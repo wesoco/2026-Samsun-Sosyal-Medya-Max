@@ -1,0 +1,130 @@
+{
+  "refs": [
+    {
+      "file": "assets/refs/mg-altunsoy.webp",
+      "title": "MG Altunsoy",
+      "sector": "Otomotiv",
+      "cat": "otomotiv",
+      "desc": "Trabzon MG Altunsoy Otomotiv MG7 Fastback Lansman ve Dijital Kimlik Tasarımı"
+    },
+    {
+      "file": "assets/refs/vardallar-peugeot.webp",
+      "title": "Vardallar Peugeot",
+      "sector": "Otomotiv",
+      "cat": "otomotiv",
+      "desc": "Trabzon Vardallar Peugeot Rifter Fındıkta Öde Yerel Satış Kampanyası Tasarımı"
+    },
+    {
+      "file": "assets/refs/taksim-gurme.webp",
+      "title": "Taksim Gurme",
+      "sector": "Gıda",
+      "cat": "gida",
+      "desc": "Trabzon Taksim Gurme Organik Yöresel Köy Tereyağı Sosyal Medya Kampanyası Tasarımı"
+    },
+    {
+      "file": "assets/refs/oltan-koleoglu.webp",
+      "title": "Oltan Köleoğlu Enerji",
+      "sector": "Enerji",
+      "cat": "kurumsal",
+      "desc": "Sosyal Medya İçerik Yönetimi: Oltan Köleoğlu Enerji. Sürdürülebilir Tarım"
+    },
+    {
+      "file": "assets/refs/arz-isi.webp",
+      "title": "Arz Isı Mühendislik",
+      "sector": "Mühendislik",
+      "cat": "kurumsal",
+      "desc": "Trabzon Arz Isı Mühendislik DemirDöküm DVS5 Isı Pompası Dijital Kampanya Tasarımı"
+    },
+    {
+      "file": "assets/refs/ak-insaat.webp",
+      "title": "Ak İnşaat",
+      "sector": "İnşaat",
+      "cat": "insaat",
+      "desc": "Trabzon Ak İnşaat: Sosyal Medyada Güven ve Estetik Odaklı İçerik Yönetimi"
+    },
+    {
+      "file": "assets/refs/maba-madencilik.webp",
+      "title": "Maba Madencilik",
+      "sector": "Madencilik",
+      "cat": "kurumsal",
+      "desc": "Trabzon Maba Madencilik: Sektörel Güven ve Önce İnsan Odaklı Sosyal Medya İletişimi"
+    },
+    {
+      "file": "assets/refs/profet-kasap.webp",
+      "title": "Profet Kasap & Restaurant",
+      "sector": "Gastronomi",
+      "cat": "gida",
+      "desc": "Profet Kasap & Restaurant: Gastronomi Odaklı Stratejik Sosyal Medya Tasarımı"
+    }
+  ],
+  "logos": [
+    {
+      "file": "assets/logos/suzuki.png",
+      "name": "Suzuki"
+    },
+    {
+      "file": "assets/logos/lider-shipping.png",
+      "name": "Lider Shipping"
+    },
+    {
+      "file": "assets/logos/mg.webp",
+      "name": "MG"
+    },
+    {
+      "file": "assets/logos/chakra.png",
+      "name": "Chakra Cafe & Lounge"
+    },
+    {
+      "file": "assets/logos/citroen.webp",
+      "name": "Citroën"
+    },
+    {
+      "file": "assets/logos/opel.webp",
+      "name": "Opel"
+    },
+    {
+      "file": "assets/logos/peugeot.webp",
+      "name": "Peugeot"
+    },
+    {
+      "file": "assets/logos/mediwali.png",
+      "name": "Mediwali"
+    },
+    {
+      "file": "assets/logos/arzisi.png",
+      "name": "Arz Isı"
+    },
+    {
+      "file": "assets/logos/zain.png",
+      "name": "Zain"
+    },
+    {
+      "file": "assets/logos/olba.png",
+      "name": "Olba"
+    },
+    {
+      "file": "assets/logos/oltan.png",
+      "name": "Oltan Köleoğlu"
+    },
+    {
+      "file": "assets/logos/vcenter.png",
+      "name": "Vcenter"
+    },
+    {
+      "file": "assets/logos/ft.png",
+      "name": "Full Tek"
+    },
+    {
+      "file": "assets/logos/altunsoy.png",
+      "name": "Altunsoy"
+    },
+    {
+      "file": "assets/logos/turkcell.png",
+      "name": "Turkcell"
+    },
+    {
+      "file": "assets/logos/kultur-turizm.png",
+      "name": "Kültür Turizm"
+    }
+  ]
+}

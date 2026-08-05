@@ -1,0 +1,16 @@
+---
+description: TrabzonSosyalMedya SEO/GEO/AEO kısa kural — detay için seo-geo-master.mdc
+alwaysApply: true
+---
+
+# SEO / GEO / AEO (özet)
+
+Tam standart: **`seo-geo-master.mdc`**.
+
+## Kalite (zorunlu)
+
+- Okuyucuya **JSON, şablon jargon, “ek not”, E-E-A-T/KPI yığını** gösterme
+- Doğal, akıcı Türkçe; insan yazmış hissi; başlığı her cümlede tekrar etme
+- SSS sitede `<details>` ile normal görünür; admin’deki JSON yalnızca depolama
+- Filler / kelime şişirme yasak; kalite > kelime sayısı
+- Sahte fiyat, sahte istatistik, sahte Review yok

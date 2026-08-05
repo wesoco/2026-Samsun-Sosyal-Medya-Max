@@ -1,0 +1,222 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+enum Role {
+  ADMIN
+}
+
+model User {
+  id           String   @id @default(cuid())
+  email        String   @unique
+  name         String?
+  passwordHash String
+  role         Role     @default(ADMIN)
+  createdAt    DateTime @default(now())
+  updatedAt    DateTime @updatedAt
+}
+
+model SiteSetting {
+  id             String   @id @default("default")
+  siteName       String   @default("Trabzon Sosyal Medya")
+  phone          String   @default("+905380581122")
+  phoneDisplay   String   @default("+90 (538) 058 11 22")
+  email          String   @default("info@wesoco.com")
+  whatsapp       String   @default("905380581122")
+  addressLine1   String   @default("Gazipaşa Mah. Uzun Sk.")
+  addressLine2   String   @default("Can Bakkal İş Merkezi, Ortahisar / Trabzon")
+  defaultTitle   String   @default("Trabzon Sosyal Medya Ajansı | Instagram, TikTok ve Meta Ads")
+  defaultDesc    String   @default("Trabzon sosyal medya ajansı. 18 ilçede Instagram yönetimi, Meta Ads, Google Ads ve içerik üretimi. Wesoco güvencesiyle.")
+  ogImage        String?
+
+  // Form etiketleri
+  formNameLabel     String @default("Ad Soyad")
+  formPhoneLabel    String @default("Telefon")
+  formEmailLabel    String @default("E-posta")
+  formDistrictLabel String @default("İlçe")
+  formServiceLabel  String @default("Hizmet")
+  formMessageLabel  String @default("Mesaj")
+  formSubmitLabel   String @default("Gönder")
+  formSuccessMsg    String @default("Mesajınız alındı. En kısa sürede dönüş yapacağız.")
+  formErrorMsg      String @default("Gönderilemedi. Lütfen tekrar deneyin veya WhatsApp yazın.")
+
+  // SMTP / bildirim
+  smtpEnabled         Boolean @default(false)
+  smtpHost            String?
+  smtpPort            Int     @default(587)
+  smtpSecure          Boolean @default(false)
+  smtpUser            String?
+  smtpPass            String?
+  smtpFrom            String?
+  notifyEmail         String?
+  emailSubjectPrefix  String  @default("Siteden yeni mesaj")
+
+  updatedAt DateTime @updatedAt
+}
+
+model Service {
+  id          String   @id @default(cuid())
+  slug        String   @unique
+  title       String
+  lead        String
+  bodyHtml    String   @db.Text
+  faqJson     Json     @default("[]")
+  seoTitle    String?
+  seoDesc     String?
+  published   Boolean  @default(true)
+  sortOrder   Int      @default(0)
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+}
+
+model BlogPost {
+  id          String   @id @default(cuid())
+  slug        String   @unique
+  title       String
+  lead        String
+  bodyHtml    String   @db.Text
+  coverUrl    String?
+  category    String
+  publishedAt DateTime @default(now())
+  published   Boolean  @default(true)
+  seoTitle    String?
+  seoDesc     String?
+  faqJson     Json     @default("[]")
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+}
+
+model District {
+  id          String   @id @default(cuid())
+  slug        String   @unique
+  name        String
+  regionLabel String
+  lead        String
+  bodyHtml    String   @db.Text
+  faqJson     Json     @default("[]")
+  seoTitle    String?
+  seoDesc     String?
+  published   Boolean  @default(true)
+  sortOrder   Int      @default(0)
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+}
+
+model FaqItem {
+  id        String   @id @default(cuid())
+  question  String
+  answer    String   @db.Text
+  sortOrder Int      @default(0)
+  published Boolean  @default(true)
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
+
+model ReferenceItem {
+  id        String   @id @default(cuid())
+  title     String
+  lead      String   @default("")
+  filter    String
+  imageUrl  String
+  videoUrl  String?
+  sortOrder Int      @default(0)
+  published Boolean  @default(true)
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
+
+model BrandLogo {
+  id        String   @id @default(cuid())
+  name      String
+  imageUrl  String
+  sortOrder Int      @default(0)
+  published Boolean  @default(true)
+}
+
+model ContactMessage {
+  id        String   @id @default(cuid())
+  name      String
+  phone     String
+  email     String?
+  district  String?
+  service   String?
+  message   String   @db.Text
+  read      Boolean  @default(false)
+  createdAt DateTime @default(now())
+}
+
+model HomeStat {
+  id        String  @id @default(cuid())
+  value     String
+  label     String
+  sortOrder Int     @default(0)
+}
+
+model HomeContent {
+  id             String   @id @default("default")
+  aboutTitle     String   @default("Trabzon'da sosyal medya denince akla ilk biz gelelim diye buradayız.")
+  aboutLead      String   @default("Trabzon Sosyal Medya, Wesoco bünyesinde yerel işletmelere Instagram, TikTok, Facebook ve LinkedIn yönetimi sunan sosyal medya ajansıdır.")
+  aboutBody      String   @default("İçerik üretimi, reels, topluluk yönetimi ve Meta Ads'i tek çatı altında yönetiyoruz.") @db.Text
+  heroSlidesJson Json
+  processJson    Json
+  ctaTitle       String   @default("Trabzon sosyal medya teklifi alın.")
+  ctaText        String   @default("Ücretsiz keşif görüşmesiyle başlayalım. Instagram, TikTok ve Meta Ads için doğru adres burası.")
+  ctaImage       String   @default("https://images.unsplash.com/photo-1663230812927-dedf2bc78fe9?auto=format&fit=crop&w=1800&q=80")
+
+  servicesTitle String @default("Büyümenin tüm adımları, tek çatıda.")
+  servicesLead  String @default("Sosyal medya yönetiminden Meta ve Google Ads'e, içerik üretiminden drone çekimine kadar Trabzon işletmeleri için uçtan uca büyüme.") @db.Text
+  processTitle  String @default("Nasıl çalışıyoruz?")
+  processLead   String @default("Keşiften stratejiye, içerik üretiminden reklam yönetimine ve aylık raporlamaya kadar her adım şeffaf, hızlı ve ölçülebilir.") @db.Text
+  refsTitle     String @default("Trabzon sosyal medya referanslarımız.")
+  refsLead      String @default("") @db.Text
+  blogTitle     String @default("Trabzon işletmeleri için pratik yazılar.")
+  approachTitle String @default("Her marka ve sektöre özel içerik planı.")
+  approachLead  String @default("Hazır paket dayatmıyoruz. Restoran ile klinik, otel ile otomotiv aynı dilde konuşmaz. Keşifte markanızın hedef kitlesini, satış ritmini ve satış yolunu dinler; ona göre kanal, içerik takvimi ve ölçüm çerçevesi kurarız. Reklam medya harcaması ajans ücretinden ayrıdır.") @db.Text
+  approachTableJson Json @default("[]")
+  faqTitle      String @default("Trabzon sosyal medya hakkında sıkça sorulanlar.")
+  faqLead       String @default("Fiyat, planlama ve iletişim hakkında net cevaplar.") @db.Text
+  contactTitle  String @default("Projenizi konuşalım.")
+  contactLead   String @default("Formu doldurun ya da WhatsApp’tan yazın. En geç 24 saat içinde size dönüş yapıyoruz.") @db.Text
+
+  updatedAt DateTime @updatedAt
+}
+
+model CaseStudy {
+  id               String   @id @default(cuid())
+  slug             String   @unique
+  sector           String
+  title            String
+  lead             String
+  challenge        String   @db.Text
+  workDone         String   @db.Text
+  result           String   @db.Text
+  bodyHtml         String   @db.Text
+  relatedServices  Json     @default("[]")
+  seoTitle         String?
+  seoDesc          String?
+  published        Boolean  @default(true)
+  sortOrder        Int      @default(0)
+  createdAt        DateTime @default(now())
+  updatedAt        DateTime @updatedAt
+}
+
+model SectorPage {
+  id        String   @id @default(cuid())
+  slug      String   @unique
+  name      String
+  title     String
+  lead      String
+  bodyHtml  String   @db.Text
+  faqJson   Json     @default("[]")
+  seoTitle  String?
+  seoDesc   String?
+  published Boolean  @default(true)
+  sortOrder Int      @default(0)
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}

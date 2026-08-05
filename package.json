@@ -1,0 +1,65 @@
+{
+  "name": "trabzon-sosyal-medya",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "eslint",
+    "db:generate": "prisma generate",
+    "db:push": "prisma db push",
+    "db:seed": "npx tsx prisma/seed.ts",
+    "db:import-legacy": "npx tsx prisma/import-legacy.ts",
+    "db:seed-seo-blogs": "npx tsx prisma/seed-seo-blogs.ts",
+    "db:seed-blog-plan": "npx tsx prisma/seed-blog-plan.ts",
+    "db:seed-fill-blogs": "npx tsx prisma/seed-fill-blogs.ts",
+    "db:expand-pages": "npx tsx prisma/expand-services-districts.ts",
+    "db:seed-services": "npx tsx prisma/seed-services-unique.ts",
+    "db:seed-districts": "npx tsx prisma/seed-districts.ts",
+    "db:deepen-districts": "npx tsx prisma/deepen-districts.ts",
+    "db:seed-purchase-faqs": "npx tsx prisma/seed-purchase-faqs.ts",
+    "db:seed-cases": "npx tsx prisma/seed-case-studies.ts",
+    "db:seed-sectors": "npx tsx prisma/seed-sectors.ts",
+    "check:links": "npx tsx scripts/check-internal-links.ts",
+    "db:studio": "prisma studio",
+    "postinstall": "prisma generate",
+    "db:seed-refs": "tsx prisma/seed-wesoco-refs.ts"
+  },
+  "dependencies": {
+    "@prisma/client": "^6.19.3",
+    "@tiptap/extension-link": "^3.29.2",
+    "@tiptap/extension-placeholder": "^3.29.2",
+    "@tiptap/react": "^3.29.2",
+    "@tiptap/starter-kit": "^3.29.2",
+    "bcryptjs": "^3.0.3",
+    "isomorphic-dompurify": "^3.19.0",
+    "next": "16.3.0",
+    "next-auth": "^5.0.0-beta.32",
+    "nodemailer": "^8.0.11",
+    "react": "19.2.8",
+    "react-dom": "19.2.8",
+    "zod": "^4.4.3"
+  },
+  "devDependencies": {
+    "@types/bcryptjs": "^2.4.6",
+    "@types/node": "^20",
+    "@types/nodemailer": "^8.0.1",
+    "@types/react": "^19",
+    "@types/react-dom": "^19",
+    "eslint": "^9",
+    "eslint-config-next": "16.3.0",
+    "prisma": "^6.19.3",
+    "tsx": "^4.23.5",
+    "typescript": "^5"
+  },
+  "prisma": {
+    "seed": "npx tsx prisma/seed.ts"
+  },
+  "browserslist": [
+    "chrome >= 111",
+    "firefox >= 111",
+    "safari >= 16.4",
+    "edge >= 111"
+  ]
+}

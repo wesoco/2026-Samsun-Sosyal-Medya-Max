@@ -1,0 +1,206 @@
+---
+description: TrabzonSosyalMedya ultimate SEO / GEO / AEO master prompt — teknik standartlar, içerik, schema, performans ve faz checklist
+alwaysApply: true
+---
+
+# Master: SEO · GEO · AEO · Citation · Entity
+
+Bu proje sıradan bir site değildir. Hedef: Google + AI Overviews + ChatGPT + Gemini + Claude + Perplexity + Copilot’ta **güvenilir kaynak / citation** olmak. Her kod ve içerik bu hedefe göre değerlendirilir. Tasarım ↔ performans ↔ SEO arasında taviz yok.
+
+Kısa özet kural: `seo-geo-aeo.mdc`. Bu dosya **tam standarttır**.
+
+---
+
+## 0. Faz checklist (öncelik)
+
+### Faz 1 — Temel (yapıldı / korunacak)
+- [x] Canonical TR path’ler, EN → TR 301, `not-found`
+- [x] `src/lib/seo.ts` JSON-LD helpers + Entity Graph
+- [x] Organization, LocalBusiness, FAQPage, Service, BlogPosting, BreadcrumbList
+- [x] OG / Twitter, `metadataBase`, sitemap, robots, `/feed.xml`
+- [x] `/llms.txt`, `/ai.txt`
+- [x] KVKK, gizlilik, çerez, aydınlatma + footer
+- [x] Gerçek NAP, harita, WhatsApp, iletişim formu
+- [x] Bölgeler footer’da (SEO); header/ana sayfa grid’de değil
+- [x] Sahte Review / AggregateRating **yasak**
+
+### Faz 2 — İçerik otoritesi (aktif)
+- [x] Her hizmet/bölge/blog: Answer-first + Nedir/Neden/Nasıl/Kim/Fiyat/Süreç/SSS (içerik veya scaffold)
+- [x] Topic cluster iç link: hizmet ↔ blog ↔ ilçe ↔ iletişim
+- [x] Blog: 150–200 kaliteli içerik planı + yayın (`db:seed-fill-blogs`)
+- [x] Sayfa içeriği doğal Türkçe + GEO blokları (filler/ek not yasak)
+- [x] Karşılaştırma tabloları, adım listeleri, FAQ her pillar’da
+- [x] Semantic entity geçişleri (aşağı §4–5)
+
+### Faz 3 — Teknik üst seviye
+- [ ] Lighthouse: Perf 95+, SEO/A11y/BP 100’e yaklaş
+- [ ] CWV yeşil (LCP/INP/CLS); gereksiz JS yok
+- [x] `next/image` + WebP/AVIF (config + blog/ana sayfa kapakları)
+- [x] Preconnect/preload kritik font & remote images
+- [ ] CDN / cache / Brotli (hosting katmanı)
+- [x] Broken link denetimi (`npm run check:links`)
+- [ ] Gerçek Google yorumları varsa ancak o zaman Review schema
+- [ ] Redirect registry (middleware EN→TR mevcut)
+
+---
+
+## 1. Genel hedef
+
+- Birincil: **Trabzon Sosyal Medya Ajansı** ve uzun kuyruk yerel niyetler
+- Helpful Content + E-E-A-T maksimum
+- GEO (Generative Engine Optimization) + AEO (Answer Engine Optimization)
+- Citation SEO: net tanımlar, tarihler, NAP, kaynaklanabilir iddialar
+- Knowledge Graph / Entity: Organization + LocalBusiness `@id` tutarlılığı (`/#organization`, `/#localbusiness`)
+
+---
+
+## 2. İçerik stratejisi
+
+Her sayfa **tek ana konu**. Rakiplerden daha kapsamlı, gerçek, kopyasız, AI-dolgu hissi yok.
+
+Zorunlu bloklar (mümkün olduğunca):
+
+| Blok | Amaç |
+|------|------|
+| Kısa cevap (ilk 40–60 kelime) | AI Overview / snippet |
+| Nedir | Tanım |
+| Neden önemli | Motivasyon |
+| Nasıl yapılır | Adımlar |
+| Kimler için | İdeal müşteri |
+| Avantajlar | Fayda |
+| Süreç | Operasyon |
+| Fiyatlandırma mantığı | Şeffaflık (uydurma fiyat yok) |
+| SSS | FAQPage schema |
+| Örnek / referans | Sosyal kanıt |
+| Sonuç + CTA | Dönüşüm |
+
+Yardımcı UI: `AnswerBox`, `GeoSection`, `ComparisonTable`, `FaqBlock`, `TopicCluster` (`src/components/seo/`).
+
+---
+
+## 3. AI Search (GEO / AEO)
+
+- İlk paragraf soruyu cevaplar; sonra detay
+- Madde, tablo, karşılaştırma, gerçek örnek
+- Her pillar’da: Nedir? Neden? Nasıl? Kimler? Fiyat neye göre?
+- `public/llms.txt` ve `public/ai.txt` güncel tutulur
+- Uydurma istatistik / sahte rating üretme
+
+---
+
+## 4. Semantic SEO
+
+Anahtar kelime stuffing yok. Doğal ilişkili kavramlar (örnek set):
+
+Instagram yönetimi, Facebook reklamları, Meta Ads, Google Ads, içerik üretimi, profesyonel fotoğraf, reels, drone, video prodüksiyon, kurumsal kimlik, marka yönetimi, dijital pazarlama, SEO, web tasarım/yazılım, logo/grafik, Google Benim İşletmem, performans pazarlaması, remarketing, lead generation, dönüşüm oranı, marka bilinirliği.
+
+---
+
+## 5. Entity SEO
+
+**Yerel:** Trabzon, Ortahisar, Akçaabat, Yomra, Arsin, Sürmene, Of, Vakfıkebir, Maçka, Beşikdüzü, Çarşıbaşı + diğer 18 ilçe.
+
+**Otorite:** Instagram, Facebook, TikTok, LinkedIn, YouTube, Google, Meta, Google Ads, Meta Ads, Analytics, Search Console.
+
+Schema `areaServed` ve metin uyumlu olmalı.
+
+---
+
+## 6. Topical authority
+
+- Yalnız hizmet sayfası yetmez → blog cluster
+- Plan kaynağı: `prisma/content-plan-blogs.ts` (≥150 başlık)
+- Seed: `npm run db:seed-blog-plan` → `published: false` taslaklar
+- Cluster örnekleri: Reels, Meta vs Google Ads, sektör (otel/restoran/klinik/inşaat), ilçe + hizmet, ajans seçim rehberi
+- Ana sayfada blog **9** adet; kalan `/blog`
+
+---
+
+## 7. Teknik SEO (kod)
+
+| Öğe | Uygulama |
+|-----|----------|
+| Canonical | `buildMetadata` → TR public path |
+| Schema | Sadece `src/lib/seo.ts` |
+| OG/Twitter | `buildMetadata` |
+| Sitemap/robots/RSS | `src/app/sitemap.ts`, `robots.ts`, `feed.xml` |
+| Hreflang | Tek dil: `alternates.languages['tr-TR']` = canonical |
+| Lazy load | Below-fold görseller |
+| Review schema | Yalnızca doğrulanmış gerçek yorum kaynağı |
+
+Yasak: hardcode JSON-LD sayfa içinde; sahte AggregateRating.
+
+---
+
+## 8. Performans
+
+- Hedef: Perf 95+, SEO/A11y/BP ~100; CLS/INP/LCP yeşil
+- Client JS minimum; ağır carousel/analytics bilinçli
+- Font: mevcut marka (Montserrat); layout shift önle
+- Hero: `fetchPriority` ilk slide; diğerleri lazy
+
+---
+
+## 9. UX
+
+- Mobil öncelik, marka: lacivert `#0c1727`, kırmızı `#e84445`
+- GEO kutuları kart/dashboard gibi şişmesin; mevcut tipografi ve kırmızı sol çizgi dili
+- CTA: teklif, WhatsApp, telefon — her pillar sonunda
+- Bölgeler: SEO için footer + `/bolgeler`; ana nav’da yok
+
+---
+
+## 10. İç linkleme
+
+- `TopicCluster` ile yetim sayfa bırakma
+- Anchor doğal: “Akçaabat Instagram yönetimi”, “Meta Ads süreci”
+- Hub: `/hizmetler`, `/blog`, `/bolgeler` → spoke sayfalar
+
+---
+
+## 11. Güven / E-E-A-T
+
+Gerçek referans, ekip, iletişim, adres, harita, SSS, sözleşme şeffaflığı, KVKK seti. Müşteri yorumu uydurma.
+
+---
+
+## 12. İçerik kalitesi
+
+- Derin ve faydalı metin; **filler / ek not döngüsü yasak** (kalite > kelime sayısı)
+- Doğal Türkçe; AI şablon dili yok; okuyucuya JSON gösterme
+- Tekrar yok; yerel örnek (ilçe, sektör, sezon)
+- Admin’den `seoTitle`, `seoDesc`, `faqJson`, body düzenlenebilir
+- `faqJson` yalnızca depolama; sitede normal SSS (`details`) arayüzü
+
+---
+
+## 13. Yapay zekâ dostu HTML
+
+Özet, `ul`/`ol`, `table`, `details` FAQ, adım başlıkları (`h2`/`h3`). Semantik HTML; gizlenmiş keyword bloğu yok. Yapı AI için okunaklı olsun ama metin insan gibi yazılsın.
+
+---
+
+## 14. Dönüşüm
+
+Her sayfa: birincil CTA + WhatsApp + form yolu + referans/süreç sinyali.
+
+---
+
+## 15. Sürekli gelişim
+
+- Modüler bileşenler (`components/seo`, `lib/seo`, `lib/paths`)
+- Yeni hizmet = slug + body + FAQ + schema otomatik
+- Blog ölçeklenebilir (Prisma)
+- Otomatik sitemap
+- Middleware redirect’ler korunur
+
+---
+
+## Agent davranış kuralları
+
+1. İçerik/SEO değişikliğinde bu master’ı uygula; eksik schema’yı `seo.ts`’e ekle.
+2. Tasarımı bozan “AI dashboard” GEO UI ekleme; marka CSS değişkenlerini kullan.
+3. Düşük kaliteli toplu içerik / kelime şişirme üretme.
+4. Performansı düşüren bağımlılık ekleme.
+5. Kullanıcı Türkçe konuşuyorsa yanıt Türkçe.
+6. Okuyucu metninde JSON, “ek not 1/2/3”, keyword stuffing, uydurma rating yok.
