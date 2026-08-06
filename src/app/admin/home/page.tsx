@@ -5,6 +5,8 @@ import { requireAdmin } from "@/lib/admin";
 import { AdminChrome } from "@/components/admin/AdminChrome";
 import { ImageField } from "@/components/admin/ImageField";
 import { HeroSlidesEditor, type HeroSlideForm } from "@/components/admin/HeroSlidesEditor";
+import { ProcessStepsEditor, type ProcessStepForm } from "@/components/admin/ProcessStepsEditor";
+import { ApproachTableEditor, type ApproachRow } from "@/components/admin/ApproachTableEditor";
 
 export const dynamic = "force-dynamic";
 
@@ -20,14 +22,14 @@ const DEFAULT_SLIDES: HeroSlideForm[] = [
   },
 ];
 
-const DEFAULT_PROCESS = [
+const DEFAULT_PROCESS: ProcessStepForm[] = [
   { num: "01", title: "Keşif", desc: "Markanızı, hedef kitlenizi ve rakiplerinizi dinliyoruz." },
   { num: "02", title: "Strateji", desc: "İçerik dili, takvim ve kanal planını birlikte netleştiriyoruz." },
   { num: "03", title: "Üretim", desc: "Çekim, kurgu, tasarım ve onaylı yayın." },
   { num: "04", title: "Büyüme", desc: "Reklam, optimizasyon ve aylık rapor." },
 ];
 
-const DEFAULT_APPROACH_TABLE = [
+const DEFAULT_APPROACH_TABLE: ApproachRow[] = [
   ["Restoran / kafe", "Menü, atmosfer, rezervasyon ritmi", "Rezervasyon / DM"],
   ["Klinik / güzellik", "Güven, önce-sonra, randevu", "Randevu formu"],
   ["Otel / turizm", "Oda, manzara, sezon kampanyası", "Direkt rezervasyon"],
@@ -56,6 +58,26 @@ function normalizeSlides(raw: unknown): HeroSlideForm[] {
   });
 }
 
+function normalizeProcess(raw: unknown): ProcessStepForm[] {
+  if (!Array.isArray(raw) || !raw.length) return DEFAULT_PROCESS;
+  return raw.map((item, i) => {
+    const s = item as Partial<ProcessStepForm>;
+    return {
+      num: String(s.num || String(i + 1).padStart(2, "0")),
+      title: String(s.title || ""),
+      desc: String(s.desc || ""),
+    };
+  });
+}
+
+function normalizeApproach(raw: unknown): ApproachRow[] {
+  if (!Array.isArray(raw) || !raw.length) return DEFAULT_APPROACH_TABLE;
+  return raw.map((item) => {
+    const row = Array.isArray(item) ? item : [];
+    return [String(row[0] || ""), String(row[1] || ""), String(row[2] || "")] as ApproachRow;
+  });
+}
+
 export default async function AdminHomePage() {
   await requireAdmin();
   let home = await prisma.homeContent.findUnique({ where: { id: "default" } });
@@ -71,13 +93,11 @@ export default async function AdminHomePage() {
   }
 
   const slides = normalizeSlides(home.heroSlidesJson);
-  const process = JSON.stringify(home.processJson, null, 2);
-  const approachTable = JSON.stringify(
+  const processSteps = normalizeProcess(home.processJson);
+  const approachRows = normalizeApproach(
     Array.isArray(home.approachTableJson) && (home.approachTableJson as unknown[]).length
       ? home.approachTableJson
       : DEFAULT_APPROACH_TABLE,
-    null,
-    2,
   );
 
   async function save(formData: FormData) {
@@ -88,8 +108,8 @@ export default async function AdminHomePage() {
     let approachTableJson: unknown = DEFAULT_APPROACH_TABLE;
     try {
       heroSlidesJson = normalizeSlides(JSON.parse(String(formData.get("heroSlidesJson") || "[]")));
-      processJson = JSON.parse(String(formData.get("processJson") || "[]"));
-      approachTableJson = JSON.parse(String(formData.get("approachTableJson") || "[]"));
+      processJson = normalizeProcess(JSON.parse(String(formData.get("processJson") || "[]")));
+      approachTableJson = normalizeApproach(JSON.parse(String(formData.get("approachTableJson") || "[]")));
     } catch {
       redirect("/admin/home?error=json");
     }
@@ -131,7 +151,7 @@ export default async function AdminHomePage() {
   return (
     <AdminChrome
       title="Anasayfa içerikleri"
-      description="Hero slaytları form ile düzenlenir; görseller yüklenebilir. Bölüm metinleri ve CTA burada."
+      description="Hero, süreç, yaklaşım tablosu ve CTA form ile düzenlenir. Görseller yüklenebilir."
     >
       <form action={save} className="admin-form admin-form-wide">
         <fieldset className="admin-fieldset">
@@ -140,6 +160,18 @@ export default async function AdminHomePage() {
             Her slayt için başlık, metin, buton ve görsel. Dosya yükleyebilir veya URL yapıştırabilirsiniz.
           </p>
           <HeroSlidesEditor initial={slides} />
+        </fieldset>
+
+        <fieldset className="admin-fieldset">
+          <legend>Çalışma süreci adımları</legend>
+          <p className="admin-hint">Ana sayfadaki “Nasıl çalışıyoruz?” adımları.</p>
+          <ProcessStepsEditor initial={processSteps} />
+        </fieldset>
+
+        <fieldset className="admin-fieldset">
+          <legend>Yaklaşım tablosu</legend>
+          <p className="admin-hint">Sektör / içerik odağı / izlenen sinyal satırları.</p>
+          <ApproachTableEditor initial={approachRows} />
         </fieldset>
 
         <fieldset className="admin-fieldset">
@@ -227,19 +259,6 @@ export default async function AdminHomePage() {
             <textarea name="ctaText" required rows={2} defaultValue={home.ctaText} />
           </label>
           <ImageField name="ctaImage" label="CTA görsel" folder="home" required defaultValue={home.ctaImage} />
-        </fieldset>
-
-        <fieldset className="admin-fieldset">
-          <legend>Süreç &amp; yaklaşım tablosu (JSON)</legend>
-          <p className="admin-hint">İleri seviye. Süreç adımları ve yaklaşım tablosu.</p>
-          <label>
-            Süreç adımları (JSON)
-            <textarea name="processJson" rows={8} defaultValue={process} className="admin-code" />
-          </label>
-          <label>
-            Yaklaşım tablosu (JSON)
-            <textarea name="approachTableJson" rows={10} defaultValue={approachTable} className="admin-code" />
-          </label>
         </fieldset>
 
         <div className="admin-form-actions">
