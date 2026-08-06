@@ -1,6 +1,6 @@
 import Link from "next/link";
 import type { Metadata } from "next";
-import { notFound } from "next/navigation";
+import { redirectMissingToHome } from "@/lib/redirect-missing";
 import { prisma } from "@/lib/prisma";
 import { paths } from "@/lib/paths";
 import { breadcrumbJsonLd, buildMetadata, jsonLdScript } from "@/lib/seo";
@@ -39,7 +39,7 @@ export default async function CaseStudyPage({ params }: Props) {
       select: { slug: true, title: true },
     }),
   ]);
-  if (!c || !c.published) notFound();
+  if (!c || !c.published) redirectMissingToHome();
 
   const relatedSlugs = Array.isArray(c.relatedServices)
     ? (c.relatedServices as string[])

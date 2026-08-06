@@ -1,9 +1,9 @@
 import Link from "next/link";
 import Image from "next/image";
 import type { Metadata } from "next";
-import { notFound } from "next/navigation";
 import { prisma } from "@/lib/prisma";
 import { paths } from "@/lib/paths";
+import { redirectMissingToHome } from "@/lib/redirect-missing";
 import {
   blogPostingJsonLd,
   breadcrumbJsonLd,
@@ -58,7 +58,7 @@ export default async function BlogPostPage({ params }: Props) {
       select: { slug: true, name: true },
     }),
   ]);
-  if (!post || !post.published) notFound();
+  if (!post || !post.published) redirectMissingToHome();
 
   const faqs = (post.faqJson as FaqPair[]) || [];
   const nap: SiteNap = {

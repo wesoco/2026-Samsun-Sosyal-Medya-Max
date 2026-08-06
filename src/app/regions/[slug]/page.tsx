@@ -1,6 +1,6 @@
 import Link from "next/link";
 import type { Metadata } from "next";
-import { notFound } from "next/navigation";
+import { redirectMissingToHome } from "@/lib/redirect-missing";
 import { prisma } from "@/lib/prisma";
 import { paths } from "@/lib/paths";
 import {
@@ -55,7 +55,7 @@ export default async function RegionPage({ params }: Props) {
       select: { slug: true, title: true },
     }),
   ]);
-  if (!d || !d.published) notFound();
+  if (!d || !d.published) redirectMissingToHome();
 
   const faqs = (d.faqJson as FaqPair[]) || [];
   const nap: SiteNap = {

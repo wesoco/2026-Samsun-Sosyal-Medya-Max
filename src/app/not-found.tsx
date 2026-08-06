@@ -1,30 +1,11 @@
-import Link from "next/link";
-import { SiteChrome } from "@/components/site/SiteChrome";
+import { permanentRedirect } from "next/navigation";
 import { paths } from "@/lib/paths";
 
+/**
+ * Bilinmeyen / kaldırılmış / eski site URL’leri 404 yerine ana sayfaya 301.
+ * Domain üzerine yeni site çekildiğinde Google’daki eski URL equity’si home’a taşınır.
+ * Admin 404’leri: `app/admin/not-found.tsx`
+ */
 export default function NotFound() {
-  return (
-    <SiteChrome variant="inner" className="site-page page">
-      <main id="main">
-        <section className="page-hero">
-          <div className="container">
-            <span className="section-label">404</span>
-            <h1>Sayfa bulunamadı.</h1>
-            <p className="lead">
-              Aradığınız sayfa taşınmış veya hiç var olmamış olabilir. Ana sayfadan hizmetler, blog veya iletişime
-              dönebilirsiniz.
-            </p>
-            <div className="page-hero-actions">
-              <Link href={paths.home} className="btn btn-primary">
-                Ana sayfa
-              </Link>
-              <Link href={paths.hash.contact} className="btn btn-outline-dark">
-                İletişim
-              </Link>
-            </div>
-          </div>
-        </section>
-      </main>
-    </SiteChrome>
-  );
+  permanentRedirect(paths.home);
 }

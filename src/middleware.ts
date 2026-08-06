@@ -29,7 +29,13 @@ const LEGACY_REDIRECTS: Array<{ match: RegExp; to: (m: RegExpMatchArray) => stri
   { match: /^\/blog\/index\.html$/, to: () => "/blog" },
   { match: /^\/blog\/([^/]+)\.html$/, to: (m) => `/blog/${m[1]}` },
   { match: /^\/index\.html$/, to: () => "/" },
+  { match: /^\/home\/?$/i, to: () => "/" },
+  { match: /^\/anasayfa\/?$/i, to: () => "/" },
+  { match: /^\/index\/?$/i, to: () => "/" },
 ];
+
+/** Eski CMS/statik uzantılar (bilinen eşleşme yoksa) → ana sayfa 301 */
+const LEGACY_FILE_EXT = /\.(html?|php|aspx?|jsp|cgi|cfm)$/i;
 
 export default auth((req) => {
   const { pathname } = req.nextUrl;
@@ -51,6 +57,14 @@ export default auth((req) => {
       url.pathname = rule.to(m);
       return NextResponse.redirect(url, 301);
     }
+  }
+
+  // Bilinmeyen .html / .php vb. eski sayfalar → home (SEO: 404 yerine 301)
+  if (LEGACY_FILE_EXT.test(pathname)) {
+    const url = req.nextUrl.clone();
+    url.pathname = "/";
+    url.search = "";
+    return NextResponse.redirect(url, 301);
   }
 
   if (pathname.startsWith("/admin") && pathname !== "/admin/login") {

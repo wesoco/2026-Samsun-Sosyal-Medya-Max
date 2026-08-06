@@ -1,6 +1,6 @@
 import Link from "next/link";
 import type { Metadata } from "next";
-import { notFound } from "next/navigation";
+import { redirectMissingToHome } from "@/lib/redirect-missing";
 import { prisma } from "@/lib/prisma";
 import { paths } from "@/lib/paths";
 import {
@@ -58,7 +58,7 @@ export default async function SectorPage({ params }: Props) {
       select: { slug: true, name: true },
     }),
   ]);
-  if (!s || !s.published) notFound();
+  if (!s || !s.published) redirectMissingToHome();
 
   const faqs = (s.faqJson as FaqPair[]) || [];
 
