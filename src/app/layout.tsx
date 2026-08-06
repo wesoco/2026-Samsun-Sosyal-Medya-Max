@@ -4,6 +4,7 @@ import "./globals.css";
 import { prisma } from "@/lib/prisma";
 import { buildMetadata } from "@/lib/seo";
 import { paths } from "@/lib/paths";
+import { GoogleTagManager, GoogleTagManagerNoscript } from "@/components/site/GoogleTagManager";
 
 const montserrat = Montserrat({
   subsets: ["latin", "latin-ext"],
@@ -41,6 +42,8 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         />
       </head>
       <body className={`${montserrat.variable} ${montserrat.className}`}>
+        <GoogleTagManagerNoscript />
+        <GoogleTagManager />
         <a className="skip-link" href="#main">
           İçeriğe geç
         </a>
