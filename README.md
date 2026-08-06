@@ -31,4 +31,28 @@ npm run dev
 - `npm run db:studio` — Prisma Studio
 - `npm run db:seed` — seed tekrar
 
+## Deploy (GitHub → GHCR → Coolify)
+
+Akış: `main` push → GitHub Actions image build → `ghcr.io/<owner>/<repo>` → Coolify image pull + Postgres.
+
+### Repo tarafı
+- [`Dockerfile`](Dockerfile) — Next.js `standalone` + Prisma
+- [`.github/workflows/ghcr.yml`](.github/workflows/ghcr.yml) — build & push (`latest` + `sha-<short>`)
+- Build sırasında Postgres gerekir (workflow’da service); lokal test:
+
+```bash
+# Postgres ayaktayken
+docker build --build-arg DATABASE_URL="$DATABASE_URL" -t trabzon-sosyal-medya .
+```
+
+### Coolify checklist
+1. PostgreSQL servisi oluştur (volume + güçlü şifre); internal `DATABASE_URL` al
+2. Resource: **Docker Image** → `ghcr.io/<owner>/<repo>:latest`
+3. Private GHCR ise registry credentials (PAT: `read:packages`)
+4. Domain + HTTPS
+5. Env: `DATABASE_URL`, `AUTH_SECRET`, `AUTH_URL`, `NEXT_PUBLIC_SITE_URL`
+6. Deploy — container start’ta `prisma db push`; seed **otomatik çalışmaz**
+7. Bir kerelik seed: lokalden prod `DATABASE_URL` ile `npm run db:seed` (gerekirse diğer `db:seed-*`)
+8. İsteğe bağlı: Coolify webhook ile Actions sonrası auto-redeploy
+
 Eski statik site: `legacy/` klasöründe.
