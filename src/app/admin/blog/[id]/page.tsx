@@ -4,6 +4,7 @@ import { prisma } from "@/lib/prisma";
 import { requireAdmin } from "@/lib/admin";
 import { AdminChrome } from "@/components/admin/AdminChrome";
 import { ContentFields } from "@/components/admin/ContentFields";
+import { ImageField } from "@/components/admin/ImageField";
 import { faqToPairs, parseFaqFromFormData } from "@/lib/faq";
 
 export const dynamic = "force-dynamic";
@@ -82,10 +83,12 @@ export default async function AdminBlogEditPage({
                 Kategori
                 <input name="category" defaultValue={post.category} />
               </label>
-              <label>
-                Kapak URL
-                <input name="coverUrl" defaultValue={post.coverUrl || "/assets/Trabzon-sosyal-medya.webp"} />
-              </label>
+              <ImageField
+                name="coverUrl"
+                label="Kapak görseli"
+                folder="blog"
+                defaultValue={post.coverUrl || "/assets/Trabzon-sosyal-medya.webp"}
+              />
             </div>
           }
         />

@@ -4,6 +4,7 @@ import { prisma } from "@/lib/prisma";
 import { requireAdmin } from "@/lib/admin";
 import { AdminChrome } from "@/components/admin/AdminChrome";
 import { ContentFields } from "@/components/admin/ContentFields";
+import { ImageField } from "@/components/admin/ImageField";
 
 export const dynamic = "force-dynamic";
 
@@ -51,10 +52,7 @@ export default async function AdminBlogNewPage() {
                 Kategori
                 <input name="category" defaultValue="Genel" />
               </label>
-              <label>
-                Kapak URL
-                <input name="coverUrl" />
-              </label>
+              <ImageField name="coverUrl" label="Kapak görseli" folder="blog" />
             </>
           }
         />

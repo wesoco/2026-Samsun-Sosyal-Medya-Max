@@ -3,10 +3,12 @@ import { redirect } from "next/navigation";
 import { prisma } from "@/lib/prisma";
 import { requireAdmin } from "@/lib/admin";
 import { AdminChrome } from "@/components/admin/AdminChrome";
+import { ImageField } from "@/components/admin/ImageField";
+import { HeroSlidesEditor, type HeroSlideForm } from "@/components/admin/HeroSlidesEditor";
 
 export const dynamic = "force-dynamic";
 
-const DEFAULT_SLIDES = [
+const DEFAULT_SLIDES: HeroSlideForm[] = [
   {
     signal: "Trabzon Sosyal Medya Ajansı",
     title: "Trabzon sosyal medya yönetimi için güvenilir ajans.",
@@ -38,6 +40,22 @@ function str(formData: FormData, key: string, fallback = "") {
   return String(formData.get(key) || fallback);
 }
 
+function normalizeSlides(raw: unknown): HeroSlideForm[] {
+  if (!Array.isArray(raw) || !raw.length) return DEFAULT_SLIDES;
+  return raw.map((item) => {
+    const s = item as Partial<HeroSlideForm>;
+    return {
+      signal: String(s.signal || ""),
+      title: String(s.title || ""),
+      lead: String(s.lead || ""),
+      image: String(s.image || "/assets/hero/01.webp"),
+      alt: String(s.alt || ""),
+      href: s.href ? String(s.href) : "",
+      cta: s.cta ? String(s.cta) : "",
+    };
+  });
+}
+
 export default async function AdminHomePage() {
   await requireAdmin();
   let home = await prisma.homeContent.findUnique({ where: { id: "default" } });
@@ -52,7 +70,7 @@ export default async function AdminHomePage() {
     });
   }
 
-  const slides = JSON.stringify(home.heroSlidesJson, null, 2);
+  const slides = normalizeSlides(home.heroSlidesJson);
   const process = JSON.stringify(home.processJson, null, 2);
   const approachTable = JSON.stringify(
     Array.isArray(home.approachTableJson) && (home.approachTableJson as unknown[]).length
@@ -69,7 +87,7 @@ export default async function AdminHomePage() {
     let processJson: unknown = DEFAULT_PROCESS;
     let approachTableJson: unknown = DEFAULT_APPROACH_TABLE;
     try {
-      heroSlidesJson = JSON.parse(String(formData.get("heroSlidesJson") || "[]"));
+      heroSlidesJson = normalizeSlides(JSON.parse(String(formData.get("heroSlidesJson") || "[]")));
       processJson = JSON.parse(String(formData.get("processJson") || "[]"));
       approachTableJson = JSON.parse(String(formData.get("approachTableJson") || "[]"));
     } catch {
@@ -113,9 +131,17 @@ export default async function AdminHomePage() {
   return (
     <AdminChrome
       title="Anasayfa içerikleri"
-      description="Hero, bölüm başlıkları, yaklaşım tablosu, CTA ve süreç adımları. Tüm ana sayfa metinleri buradan."
+      description="Hero slaytları form ile düzenlenir; görseller yüklenebilir. Bölüm metinleri ve CTA burada."
     >
       <form action={save} className="admin-form admin-form-wide">
+        <fieldset className="admin-fieldset">
+          <legend>Hero slaytları</legend>
+          <p className="admin-hint">
+            Her slayt için başlık, metin, buton ve görsel. Dosya yükleyebilir veya URL yapıştırabilirsiniz.
+          </p>
+          <HeroSlidesEditor initial={slides} />
+        </fieldset>
+
         <fieldset className="admin-fieldset">
           <legend>Hakkımızda</legend>
           <label>
@@ -200,19 +226,12 @@ export default async function AdminHomePage() {
             CTA metin
             <textarea name="ctaText" required rows={2} defaultValue={home.ctaText} />
           </label>
-          <label>
-            CTA görsel URL
-            <input name="ctaImage" required defaultValue={home.ctaImage} />
-          </label>
+          <ImageField name="ctaImage" label="CTA görsel" folder="home" required defaultValue={home.ctaImage} />
         </fieldset>
 
         <fieldset className="admin-fieldset">
-          <legend>JSON bloklar</legend>
-          <p className="admin-hint">Hero slaytları, süreç adımları ve yaklaşım tablosu ([["Sektör","Odak","Hedef"], ...]).</p>
-          <label>
-            Hero slaytları (JSON)
-            <textarea name="heroSlidesJson" rows={12} defaultValue={slides} className="admin-code" />
-          </label>
+          <legend>Süreç &amp; yaklaşım tablosu (JSON)</legend>
+          <p className="admin-hint">İleri seviye. Süreç adımları ve yaklaşım tablosu.</p>
           <label>
             Süreç adımları (JSON)
             <textarea name="processJson" rows={8} defaultValue={process} className="admin-code" />

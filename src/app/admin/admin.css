@@ -588,3 +588,50 @@
   .admin-field-grid, .admin-quick-grid { grid-template-columns: 1fr; }
 }
 
+
+/* Image upload fields */
+.admin-image-field {
+  display: grid;
+  gap: 8px;
+}
+.admin-image-field-actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 12px;
+}
+.admin-upload-btn {
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  margin: 0;
+}
+.admin-image-preview {
+  width: 96px;
+  height: 72px;
+  object-fit: cover;
+  border-radius: 10px;
+  border: 1px solid rgba(12, 23, 39, 0.1);
+  background: #fff;
+}
+
+/* Hero slides editor */
+.admin-hero-editor {
+  display: grid;
+  gap: 16px;
+}
+.admin-hero-slide legend {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  width: 100%;
+}
+.admin-hero-slide-tools {
+  display: inline-flex;
+  gap: 6px;
+}
+.admin-hero-slide-tools .admin-btn {
+  padding: 4px 10px;
+  font-size: 0.78rem;
+}

@@ -3,6 +3,7 @@ import { redirect } from "next/navigation";
 import { prisma } from "@/lib/prisma";
 import { requireAdmin } from "@/lib/admin";
 import { AdminChrome } from "@/components/admin/AdminChrome";
+import { ImageField } from "@/components/admin/ImageField";
 
 export const dynamic = "force-dynamic";
 
@@ -107,10 +108,7 @@ export default async function AdminSettingsPage() {
             Varsayılan description
             <textarea name="defaultDesc" rows={3} defaultValue={s?.defaultDesc || ""} />
           </label>
-          <label>
-            OG Image URL
-            <input name="ogImage" defaultValue={s?.ogImage || ""} placeholder="/assets/…" />
-          </label>
+          <ImageField name="ogImage" label="OG Image" folder="misc" defaultValue={s?.ogImage || ""} placeholder="/assets/…" />
         </fieldset>
 
         <fieldset className="admin-fieldset">

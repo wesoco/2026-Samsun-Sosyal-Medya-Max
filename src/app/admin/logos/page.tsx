@@ -4,6 +4,7 @@ import { redirect } from "next/navigation";
 import { prisma } from "@/lib/prisma";
 import { requireAdmin } from "@/lib/admin";
 import { AdminChrome } from "@/components/admin/AdminChrome";
+import { ImageField } from "@/components/admin/ImageField";
 
 export const dynamic = "force-dynamic";
 
@@ -41,10 +42,7 @@ export default async function AdminLogosPage() {
           Ad
           <input name="name" required />
         </label>
-        <label>
-          Görsel URL
-          <input name="imageUrl" required placeholder="/assets/logos/..." />
-        </label>
+        <ImageField name="imageUrl" label="Görsel" folder="logos" required placeholder="/assets/logos/…" />
         <label>
           Sıra
           <input name="sortOrder" type="number" defaultValue={logos.length + 1} />

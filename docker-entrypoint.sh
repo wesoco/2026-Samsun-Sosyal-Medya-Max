@@ -6,6 +6,9 @@ if [ -z "$DATABASE_URL" ]; then
   exit 1
 fi
 
+UPLOAD_DIR="${UPLOAD_DIR:-/app/uploads}"
+mkdir -p "$UPLOAD_DIR"
+
 echo "Syncing database schema (prisma db push)..."
 prisma db push --skip-generate
 

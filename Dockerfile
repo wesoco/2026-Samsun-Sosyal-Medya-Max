@@ -28,10 +28,13 @@ ENV NODE_ENV=production
 ENV NEXT_TELEMETRY_DISABLED=1
 ENV HOSTNAME=0.0.0.0
 ENV PORT=3000
+ENV UPLOAD_DIR=/app/uploads
 
 RUN addgroup --system --gid 1001 nodejs \
   && adduser --system --uid 1001 nextjs \
-  && npm install -g prisma@6.19.3
+  && npm install -g prisma@6.19.3 \
+  && mkdir -p /app/uploads \
+  && chown -R nextjs:nodejs /app/uploads
 
 COPY --from=builder /app/public ./public
 COPY --from=builder /app/prisma ./prisma
@@ -49,5 +52,6 @@ RUN chmod +x ./docker-entrypoint.sh
 
 USER nextjs
 EXPOSE 3000
+VOLUME ["/app/uploads"]
 
 ENTRYPOINT ["./docker-entrypoint.sh"]

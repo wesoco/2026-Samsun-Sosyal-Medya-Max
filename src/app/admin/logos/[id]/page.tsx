@@ -3,6 +3,7 @@ import { notFound, redirect } from "next/navigation";
 import { prisma } from "@/lib/prisma";
 import { requireAdmin } from "@/lib/admin";
 import { AdminChrome } from "@/components/admin/AdminChrome";
+import { ImageField } from "@/components/admin/ImageField";
 
 export const dynamic = "force-dynamic";
 
@@ -35,10 +36,7 @@ export default async function AdminLogoEditPage({ params }: { params: Promise<{ 
           Ad
           <input name="name" required defaultValue={l.name} />
         </label>
-        <label>
-          Görsel URL
-          <input name="imageUrl" required defaultValue={l.imageUrl} />
-        </label>
+        <ImageField name="imageUrl" label="Görsel" folder="logos" required defaultValue={l.imageUrl} />
         <label>
           Sıra
           <input name="sortOrder" type="number" defaultValue={l.sortOrder} />

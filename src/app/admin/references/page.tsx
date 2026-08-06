@@ -4,6 +4,7 @@ import { redirect } from "next/navigation";
 import { prisma } from "@/lib/prisma";
 import { requireAdmin } from "@/lib/admin";
 import { AdminChrome } from "@/components/admin/AdminChrome";
+import { ImageField } from "@/components/admin/ImageField";
 
 export const dynamic = "force-dynamic";
 
@@ -56,10 +57,7 @@ export default async function AdminReferencesPage() {
             <option value="tanitici">Tanıtım filmi · 1920×1080</option>
           </select>
         </label>
-        <label>
-          Görsel URL
-          <input name="imageUrl" required placeholder="/assets/refs/..." />
-        </label>
+        <ImageField name="imageUrl" label="Görsel" folder="refs" required placeholder="/assets/refs/…" />
         <label>
           Video URL (YouTube ID veya link)
           <input name="videoUrl" />
