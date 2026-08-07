@@ -43,13 +43,18 @@ export async function listPublicBlogPosts(opts?: {
       continue;
     }
 
+    const bodyImg = (p.bodyHtml || "").match(/<img[^>]+src=["']([^"']+)["']/i)?.[1];
     bySlug.set(p.slug, {
       id: p.id,
       slug: p.slug,
       title: p.title,
       lead: p.metaDescription || existing?.lead || "",
       category: "SEO",
-      coverUrl: p.coverImageUrl || existing?.coverUrl || "/images/cover.webp",
+      coverUrl:
+        p.coverImageUrl ||
+        bodyImg ||
+        existing?.coverUrl ||
+        "/assets/Trabzon-sosyal-medya.webp",
       publishedAt,
     });
   }

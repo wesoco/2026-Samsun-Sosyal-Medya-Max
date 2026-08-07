@@ -1,4 +1,5 @@
 import { verifySignature } from "@wesoco/seo-core";
+import { normalizeAgentPostImages } from "../normalize-images";
 import { createDefaultStore, type AgentPost, type PostStore } from "../storage";
 
 export interface AgentHandlerOptions {
@@ -106,7 +107,7 @@ export function createSeoAgentHandlers(opts?: AgentHandlerOptions) {
 
     const now = new Date().toISOString();
     const existing = await store.getBySlug(payload.slug);
-    const post: AgentPost = {
+    const post = normalizeAgentPostImages({
       id: existing?.id ?? `post_${Date.now().toString(36)}`,
       slug: payload.slug,
       title: payload.title,
@@ -123,7 +124,7 @@ export function createSeoAgentHandlers(opts?: AgentHandlerOptions) {
           : payload.publishedAt ?? now,
       createdAt: existing?.createdAt ?? now,
       updatedAt: now,
-    };
+    });
 
     await store.upsert(post);
     const base = publicBaseUrl.replace(/\/$/, "");

@@ -1,22 +1,77 @@
 import Link from "next/link";
-import { createDefaultStore } from "@wesoco/seo-agent";
+import { revalidatePath } from "next/cache";
+import { redirect } from "next/navigation";
+import {
+  createDefaultStore,
+  normalizeAgentPostImages,
+} from "@wesoco/seo-agent";
 import { AdminChrome } from "@/components/admin/AdminChrome";
 import { requireStaff } from "@/lib/admin";
 import { paths } from "@/lib/paths";
+import { revalidateSitemapAndFeed } from "@/lib/revalidate-public";
 
 export const dynamic = "force-dynamic";
 
-export default async function SeoAgentAdminPage() {
+export default async function SeoAgentAdminPage({
+  searchParams,
+}: {
+  searchParams: Promise<{ fixed?: string }>;
+}) {
   await requireStaff();
-  const posts = await createDefaultStore().list().catch(() => []);
+  const sp = await searchParams;
+  const store = createDefaultStore();
+  const posts = await store.list().catch(() => []);
   const published = posts.filter((p) => p.status === "published");
   const drafts = posts.filter((p) => p.status !== "published");
+
+  async function fixDuplicateImages() {
+    "use server";
+    await requireStaff();
+    const s = createDefaultStore();
+    const all = await s.list();
+    let n = 0;
+    for (const p of all) {
+      const fixed = normalizeAgentPostImages(p);
+      if (fixed.coverImageUrl !== p.coverImageUrl) {
+        await s.upsert({ ...fixed, updatedAt: new Date().toISOString() });
+        n += 1;
+      }
+    }
+    revalidatePath("/");
+    revalidatePath("/blog");
+    revalidatePath("/admin/seo-agent");
+    revalidateSitemapAndFeed();
+    redirect(`/admin/seo-agent?fixed=${n}`);
+  }
 
   return (
     <AdminChrome
       title="SEO Agent"
-      description="Wesoco panelinden gelen yazılar. Secret yalnızca .env.local içinde olmalı."
+      description="Wesoco panelinden gelen yazılar. Buradan düzenleyip tek görsele indirebilirsiniz."
+      actions={
+        <Link href="/admin/blog" className="admin-btn admin-btn-secondary">
+          Prisma blog
+        </Link>
+      }
     >
+      {sp.fixed != null ? (
+        <p className="admin-alert" style={{ color: "var(--ok, #0a7)" }}>
+          Çift kapak temizlendi: {sp.fixed} yazı güncellendi.
+        </p>
+      ) : null}
+
+      <section className="admin-card">
+        <h2>Çift görsel düzelt</h2>
+        <p className="admin-muted">
+          Panel kapak + içerikte aynı görseli gönderince biri kırık görünür. Bu düğme içerikte görsel olan
+          yazılarda ayrı kapağı kaldırır.
+        </p>
+        <form action={fixDuplicateImages}>
+          <button type="submit" className="admin-btn admin-btn-primary">
+            Tüm agent yazılarında tek görsele indir
+          </button>
+        </form>
+      </section>
       <section className="admin-card">
         <h2>Bağlantı</h2>
         <p>
@@ -39,28 +94,70 @@ export default async function SeoAgentAdminPage() {
         {published.length === 0 ? (
           <p>Henüz panelden yayınlanmış yazı yok.</p>
         ) : (
-          <ul className="admin-list">
-            {published.map((p) => (
-              <li key={p.id}>
-                <Link href={paths.blogPost(p.slug)}>{p.title}</Link>
-                <span className="admin-muted"> /{p.slug}</span>
-              </li>
-            ))}
-          </ul>
+          <div className="admin-table-wrap">
+            <table className="admin-table">
+              <thead>
+                <tr>
+                  <th>Yazı</th>
+                  <th>Durum</th>
+                  <th>İşlem</th>
+                </tr>
+              </thead>
+              <tbody>
+                {published.map((p) => (
+                  <tr key={p.id}>
+                    <td>
+                      <strong>{p.title}</strong>
+                      <div className="admin-muted">
+                        <Link href={paths.blogPost(p.slug)} target="_blank" className="admin-link">
+                          /blog/{p.slug}
+                        </Link>
+                      </div>
+                    </td>
+                    <td>
+                      <span className="admin-badge is-live">Yayında</span>
+                    </td>
+                    <td>
+                      <Link href={`/admin/seo-agent/${p.id}`} className="admin-btn admin-btn-sm">
+                        Düzenle
+                      </Link>
+                    </td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
         )}
       </section>
 
       {drafts.length > 0 ? (
         <section className="admin-card">
           <h2>Taslak ({drafts.length})</h2>
-          <ul className="admin-list">
-            {drafts.map((p) => (
-              <li key={p.id}>
-                {p.title}
-                <span className="admin-muted"> /{p.slug}</span>
-              </li>
-            ))}
-          </ul>
+          <div className="admin-table-wrap">
+            <table className="admin-table">
+              <thead>
+                <tr>
+                  <th>Yazı</th>
+                  <th>İşlem</th>
+                </tr>
+              </thead>
+              <tbody>
+                {drafts.map((p) => (
+                  <tr key={p.id}>
+                    <td>
+                      <strong>{p.title}</strong>
+                      <div className="admin-muted">/{p.slug}</div>
+                    </td>
+                    <td>
+                      <Link href={`/admin/seo-agent/${p.id}`} className="admin-btn admin-btn-sm">
+                        Düzenle
+                      </Link>
+                    </td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
         </section>
       ) : null}
     </AdminChrome>

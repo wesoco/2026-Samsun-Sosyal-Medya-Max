@@ -182,7 +182,9 @@ export default async function BlogPostPage({ params }: Props) {
 
           <div className="container blog-wide blog-layout">
             <div className="blog-main">
-              {post.coverUrl && !bodyHasCover(post.bodyHtml, post.coverUrl) ? (
+              {post.coverUrl &&
+              !bodyHasCover(post.bodyHtml, post.coverUrl) &&
+              !(post.source === "seo-agent" && /<img\b/i.test(post.bodyHtml)) ? (
                 <div className="blog-cover">
                   <SafeImage
                     src={post.coverUrl}
