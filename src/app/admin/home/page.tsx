@@ -7,20 +7,20 @@ import { ImageField } from "@/components/admin/ImageField";
 import { HeroSlidesEditor, type HeroSlideForm } from "@/components/admin/HeroSlidesEditor";
 import { ProcessStepsEditor, type ProcessStepForm } from "@/components/admin/ProcessStepsEditor";
 import { ApproachTableEditor, type ApproachRow } from "@/components/admin/ApproachTableEditor";
+import { DEFAULT_HERO_SLIDES } from "@/lib/hero-slides";
 
 export const dynamic = "force-dynamic";
 
-const DEFAULT_SLIDES: HeroSlideForm[] = [
-  {
-    signal: "Trabzon Sosyal Medya Ajansı",
-    title: "Trabzon sosyal medya yönetimi için güvenilir ajans.",
-    lead: "Instagram, TikTok, Facebook ve LinkedIn'de yerel markaları büyütüyoruz. Ortahisar'dan 18 ilçeye Wesoco güvencesiyle.",
-    image: "/assets/hero/01.webp",
-    alt: "Trabzon sosyal medya ajansı. Wesoco ekibi ve yerel marka çalışmaları",
-    href: "/hizmetler/sosyal-medya-yonetimi",
-    cta: "Sosyal medya yönetimi",
-  },
-];
+const DEFAULT_SLIDES: HeroSlideForm[] = DEFAULT_HERO_SLIDES.map((s) => ({
+  signal: s.signal,
+  title: s.title,
+  lead: s.lead,
+  image: s.image,
+  alt: s.alt,
+  href: s.href || "",
+  cta: s.cta || "",
+  tags: (s.tags || []).join(", "),
+}));
 
 const DEFAULT_PROCESS: ProcessStepForm[] = [
   { num: "01", title: "Keşif", desc: "Markanızı, hedef kitlenizi ve rakiplerinizi dinliyoruz." },
@@ -45,17 +45,43 @@ function str(formData: FormData, key: string, fallback = "") {
 function normalizeSlides(raw: unknown): HeroSlideForm[] {
   if (!Array.isArray(raw) || !raw.length) return DEFAULT_SLIDES;
   return raw.map((item) => {
-    const s = item as Partial<HeroSlideForm>;
+    const s = item as Record<string, unknown>;
+    const tagsRaw = s.tags;
+    const tags =
+      typeof tagsRaw === "string"
+        ? tagsRaw
+        : Array.isArray(tagsRaw)
+          ? tagsRaw.map(String).join(", ")
+          : "";
     return {
       signal: String(s.signal || ""),
       title: String(s.title || ""),
       lead: String(s.lead || ""),
-      image: String(s.image || "/assets/hero/01.webp"),
+      image: String(s.image || "/assets/hero/03.webp"),
       alt: String(s.alt || ""),
       href: s.href ? String(s.href) : "",
       cta: s.cta ? String(s.cta) : "",
+      tags,
     };
   });
+}
+
+function slidesForDb(slides: HeroSlideForm[]) {
+  return slides.map((s) => ({
+    signal: s.signal,
+    title: s.title,
+    lead: s.lead,
+    image: s.image,
+    alt: s.alt,
+    href: s.href || undefined,
+    cta: s.cta || undefined,
+    tags: s.tags
+      ? s.tags
+          .split(",")
+          .map((t) => t.trim())
+          .filter(Boolean)
+      : [],
+  }));
 }
 
 function normalizeProcess(raw: unknown): ProcessStepForm[] {
@@ -85,7 +111,7 @@ export default async function AdminHomePage() {
     home = await prisma.homeContent.create({
       data: {
         id: "default",
-        heroSlidesJson: DEFAULT_SLIDES,
+        heroSlidesJson: DEFAULT_HERO_SLIDES,
         processJson: DEFAULT_PROCESS,
         approachTableJson: DEFAULT_APPROACH_TABLE,
       },
@@ -103,11 +129,11 @@ export default async function AdminHomePage() {
   async function save(formData: FormData) {
     "use server";
     await requireStaff();
-    let heroSlidesJson: unknown = DEFAULT_SLIDES;
+    let heroSlidesJson: unknown = DEFAULT_HERO_SLIDES;
     let processJson: unknown = DEFAULT_PROCESS;
     let approachTableJson: unknown = DEFAULT_APPROACH_TABLE;
     try {
-      heroSlidesJson = normalizeSlides(JSON.parse(String(formData.get("heroSlidesJson") || "[]")));
+      heroSlidesJson = slidesForDb(normalizeSlides(JSON.parse(String(formData.get("heroSlidesJson") || "[]"))));
       processJson = normalizeProcess(JSON.parse(String(formData.get("processJson") || "[]")));
       approachTableJson = normalizeApproach(JSON.parse(String(formData.get("approachTableJson") || "[]")));
     } catch {

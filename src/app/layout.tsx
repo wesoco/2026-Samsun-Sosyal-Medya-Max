@@ -41,11 +41,9 @@ export default async function RootLayout({ children }: { children: React.ReactNo
         <link
           rel="preload"
           as="image"
-          href="/assets/hero/01-xs.avif"
-          type="image/avif"
+          href="/assets/hero/03.webp"
+          type="image/webp"
           fetchPriority="high"
-          imageSrcSet="/assets/hero/01-xs.avif 640w"
-          imageSizes="360px"
         />
       </head>
       <body className={`${montserrat.variable} ${montserrat.className}`}>

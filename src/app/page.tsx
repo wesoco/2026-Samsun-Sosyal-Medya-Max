@@ -7,78 +7,13 @@ import { prisma } from "@/lib/prisma";
 import { paths } from "@/lib/paths";
 import { jsonLdScript, entityGraphJsonLd, faqPageJsonLd, referenceItemListJsonLd, type SiteNap } from "@/lib/seo";
 import { SiteChrome } from "@/components/site/SiteChrome";
+import { DEFAULT_HERO_SLIDES, type HeroSlide } from "@/lib/hero-slides";
 
 export const revalidate = 60;
 
-type HeroSlide = {
-  signal: string;
-  title: string;
-  lead: string;
-  image: string;
-  alt: string;
-  href?: string;
-  cta?: string;
-};
-
 type ProcessStep = { num: string; title: string; desc: string };
 
-/** Tek h1 + diğer slaytlarda h2; her slaytta Trabzon + hizmet niyeti + anlamlı alt */
-const FALLBACK_SLIDES: HeroSlide[] = [
-  {
-    signal: "Sosyal Medya & Dijital Pazarlama",
-    title: "Trabzon sosyal medya yönetimi ile markanızı büyütecek ajans.",
-    lead: "Instagram, Facebook, TikTok ve LinkedIn'de strateji, içerik ve reklam yönetimi. Ortahisar'dan 18 ilçeye ölçülebilir büyüme.",
-    image: "/assets/hero/01.webp",
-    alt: "Trabzon sosyal medya ajansı ekip ve prodüksiyon",
-    href: "/hizmetler/sosyal-medya-yonetimi",
-    cta: "Sosyal medya yönetimi",
-  },
-  {
-    signal: "Instagram Yönetimi",
-    title: "Trabzon Instagram yönetimi: hesabı büyüten değil dönüşüm üreten ajans.",
-    lead: "Grid, reels, story ve topluluk yönetimi tek sistemde. Yerel işletmeler için net CTA ve düzenli yayın ritmi.",
-    image: "/assets/hero/02.webp",
-    alt: "Trabzon Instagram yönetimi ve içerik üretimi",
-    href: "/hizmetler/instagram-yonetimi",
-    cta: "Instagram yönetimi",
-  },
-  {
-    signal: "Meta Ads",
-    title: "Trabzon Meta Ads ile Instagram ve Facebook'ta ölçülebilir sonuç.",
-    lead: "Doğru kitle, kreatif test ve şeffaf raporlama. Bütçenizi boşa harcamadan mesaj ve satış odaklı reklam.",
-    image: "/assets/hero/03.webp",
-    alt: "Trabzon Meta Ads reklam yönetimi",
-    href: "/hizmetler/meta-ads",
-    cta: "Meta Ads hizmeti",
-  },
-  {
-    signal: "Google Ads",
-    title: "Trabzon Google Ads ile arayan müşteriye ulaşın.",
-    lead: "Arama, Display ve YouTube reklamlarıyla niyetli müşteriye ulaşın. Anahtar kelime, dönüşüm izleme ve şeffaf medya satırı.",
-    image: "/assets/hero/04.webp",
-    alt: "Trabzon Google Ads yönetimi",
-    href: "/hizmetler/google-ads",
-    cta: "Google Ads hizmeti",
-  },
-  {
-    signal: "İçerik & Çekim",
-    title: "Trabzon içerik üretimi: reels, fotoğraf ve profesyonel çekim.",
-    lead: "Yerinde çekim, kurgu ve sosyal formatlara kırılmış stok. Markanızın gerçek yüzünü ekrana taşıyoruz.",
-    image: "/assets/hero/05.webp",
-    alt: "Trabzon içerik üretimi ve profesyonel çekim",
-    href: "/hizmetler/icerik-uretimi-cekim",
-    cta: "İçerik üretimi",
-  },
-  {
-    signal: "Drone Çekimi",
-    title: "Trabzon drone çekimi ile markanızı havadan anlatın.",
-    lead: "Otel, inşaat, turizm ve kurumsal projeler için profesyonel drone video ve fotoğraf. Sosyal medya ve tanıtım filmine hazır.",
-    image: "/assets/hero/06.webp",
-    alt: "Trabzon drone çekimi ve havadan görüntüleme",
-    href: "/hizmetler/drone-cekimi",
-    cta: "Drone çekimi",
-  },
-];
+const FALLBACK_SLIDES = DEFAULT_HERO_SLIDES;
 
 const FALLBACK_PROCESS: ProcessStep[] = [
   { num: "01", title: "Keşif", desc: "Markanızı, hedef kitlenizi ve rakiplerinizi dinliyoruz." },
@@ -143,15 +78,21 @@ export default async function HomePage() {
 
   const slides = (
     Array.isArray(home?.heroSlidesJson) && (home.heroSlidesJson as unknown[]).length > 0
-      ? (home.heroSlidesJson as HeroSlide[]).map((s, i) => ({
-          ...FALLBACK_SLIDES[i % FALLBACK_SLIDES.length],
-          ...s,
-          alt: s.alt || FALLBACK_SLIDES[i % FALLBACK_SLIDES.length]?.alt || `${s.signal}: ${s.title}`,
-          href: s.href || FALLBACK_SLIDES[i % FALLBACK_SLIDES.length]?.href,
-          cta: s.cta || FALLBACK_SLIDES[i % FALLBACK_SLIDES.length]?.cta,
-        }))
+      ? (home.heroSlidesJson as HeroSlide[]).map((s, i) => {
+          const fb = FALLBACK_SLIDES[i % FALLBACK_SLIDES.length];
+          return {
+            ...fb,
+            ...s,
+            signal: s.signal ?? fb?.signal ?? "",
+            alt: s.alt || fb?.alt || s.title || "Hero",
+            href: s.href || fb?.href,
+            cta: s.cta || fb?.cta,
+            tags: Array.isArray(s.tags) && s.tags.length ? s.tags : fb?.tags || [],
+          };
+        })
       : FALLBACK_SLIDES
   ) as HeroSlide[];
+  const firstHeroSrc = slides[0]?.image || "/assets/hero/03.webp";
   const processSteps = (Array.isArray(home?.processJson) ? home.processJson : FALLBACK_PROCESS) as ProcessStep[];
   const wa = s.whatsapp;
 
@@ -194,29 +135,20 @@ export default async function HomePage() {
                   data-slide={i}
                   aria-hidden={i === 0 ? undefined : true}
                   aria-roledescription="slide"
-                  aria-label={`${i + 1} / ${slides.length}: ${slide.signal}`}
+                  aria-label={`${i + 1} / ${slides.length}: ${slide.title}`}
                 >
                   <div className="hero-media">
-                    {/* Static WebP/AVIF: LCP için optimizer round-trip yok; diğer slaytlar data-src ile gecikmeli */}
+                    {/* Static WebP: LCP ilk slayt (Wesoco sırası: 03); diğerleri data-src */}
                     {i === 0 ? (
-                      <picture>
-                        <source
-                          type="image/avif"
-                          srcSet="/assets/hero/01-xs.avif 640w, /assets/hero/01-sm.webp 750w"
-                          sizes="(max-width: 900px) 360px, 1200px"
-                        />
-                        <img
-                          src="/assets/hero/01-xs.webp"
-                          srcSet="/assets/hero/01-xs.webp 640w, /assets/hero/01-sm.webp 750w, /assets/hero/01-md.webp 960w, /assets/hero/01.webp 1200w"
-                          sizes="(max-width: 900px) 360px, (max-width: 1024px) 960px, 1200px"
-                          alt={slide.alt}
-                          width={1280}
-                          height={800}
-                          decoding="async"
-                          fetchPriority="high"
-                          className="hero-img"
-                        />
-                      </picture>
+                      <img
+                        src={firstHeroSrc}
+                        alt={slide.alt}
+                        width={1280}
+                        height={800}
+                        decoding="async"
+                        fetchPriority="high"
+                        className="hero-img"
+                      />
                     ) : (
                       <img
                         src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
@@ -233,9 +165,16 @@ export default async function HomePage() {
                     <div className="hero-gradient" aria-hidden="true" />
                   </div>
                   <div className="hero-content">
-                    <p className="brand-signal">{slide.signal}</p>
+                    {slide.signal ? <p className="brand-signal">{slide.signal}</p> : null}
                     {i === 0 ? <h1>{slide.title}</h1> : <h2 className="hero-title">{slide.title}</h2>}
                     <p className="hero-lead">{slide.lead}</p>
+                    {slide.tags && slide.tags.length > 0 ? (
+                      <ul className="hero-slide-tags" aria-label="Anahtar konular">
+                        {slide.tags.map((tag) => (
+                          <li key={tag}>{tag}</li>
+                        ))}
+                      </ul>
+                    ) : null}
                     {slide.href ? (
                       <p className="hero-slide-link">
                         <Link href={slide.href}>{slide.cta || "Hizmeti incele"}</Link>
@@ -247,28 +186,13 @@ export default async function HomePage() {
             </div>
             <div className="hero-footer">
               <div className="hero-actions">
-                <a
-                  href={`https://wa.me/${wa}?text=${encodeURIComponent("Merhaba, Trabzon Sosyal Medya hizmetleri hakkında teklif almak istiyorum.")}`}
-                  className="btn btn-primary header-whatsapp"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor" aria-hidden="true">
-                    <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.435 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
-                  </svg>
-                  WhatsApp
-                </a>
+                <Link href={paths.hash.contact} className="btn btn-primary">
+                  Teklif Al
+                </Link>
                 <Link href={paths.hash.refs} className="btn btn-ghost">
-                  Referansları Gör
+                  Projelerimizi Gör
                 </Link>
               </div>
-              <nav className="hero-topics" aria-label="Öne çıkan hizmetler">
-                {services.slice(0, 6).map((svc) => (
-                  <Link key={svc.id} href={paths.service(svc.slug)}>
-                    {svc.title.replace(/^Trabzon\s+/i, "")}
-                  </Link>
-                ))}
-              </nav>
               <div className="hero-pager" role="tablist" aria-label="Slayt seçimi">
                 {slides.map((slide, i) => (
                   <button
@@ -276,7 +200,7 @@ export default async function HomePage() {
                     type="button"
                     role="tab"
                     aria-selected={i === 0}
-                    aria-label={`${String(i + 1).padStart(2, "0")}: ${slide.signal}`}
+                    aria-label={`${String(i + 1).padStart(2, "0")}: ${slide.title}`}
                     className={i === 0 ? "is-active" : undefined}
                     data-slide={i}
                   >

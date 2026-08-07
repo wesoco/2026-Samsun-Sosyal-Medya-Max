@@ -10,6 +10,8 @@ export type HeroSlideForm = {
   alt: string;
   href?: string;
   cta?: string;
+  /** Admin'de virgülle ayrılmış; DB'de string[] */
+  tags?: string;
 };
 
 type Props = {
@@ -21,10 +23,11 @@ const emptySlide = (): HeroSlideForm => ({
   signal: "",
   title: "",
   lead: "",
-  image: "/assets/hero/01.webp",
+  image: "/assets/hero/03.webp",
   alt: "",
   href: "",
   cta: "",
+  tags: "",
 });
 
 export function HeroSlidesEditor({ name = "heroSlidesJson", initial }: Props) {
@@ -91,12 +94,12 @@ export function HeroSlidesEditor({ name = "heroSlidesJson", initial }: Props) {
           </legend>
           <div className="admin-field-grid">
             <label>
-              Üst etiket (signal)
-              <input value={slide.signal} onChange={(e) => update(i, { signal: e.target.value })} required />
+              Üst etiket (signal, opsiyonel)
+              <input value={slide.signal} onChange={(e) => update(i, { signal: e.target.value })} placeholder="Boş bırakılabilir" />
             </label>
             <label>
-              Buton metni (CTA)
-              <input value={slide.cta || ""} onChange={(e) => update(i, { cta: e.target.value })} placeholder="Sosyal medya yönetimi" />
+              Buton metni (CTA, opsiyonel)
+              <input value={slide.cta || ""} onChange={(e) => update(i, { cta: e.target.value })} placeholder="Hizmeti incele" />
             </label>
           </div>
           <label>
@@ -106,6 +109,14 @@ export function HeroSlidesEditor({ name = "heroSlidesJson", initial }: Props) {
           <label>
             Lead / kısa metin
             <textarea value={slide.lead} onChange={(e) => update(i, { lead: e.target.value })} rows={2} required />
+          </label>
+          <label>
+            Tag’ler (virgülle)
+            <input
+              value={slide.tags || ""}
+              onChange={(e) => update(i, { tags: e.target.value })}
+              placeholder="Instagram, Facebook, TikTok"
+            />
           </label>
           <div className="admin-field-grid">
             <label>
