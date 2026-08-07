@@ -1,0 +1,27 @@
+---
+description: Wesoco SEO Agent entegrasyonu. panelden otomatik blog yazısı
+globs:
+  - src/app/**/*
+  - src/lib/**/*
+  - packages/**/*
+  - .env*
+alwaysApply: false
+---
+
+# Wesoco SEO Agent
+
+Bu proje Wesoco AI paneline bağlanır.
+
+## Zorunlu parçalar
+- Paket: `@wesoco/seo-agent`
+- Route: `src/app/api/seo-agent/[...path]/route.ts` → `export { GET, POST, PUT } from "@wesoco/seo-agent/next"`
+- Helper: `src/lib/seo-posts.ts` (`listSeoPosts`, `getSeoPost`)
+- Env: `SEO_AGENT_SITE_KEY`, `SEO_AGENT_SECRET`, `SEO_AGENT_PUBLIC_URL` (`.env.local`, commit yok)
+
+## Davranış
+- Panel HMAC imzalı istek atar; secret olmadan yazı basılamaz.
+- Yayınlanan yazılar `/blog` altında görünür.
+- Secret'ı UI'da veya git'te asla gösterme.
+
+## Yeni site / eksik entegrasyon istenirse
+`AI-KURULUM.md` adımlarını uygula; mevcut tasarımı bozmadan blog + API'yi bağla.

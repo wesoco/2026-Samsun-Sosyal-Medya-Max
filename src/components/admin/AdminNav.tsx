@@ -21,6 +21,7 @@ const GROUPS: NavGroup[] = [
     title: "İçerik",
     items: [
       { href: "/admin/blog", label: "Blog" },
+      { href: "/admin/seo-agent", label: "SEO Agent" },
       { href: "/admin/services", label: "Hizmetler" },
       { href: "/admin/sectors", label: "Sektörler" },
       { href: "/admin/cases", label: "Vakalar" },

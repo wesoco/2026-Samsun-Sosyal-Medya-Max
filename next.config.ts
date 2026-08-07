@@ -2,6 +2,7 @@ import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
   output: "standalone",
+  transpilePackages: ["@wesoco/seo-agent", "@wesoco/seo-core"],
   images: {
     formats: ["image/avif", "image/webp"],
     remotePatterns: [

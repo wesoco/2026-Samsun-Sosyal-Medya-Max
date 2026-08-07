@@ -2,6 +2,7 @@
 
 # dependencies
 /node_modules
+**/node_modules
 /.pnp
 .pnp.*
 .yarn/*
@@ -47,3 +48,6 @@ dumps/
 /uploads/*
 !/uploads/.gitkeep
 
+
+# Wesoco SEO Agent data
+.data/

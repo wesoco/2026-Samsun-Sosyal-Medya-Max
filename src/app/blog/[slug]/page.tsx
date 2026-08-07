@@ -13,6 +13,7 @@ import {
   type FaqPair,
   type SiteNap,
 } from "@/lib/seo";
+import { getSeoPost } from "@/lib/seo-posts";
 import { SiteChrome } from "@/components/site/SiteChrome";
 import { AnswerBox } from "@/components/seo/GeoBlocks";
 import { TopicCluster } from "@/components/seo/TopicCluster";
@@ -21,10 +22,68 @@ export const dynamic = "force-dynamic";
 
 type Props = { params: Promise<{ slug: string }> };
 
+type UnifiedPost = {
+  slug: string;
+  title: string;
+  lead: string;
+  bodyHtml: string;
+  coverUrl: string | null;
+  category: string;
+  seoTitle: string | null;
+  seoDesc: string | null;
+  publishedAt: Date;
+  updatedAt: Date;
+  faqJson: FaqPair[];
+  source: "db" | "seo-agent";
+};
+
+async function loadPost(slug: string): Promise<UnifiedPost | null> {
+  const db = await prisma.blogPost.findUnique({ where: { slug } });
+  if (db?.published) {
+    return {
+      slug: db.slug,
+      title: db.title,
+      lead: db.lead,
+      bodyHtml: db.bodyHtml,
+      coverUrl: db.coverUrl,
+      category: db.category,
+      seoTitle: db.seoTitle,
+      seoDesc: db.seoDesc,
+      publishedAt: db.publishedAt,
+      updatedAt: db.updatedAt,
+      faqJson: (db.faqJson as FaqPair[]) || [],
+      source: "db",
+    };
+  }
+
+  const agent = await getSeoPost(slug).catch(() => null);
+  if (!agent) return null;
+
+  const faqs: FaqPair[] = (agent.faq || []).map((f) => ({
+    q: f.question,
+    a: f.answer,
+  }));
+
+  return {
+    slug: agent.slug,
+    title: agent.title,
+    lead: agent.metaDescription || "",
+    bodyHtml: agent.bodyHtml,
+    coverUrl: agent.coverImageUrl || "/images/cover.webp",
+    category: "SEO",
+    seoTitle: agent.title,
+    seoDesc: agent.metaDescription || null,
+    publishedAt: new Date(agent.publishedAt || agent.createdAt),
+    updatedAt: new Date(agent.updatedAt || agent.createdAt),
+    faqJson: faqs,
+    source: "seo-agent",
+  };
+}
+
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { slug } = await params;
-  const post = await prisma.blogPost.findUnique({ where: { slug } });
-  if (!post || !post.published) return {};
+  const post = await loadPost(slug);
+  if (!post) return {};
   return buildMetadata({
     title: post.seoTitle || post.title,
     description: post.seoDesc || post.lead,
@@ -36,8 +95,8 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 
 export default async function BlogPostPage({ params }: Props) {
   const { slug } = await params;
-  const [post, settings, related, services, districts] = await Promise.all([
-    prisma.blogPost.findUnique({ where: { slug } }),
+  const [post, settings, relatedDb, services, districts] = await Promise.all([
+    loadPost(slug),
     prisma.siteSetting.findUnique({ where: { id: "default" } }),
     prisma.blogPost.findMany({
       where: { published: true, NOT: { slug } },
@@ -58,9 +117,9 @@ export default async function BlogPostPage({ params }: Props) {
       select: { slug: true, name: true },
     }),
   ]);
-  if (!post || !post.published) redirectMissingToHome();
+  if (!post) redirectMissingToHome();
 
-  const faqs = (post.faqJson as FaqPair[]) || [];
+  const faqs = post.faqJson;
   const nap: SiteNap = {
     siteName: settings?.siteName || "Trabzon Sosyal Medya",
     phone: settings?.phone || "+905380581122",
@@ -182,12 +241,12 @@ export default async function BlogPostPage({ params }: Props) {
               </aside>
             </div>
 
-            {related.length > 0 ? (
+            {relatedDb.length > 0 ? (
               <aside className="blog-aside" aria-label="Diğer yazılar">
                 <div className="blog-aside-card">
                   <p className="blog-related-label">Diğer yazılar</p>
                   <ul className="blog-aside-list">
-                    {related.map((r) => (
+                    {relatedDb.map((r) => (
                       <li key={r.slug}>
                         <Link href={paths.blogPost(r.slug)} className="blog-aside-item">
                           {r.coverUrl ? (

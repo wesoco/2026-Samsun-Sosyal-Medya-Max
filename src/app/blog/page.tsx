@@ -4,6 +4,7 @@ import type { Metadata } from "next";
 import { prisma } from "@/lib/prisma";
 import { paths } from "@/lib/paths";
 import { buildMetadata } from "@/lib/seo";
+import { listSeoPosts } from "@/lib/seo-posts";
 import { SiteShell } from "@/components/site/SiteShell";
 
 export const dynamic = "force-dynamic";
@@ -16,11 +17,48 @@ export async function generateMetadata(): Promise<Metadata> {
   });
 }
 
+type CardPost = {
+  id: string;
+  slug: string;
+  title: string;
+  lead: string;
+  category: string;
+  coverUrl: string | null;
+  publishedAt: Date;
+};
+
 export default async function BlogIndexPage() {
-  const posts = await prisma.blogPost.findMany({
-    where: { published: true },
-    orderBy: { publishedAt: "desc" },
-  });
+  const [dbPosts, seoPosts] = await Promise.all([
+    prisma.blogPost.findMany({
+      where: { published: true },
+      orderBy: { publishedAt: "desc" },
+    }),
+    listSeoPosts().catch(() => []),
+  ]);
+
+  const dbSlugs = new Set(dbPosts.map((p) => p.slug));
+  const cards: CardPost[] = [
+    ...dbPosts.map((p) => ({
+      id: p.id,
+      slug: p.slug,
+      title: p.title,
+      lead: p.lead,
+      category: p.category,
+      coverUrl: p.coverUrl,
+      publishedAt: p.publishedAt,
+    })),
+    ...seoPosts
+      .filter((p) => !dbSlugs.has(p.slug))
+      .map((p) => ({
+        id: p.id,
+        slug: p.slug,
+        title: p.title,
+        lead: p.metaDescription || "",
+        category: "SEO",
+        coverUrl: p.coverImageUrl || "/images/cover.webp",
+        publishedAt: new Date(p.publishedAt || p.createdAt),
+      })),
+  ].sort((a, b) => b.publishedAt.getTime() - a.publishedAt.getTime());
 
   return (
     <SiteShell bodyClass="page page-blog">
@@ -40,7 +78,7 @@ export default async function BlogIndexPage() {
         <section className="page-block soft">
           <div className="container">
             <div className="blog-grid">
-              {posts.map((p) => (
+              {cards.map((p) => (
                 <article className="blog-card reveal" key={p.id}>
                   <Link
                     href={paths.blogPost(p.slug)}
