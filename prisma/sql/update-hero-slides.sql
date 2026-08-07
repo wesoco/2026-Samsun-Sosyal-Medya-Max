@@ -1,9 +1,20 @@
--- Coolify Postgres Terminal:
---   psql -U postgres -d postgres
--- Sonra bu dosyanın tamamını yapıştır (uzun satırı kesme!).
--- Bitince Coolify'da uygulamayı Restart et (ISR cache temizlensin).
+-- =============================================================================
+-- HERO UPDATE (title + lead + image + tags) — Coolify Postgres Terminal
+--
+-- 1) Coolify → Databases → bu projenin Postgres'i → Terminal
+-- 2) Şunu yaz:  psql -U postgres -d postgres
+-- 3) Bu dosyanın HEPSİNİ yapıştır (kesme!)
+-- 4) Çıktıda mutlaka görmelisin:  UPDATE 1
+--    ve kontrol tablosunda 6 satır (title/lead/image dolu)
+-- 5) Coolify → site uygulaması → Restart (yoksa eski HTML cache kalır)
+-- =============================================================================
 
-BEGIN;
+-- Şu an ne var? (eskiyse 4 satır görürsün)
+SELECT
+  jsonb_array_length("heroSlidesJson") AS slide_count,
+  "heroSlidesJson"->0->>'title' AS first_title
+FROM "HomeContent"
+WHERE "id" = 'default';
 
 UPDATE "HomeContent"
 SET
@@ -128,12 +139,13 @@ $HEROJSON$::jsonb,
   "updatedAt" = NOW()
 WHERE "id" = 'default';
 
-COMMIT;
+-- Bu satır UPDATE 1 demezse yanlış DB'desin!
+-- (psql "UPDATE 1" yazar)
 
--- Kontrol: image dolu mu?
 SELECT
   ordinality AS n,
   slide->>'title' AS title,
+  left(slide->>'lead', 70) AS lead,
   slide->>'image' AS image
 FROM "HomeContent",
      jsonb_array_elements("heroSlidesJson") WITH ORDINALITY AS t(slide, ordinality)
