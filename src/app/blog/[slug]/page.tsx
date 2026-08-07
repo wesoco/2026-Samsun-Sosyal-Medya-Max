@@ -75,7 +75,7 @@ async function loadPost(slug: string): Promise<UnifiedPost | null> {
     lead: agent.metaDescription || "",
     bodyHtml: agent.bodyHtml,
     coverUrl: agent.coverImageUrl || "/images/cover.webp",
-    category: "SEO",
+    category: "Yazar",
     seoTitle: agent.title,
     seoDesc: agent.metaDescription || null,
     publishedAt: new Date(agent.publishedAt || agent.createdAt),
