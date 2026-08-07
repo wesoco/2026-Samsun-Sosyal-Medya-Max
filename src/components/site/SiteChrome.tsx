@@ -3,6 +3,7 @@ import { SiteHeader, MobileNav } from "@/components/site/Header";
 import { SiteFooter, WhatsAppFloat } from "@/components/site/Footer";
 import { SiteInteractionsLazy } from "@/components/site/SiteInteractionsLazy";
 import { WebMcpToolsLazy } from "@/components/site/WebMcpToolsLazy";
+import { ScrollManager } from "@/components/site/ScrollManager";
 
 type Settings = {
   phone: string;
@@ -55,6 +56,7 @@ export async function SiteChrome({
     <div className={className || undefined}>
       <SiteHeader phoneDisplay={s.phoneDisplay} whatsapp={s.whatsapp} variant={variant} />
       <MobileNav whatsapp={s.whatsapp} />
+      <ScrollManager />
       <SiteInteractionsLazy variant={variant} />
       <WebMcpToolsLazy />
       {children}

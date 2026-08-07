@@ -8,6 +8,7 @@ import { paths } from "@/lib/paths";
 import { listPublicBlogPosts } from "@/lib/blog-posts";
 import { jsonLdScript, entityGraphJsonLd, faqPageJsonLd, referenceItemListJsonLd, type SiteNap } from "@/lib/seo";
 import { SiteChrome } from "@/components/site/SiteChrome";
+import { SafeImage } from "@/components/site/SafeImage";
 import { DEFAULT_HERO_SLIDES, type HeroSlide } from "@/lib/hero-slides";
 
 export const revalidate = 60;
@@ -429,7 +430,7 @@ export default async function HomePage() {
                 <article className="blog-tile reveal" key={p.id}>
                   <Link href={paths.blogPost(p.slug)}>
                     {p.coverUrl ? (
-                      <Image
+                      <SafeImage
                         src={p.coverUrl}
                         alt=""
                         width={900}

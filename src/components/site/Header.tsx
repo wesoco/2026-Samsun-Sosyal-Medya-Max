@@ -31,7 +31,7 @@ export function SiteHeader({ phoneDisplay, whatsapp, variant = "home" }: Props) 
         <SiteLogo />
         <nav className="nav-desktop" aria-label="Ana menü">
           {NAV.map((item) => (
-            <Link key={item.href} href={item.href}>
+            <Link key={item.href} href={item.href} scroll>
               {item.label}
             </Link>
           ))}
@@ -72,7 +72,7 @@ export function MobileNav({ whatsapp }: { whatsapp: string }) {
     <div className="mobile-nav" id="mobileNav" hidden>
       <nav aria-label="Mobil menü">
         {NAV.map((item) => (
-          <Link key={item.href} href={item.href}>
+          <Link key={item.href} href={item.href} scroll>
             {item.label}
           </Link>
         ))}

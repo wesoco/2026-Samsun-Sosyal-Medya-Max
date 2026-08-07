@@ -1,10 +1,10 @@
 import Link from "next/link";
-import Image from "next/image";
 import type { Metadata } from "next";
 import { paths } from "@/lib/paths";
 import { buildMetadata } from "@/lib/seo";
 import { listPublicBlogPosts } from "@/lib/blog-posts";
 import { SiteShell } from "@/components/site/SiteShell";
+import { SafeImage } from "@/components/site/SafeImage";
 
 export const dynamic = "force-dynamic";
 
@@ -45,7 +45,7 @@ export default async function BlogIndexPage() {
                     aria-label={p.title}
                   >
                     {p.coverUrl ? (
-                      <Image
+                      <SafeImage
                         src={p.coverUrl}
                         alt={p.title}
                         width={800}

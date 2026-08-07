@@ -1,5 +1,4 @@
 import Link from "next/link";
-import Image from "next/image";
 import type { Metadata } from "next";
 import { prisma } from "@/lib/prisma";
 import { paths } from "@/lib/paths";
@@ -15,8 +14,14 @@ import {
 } from "@/lib/seo";
 import { getSeoPost } from "@/lib/seo-posts";
 import { SiteChrome } from "@/components/site/SiteChrome";
+import { SafeImage } from "@/components/site/SafeImage";
 import { AnswerBox } from "@/components/seo/GeoBlocks";
 import { TopicCluster } from "@/components/seo/TopicCluster";
+
+function bodyHasCover(html: string, coverUrl: string | null) {
+  if (!coverUrl) return false;
+  return html.includes(coverUrl);
+}
 
 export const dynamic = "force-dynamic";
 
@@ -177,9 +182,9 @@ export default async function BlogPostPage({ params }: Props) {
 
           <div className="container blog-wide blog-layout">
             <div className="blog-main">
-              {post.coverUrl ? (
+              {post.coverUrl && !bodyHasCover(post.bodyHtml, post.coverUrl) ? (
                 <div className="blog-cover">
-                  <Image
+                  <SafeImage
                     src={post.coverUrl}
                     alt={post.title}
                     width={1200}
@@ -251,7 +256,7 @@ export default async function BlogPostPage({ params }: Props) {
                         <Link href={paths.blogPost(r.slug)} className="blog-aside-item">
                           {r.coverUrl ? (
                             <span className="blog-aside-thumb">
-                              <Image src={r.coverUrl} alt="" width={120} height={80} loading="lazy" />
+                              <SafeImage src={r.coverUrl} alt="" width={120} height={80} loading="lazy" />
                             </span>
                           ) : null}
                           <span className="blog-aside-body">
