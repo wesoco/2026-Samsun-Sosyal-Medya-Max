@@ -38,8 +38,9 @@ export function ContactForm({ districts, services, labels }: Props) {
 
   async function onSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
+    const form = e.currentTarget;
     setStatus("loading");
-    const fd = new FormData(e.currentTarget);
+    const fd = new FormData(form);
     const payload = Object.fromEntries(fd.entries());
     try {
       const res = await fetch("/api/contact", {
@@ -47,9 +48,13 @@ export function ContactForm({ districts, services, labels }: Props) {
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(payload),
       });
-      if (!res.ok) throw new Error("fail");
+      const data = (await res.json().catch(() => null)) as { ok?: boolean } | null;
+      if (!res.ok || data?.ok === false) {
+        setStatus("err");
+        return;
+      }
+      form.reset();
       setStatus("ok");
-      e.currentTarget.reset();
     } catch {
       setStatus("err");
     }
