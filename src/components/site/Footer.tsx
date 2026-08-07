@@ -130,8 +130,9 @@ export async function SiteFooter({
             target="_blank"
             rel="noopener noreferrer"
             className="footer-credit-logo"
+            aria-label="Web tasarım: Wesoco"
           >
-            Web Tasarım: Wesoco
+            <span>Web Tasarım:</span>
             <img src="/assets/wesoco-logo-beyaz.svg" alt="" width={96} height={16} aria-hidden="true" />
           </a>
         </p>
