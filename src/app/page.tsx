@@ -280,9 +280,9 @@ export default async function HomePage() {
                   alt={`${l.name} Trabzon sosyal medya referansı`}
                   width={120}
                   height={40}
-                  loading="lazy"
+                  loading="eager"
                   decoding="async"
-                  fetchPriority="low"
+                  draggable={false}
                 />
               ))}
               {logos.map((l) => (
@@ -292,9 +292,9 @@ export default async function HomePage() {
                   alt=""
                   width={120}
                   height={40}
-                  loading="lazy"
+                  loading="eager"
                   decoding="async"
-                  fetchPriority="low"
+                  draggable={false}
                   aria-hidden="true"
                 />
               ))}

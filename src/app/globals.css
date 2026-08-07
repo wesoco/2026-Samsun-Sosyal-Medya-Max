@@ -684,26 +684,35 @@ body.nav-open .menu-toggle:focus-visible {
   overflow: hidden;
   border-bottom: 1px solid var(--navy-faint);
   background: var(--bg);
+  /* compositing: marquee tek katmanda kalsın, alt öğelerle titreme yapmasın */
+  isolation: isolate;
 }
 
 .logos-track {
   display: flex;
   align-items: center;
-  gap: 48px;
+  /* gap kullanma: translateX(-50%) ile (2n-1) gap yarısı ≠ n gap → dikiş/jump */
+  gap: 0;
   width: max-content;
   animation: marquee 55s linear infinite;
-  padding-inline: 24px;
+  will-change: transform;
+  backface-visibility: hidden;
+  transform: translate3d(0, 0, 0);
 }
 
 .logos-track img {
+  display: block;
+  flex: 0 0 auto;
   height: 36px;
   width: auto;
   max-width: 120px;
+  margin-inline-end: 48px;
   object-fit: contain;
   filter: grayscale(1) contrast(1.05);
   opacity: 0.55;
   transition: opacity 0.3s ease, filter 0.3s ease;
-  content-visibility: auto;
+  /* content-visibility animasyonlu şeritte titreme yapar — kullanma */
+  pointer-events: auto;
 }
 
 .logos-track img:hover {
@@ -712,8 +721,8 @@ body.nav-open .menu-toggle:focus-visible {
 }
 
 @keyframes marquee {
-  from { transform: translateX(0); }
-  to { transform: translateX(-50%); }
+  from { transform: translate3d(0, 0, 0); }
+  to { transform: translate3d(-50%, 0, 0); }
 }
 
 /* --- Sections --- */

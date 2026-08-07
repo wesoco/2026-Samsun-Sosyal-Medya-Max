@@ -11,6 +11,7 @@
     "db:push": "prisma db push",
     "db:seed": "npx tsx prisma/seed.ts",
     "db:import-legacy": "npx tsx prisma/import-legacy.ts",
+    "db:import-old-blogs": "npx tsx prisma/import-old-site-blogs.ts",
     "db:seed-seo-blogs": "npx tsx prisma/seed-seo-blogs.ts",
     "db:seed-blog-plan": "npx tsx prisma/seed-blog-plan.ts",
     "db:seed-fill-blogs": "npx tsx prisma/seed-fill-blogs.ts",
