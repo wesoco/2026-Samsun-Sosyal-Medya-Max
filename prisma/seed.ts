@@ -88,8 +88,8 @@ async function main() {
     },
     {
       slug: "dijital-pazarlama-ajansi",
-      title: "Grafik ve Marka",
-      lead: "Görsel dil, sosyal kreatifler ve kampanya tasarımları.",
+      title: "Dijital Pazarlama Ajansı",
+      lead: "İçerik, Meta/Google Ads ve ölçümü full funnel sistemde birleştiren dijital pazarlama.",
       bodyHtml: "<h2>Tasarım</h2><p>Tutarlı marka dili ve dönüşüm odaklı görseller.</p>",
       sortOrder: 5,
     },
@@ -111,9 +111,10 @@ async function main() {
   ];
 
   for (const s of services) {
+    // Uzun SEO içerikleri seed-services-unique ile gelir; stub body ile ezme.
     await prisma.service.upsert({
       where: { slug: s.slug },
-      update: s,
+      update: { title: s.title, sortOrder: s.sortOrder },
       create: { ...s, published: true, seoTitle: `${s.title} | Trabzon Sosyal Medya`, seoDesc: s.lead },
     });
   }
