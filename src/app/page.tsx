@@ -5,6 +5,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { prisma } from "@/lib/prisma";
 import { paths } from "@/lib/paths";
+import { listPublicBlogPosts } from "@/lib/blog-posts";
 import { jsonLdScript, entityGraphJsonLd, faqPageJsonLd, referenceItemListJsonLd, type SiteNap } from "@/lib/seo";
 import { SiteChrome } from "@/components/site/SiteChrome";
 import { DEFAULT_HERO_SLIDES, type HeroSlide } from "@/lib/hero-slides";
@@ -35,7 +36,7 @@ export default async function HomePage() {
     prisma.service.findMany({ where: { published: true }, orderBy: { sortOrder: "asc" } }),
     prisma.homeStat.findMany({ orderBy: { sortOrder: "asc" } }),
     prisma.faqItem.findMany({ where: { published: true }, orderBy: { sortOrder: "asc" } }),
-    prisma.blogPost.findMany({ where: { published: true }, orderBy: { publishedAt: "desc" }, take: 9 }),
+    listPublicBlogPosts({ take: 9 }),
     prisma.district.findMany({ where: { published: true }, orderBy: { sortOrder: "asc" }, take: 18 }),
     prisma.brandLogo.findMany({ where: { published: true }, orderBy: { sortOrder: "asc" }, take: 12 }),
     prisma.referenceItem.findMany({ where: { published: true }, orderBy: { sortOrder: "asc" } }),
