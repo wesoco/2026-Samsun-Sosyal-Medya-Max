@@ -80,10 +80,14 @@ export default async function HomePage() {
     Array.isArray(home?.heroSlidesJson) && (home.heroSlidesJson as unknown[]).length > 0
       ? (home.heroSlidesJson as HeroSlide[]).map((s, i) => {
           const fb = FALLBACK_SLIDES[i % FALLBACK_SLIDES.length];
+          const image = String(s.image || "").trim() || fb?.image || "/assets/hero/03.webp";
           return {
             ...fb,
             ...s,
             signal: s.signal ?? fb?.signal ?? "",
+            title: String(s.title || fb?.title || ""),
+            lead: String(s.lead || fb?.lead || ""),
+            image,
             alt: s.alt || fb?.alt || s.title || "Hero",
             href: s.href || fb?.href,
             cta: s.cta || fb?.cta,
@@ -92,7 +96,6 @@ export default async function HomePage() {
         })
       : FALLBACK_SLIDES
   ) as HeroSlide[];
-  const firstHeroSrc = slides[0]?.image || "/assets/hero/03.webp";
   const processSteps = (Array.isArray(home?.processJson) ? home.processJson : FALLBACK_PROCESS) as ProcessStep[];
   const wa = s.whatsapp;
 
@@ -138,30 +141,17 @@ export default async function HomePage() {
                   aria-label={`${i + 1} / ${slides.length}: ${slide.title}`}
                 >
                   <div className="hero-media">
-                    {/* Static WebP: LCP ilk slayt (Wesoco sırası: 03); diğerleri data-src */}
-                    {i === 0 ? (
-                      <img
-                        src={firstHeroSrc}
-                        alt={slide.alt}
-                        width={1280}
-                        height={800}
-                        decoding="async"
-                        fetchPriority="high"
-                        className="hero-img"
-                      />
-                    ) : (
-                      <img
-                        src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
-                        data-src={slide.image}
-                        alt={slide.alt}
-                        width={1280}
-                        height={800}
-                        loading="lazy"
-                        decoding="async"
-                        fetchPriority="low"
-                        className="hero-img"
-                      />
-                    )}
+                    {/* Tüm slaytlarda gerçek src — data-src boş 1px gif kalmasın */}
+                    <img
+                      src={slide.image}
+                      alt={slide.alt}
+                      width={1280}
+                      height={800}
+                      decoding={i === 0 ? "async" : "async"}
+                      loading={i === 0 ? "eager" : "lazy"}
+                      fetchPriority={i === 0 ? "high" : "low"}
+                      className="hero-img"
+                    />
                     <div className="hero-gradient" aria-hidden="true" />
                   </div>
                   <div className="hero-content">
