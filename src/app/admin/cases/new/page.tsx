@@ -2,7 +2,7 @@ import { revalidatePath } from "next/cache";
 import { revalidateSitemapAndFeed } from "@/lib/revalidate-public";
 import { redirect } from "next/navigation";
 import { prisma } from "@/lib/prisma";
-import { requireAdmin } from "@/lib/admin";
+import { requireStaff } from "@/lib/admin";
 import { AdminChrome } from "@/components/admin/AdminChrome";
 
 export const dynamic = "force-dynamic";
@@ -16,11 +16,11 @@ function slugify(raw: string) {
 }
 
 export default async function AdminCaseNewPage() {
-  await requireAdmin();
+  await requireStaff();
 
   async function create(formData: FormData) {
     "use server";
-    await requireAdmin();
+    await requireStaff();
     const slug = slugify(String(formData.get("slug") || formData.get("title") || ""));
     try {
       await prisma.caseStudy.create({

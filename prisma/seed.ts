@@ -42,7 +42,7 @@ async function main() {
   await prisma.siteSetting.upsert({
     where: { id: "default" },
     update: {},
-    create: { id: "default" },
+    create: { id: "default", gtmId: process.env.NEXT_PUBLIC_GTM_ID || "GTM-M2W8R68W" },
   });
 
   await prisma.homeStat.deleteMany();

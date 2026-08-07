@@ -1,20 +1,20 @@
 import { revalidatePath } from "next/cache";
 import { notFound, redirect } from "next/navigation";
 import { prisma } from "@/lib/prisma";
-import { requireAdmin } from "@/lib/admin";
+import { requireStaff } from "@/lib/admin";
 import { AdminChrome } from "@/components/admin/AdminChrome";
 
 export const dynamic = "force-dynamic";
 
 export default async function AdminStatEditPage({ params }: { params: Promise<{ id: string }> }) {
-  await requireAdmin();
+  await requireStaff();
   const { id } = await params;
   const s = await prisma.homeStat.findUnique({ where: { id } });
   if (!s) notFound();
 
   async function update(formData: FormData) {
     "use server";
-    await requireAdmin();
+    await requireStaff();
     await prisma.homeStat.update({
       where: { id },
       data: {

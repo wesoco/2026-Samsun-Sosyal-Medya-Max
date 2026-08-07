@@ -1,7 +1,7 @@
 import { revalidatePath } from "next/cache";
 import { redirect } from "next/navigation";
 import { prisma } from "@/lib/prisma";
-import { requireAdmin } from "@/lib/admin";
+import { requireStaff } from "@/lib/admin";
 import { AdminChrome } from "@/components/admin/AdminChrome";
 import { ImageField } from "@/components/admin/ImageField";
 import { HeroSlidesEditor, type HeroSlideForm } from "@/components/admin/HeroSlidesEditor";
@@ -79,7 +79,7 @@ function normalizeApproach(raw: unknown): ApproachRow[] {
 }
 
 export default async function AdminHomePage() {
-  await requireAdmin();
+  await requireStaff();
   let home = await prisma.homeContent.findUnique({ where: { id: "default" } });
   if (!home) {
     home = await prisma.homeContent.create({
@@ -102,7 +102,7 @@ export default async function AdminHomePage() {
 
   async function save(formData: FormData) {
     "use server";
-    await requireAdmin();
+    await requireStaff();
     let heroSlidesJson: unknown = DEFAULT_SLIDES;
     let processJson: unknown = DEFAULT_PROCESS;
     let approachTableJson: unknown = DEFAULT_APPROACH_TABLE;

@@ -1,19 +1,20 @@
 import { revalidatePath } from "next/cache";
 import { redirect } from "next/navigation";
 import { prisma } from "@/lib/prisma";
-import { requireAdmin } from "@/lib/admin";
+import { requireStaff } from "@/lib/admin";
 import { AdminChrome } from "@/components/admin/AdminChrome";
+import { ConfirmDeleteButton } from "@/components/admin/ConfirmDeleteButton";
 
 export const dynamic = "force-dynamic";
 
 export default async function AdminMessagesPage() {
-  await requireAdmin();
+  await requireStaff();
   const messages = await prisma.contactMessage.findMany({ orderBy: { createdAt: "desc" } });
   const unread = messages.filter((m) => !m.read).length;
 
   async function markRead(formData: FormData) {
     "use server";
-    await requireAdmin();
+    await requireStaff();
     await prisma.contactMessage.update({
       where: { id: String(formData.get("id")) },
       data: { read: true },
@@ -24,7 +25,7 @@ export default async function AdminMessagesPage() {
 
   async function deleteMessage(formData: FormData) {
     "use server";
-    await requireAdmin();
+    await requireStaff();
     await prisma.contactMessage.delete({ where: { id: String(formData.get("id")) } });
     revalidatePath("/admin/messages");
     redirect("/admin/messages");
@@ -67,9 +68,7 @@ export default async function AdminMessagesPage() {
                   ) : null}
                   <form action={deleteMessage}>
                     <input type="hidden" name="id" value={m.id} />
-                    <button type="submit" className="admin-btn admin-btn-sm admin-btn-danger">
-                      Sil
-                    </button>
+                    <ConfirmDeleteButton />
                   </form>
                 </div>
               </li>

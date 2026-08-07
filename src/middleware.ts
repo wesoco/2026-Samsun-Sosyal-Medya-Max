@@ -69,9 +69,20 @@ export default auth((req) => {
 
   if (pathname.startsWith("/admin") && pathname !== "/admin/login") {
     const role = req.auth?.user && (req.auth.user as { role?: string }).role;
-    if (!req.auth || role !== "ADMIN") {
+    const isStaff = role === "ADMIN" || role === "EDITOR";
+    if (!req.auth || !isStaff) {
       const url = req.nextUrl.clone();
       url.pathname = "/admin/login";
+      return NextResponse.redirect(url);
+    }
+    const adminOnly =
+      pathname === "/admin/settings" ||
+      pathname.startsWith("/admin/settings/") ||
+      pathname === "/admin/users" ||
+      pathname.startsWith("/admin/users/");
+    if (adminOnly && role !== "ADMIN") {
+      const url = req.nextUrl.clone();
+      url.pathname = "/admin";
       return NextResponse.redirect(url);
     }
   }

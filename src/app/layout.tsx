@@ -19,7 +19,9 @@ export async function generateMetadata(): Promise<Metadata> {
   const settings = await prisma.siteSetting.findUnique({ where: { id: "default" } });
   return buildMetadata({
     title: settings?.defaultTitle || "Trabzon Sosyal Medya Ajansı",
-    description: settings?.defaultDesc || "Trabzon sosyal medya ajansı",
+    description:
+      settings?.defaultDesc ||
+      "Trabzon sosyal medya ajansı. Instagram yönetimi, Meta Ads, Google Ads ve içerik üretimi.",
     path: paths.home,
     image: settings?.ogImage,
   });
@@ -27,7 +29,12 @@ export async function generateMetadata(): Promise<Metadata> {
 
 export const revalidate = 60;
 
-export default function RootLayout({ children }: { children: React.ReactNode }) {
+export default async function RootLayout({ children }: { children: React.ReactNode }) {
+  const settings = await prisma.siteSetting.findUnique({
+    where: { id: "default" },
+    select: { gtmId: true },
+  });
+
   return (
     <html lang="tr">
       <head>
@@ -42,8 +49,8 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         />
       </head>
       <body className={`${montserrat.variable} ${montserrat.className}`}>
-        <GoogleTagManagerNoscript />
-        <GoogleTagManager />
+        <GoogleTagManagerNoscript gtmId={settings?.gtmId} />
+        <GoogleTagManager gtmId={settings?.gtmId} />
         <a className="skip-link" href="#main">
           İçeriğe geç
         </a>

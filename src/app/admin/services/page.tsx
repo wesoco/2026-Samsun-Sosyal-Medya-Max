@@ -3,8 +3,9 @@ import { revalidatePath } from "next/cache";
 import { revalidateSitemapAndFeed } from "@/lib/revalidate-public";
 import { redirect } from "next/navigation";
 import { prisma } from "@/lib/prisma";
-import { requireAdmin } from "@/lib/admin";
+import { requireStaff } from "@/lib/admin";
 import { AdminChrome } from "@/components/admin/AdminChrome";
+import { ConfirmDeleteButton } from "@/components/admin/ConfirmDeleteButton";
 import { paths } from "@/lib/paths";
 
 export const dynamic = "force-dynamic";
@@ -14,13 +15,13 @@ export default async function AdminServicesPage({
 }: {
   searchParams: Promise<{ error?: string }>;
 }) {
-  await requireAdmin();
+  await requireStaff();
   const services = await prisma.service.findMany({ orderBy: { sortOrder: "asc" } });
   const sp = await searchParams;
 
   async function deleteService(formData: FormData) {
     "use server";
-    await requireAdmin();
+    await requireStaff();
     const id = String(formData.get("id"));
     const s = await prisma.service.findUnique({ where: { id } });
     await prisma.service.delete({ where: { id } });
@@ -81,9 +82,7 @@ export default async function AdminServicesPage({
                       </Link>
                       <form action={deleteService}>
                         <input type="hidden" name="id" value={s.id} />
-                        <button type="submit" className="admin-btn admin-btn-sm admin-btn-danger">
-                          Sil
-                        </button>
+                        <ConfirmDeleteButton />
                       </form>
                     </div>
                   </td>

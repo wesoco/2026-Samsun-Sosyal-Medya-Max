@@ -9,6 +9,7 @@ datasource db {
 
 enum Role {
   ADMIN
+  EDITOR
 }
 
 model User {
@@ -44,6 +45,9 @@ model SiteSetting {
   formSubmitLabel   String @default("Gönder")
   formSuccessMsg    String @default("Mesajınız alındı. En kısa sürede dönüş yapacağız.")
   formErrorMsg      String @default("Gönderilemedi. Lütfen tekrar deneyin veya WhatsApp yazın.")
+
+  /** Google Tag Manager ID (örn. GTM-XXXX). Boşsa env / varsayılan. */
+  gtmId             String?
 
   // SMTP / bildirim
   smtpEnabled         Boolean @default(false)

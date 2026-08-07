@@ -2,7 +2,7 @@ import { revalidatePath } from "next/cache";
 import { revalidateSitemapAndFeed } from "@/lib/revalidate-public";
 import { redirect } from "next/navigation";
 import { prisma } from "@/lib/prisma";
-import { requireAdmin } from "@/lib/admin";
+import { requireStaff } from "@/lib/admin";
 import { AdminChrome } from "@/components/admin/AdminChrome";
 import { ContentFields } from "@/components/admin/ContentFields";
 import { parseFaqFromFormData } from "@/lib/faq";
@@ -10,11 +10,11 @@ import { parseFaqFromFormData } from "@/lib/faq";
 export const dynamic = "force-dynamic";
 
 export default async function AdminSectorNewPage() {
-  await requireAdmin();
+  await requireStaff();
 
   async function create(formData: FormData) {
     "use server";
-    await requireAdmin();
+    await requireStaff();
     const slug = String(formData.get("slug") || "")
       .trim()
       .toLowerCase()

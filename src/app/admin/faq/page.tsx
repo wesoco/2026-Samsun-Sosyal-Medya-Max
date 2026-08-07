@@ -2,18 +2,19 @@ import Link from "next/link";
 import { revalidatePath } from "next/cache";
 import { redirect } from "next/navigation";
 import { prisma } from "@/lib/prisma";
-import { requireAdmin } from "@/lib/admin";
+import { requireStaff } from "@/lib/admin";
 import { AdminChrome } from "@/components/admin/AdminChrome";
+import { ConfirmDeleteButton } from "@/components/admin/ConfirmDeleteButton";
 
 export const dynamic = "force-dynamic";
 
 export default async function AdminFaqPage() {
-  await requireAdmin();
+  await requireStaff();
   const faqs = await prisma.faqItem.findMany({ orderBy: { sortOrder: "asc" } });
 
   async function createFaq(formData: FormData) {
     "use server";
-    await requireAdmin();
+    await requireStaff();
     await prisma.faqItem.create({
       data: {
         question: String(formData.get("question") || ""),
@@ -30,7 +31,7 @@ export default async function AdminFaqPage() {
 
   async function deleteFaq(formData: FormData) {
     "use server";
-    await requireAdmin();
+    await requireStaff();
     await prisma.faqItem.delete({ where: { id: String(formData.get("id")) } });
     revalidatePath("/");
     revalidatePath("/faq");
@@ -79,7 +80,7 @@ export default async function AdminFaqPage() {
                 <Link href={`/admin/faq/${f.id}`}>Düzenle</Link>
                 <form action={deleteFaq}>
                   <input type="hidden" name="id" value={f.id} />
-                  <button type="submit">Sil</button>
+                  <ConfirmDeleteButton />
                 </form>
               </td>
             </tr>

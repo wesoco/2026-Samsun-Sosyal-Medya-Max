@@ -2,19 +2,26 @@ import Link from "next/link";
 import { revalidatePath } from "next/cache";
 import { redirect } from "next/navigation";
 import { prisma } from "@/lib/prisma";
-import { requireAdmin } from "@/lib/admin";
+import { requireStaff } from "@/lib/admin";
 import { AdminChrome } from "@/components/admin/AdminChrome";
+import { ConfirmDeleteButton } from "@/components/admin/ConfirmDeleteButton";
 import { ImageField } from "@/components/admin/ImageField";
 
 export const dynamic = "force-dynamic";
 
+const FILTER_LABEL: Record<string, string> = {
+  gorsel: "Post",
+  reels: "Reels",
+  tanitici: "Tanıtım",
+};
+
 export default async function AdminReferencesPage() {
-  await requireAdmin();
+  await requireStaff();
   const items = await prisma.referenceItem.findMany({ orderBy: { sortOrder: "asc" } });
 
   async function create(formData: FormData) {
     "use server";
-    await requireAdmin();
+    await requireStaff();
     await prisma.referenceItem.create({
       data: {
         title: String(formData.get("title") || ""),
@@ -32,15 +39,19 @@ export default async function AdminReferencesPage() {
 
   async function deleteItem(formData: FormData) {
     "use server";
-    await requireAdmin();
+    await requireStaff();
     await prisma.referenceItem.delete({ where: { id: String(formData.get("id")) } });
     revalidatePath("/");
     redirect("/admin/references");
   }
 
   return (
-    <AdminChrome title="Referanslar">
-      <form action={create} className="admin-form">
+    <AdminChrome
+      title="Referanslar"
+      description="Ana sayfa portföy kartları. Görsel yükleyin veya URL yapıştırın."
+    >
+      <form action={create} className="admin-form admin-panel">
+        <h2 className="admin-subhead">Yeni referans</h2>
         <label>
           Başlık
           <input name="title" required />
@@ -69,36 +80,40 @@ export default async function AdminReferencesPage() {
         <label className="admin-check">
           <input type="checkbox" name="published" defaultChecked /> Yayınla
         </label>
-        <button className="btn btn-primary" type="submit">
+        <button className="admin-btn admin-btn-primary" type="submit">
           Ekle
         </button>
       </form>
-      <table className="admin-table">
-        <thead>
-          <tr>
-            <th>Başlık</th>
-            <th>Filtre</th>
-            <th>Durum</th>
-            <th></th>
-          </tr>
-        </thead>
-        <tbody>
-          {items.map((r) => (
-            <tr key={r.id}>
-              <td>{r.title}</td>
-              <td>{r.filter}</td>
-              <td>{r.published ? "Yayında" : "Taslak"}</td>
-              <td style={{ display: "flex", gap: 8 }}>
-                <Link href={`/admin/references/${r.id}`}>Düzenle</Link>
+
+      <div className="admin-media-grid">
+        {items.map((r) => (
+          <article key={r.id} className="admin-media-card">
+            <div className="admin-media-thumb">
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img src={r.imageUrl} alt="" />
+            </div>
+            <div className="admin-media-body">
+              <div className="admin-media-meta">
+                <span className="admin-badge">{FILTER_LABEL[r.filter] || r.filter}</span>
+                <span className={`admin-badge ${r.published ? "is-live" : "is-draft"}`}>
+                  {r.published ? "Yayında" : "Taslak"}
+                </span>
+              </div>
+              <strong>{r.title}</strong>
+              {r.lead ? <p className="admin-muted">{r.lead}</p> : null}
+              <div className="admin-row-actions">
+                <Link href={`/admin/references/${r.id}`} className="admin-btn admin-btn-sm">
+                  Düzenle
+                </Link>
                 <form action={deleteItem}>
                   <input type="hidden" name="id" value={r.id} />
-                  <button type="submit">Sil</button>
+                  <ConfirmDeleteButton confirmMessage={`“${r.title}” silinsin mi?`} />
                 </form>
-              </td>
-            </tr>
-          ))}
-        </tbody>
-      </table>
+              </div>
+            </div>
+          </article>
+        ))}
+      </div>
     </AdminChrome>
   );
 }

@@ -3310,7 +3310,8 @@ a.contact-row:hover {
 .footer-credit-logo {
   display: inline-flex;
   align-items: center;
-  line-height: 0;
+  gap: 8px;
+  line-height: 1.2;
 }
 
 .footer-credit-logo img {

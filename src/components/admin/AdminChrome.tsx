@@ -1,5 +1,5 @@
 import { signOut } from "@/lib/auth";
-import { requireAdmin } from "@/lib/admin";
+import { requireStaff } from "@/lib/admin";
 import { prisma } from "@/lib/prisma";
 import { paths } from "@/lib/paths";
 import { AdminNav } from "@/components/admin/AdminNav";
@@ -15,12 +15,17 @@ export async function AdminChrome({
   description?: string;
   actions?: React.ReactNode;
 }) {
-  const session = await requireAdmin();
+  const session = await requireStaff();
   const unreadMessages = await prisma.contactMessage.count({ where: { read: false } });
+  const role = (session.user?.role || "EDITOR") as "ADMIN" | "EDITOR";
 
   return (
     <div className="admin-shell">
-      <AdminNav email={session.user?.email} unreadMessages={unreadMessages} />
+      <AdminNav
+        email={session.user?.email}
+        role={role}
+        unreadMessages={unreadMessages}
+      />
       <div className="admin-workspace">
         <header className="admin-topbar">
           <div className="admin-topbar-copy">

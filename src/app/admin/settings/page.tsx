@@ -36,6 +36,7 @@ export default async function AdminSettingsPage() {
       formSubmitLabel: String(formData.get("formSubmitLabel") || "Gönder"),
       formSuccessMsg: String(formData.get("formSuccessMsg") || ""),
       formErrorMsg: String(formData.get("formErrorMsg") || ""),
+      gtmId: String(formData.get("gtmId") || "").trim() || null,
       smtpEnabled: formData.get("smtpEnabled") === "on",
       smtpHost: String(formData.get("smtpHost") || "") || null,
       smtpPort: Number(formData.get("smtpPort") || 587),
@@ -60,7 +61,7 @@ export default async function AdminSettingsPage() {
   return (
     <AdminChrome
       title="Site ayarları"
-      description="İletişim bilgileri, SEO, form etiketleri ve SMTP. Form gönderimleri hem mesajlara düşer hem (açıksa) e-postaya gider."
+      description="İletişim bilgileri, SEO, GTM, form etiketleri ve SMTP. Form gönderimleri hem mesajlara düşer hem (açıksa) e-postaya gider."
     >
       <form action={save} className="admin-form admin-form-wide">
         <fieldset className="admin-fieldset">
@@ -109,6 +110,16 @@ export default async function AdminSettingsPage() {
             <textarea name="defaultDesc" rows={3} defaultValue={s?.defaultDesc || ""} />
           </label>
           <ImageField name="ogImage" label="OG Image" folder="misc" defaultValue={s?.ogImage || ""} placeholder="/assets/…" />
+          <label>
+            Google Tag Manager ID
+            <input
+              name="gtmId"
+              defaultValue={s?.gtmId || process.env.NEXT_PUBLIC_GTM_ID || "GTM-M2W8R68W"}
+              placeholder="GTM-XXXXXXX"
+              pattern="GTM-[A-Za-z0-9]+"
+            />
+          </label>
+          <p className="admin-hint">Boş bırakırsanız ortam değişkeni / varsayılan GTM kullanılır. Örnek: GTM-M2W8R68W</p>
         </fieldset>
 
         <fieldset className="admin-fieldset">

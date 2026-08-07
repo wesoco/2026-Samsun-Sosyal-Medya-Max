@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { paths } from "@/lib/paths";
+import { SiteLogo } from "@/components/site/SiteLogo";
 
 const WA_ICON = (
   <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor" aria-hidden="true">
@@ -27,10 +28,7 @@ export function SiteHeader({ phoneDisplay, whatsapp, variant = "home" }: Props) 
   return (
     <header className={`site-header${variant === "inner" ? " is-scrolled" : ""}`} id="header">
       <div className="header-inner">
-        <Link href={paths.home} className="logo" aria-label="Trabzon Sosyal Medya ana sayfa">
-          <img className="logo-img logo-img-white" src="/assets/wesoco-logo-beyaz.svg" alt="Wesoco" width={140} height={22} />
-          <img className="logo-img logo-img-navy" src="/assets/wesoco-logo-navy.svg" alt="Wesoco" width={140} height={22} />
-        </Link>
+        <SiteLogo />
         <nav className="nav-desktop" aria-label="Ana menü">
           {NAV.map((item) => (
             <Link key={item.href} href={item.href}>

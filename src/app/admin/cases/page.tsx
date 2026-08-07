@@ -3,19 +3,20 @@ import { revalidatePath } from "next/cache";
 import { revalidateSitemapAndFeed } from "@/lib/revalidate-public";
 import { redirect } from "next/navigation";
 import { prisma } from "@/lib/prisma";
-import { requireAdmin } from "@/lib/admin";
+import { requireStaff } from "@/lib/admin";
 import { AdminChrome } from "@/components/admin/AdminChrome";
+import { ConfirmDeleteButton } from "@/components/admin/ConfirmDeleteButton";
 import { paths } from "@/lib/paths";
 
 export const dynamic = "force-dynamic";
 
 export default async function AdminCasesPage() {
-  await requireAdmin();
+  await requireStaff();
   const items = await prisma.caseStudy.findMany({ orderBy: [{ sortOrder: "asc" }, { updatedAt: "desc" }] });
 
   async function deleteItem(formData: FormData) {
     "use server";
-    await requireAdmin();
+    await requireStaff();
     await prisma.caseStudy.delete({ where: { id: String(formData.get("id")) } });
     revalidatePath("/vakalar");
     revalidatePath("/cases");
@@ -75,9 +76,7 @@ export default async function AdminCasesPage() {
                         </Link>
                         <form action={deleteItem}>
                           <input type="hidden" name="id" value={item.id} />
-                          <button type="submit" className="admin-btn admin-btn-sm admin-btn-danger">
-                            Sil
-                          </button>
+                          <ConfirmDeleteButton />
                         </form>
                       </div>
                     </td>

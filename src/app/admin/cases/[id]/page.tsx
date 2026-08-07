@@ -2,7 +2,7 @@ import { revalidatePath } from "next/cache";
 import { revalidateSitemapAndFeed } from "@/lib/revalidate-public";
 import { notFound, redirect } from "next/navigation";
 import { prisma } from "@/lib/prisma";
-import { requireAdmin } from "@/lib/admin";
+import { requireStaff } from "@/lib/admin";
 import { AdminChrome } from "@/components/admin/AdminChrome";
 
 export const dynamic = "force-dynamic";
@@ -20,14 +20,14 @@ export default async function AdminCaseEditPage({
 }: {
   params: Promise<{ id: string }>;
 }) {
-  await requireAdmin();
+  await requireStaff();
   const { id } = await params;
   const item = await prisma.caseStudy.findUnique({ where: { id } });
   if (!item) notFound();
 
   async function update(formData: FormData) {
     "use server";
-    await requireAdmin();
+    await requireStaff();
     const slug = slugify(String(formData.get("slug") || ""));
     try {
       await prisma.caseStudy.update({

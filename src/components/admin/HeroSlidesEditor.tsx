@@ -75,7 +75,16 @@ export function HeroSlidesEditor({ name = "heroSlidesJson", initial }: Props) {
               >
                 ↓
               </button>
-              <button type="button" className="admin-btn admin-btn-secondary" onClick={() => remove(i)} disabled={slides.length <= 1}>
+              <button
+                type="button"
+                className="admin-btn admin-btn-secondary"
+                onClick={() => {
+                  if (slides.length <= 1) return;
+                  if (!window.confirm("Bu slaytı kaldırmak istediğinize emin misiniz?")) return;
+                  remove(i);
+                }}
+                disabled={slides.length <= 1}
+              >
                 Sil
               </button>
             </span>

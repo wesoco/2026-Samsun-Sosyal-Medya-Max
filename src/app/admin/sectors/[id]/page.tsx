@@ -2,7 +2,7 @@ import { revalidatePath } from "next/cache";
 import { revalidateSitemapAndFeed } from "@/lib/revalidate-public";
 import { notFound, redirect } from "next/navigation";
 import { prisma } from "@/lib/prisma";
-import { requireAdmin } from "@/lib/admin";
+import { requireStaff } from "@/lib/admin";
 import { AdminChrome } from "@/components/admin/AdminChrome";
 import { ContentFields } from "@/components/admin/ContentFields";
 import { faqToPairs, parseFaqFromFormData } from "@/lib/faq";
@@ -14,14 +14,14 @@ export default async function AdminSectorEditPage({
 }: {
   params: Promise<{ id: string }>;
 }) {
-  await requireAdmin();
+  await requireStaff();
   const { id } = await params;
   const item = await prisma.sectorPage.findUnique({ where: { id } });
   if (!item) notFound();
 
   async function update(formData: FormData) {
     "use server";
-    await requireAdmin();
+    await requireStaff();
     const slug = String(formData.get("slug") || "")
       .trim()
       .toLowerCase()

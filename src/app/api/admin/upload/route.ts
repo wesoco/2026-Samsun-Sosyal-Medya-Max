@@ -5,7 +5,7 @@ export const runtime = "nodejs";
 
 export async function POST(req: Request) {
   const session = await auth();
-  if (!session?.user || (session.user as { role?: string }).role !== "ADMIN") {
+  if (!session?.user || ((session.user as { role?: string }).role !== "ADMIN" && (session.user as { role?: string }).role !== "EDITOR")) {
     return Response.json({ error: "Yetkisiz" }, { status: 401 });
   }
 

@@ -125,17 +125,14 @@ export async function SiteFooter({
           <Link href={paths.disclosure}>Aydınlatma</Link>
         </nav>
         <p className="footer-credit">
-          <a href="https://www.wesoco.com" target="_blank" rel="noopener noreferrer">
-            Web Tasarım:
-          </a>
           <a
             href="https://www.wesoco.com"
             target="_blank"
             rel="noopener noreferrer"
             className="footer-credit-logo"
-            aria-label="Wesoco"
           >
-            <img src="/assets/wesoco-logo-beyaz.svg" alt="Wesoco" width={96} height={16} />
+            Web Tasarım: Wesoco
+            <img src="/assets/wesoco-logo-beyaz.svg" alt="" width={96} height={16} aria-hidden="true" />
           </a>
         </p>
       </div>

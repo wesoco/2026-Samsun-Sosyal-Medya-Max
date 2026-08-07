@@ -2,18 +2,19 @@ import Link from "next/link";
 import { revalidatePath } from "next/cache";
 import { redirect } from "next/navigation";
 import { prisma } from "@/lib/prisma";
-import { requireAdmin } from "@/lib/admin";
+import { requireStaff } from "@/lib/admin";
 import { AdminChrome } from "@/components/admin/AdminChrome";
+import { ConfirmDeleteButton } from "@/components/admin/ConfirmDeleteButton";
 
 export const dynamic = "force-dynamic";
 
 export default async function AdminStatsPage() {
-  await requireAdmin();
+  await requireStaff();
   const stats = await prisma.homeStat.findMany({ orderBy: { sortOrder: "asc" } });
 
   async function create(formData: FormData) {
     "use server";
-    await requireAdmin();
+    await requireStaff();
     await prisma.homeStat.create({
       data: {
         value: String(formData.get("value") || ""),
@@ -27,7 +28,7 @@ export default async function AdminStatsPage() {
 
   async function deleteStat(formData: FormData) {
     "use server";
-    await requireAdmin();
+    await requireStaff();
     await prisma.homeStat.delete({ where: { id: String(formData.get("id")) } });
     revalidatePath("/");
     redirect("/admin/stats");
@@ -69,7 +70,7 @@ export default async function AdminStatsPage() {
                 <Link href={`/admin/stats/${s.id}`}>Düzenle</Link>
                 <form action={deleteStat}>
                   <input type="hidden" name="id" value={s.id} />
-                  <button type="submit">Sil</button>
+                  <ConfirmDeleteButton />
                 </form>
               </td>
             </tr>

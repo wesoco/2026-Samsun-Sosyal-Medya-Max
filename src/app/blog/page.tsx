@@ -42,11 +42,15 @@ export default async function BlogIndexPage() {
             <div className="blog-grid">
               {posts.map((p) => (
                 <article className="blog-card reveal" key={p.id}>
-                  <Link href={paths.blogPost(p.slug)} className="blog-card-media">
+                  <Link
+                    href={paths.blogPost(p.slug)}
+                    className="blog-card-media"
+                    aria-label={p.title}
+                  >
                     {p.coverUrl ? (
                       <Image
                         src={p.coverUrl}
-                        alt=""
+                        alt={p.title}
                         width={800}
                         height={520}
                         loading="lazy"

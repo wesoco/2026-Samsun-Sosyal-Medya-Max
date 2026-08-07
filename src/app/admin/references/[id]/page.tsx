@@ -1,21 +1,21 @@
 import { revalidatePath } from "next/cache";
 import { notFound, redirect } from "next/navigation";
 import { prisma } from "@/lib/prisma";
-import { requireAdmin } from "@/lib/admin";
+import { requireStaff } from "@/lib/admin";
 import { AdminChrome } from "@/components/admin/AdminChrome";
 import { ImageField } from "@/components/admin/ImageField";
 
 export const dynamic = "force-dynamic";
 
 export default async function AdminReferenceEditPage({ params }: { params: Promise<{ id: string }> }) {
-  await requireAdmin();
+  await requireStaff();
   const { id } = await params;
   const r = await prisma.referenceItem.findUnique({ where: { id } });
   if (!r) notFound();
 
   async function update(formData: FormData) {
     "use server";
-    await requireAdmin();
+    await requireStaff();
     await prisma.referenceItem.update({
       where: { id },
       data: {

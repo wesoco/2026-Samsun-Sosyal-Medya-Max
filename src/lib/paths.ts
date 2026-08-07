@@ -63,10 +63,10 @@ export function siteUrl() {
 function isPublicProductionOrigin(value: string) {
   try {
     const u = new URL(value);
-    if (u.protocol !== "https:" && u.protocol !== "http:") return false;
+    // Sitemap / canonical asla http veya localhost/staging olmasın
+    if (u.protocol !== "https:") return false;
     const host = u.hostname.toLowerCase();
     if (host === "localhost" || host === "127.0.0.1" || host.endsWith(".local")) return false;
-    // Geçici Coolify / staging hostları
     if (host.includes("wesoco.com") && host !== "trabzonsosyalmedya.com") return false;
     if (/^[a-z0-9]+\.wesoco\.com(\.tr)?$/i.test(host)) return false;
     return true;
