@@ -145,6 +145,7 @@ export default async function AdminHomePage() {
       update: data,
     });
     revalidatePath("/");
+    revalidateSitemapAndFeed();
     redirect("/admin/home");
   }
 

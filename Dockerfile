@@ -16,6 +16,8 @@ COPY . .
 # ISR pages query Postgres at build time — pass a reachable DATABASE_URL (CI service or local).
 ARG DATABASE_URL
 ENV DATABASE_URL=$DATABASE_URL
+ARG NEXT_PUBLIC_SITE_URL=https://trabzonsosyalmedya.com
+ENV NEXT_PUBLIC_SITE_URL=$NEXT_PUBLIC_SITE_URL
 ENV NEXT_TELEMETRY_DISABLED=1
 ENV NODE_ENV=production
 
@@ -29,6 +31,7 @@ ENV NEXT_TELEMETRY_DISABLED=1
 ENV HOSTNAME=0.0.0.0
 ENV PORT=3000
 ENV UPLOAD_DIR=/app/uploads
+ENV NEXT_PUBLIC_SITE_URL=https://trabzonsosyalmedya.com
 
 RUN addgroup --system --gid 1001 nodejs \
   && adduser --system --uid 1001 nextjs \

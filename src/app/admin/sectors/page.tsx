@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { revalidatePath } from "next/cache";
+import { revalidateSitemapAndFeed } from "@/lib/revalidate-public";
 import { redirect } from "next/navigation";
 import { prisma } from "@/lib/prisma";
 import { requireAdmin } from "@/lib/admin";
@@ -17,6 +18,7 @@ export default async function AdminSectorsPage() {
     await requireAdmin();
     await prisma.sectorPage.delete({ where: { id: String(formData.get("id")) } });
     revalidatePath("/sektorler");
+    revalidateSitemapAndFeed();
     redirect("/admin/sectors");
   }
 

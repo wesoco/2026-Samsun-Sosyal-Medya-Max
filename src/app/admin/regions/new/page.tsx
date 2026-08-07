@@ -1,4 +1,5 @@
 import { revalidatePath } from "next/cache";
+import { revalidateSitemapAndFeed } from "@/lib/revalidate-public";
 import { redirect } from "next/navigation";
 import { prisma } from "@/lib/prisma";
 import { requireAdmin } from "@/lib/admin";
@@ -40,6 +41,7 @@ export default async function AdminRegionNewPage() {
     revalidatePath("/bolgeler");
     revalidatePath(`/regions/${slug}`);
     revalidatePath(`/bolgeler/${slug}`);
+    revalidateSitemapAndFeed();
     redirect("/admin/regions");
   }
 

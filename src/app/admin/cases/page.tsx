@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { revalidatePath } from "next/cache";
+import { revalidateSitemapAndFeed } from "@/lib/revalidate-public";
 import { redirect } from "next/navigation";
 import { prisma } from "@/lib/prisma";
 import { requireAdmin } from "@/lib/admin";
@@ -18,6 +19,7 @@ export default async function AdminCasesPage() {
     await prisma.caseStudy.delete({ where: { id: String(formData.get("id")) } });
     revalidatePath("/vakalar");
     revalidatePath("/cases");
+    revalidateSitemapAndFeed();
     redirect("/admin/cases");
   }
 

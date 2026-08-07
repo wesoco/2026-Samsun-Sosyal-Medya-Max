@@ -69,5 +69,6 @@ jobs:
           labels: ${{ steps.meta.outputs.labels }}
           build-args: |
             DATABASE_URL=${{ env.DATABASE_URL }}
+            NEXT_PUBLIC_SITE_URL=https://trabzonsosyalmedya.com
           cache-from: type=gha
           cache-to: type=gha,mode=max

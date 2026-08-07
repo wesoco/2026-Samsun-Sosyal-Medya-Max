@@ -1,4 +1,5 @@
 import { revalidatePath } from "next/cache";
+import { revalidateSitemapAndFeed } from "@/lib/revalidate-public";
 import { redirect } from "next/navigation";
 import { prisma } from "@/lib/prisma";
 import { requireAdmin } from "@/lib/admin";
@@ -42,6 +43,7 @@ export default async function AdminCaseNewPage() {
       redirect("/admin/cases/new?error=1");
     }
     revalidatePath("/vakalar");
+    revalidateSitemapAndFeed();
     redirect("/admin/cases");
   }
 

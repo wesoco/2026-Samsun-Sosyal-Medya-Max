@@ -1,4 +1,5 @@
 import { revalidatePath } from "next/cache";
+import { revalidateSitemapAndFeed } from "@/lib/revalidate-public";
 import { redirect } from "next/navigation";
 import { prisma } from "@/lib/prisma";
 import { requireAdmin } from "@/lib/admin";
@@ -38,6 +39,7 @@ export default async function AdminSectorNewPage() {
       redirect("/admin/sectors/new?error=1");
     }
     revalidatePath("/sektorler");
+    revalidateSitemapAndFeed();
     redirect("/admin/sectors");
   }
 
