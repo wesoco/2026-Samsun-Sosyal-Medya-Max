@@ -1,4 +1,4 @@
-import { verifySignature } from "@wesoco/seo-core";
+import { slugify, verifySignature } from "@wesoco/seo-core";
 import { normalizeAgentPostImages } from "../normalize-images";
 import { createDefaultStore, type AgentPost, type PostStore } from "../storage";
 
@@ -105,11 +105,27 @@ export function createSeoAgentHandlers(opts?: AgentHandlerOptions) {
       );
     }
 
+    const safeSlug = slugify(String(payload.slug));
+    if (!safeSlug) {
+      return Response.json(
+        { error: "slug geçersiz — yalnızca latin harf, rakam ve tire" },
+        { status: 400 },
+      );
+    }
+
     const now = new Date().toISOString();
-    const existing = await store.getBySlug(payload.slug);
+    const existing =
+      (await store.getBySlug(safeSlug)) ||
+      (await store.getBySlug(String(payload.slug)));
+    const rawCategory =
+      typeof payload.category === "string" ? payload.category.trim() : "";
+    const category =
+      rawCategory && !/seo\s*agent/i.test(rawCategory)
+        ? rawCategory.slice(0, 64)
+        : existing?.category;
     const post = normalizeAgentPostImages({
       id: existing?.id ?? `post_${Date.now().toString(36)}`,
-      slug: payload.slug,
+      slug: safeSlug,
       title: payload.title,
       metaDescription: payload.metaDescription ?? "",
       bodyHtml: payload.bodyHtml,
@@ -117,6 +133,7 @@ export function createSeoAgentHandlers(opts?: AgentHandlerOptions) {
       faq: payload.faq ?? [],
       schemaJson: payload.schemaJson ?? {},
       coverImageUrl: payload.coverImageUrl || existing?.coverImageUrl,
+      ...(category ? { category } : {}),
       status: payload.status === "draft" ? "draft" : "published",
       publishedAt:
         payload.status === "draft"
@@ -139,11 +156,39 @@ export function createSeoAgentHandlers(opts?: AgentHandlerOptions) {
     return POST(req);
   }
 
-  return { GET, POST, PUT };
+  async function DELETE(req: Request) {
+    const { store, siteKey, siteSecret } = cfg();
+    const body = await readBody(req);
+    if (!authorize(req, body, siteSecret, siteKey)) return unauthorized();
+
+    let payload: { slug?: string };
+    try {
+      payload = JSON.parse(body || "{}") as { slug?: string };
+    } catch {
+      return Response.json({ error: "Invalid JSON" }, { status: 400 });
+    }
+
+    const raw = String(payload.slug || "").trim();
+    const slug = slugify(raw) || raw;
+    if (!slug) {
+      return Response.json({ error: "slug required" }, { status: 400 });
+    }
+
+    const removed =
+      (await store.deleteBySlug(slug)) ||
+      (raw !== slug ? await store.deleteBySlug(raw) : false);
+    if (!removed) {
+      return Response.json({ error: "Not found" }, { status: 404 });
+    }
+    return Response.json({ ok: true, slug });
+  }
+
+  return { GET, POST, PUT, DELETE };
 }
 
-/** Default handlers using env config — for `export { GET, POST, PUT } from "@wesoco/seo-agent/next"`. */
+/** Default handlers using env config — for `export { GET, POST, PUT, DELETE } from "@wesoco/seo-agent/next"`. */
 const defaultHandlers = createSeoAgentHandlers();
 export const GET = defaultHandlers.GET;
 export const POST = defaultHandlers.POST;
 export const PUT = defaultHandlers.PUT;
+export const DELETE = defaultHandlers.DELETE;

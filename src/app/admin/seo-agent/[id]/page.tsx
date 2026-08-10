@@ -7,8 +7,10 @@ import { requireStaff } from "@/lib/admin";
 import { AdminChrome } from "@/components/admin/AdminChrome";
 import { ContentFields } from "@/components/admin/ContentFields";
 import { ConfirmDeleteButton } from "@/components/admin/ConfirmDeleteButton";
+import { ImageField } from "@/components/admin/ImageField";
 import { paths } from "@/lib/paths";
 import { faqToPairs, parseFaqFromFormData } from "@/lib/faq";
+import { slugify } from "@/lib/slug";
 
 export const dynamic = "force-dynamic";
 
@@ -34,11 +36,8 @@ export default async function AdminSeoAgentEditPage({
     const existing = await s.getById(id);
     if (!existing) redirect("/admin/seo-agent");
 
-    const slug = String(formData.get("slug") || "")
-      .trim()
-      .toLowerCase()
-      .replace(/[^a-z0-9-]+/g, "-")
-      .replace(/^-|-$/g, "");
+    const slug = slugify(String(formData.get("slug") || ""));
+    if (!slug) redirect(`/admin/seo-agent/${id}?error=1`);
 
     const coverRaw = String(formData.get("coverUrl") || "").trim();
     const bodyHtml = String(formData.get("bodyHtml") || "<p></p>");
@@ -95,7 +94,7 @@ export default async function AdminSeoAgentEditPage({
   return (
     <AdminChrome
       title="SEO Agent yazısı düzenle"
-      description="Panelden gelen yazıyı burada düzeltin. Kapak + içerikte aynı görsel varsa kapak otomatik kalkar (tek görsel)."
+      description="Panelden gelen yazıyı burada düzeltin. Kapak + içerikte aynı görsel varsa kapak otomatik kalkar."
       actions={
         <>
           <Link href="/admin/seo-agent" className="admin-btn admin-btn-secondary">
@@ -113,7 +112,7 @@ export default async function AdminSeoAgentEditPage({
       }
     >
       {sp.error ? <p className="form-error admin-alert">Kayıt başarısız.</p> : null}
-      {sp.saved ? <p className="admin-alert" style={{ color: "var(--ok, #0a7)" }}>Kaydedildi.</p> : null}
+      {sp.saved ? <p className="form-success admin-alert is-ok">Kaydedildi.</p> : null}
 
       <form action={update} className="admin-form admin-form-wide">
         <ContentFields
@@ -127,17 +126,18 @@ export default async function AdminSeoAgentEditPage({
           showFaq
           faqs={faqToPairs(post.faq)}
           extra={
-            <label>
-              Kapak URL (opsiyonel)
-              <input
+            <>
+              <ImageField
                 name="coverUrl"
+                label="Kapak görseli (opsiyonel)"
+                folder="blog"
                 defaultValue={post.coverImageUrl || ""}
                 placeholder="Boş bırakın — içerikteki görsel kullanılır"
               />
-              <span className="admin-hint">
+              <p className="admin-hint">
                 İçerikte zaten görsel varsa kapak boş kalsın; yoksa kırık çift görsel oluşur.
-              </span>
-            </label>
+              </p>
+            </>
           }
         />
         <div className="admin-form-actions">
@@ -147,9 +147,13 @@ export default async function AdminSeoAgentEditPage({
         </div>
       </form>
 
-      <form action={remove} className="admin-card" style={{ marginTop: 24 }}>
-        <h2>Sil</h2>
-        <p className="admin-muted">Bu yazı yalnızca SEO Agent deposundan silinir (Prisma blog’a dokunulmaz).</p>
+      <form action={remove} className="admin-panel admin-stack">
+        <div className="admin-panel-head">
+          <h2>Sil</h2>
+        </div>
+        <p className="admin-hint">
+          Bu yazı yalnızca SEO Agent deposundan silinir (Prisma blog’a dokunulmaz).
+        </p>
         <ConfirmDeleteButton />
       </form>
     </AdminChrome>

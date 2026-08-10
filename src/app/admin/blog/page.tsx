@@ -133,7 +133,7 @@ export default async function AdminBlogListPage({
                           </Link>
                         </div>
                       </td>
-                      <td>SEO Agent</td>
+                      <td>{p.category?.trim() || "Blog"}</td>
                       <td>
                         <span className={`admin-badge ${p.status === "published" ? "is-live" : "is-draft"}`}>
                           {p.status === "published" ? "Yayında" : "Taslak"}

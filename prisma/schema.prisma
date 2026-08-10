@@ -60,6 +60,11 @@ model SiteSetting {
   notifyEmail         String?
   emailSubjectPrefix  String  @default("Siteden yeni mesaj")
 
+  /** Wesoco SEO Agent — admin’den düzenlenebilir; boşsa env kullanılır */
+  seoAgentPublicUrl   String?
+  seoAgentSiteKey     String?
+  seoAgentSecret      String?
+
   updatedAt DateTime @updatedAt
 }
 

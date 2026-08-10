@@ -49,7 +49,7 @@ export async function listPublicBlogPosts(opts?: {
       slug: p.slug,
       title: p.title,
       lead: p.metaDescription || existing?.lead || "",
-      category: "Yazar",
+      category: p.category?.trim() || existing?.category || "Blog",
       coverUrl:
         p.coverImageUrl ||
         bodyImg ||

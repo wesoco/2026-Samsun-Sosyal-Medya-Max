@@ -42,26 +42,41 @@ type UnifiedPost = {
   source: "db" | "seo-agent";
 };
 
-async function loadPost(slug: string): Promise<UnifiedPost | null> {
-  const db = await prisma.blogPost.findUnique({ where: { slug } });
-  if (db?.published) {
-    return {
-      slug: db.slug,
-      title: db.title,
-      lead: db.lead,
-      bodyHtml: db.bodyHtml,
-      coverUrl: db.coverUrl,
-      category: db.category,
-      seoTitle: db.seoTitle,
-      seoDesc: db.seoDesc,
-      publishedAt: db.publishedAt,
-      updatedAt: db.updatedAt,
-      faqJson: (db.faqJson as FaqPair[]) || [],
-      source: "db",
-    };
+async function loadPost(rawSlug: string): Promise<UnifiedPost | null> {
+  const { slugify } = await import("@/lib/slug");
+  let decoded = rawSlug;
+  try {
+    decoded = decodeURIComponent(rawSlug);
+  } catch {
+    decoded = rawSlug;
+  }
+  const candidates = [...new Set([rawSlug, decoded, slugify(decoded)].filter(Boolean))];
+
+  for (const slug of candidates) {
+    const db = await prisma.blogPost.findUnique({ where: { slug } });
+    if (db?.published) {
+      return {
+        slug: db.slug,
+        title: db.title,
+        lead: db.lead,
+        bodyHtml: db.bodyHtml,
+        coverUrl: db.coverUrl,
+        category: db.category,
+        seoTitle: db.seoTitle,
+        seoDesc: db.seoDesc,
+        publishedAt: db.publishedAt,
+        updatedAt: db.updatedAt,
+        faqJson: (db.faqJson as FaqPair[]) || [],
+        source: "db",
+      };
+    }
   }
 
-  const agent = await getSeoPost(slug).catch(() => null);
+  let agent = null;
+  for (const slug of candidates) {
+    agent = await getSeoPost(slug).catch(() => null);
+    if (agent) break;
+  }
   if (!agent) return null;
 
   const faqs: FaqPair[] = (agent.faq || []).map((f) => ({
@@ -75,7 +90,7 @@ async function loadPost(slug: string): Promise<UnifiedPost | null> {
     lead: agent.metaDescription || "",
     bodyHtml: agent.bodyHtml,
     coverUrl: agent.coverImageUrl || "/images/cover.webp",
-    category: "Yazar",
+    category: agent.category?.trim() || "Blog",
     seoTitle: agent.title,
     seoDesc: agent.metaDescription || null,
     publishedAt: new Date(agent.publishedAt || agent.createdAt),

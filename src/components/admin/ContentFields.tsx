@@ -42,7 +42,14 @@ export function ContentFields({
           </label>
           <label>
             {slugLabel}
-            <input name="slug" required defaultValue={slug} placeholder="trabzon-instagram-yonetimi" />
+            <input
+              name="slug"
+              required
+              defaultValue={slug}
+              placeholder="trabzon-instagram-yonetimi"
+              pattern="[a-z0-9]+(?:-[a-z0-9]+)*"
+              title="Yalnızca küçük harf, rakam ve tire (Türkçe karakter yok: öğrenci → ogrenci)"
+            />
           </label>
         </div>
         {extra}

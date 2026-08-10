@@ -11,6 +11,8 @@ export interface AgentPost {
   faq: { question: string; answer: string }[];
   schemaJson: Record<string, unknown>;
   coverImageUrl?: string;
+  /** Public blog kategorisi */
+  category?: string;
   status: "draft" | "published";
   publishedAt?: string;
   updatedAt: string;
@@ -23,6 +25,7 @@ export interface PostStore {
   getById(id: string): Promise<AgentPost | null>;
   upsert(post: AgentPost): Promise<AgentPost>;
   deleteById(id: string): Promise<boolean>;
+  deleteBySlug(slug: string): Promise<boolean>;
 }
 
 /** File-backed store for demo / simple Next sites. */
@@ -70,6 +73,14 @@ export class FilePostStore implements PostStore {
   async deleteById(id: string): Promise<boolean> {
     const posts = await this.list();
     const next = posts.filter((p) => p.id !== id);
+    if (next.length === posts.length) return false;
+    await fs.writeFile(this.filePath(), JSON.stringify(next, null, 2), "utf8");
+    return true;
+  }
+
+  async deleteBySlug(slug: string): Promise<boolean> {
+    const posts = await this.list();
+    const next = posts.filter((p) => p.slug !== slug);
     if (next.length === posts.length) return false;
     await fs.writeFile(this.filePath(), JSON.stringify(next, null, 2), "utf8");
     return true;

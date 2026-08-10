@@ -7,6 +7,7 @@ import { AdminChrome } from "@/components/admin/AdminChrome";
 import { ContentFields } from "@/components/admin/ContentFields";
 import { ImageField } from "@/components/admin/ImageField";
 import { faqToPairs, parseFaqFromFormData } from "@/lib/faq";
+import { slugify } from "@/lib/slug";
 
 export const dynamic = "force-dynamic";
 
@@ -26,11 +27,8 @@ export default async function AdminBlogEditPage({
   async function update(formData: FormData) {
     "use server";
     await requireStaff();
-    const slug = String(formData.get("slug") || "")
-      .trim()
-      .toLowerCase()
-      .replace(/[^a-z0-9-]+/g, "-")
-      .replace(/^-|-$/g, "");
+    const slug = slugify(String(formData.get("slug") || ""));
+    if (!slug) redirect(`/admin/blog/${id}?error=1`);
     try {
       await prisma.blogPost.update({
         where: { id },
