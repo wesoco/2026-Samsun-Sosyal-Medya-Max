@@ -32,7 +32,7 @@ export function WebMcpTools() {
       ctx.registerTool({
         name: "open_whatsapp",
         description:
-          "Trabzon Sosyal Medya WhatsApp sohbetini açar. Hızlı teklif veya soru için kullanın.",
+          "Samsun Sosyal Medya WhatsApp sohbetini açar. Hızlı teklif veya soru için kullanın.",
         inputSchema: {
           type: "object",
           properties: {

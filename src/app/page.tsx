@@ -10,6 +10,7 @@ import { jsonLdScript, entityGraphJsonLd, faqPageJsonLd, referenceItemListJsonLd
 import { SiteChrome } from "@/components/site/SiteChrome";
 import { SafeImage } from "@/components/site/SafeImage";
 import { DEFAULT_HERO_SLIDES, type HeroSlide } from "@/lib/hero-slides";
+import { RefLead } from "@/components/site/RefLead";
 
 export const revalidate = 60;
 
@@ -44,29 +45,21 @@ export default async function HomePage() {
     prisma.homeContent.findUnique({ where: { id: "default" } }),
   ]);
 
-  /** Ana sayfada filtre başına en fazla 12 kart — HTML/LCP için tüm kataloğu basma */
-  const REF_PER_FILTER = 12;
-  const refsByFilter = new Map<string, typeof refs>();
-  for (const r of refs) {
-    const list = refsByFilter.get(r.filter) || [];
-    if (list.length < REF_PER_FILTER) {
-      list.push(r);
-      refsByFilter.set(r.filter, list);
-    }
-  }
-  const homeRefs = ["tanitici", "gorsel", "reels"].flatMap((f) => refsByFilter.get(f) || []);
+  /** Yayınlı tüm tanıtıcı / görsel / reels kartları HTML’e girer; “Devamını gör” JS ile sayfalar */
+  const homeRefs = ["tanitici", "gorsel", "reels"].flatMap((f) => refs.filter((r) => r.filter === f));
+  const schemaRefs = homeRefs.slice(0, 24);
   /** Sitede görünen SSS ile FAQPage schema birebir aynı olmalı */
   const homeFaqItems = faqs.slice(0, 10);
   const homeFaqs = homeFaqItems.map((f) => ({ q: f.question, a: f.answer }));
 
   const s = settings || {
-    siteName: "Trabzon Sosyal Medya",
+    siteName: "Samsun Sosyal Medya",
     phone: "+905380581122",
     phoneDisplay: "+90 (538) 058 11 22",
     email: "info@wesoco.com",
     whatsapp: "905380581122",
-    addressLine1: "Gazipaşa Mah. Uzun Sk.",
-    addressLine2: "Can Bakkal İş Merkezi, Ortahisar / Trabzon",
+    addressLine1: "Gazipaşa Mah. Uzun Sk., Can Bakkal İş Merkezi",
+    addressLine2: "Kat:7 Daire:61, Ortahisar / Trabzon",
     formNameLabel: "Ad Soyad",
     formPhoneLabel: "Telefon",
     formEmailLabel: "E-posta",
@@ -114,7 +107,7 @@ export default async function HomePage() {
     faqPageJsonLd(homeFaqs),
     homeRefs.length
       ? referenceItemListJsonLd(
-          homeRefs.map((r) => ({
+          schemaRefs.map((r) => ({
             title: r.title,
             lead: (r.lead || "").slice(0, 120),
             imageUrl: r.imageUrl,
@@ -130,7 +123,7 @@ export default async function HomePage() {
         <script key={i} type="application/ld+json" dangerouslySetInnerHTML={jsonLdScript(schema)} />
       ))}
       <main id="main">
-        <section className="hero" id="anasayfa" aria-label="Trabzon sosyal medya ajansı">
+        <section className="hero" id="anasayfa" aria-label="Samsun sosyal medya ajansı">
           <div className="hero-stage" id="heroStage">
             <div className="hero-slides" aria-roledescription="carousel" aria-label="Öne çıkan hizmetler">
               {slides.map((slide, i) => (
@@ -143,7 +136,7 @@ export default async function HomePage() {
                   aria-label={`${i + 1} / ${slides.length}: ${slide.title}`}
                 >
                   <div className="hero-media">
-                    {/* Tüm slaytlarda gerçek src — data-src boş 1px gif kalmasın */}
+                    {/* Tüm slaytlarda gerçek src  -  data-src boş 1px gif kalmasın */}
                     <img
                       src={slide.image}
                       alt={slide.alt}
@@ -211,7 +204,7 @@ export default async function HomePage() {
                 <img
                   key={l.id}
                   src={l.imageUrl}
-                  alt={`${l.name} Trabzon sosyal medya referansı`}
+                  alt={`${l.name} Samsun sosyal medya referansı`}
                   width={120}
                   height={40}
                   loading="eager"
@@ -240,12 +233,12 @@ export default async function HomePage() {
           <div className="container">
             <div className="about-top">
               <span className="section-label">Hakkımızda</span>
-              <h2>{home?.aboutTitle || "Trabzon'da sosyal medya denince akla ilk biz gelelim diye buradayız."}</h2>
+              <h2>{home?.aboutTitle || "Samsun'da sosyal medya denince akla ilk biz gelelim diye buradayız."}</h2>
             </div>
             <div className="about-grid">
               <p className="about-lead-text">
                 {home?.aboutLead ||
-                  "Trabzon Sosyal Medya, Wesoco bünyesinde yerel işletmelere Instagram, TikTok, Facebook ve LinkedIn yönetimi sunan sosyal medya ajansıdır."}
+                  "Samsun Sosyal Medya, Wesoco bünyesinde yerel işletmelere Instagram, TikTok, Facebook ve LinkedIn yönetimi sunan sosyal medya ajansıdır."}
               </p>
               <div className="about-copy">
                 <p>
@@ -275,7 +268,7 @@ export default async function HomePage() {
               <h2>{home?.servicesTitle || "Büyümenin tüm adımları, tek çatıda."}</h2>
               <p className="section-desc">
                 {home?.servicesLead ||
-                  "Sosyal medya yönetiminden Meta ve Google Ads'e, içerik üretiminden drone çekimine kadar Trabzon işletmeleri için uçtan uca büyüme."}
+                  "Sosyal medya yönetiminden Meta ve Google Ads'e, içerik üretiminden drone çekimine kadar Samsun işletmeleri için uçtan uca büyüme."}
               </p>
             </div>
             <ol className="service-list">
@@ -331,10 +324,10 @@ export default async function HomePage() {
             <div className="container">
               <div className="section-head section-head-full">
                 <span className="section-label">Referanslar</span>
-                <h2>{home?.refsTitle || "Trabzon sosyal medya referanslarımız."}</h2>
+                <h2>{home?.refsTitle || "Samsun sosyal medya referanslarımız."}</h2>
                 <p className="section-desc">
                   {home?.refsLead ||
-                    "Trabzon sosyal medya ajansı olarak otomotiv, gastronomi, inşaat, enerji ve kurumsal markalar için ürettiğimiz Instagram postları, reels içerikleri ve tanıtım filmlerinden seçkiler. Her proje yerel hedef kitleye, sektör diline ve ölçülebilir büyüme hedefine göre planlanır."}
+                    "Samsun sosyal medya ajansı olarak otomotiv, gastronomi, inşaat, enerji ve kurumsal markalar için ürettiğimiz Instagram postları, reels içerikleri ve tanıtım filmlerinden seçkiler. Her proje yerel hedef kitleye, sektör diline ve ölçülebilir büyüme hedefine göre planlanır."}
                 </p>
               </div>
               <div className="ref-filters" role="tablist" aria-label="Referans türü">
@@ -373,7 +366,7 @@ export default async function HomePage() {
                         >
                           <img
                             src={r.imageUrl}
-                            alt={`${r.title}, Trabzon ${dims.label.toLowerCase()} referansı`}
+                            alt={`${r.title}, Samsun ${dims.label.toLowerCase()} referansı`}
                             width={dims.w}
                             height={dims.h}
                             loading="lazy"
@@ -386,7 +379,7 @@ export default async function HomePage() {
                         <div className="ref-media">
                           <img
                             src={r.imageUrl}
-                            alt={`${r.title} Trabzon sosyal medya referansı (${dims.label})`}
+                            alt={`${r.title} Samsun sosyal medya referansı (${dims.label})`}
                             width={dims.w}
                             height={dims.h}
                             loading="lazy"
@@ -398,7 +391,7 @@ export default async function HomePage() {
                       <div className="ref-body">
                         <span className="ref-sector">{dims.label}</span>
                         <h3>{r.title}</h3>
-                        {r.lead ? <p>{r.lead}</p> : null}
+                        <RefLead text={r.lead || ""} />
                       </div>
                     </article>
                   );
@@ -418,7 +411,7 @@ export default async function HomePage() {
             <div className="section-head section-head-full">
               <span className="section-label">Blog</span>
               <div className="section-head-row">
-                <h2>{home?.blogTitle || "Trabzon işletmeleri için pratik yazılar."}</h2>
+                <h2>{home?.blogTitle || "Samsun işletmeleri için pratik yazılar."}</h2>
                 <Link href={paths.blog} className="btn btn-primary section-head-cta-btn">
                   Tüm yazılar
                 </Link>
@@ -472,7 +465,7 @@ export default async function HomePage() {
                 />
               </div>
               <div className="cta-inner">
-                <h2>{home?.ctaTitle || "Trabzon sosyal medya teklifi alın."}</h2>
+                <h2>{home?.ctaTitle || "Samsun sosyal medya teklifi alın."}</h2>
                 <p>
                   {home?.ctaText ||
                     "Ücretsiz keşif görüşmesiyle başlayalım. Instagram, TikTok ve Meta Ads için doğru adres burası."}
@@ -542,7 +535,7 @@ export default async function HomePage() {
           <div className="container">
             <div className="section-head section-head-full">
               <span className="section-label">S.S.S.</span>
-              <h2>{home?.faqTitle || "Trabzon sosyal medya hakkında sıkça sorulanlar."}</h2>
+              <h2>{home?.faqTitle || "Samsun sosyal medya hakkında sıkça sorulanlar."}</h2>
               <p className="section-desc">
                 {home?.faqLead ||
                   "Fiyat mantığı, sektöre özel planlama, reklam bütçesi, sözleşme ve WhatsApp iletişimi hakkında net cevaplar."}

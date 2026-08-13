@@ -54,7 +54,7 @@ export async function listPublicBlogPosts(opts?: {
         p.coverImageUrl ||
         bodyImg ||
         existing?.coverUrl ||
-        "/assets/Trabzon-sosyal-medya.webp",
+        "/assets/Samsun-sosyal-medya.webp",
       publishedAt,
     });
   }

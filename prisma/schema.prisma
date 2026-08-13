@@ -24,15 +24,15 @@ model User {
 
 model SiteSetting {
   id             String   @id @default("default")
-  siteName       String   @default("Trabzon Sosyal Medya")
+  siteName       String   @default("Samsun Sosyal Medya")
   phone          String   @default("+905380581122")
   phoneDisplay   String   @default("+90 (538) 058 11 22")
   email          String   @default("info@wesoco.com")
   whatsapp       String   @default("905380581122")
-  addressLine1   String   @default("Gazipaşa Mah. Uzun Sk.")
-  addressLine2   String   @default("Can Bakkal İş Merkezi, Ortahisar / Trabzon")
-  defaultTitle   String   @default("Trabzon Sosyal Medya Ajansı | Instagram, TikTok ve Meta Ads")
-  defaultDesc    String   @default("Trabzon sosyal medya ajansı. 18 ilçede Instagram yönetimi, Meta Ads, Google Ads ve içerik üretimi. Wesoco güvencesiyle.")
+  addressLine1   String   @default("Gazipaşa Mah. Uzun Sk., Can Bakkal İş Merkezi")
+  addressLine2   String   @default("Kat:7 Daire:61, Ortahisar / Trabzon")
+  defaultTitle   String   @default("Samsun Sosyal Medya Ajansı | Instagram, TikTok ve Meta Ads")
+  defaultDesc    String   @default("Samsun sosyal medya ajansı. 17 ilçede Instagram yönetimi, Meta Ads, Google Ads ve içerik üretimi. Wesoco güvencesiyle.")
   ogImage        String?
 
   // Form etiketleri
@@ -168,26 +168,26 @@ model HomeStat {
 
 model HomeContent {
   id             String   @id @default("default")
-  aboutTitle     String   @default("Trabzon'da sosyal medya denince akla ilk biz gelelim diye buradayız.")
-  aboutLead      String   @default("Trabzon Sosyal Medya, Wesoco bünyesinde yerel işletmelere Instagram, TikTok, Facebook ve LinkedIn yönetimi sunan sosyal medya ajansıdır.")
+  aboutTitle     String   @default("Samsun'da sosyal medya denince akla ilk biz gelelim diye buradayız.")
+  aboutLead      String   @default("Samsun Sosyal Medya, Wesoco bünyesinde yerel işletmelere Instagram, TikTok, Facebook ve LinkedIn yönetimi sunan sosyal medya ajansıdır.")
   aboutBody      String   @default("İçerik üretimi, reels, topluluk yönetimi ve Meta Ads'i tek çatı altında yönetiyoruz.") @db.Text
   heroSlidesJson Json
   processJson    Json
-  ctaTitle       String   @default("Trabzon sosyal medya teklifi alın.")
+  ctaTitle       String   @default("Samsun sosyal medya teklifi alın.")
   ctaText        String   @default("Ücretsiz keşif görüşmesiyle başlayalım. Instagram, TikTok ve Meta Ads için doğru adres burası.")
   ctaImage       String   @default("https://images.unsplash.com/photo-1663230812927-dedf2bc78fe9?auto=format&fit=crop&w=1800&q=80")
 
   servicesTitle String @default("Büyümenin tüm adımları, tek çatıda.")
-  servicesLead  String @default("Sosyal medya yönetiminden Meta ve Google Ads'e, içerik üretiminden drone çekimine kadar Trabzon işletmeleri için uçtan uca büyüme.") @db.Text
+  servicesLead  String @default("Sosyal medya yönetiminden Meta ve Google Ads'e, içerik üretiminden drone çekimine kadar Samsun işletmeleri için uçtan uca büyüme.") @db.Text
   processTitle  String @default("Nasıl çalışıyoruz?")
   processLead   String @default("Keşiften stratejiye, içerik üretiminden reklam yönetimine ve aylık raporlamaya kadar her adım şeffaf, hızlı ve ölçülebilir.") @db.Text
-  refsTitle     String @default("Trabzon sosyal medya referanslarımız.")
+  refsTitle     String @default("Samsun sosyal medya referanslarımız.")
   refsLead      String @default("") @db.Text
-  blogTitle     String @default("Trabzon işletmeleri için pratik yazılar.")
+  blogTitle     String @default("Samsun işletmeleri için pratik yazılar.")
   approachTitle String @default("Her marka ve sektöre özel içerik planı.")
   approachLead  String @default("Hazır paket dayatmıyoruz. Restoran ile klinik, otel ile otomotiv aynı dilde konuşmaz. Keşifte markanızın hedef kitlesini, satış ritmini ve satış yolunu dinler; ona göre kanal, içerik takvimi ve ölçüm çerçevesi kurarız. Reklam medya harcaması ajans ücretinden ayrıdır.") @db.Text
   approachTableJson Json @default("[]")
-  faqTitle      String @default("Trabzon sosyal medya hakkında sıkça sorulanlar.")
+  faqTitle      String @default("Samsun sosyal medya hakkında sıkça sorulanlar.")
   faqLead       String @default("Fiyat, planlama ve iletişim hakkında net cevaplar.") @db.Text
   contactTitle  String @default("Projenizi konuşalım.")
   contactLead   String @default("Formu doldurun ya da WhatsApp’tan yazın. En geç 24 saat içinde size dönüş yapıyoruz.") @db.Text

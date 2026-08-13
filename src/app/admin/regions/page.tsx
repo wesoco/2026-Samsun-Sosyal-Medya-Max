@@ -39,7 +39,7 @@ export default async function AdminRegionsPage({
   return (
     <AdminChrome
       title="Bölgeler"
-      description="18 ilçe SEO sayfası. Footer ve /bolgeler üzerinden indekslenir; ana menüde gösterilmez."
+      description="17 ilçe SEO sayfası. Footer ve /bolgeler üzerinden indekslenir; ana menüde gösterilmez."
       actions={
         <Link href="/admin/regions/new" className="admin-btn admin-btn-primary">
           Yeni bölge

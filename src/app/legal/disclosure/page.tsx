@@ -5,8 +5,8 @@ export const dynamic = "force-dynamic";
 
 export function generateMetadata() {
   return buildLegalMetadata(
-    "Aydınlatma Metni | Trabzon Sosyal Medya",
-    "KVKK kapsamında Trabzon Sosyal Medya aydınlatma metni.",
+    "Aydınlatma Metni | Samsun Sosyal Medya",
+    "KVKK kapsamında Samsun Sosyal Medya aydınlatma metni.",
     paths.disclosure,
   );
 }
@@ -21,7 +21,7 @@ export default function DisclosurePage() {
     >
       <h2>1. Veri sorumlusu</h2>
       <p>
-        Trabzon Sosyal Medya (Wesoco), Ortahisar / Trabzon. E-posta: info@wesoco.com · Tel: +90 (538) 058 11 22.
+        Samsun Sosyal Medya (Wesoco), Ortahisar / Trabzon. E-posta: info@wesoco.com · Tel: +90 (538) 058 11 22.
       </p>
       <h2>2. İşleme amaçları</h2>
       <p>İletişim taleplerinin yanıtlanması, teklif hazırlama, sözleşme ve faturalama süreçleri, yasal yükümlülükler.</p>

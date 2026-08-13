@@ -24,7 +24,7 @@ type Props = {
 };
 
 export function SiteHeader({ phoneDisplay, whatsapp, variant = "home" }: Props) {
-  const wa = `https://wa.me/${whatsapp}?text=${encodeURIComponent("Merhaba, Trabzon Sosyal Medya hizmetleri hakkında bilgi almak istiyorum.")}`;
+  const wa = `https://wa.me/${whatsapp}?text=${encodeURIComponent("Merhaba, Samsun Sosyal Medya hizmetleri hakkında bilgi almak istiyorum.")}`;
   return (
     <header className={`site-header${variant === "inner" ? " is-scrolled" : ""}`} id="header">
       <div className="header-inner">

@@ -7,7 +7,7 @@ export function resolveGtmId(fromDb?: string | null) {
   return /^GTM-[A-Z0-9]+$/i.test(id) ? id : "";
 }
 
-/** Google Tag Manager — head script + body noscript */
+/** Google Tag Manager  -  head script + body noscript */
 export function GoogleTagManager({ gtmId }: { gtmId?: string | null }) {
   const id = resolveGtmId(gtmId);
   if (!id) return null;

@@ -9,8 +9,8 @@ export const dynamic = "force-dynamic";
 
 export async function generateMetadata(): Promise<Metadata> {
   return buildMetadata({
-    title: "Hizmet Bölgeleri | Trabzon Sosyal Medya",
-    description: "Trabzon'un 18 ilçesinde sosyal medya yönetimi.",
+    title: "Hizmet Bölgeleri | Samsun Sosyal Medya",
+    description: "Samsun'un 17 ilçesinde sosyal medya yönetimi.",
     path: paths.regions,
   });
 }
@@ -32,8 +32,8 @@ export default async function RegionsIndexPage() {
               <span>Bölgeler</span>
             </nav>
             <span className="section-label">Bölgeler</span>
-            <h1>Trabzon ve 18 ilçesinde sosyal medya yönetimi.</h1>
-            <p className="lead">Akçaabat&apos;tan Of&apos;a yerel işletmeler için aynı kalitede hizmet.</p>
+            <h1>Samsun ve 17 ilçesinde sosyal medya yönetimi.</h1>
+            <p className="lead">Atakum&apos;tan Bafra&apos;a yerel işletmeler için aynı kalitede hizmet.</p>
           </div>
         </section>
         <section className="page-block soft">

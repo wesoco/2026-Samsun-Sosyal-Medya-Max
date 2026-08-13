@@ -18,7 +18,7 @@ const FOCUS: Record<string, string> = {
 
 export async function generateMetadata(): Promise<Metadata> {
   return buildMetadata({
-    title: "Sektörler | Trabzon Sosyal Medya",
+    title: "Sektörler | Samsun Sosyal Medya",
     description:
       "Restoran, klinik, otel, otomotiv, inşaat ve perakende için sektöre özel sosyal medya yönetimi.",
     path: paths.sectors,
@@ -42,7 +42,7 @@ export default async function SectorsIndexPage() {
               <span>Sektörler</span>
             </nav>
             <span className="section-label">Sektörler</span>
-            <h1>Trabzon’da sektöre özel sosyal medya.</h1>
+            <h1>Samsun’da sektöre özel sosyal medya.</h1>
             <p className="lead">
               Her sektörün kendi dili, temposu ve satış yolu vardır. Şablon paket yok; markanıza göre içerik planı
               kurulur.

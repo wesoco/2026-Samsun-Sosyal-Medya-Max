@@ -10,7 +10,7 @@ export const dynamic = "force-dynamic";
 
 export async function generateMetadata(): Promise<Metadata> {
   return buildMetadata({
-    title: "Blog | Trabzon Sosyal Medya Ajansı",
+    title: "Blog | Samsun Sosyal Medya Ajansı",
     description: "Instagram, Meta Ads, Google Ads, drone ve içerik üretimi yazıları.",
     path: paths.blog,
   });
@@ -30,7 +30,7 @@ export default async function BlogIndexPage() {
               <span>Blog</span>
             </nav>
             <span className="section-label">Blog</span>
-            <h1>Trabzon sosyal medya üzerine yazılar.</h1>
+            <h1>Samsun sosyal medya üzerine yazılar.</h1>
             <p className="lead">Ajans seçimi, Instagram, Meta Ads, Google Ads, drone ve içerik rehberleri.</p>
           </div>
         </section>

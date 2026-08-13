@@ -7,7 +7,7 @@ const SiteInteractions = dynamic(
   { ssr: false },
 );
 
-/** Ayrı chunk — LCP sonrası hydrate (menü/scroll için gecikmesiz) */
+/** Ayrı chunk  -  LCP sonrası hydrate (menü/scroll için gecikmesiz) */
 export function SiteInteractionsLazy({ variant = "inner" }: { variant?: "home" | "inner" }) {
   return <SiteInteractions variant={variant} />;
 }

@@ -15,24 +15,23 @@ export type SiteNap = {
 };
 
 const DISTRICTS = [
-  "Ortahisar",
-  "Akçaabat",
-  "Yomra",
-  "Arsin",
-  "Sürmene",
-  "Of",
-  "Vakfıkebir",
-  "Maçka",
-  "Beşikdüzü",
-  "Çarşıbaşı",
-  "Araklı",
-  "Çaykara",
-  "Tonya",
-  "Düzköy",
-  "Şalpazarı",
-  "Hayrat",
-  "Dernekpazarı",
-  "Köprübaşı",
+  "İlkadım",
+  "Atakum",
+  "Canik",
+  "Tekkeköy",
+  "Bafra",
+  "Çarşamba",
+  "Vezirköprü",
+  "Terme",
+  "Havza",
+  "Kavak",
+  "Alaçam",
+  "19 Mayıs",
+  "Salıpazarı",
+  "Asarcık",
+  "Ladik",
+  "Ayvacık",
+  "Yakakent",
 ] as const;
 
 type MetaInput = {
@@ -64,7 +63,7 @@ export function buildMetadata({
       title,
       description,
       url,
-      siteName: "Trabzon Sosyal Medya",
+      siteName: "Samsun Sosyal Medya",
       locale: "tr_TR",
       type,
       images: [{ url: ogImage }],
@@ -130,7 +129,7 @@ export function localBusinessJsonLd(nap: SiteNap) {
     areaServed: DISTRICTS.map((name) => ({
       "@type": "City",
       name,
-      containedInPlace: { "@type": "AdministrativeArea", name: "Trabzon" },
+      containedInPlace: { "@type": "AdministrativeArea", name: "Samsun" },
     })),
     priceRange: "$$",
     openingHoursSpecification: [
@@ -172,7 +171,7 @@ export function serviceJsonLd(input: {
     description: input.description,
     url: absoluteUrl(input.path),
     provider: { "@id": `${siteUrl()}/#localbusiness` },
-    areaServed: { "@type": "AdministrativeArea", name: "Trabzon" },
+    areaServed: { "@type": "AdministrativeArea", name: "Samsun" },
     serviceType: input.name,
   };
 }
@@ -217,7 +216,7 @@ export function blogPostingJsonLd(input: {
       "@type": "WebPage",
       "@id": absoluteUrl(input.path),
     },
-    isPartOf: {
+    isPartBafra: {
       "@type": "WebSite",
       "@id": `${siteUrl()}/#website`,
       name: input.nap.siteName,
@@ -270,9 +269,9 @@ export function referenceItemListJsonLd(
   return {
     "@context": "https://schema.org",
     "@type": "ItemList",
-    name: "Trabzon sosyal medya referansları",
+    name: "Samsun sosyal medya referansları",
     description:
-      "Wesoco / Trabzon Sosyal Medya ajansının post, reels ve tanıtım filmi çalışmalarından seçilmiş referanslar.",
+      "Wesoco / Samsun Sosyal Medya ajansının post, reels ve tanıtım filmi çalışmalarından seçilmiş referanslar.",
     numberOfItems: items.length,
     itemListElement: items.map((item, i) => ({
       "@type": "ListItem",

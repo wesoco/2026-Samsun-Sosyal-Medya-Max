@@ -1,5 +1,5 @@
 ---
-description: TrabzonSosyalMedya ultimate SEO / GEO / AEO master prompt — teknik standartlar, içerik, schema, performans ve faz checklist
+description: SamsunSosyalMedya ultimate SEO / GEO / AEO master prompt — teknik standartlar, içerik, schema, performans ve faz checklist
 alwaysApply: true
 ---
 
@@ -46,7 +46,7 @@ Kısa özet kural: `seo-geo-aeo.mdc`. Bu dosya **tam standarttır**.
 
 ## 1. Genel hedef
 
-- Birincil: **Trabzon Sosyal Medya Ajansı** ve uzun kuyruk yerel niyetler
+- Birincil: **Samsun Sosyal Medya Ajansı** ve uzun kuyruk yerel niyetler
 - Helpful Content + E-E-A-T maksimum
 - GEO (Generative Engine Optimization) + AEO (Answer Engine Optimization)
 - Citation SEO: net tanımlar, tarihler, NAP, kaynaklanabilir iddialar
@@ -98,7 +98,7 @@ Instagram yönetimi, Facebook reklamları, Meta Ads, Google Ads, içerik üretim
 
 ## 5. Entity SEO
 
-**Yerel:** Trabzon, Ortahisar, Akçaabat, Yomra, Arsin, Sürmene, Of, Vakfıkebir, Maçka, Beşikdüzü, Çarşıbaşı + diğer 18 ilçe.
+**Yerel:** Samsun, İlkadım, Atakum, Canik, Tekkeköy, Bafra, Çarşamba, Vezirköprü, Terme, Havza, Kavak, Alaçam, 19 Mayıs, Salıpazarı, Asarcık, Ladik, Ayvacık, Yakakent.
 
 **Otorite:** Instagram, Facebook, TikTok, LinkedIn, YouTube, Google, Meta, Google Ads, Meta Ads, Analytics, Search Console.
 
@@ -153,7 +153,7 @@ Yasak: hardcode JSON-LD sayfa içinde; sahte AggregateRating.
 ## 10. İç linkleme
 
 - `TopicCluster` ile yetim sayfa bırakma
-- Anchor doğal: “Akçaabat Instagram yönetimi”, “Meta Ads süreci”
+- Anchor doğal: “Atakum Instagram yönetimi”, “Meta Ads süreci”
 - Hub: `/hizmetler`, `/blog`, `/bolgeler` → spoke sayfalar
 
 ---

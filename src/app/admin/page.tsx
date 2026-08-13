@@ -106,7 +106,7 @@ export default async function AdminDashboard() {
             </Link>
             <Link href="/admin/regions" className="admin-quick">
               <strong>Bölgeler</strong>
-              <span>18 ilçe SEO sayfası</span>
+              <span>17 ilçe SEO sayfası</span>
             </Link>
             <Link href="/admin/home" className="admin-quick">
               <strong>Anasayfa</strong>

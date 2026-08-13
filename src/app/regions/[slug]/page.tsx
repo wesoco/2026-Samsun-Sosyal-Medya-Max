@@ -59,11 +59,11 @@ export default async function RegionPage({ params }: Props) {
 
   const faqs = (d.faqJson as FaqPair[]) || [];
   const nap: SiteNap = {
-    siteName: settings?.siteName || "Trabzon Sosyal Medya",
+    siteName: settings?.siteName || "Samsun Sosyal Medya",
     phone: settings?.phone || "+905380581122",
     email: settings?.email || "info@wesoco.com",
-    addressLine1: settings?.addressLine1 || "Gazipaşa Mah. Uzun Sk.",
-    addressLine2: settings?.addressLine2 || "Can Bakkal İş Merkezi, Ortahisar / Trabzon",
+    addressLine1: settings?.addressLine1 || "Gazipaşa Mah. Uzun Sk., Can Bakkal İş Merkezi",
+    addressLine2: settings?.addressLine2 || "Kat:7 Daire:61, Ortahisar / Trabzon",
   };
 
   const schemas = [
@@ -116,7 +116,7 @@ export default async function RegionPage({ params }: Props) {
               title="Bunlara da bakın"
               services={services.slice(0, 3).map((x) => ({
                 href: paths.service(x.slug),
-                label: x.title.replace(/^Trabzon\s+/i, ""),
+                label: x.title.replace(/^Samsun\s+/i, ""),
               }))}
               regions={otherDistricts.slice(0, 3).map((x) => ({
                 href: paths.region(x.slug),

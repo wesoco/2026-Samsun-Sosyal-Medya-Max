@@ -18,10 +18,10 @@ const montserrat = Montserrat({
 export async function generateMetadata(): Promise<Metadata> {
   const settings = await prisma.siteSetting.findUnique({ where: { id: "default" } });
   return buildMetadata({
-    title: settings?.defaultTitle || "Trabzon Sosyal Medya Ajansı",
+    title: settings?.defaultTitle || "Samsun Sosyal Medya Ajansı",
     description:
       settings?.defaultDesc ||
-      "Trabzon sosyal medya ajansı. Instagram yönetimi, Meta Ads, Google Ads ve içerik üretimi.",
+      "Samsun sosyal medya ajansı. Instagram yönetimi, Meta Ads, Google Ads ve içerik üretimi.",
     path: paths.home,
     image: settings?.ogImage,
   });

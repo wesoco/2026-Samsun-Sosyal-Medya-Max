@@ -10,7 +10,7 @@ export const dynamic = "force-dynamic";
 
 export async function generateMetadata(): Promise<Metadata> {
   return buildMetadata({
-    title: "S.S.S. | Trabzon Sosyal Medya",
+    title: "S.S.S. | Samsun Sosyal Medya",
     description: "Instagram, Meta Ads ve ajans süreci hakkında sıkça sorulanlar.",
     path: paths.faq,
   });
@@ -50,7 +50,7 @@ export default async function FaqPage() {
         </section>
         <section className="faq section">
           <div className="container">
-            <FaqBlock title="Trabzon sosyal medya hakkında SSS" faqs={pairs} />
+            <FaqBlock title="Samsun sosyal medya hakkında SSS" faqs={pairs} />
           </div>
         </section>
       </main>

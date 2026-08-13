@@ -1,4 +1,4 @@
-# Trabzon Sosyal Medya (Next.js 16)
+# Samsun Sosyal Medya (Next.js 16)
 
 SSR-first Next.js 16 + PostgreSQL (Prisma) + Admin paneli.
 
@@ -18,7 +18,7 @@ npm run dev
 
 - Site: http://localhost:3000
 - Admin: http://localhost:3000/admin/login  
-  Varsayılan: `admin@trabzonsosyalmedya.com` / `Admin123!`
+  Varsayılan: `admin@samsunsosyalmedya.com` / `Admin123!`
 
 ## Path yapısı
 - Kod route’ları İngilizce: `/about`, `/services`, `/regions`, `/blog`, `/contact`, `/faq`
@@ -42,7 +42,7 @@ Akış: `main` push → GitHub Actions image build → `ghcr.io/<owner>/<repo>` 
 
 ```bash
 # Postgres ayaktayken
-docker build --build-arg DATABASE_URL="$DATABASE_URL" -t trabzon-sosyal-medya .
+docker build --build-arg DATABASE_URL="$DATABASE_URL" -t samsun-sosyal-medya .
 ```
 
 ### Coolify checklist

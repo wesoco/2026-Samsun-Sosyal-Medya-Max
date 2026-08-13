@@ -65,7 +65,7 @@ export function ContactForm({ districts, services, labels }: Props) {
       className="contact-form"
       onSubmit={onSubmit}
       toolname="submit_contact_form"
-      tooldescription="Trabzon Sosyal Medya iletişim formunu doldurup gönderir. Teklif, WhatsApp veya proje talebi için kullanın."
+      tooldescription="Samsun Sosyal Medya iletişim formunu doldurup gönderir. Teklif, WhatsApp veya proje talebi için kullanın."
     >
       <div className="form-row">
         <label>

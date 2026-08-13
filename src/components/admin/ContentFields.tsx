@@ -38,7 +38,7 @@ export function ContentFields({
         <div className="admin-field-grid">
           <label>
             Başlık
-            <input name="title" required defaultValue={title} placeholder="Örn. Trabzon Instagram yönetimi" />
+            <input name="title" required defaultValue={title} placeholder="Örn. Samsun Instagram yönetimi" />
           </label>
           <label>
             {slugLabel}
@@ -46,7 +46,7 @@ export function ContentFields({
               name="slug"
               required
               defaultValue={slug}
-              placeholder="trabzon-instagram-yonetimi"
+              placeholder="samsun-instagram-yonetimi"
               pattern="[a-z0-9]+(?:-[a-z0-9]+)*"
               title="Yalnızca küçük harf, rakam ve tire (Türkçe karakter yok: öğrenci → ogrenci)"
             />

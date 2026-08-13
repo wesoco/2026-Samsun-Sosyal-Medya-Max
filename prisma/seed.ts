@@ -2,37 +2,37 @@ import { PrismaClient } from "@prisma/client";
 import bcrypt from "bcryptjs";
 import { existsSync, readFileSync } from "fs";
 import { join } from "path";
+import { DEFAULT_HERO_SLIDES } from "../src/lib/hero-slides";
 
 const prisma = new PrismaClient();
 
 const districts = [
-  ["ortahisar", "Ortahisar", "Merkez"],
-  ["akcaabat", "Akçaabat", "Batı koridoru"],
-  ["yomra", "Yomra", "Doğu koridoru"],
-  ["of", "Of", "Doğu koridoru"],
-  ["arakli", "Araklı", "Doğu koridoru"],
-  ["surmene", "Sürmene", "Doğu koridoru"],
-  ["arsin", "Arsin", "Doğu koridoru"],
-  ["vakfikebir", "Vakfıkebir", "Batı koridoru"],
-  ["besikduzu", "Beşikdüzü", "Batı koridoru"],
-  ["macka", "Maçka", "İç kesim"],
-  ["caykara", "Çaykara", "İç kesim"],
-  ["tonya", "Tonya", "İç kesim"],
-  ["carsibasi", "Çarşıbaşı", "Batı koridoru"],
-  ["salpazari", "Şalpazarı", "İç kesim"],
-  ["duzkoy", "Düzköy", "İç kesim"],
-  ["hayrat", "Hayrat", "Doğu koridoru"],
-  ["dernekpazari", "Dernekpazarı", "Doğu koridoru"],
-  ["koprubasi", "Köprübaşı", "Doğu koridoru"],
+  ["ilkadim", "İlkadım", "Merkez"],
+  ["atakum", "Atakum", "Batı koridoru"],
+  ["canik", "Canik", "Güney koridoru"],
+  ["tekkekoy", "Tekkeköy", "Doğu koridoru"],
+  ["bafra", "Bafra", "Batı koridoru"],
+  ["carsamba", "Çarşamba", "Doğu koridoru"],
+  ["vezirkopru", "Vezirköprü", "İç kesim"],
+  ["terme", "Terme", "Doğu koridoru"],
+  ["havza", "Havza", "İç kesim"],
+  ["kavak", "Kavak", "İç kesim"],
+  ["alacam", "Alaçam", "Batı koridoru"],
+  ["19-mayis", "19 Mayıs", "Batı koridoru"],
+  ["salipazari", "Salıpazarı", "İç kesim"],
+  ["asarcik", "Asarcık", "İç kesim"],
+  ["ladik", "Ladik", "İç kesim"],
+  ["ayvacik", "Ayvacık", "Batı koridoru"],
+  ["yakakent", "Yakakent", "Batı koridoru"],
 ] as const;
 
 async function main() {
   const passwordHash = await bcrypt.hash(process.env.ADMIN_PASSWORD || "Admin123!", 12);
   await prisma.user.upsert({
-    where: { email: process.env.ADMIN_EMAIL || "admin@trabzonsosyalmedya.com" },
+    where: { email: process.env.ADMIN_EMAIL || "admin@samsunsosyalmedya.com" },
     update: { passwordHash },
     create: {
-      email: process.env.ADMIN_EMAIL || "admin@trabzonsosyalmedya.com",
+      email: process.env.ADMIN_EMAIL || "admin@samsunsosyalmedya.com",
       name: "Admin",
       passwordHash,
       role: "ADMIN",
@@ -41,14 +41,35 @@ async function main() {
 
   await prisma.siteSetting.upsert({
     where: { id: "default" },
-    update: {},
-    create: { id: "default", gtmId: process.env.NEXT_PUBLIC_GTM_ID || "GTM-M2W8R68W" },
+    update: {
+      siteName: "Samsun Sosyal Medya",
+      addressLine1: "Gazipaşa Mah. Uzun Sk., Can Bakkal İş Merkezi",
+      addressLine2: "Kat:7 Daire:61, Ortahisar / Trabzon",
+      defaultTitle: "Samsun Sosyal Medya Ajansı | Instagram, TikTok ve Meta Ads",
+      defaultDesc:
+        "Samsun sosyal medya ajansı. 17 ilçede Instagram yönetimi, Meta Ads, Google Ads ve içerik üretimi. Wesoco güvencesiyle.",
+      email: "info@wesoco.com",
+      phone: "+905380581122",
+      phoneDisplay: "+90 (538) 058 11 22",
+      whatsapp: "905380581122",
+      gtmId: process.env.NEXT_PUBLIC_GTM_ID || "GTM-M2W8R68W",
+    },
+    create: {
+      id: "default",
+      siteName: "Samsun Sosyal Medya",
+      addressLine1: "Gazipaşa Mah. Uzun Sk., Can Bakkal İş Merkezi",
+      addressLine2: "Kat:7 Daire:61, Ortahisar / Trabzon",
+      defaultTitle: "Samsun Sosyal Medya Ajansı | Instagram, TikTok ve Meta Ads",
+      defaultDesc:
+        "Samsun sosyal medya ajansı. 17 ilçede Instagram yönetimi, Meta Ads, Google Ads ve içerik üretimi. Wesoco güvencesiyle.",
+      gtmId: process.env.NEXT_PUBLIC_GTM_ID || "GTM-M2W8R68W",
+    },
   });
 
   await prisma.homeStat.deleteMany();
   await prisma.homeStat.createMany({
     data: [
-      { value: "18", label: "İlçede hizmet", sortOrder: 1 },
+      { value: "17", label: "İlçede hizmet", sortOrder: 1 },
       { value: "87", label: "Aktif firma", sortOrder: 2 },
       { value: "%100", label: "Yerel odak", sortOrder: 3 },
       { value: "7/24", label: "İletişim", sortOrder: 4 },
@@ -58,51 +79,51 @@ async function main() {
   const services = [
     {
       slug: "sosyal-medya-yonetimi",
-      title: "Sosyal Medya Yönetimi",
+      title: "Samsun Sosyal Medya Yönetimi",
       lead: "Instagram, Facebook, TikTok ve LinkedIn hesaplarınızı düzenli ve markanıza özel yönetiyoruz.",
       bodyHtml:
-        "<h2>Kapsam</h2><p>İçerik takvimi, yayınlama, topluluk yönetimi ve aylık rapor. Trabzon işletmeleri için ölçülebilir büyüme.</p><h2>Süreç</h2><p>Keşif, strateji, üretim, yayın ve optimizasyon. Wesoco güvencesiyle şeffaf ilerleriz.</p>",
+        "<h2>Kapsam</h2><p>İçerik takvimi, yayınlama, topluluk yönetimi ve aylık rapor. Samsun işletmeleri için ölçülebilir büyüme.</p><h2>Süreç</h2><p>Keşif, strateji, üretim, yayın ve optimizasyon. Wesoco güvencesiyle şeffaf ilerleriz.</p>",
       sortOrder: 1,
     },
     {
       slug: "icerik-uretimi-cekim",
-      title: "İçerik ve Reels Üretimi",
-      lead: "Post, story ve reels. Trabzon'da çekim, kurgu ve yayın ile satışa odaklı içerik.",
+      title: "Samsun İçerik ve Reels Üretimi",
+      lead: "Post, story ve reels. Samsun'da çekim, kurgu ve yayın ile satışa odaklı içerik.",
       bodyHtml:
         "<h2>Üretim</h2><p>Yerinde çekim, reels kurgu ve marka diline uygun içerik stoğu.</p>",
       sortOrder: 2,
     },
     {
       slug: "meta-ads",
-      title: "Meta Ads",
+      title: "Samsun Meta Ads",
       lead: "Facebook ve Instagram reklamlarıyla doğru kitleye, doğru bütçeyle.",
       bodyHtml: "<h2>Performans</h2><p>Hedefleme, kreatif, retargeting ve şeffaf raporlama.</p>",
       sortOrder: 3,
     },
     {
       slug: "google-ads",
-      title: "Google Ads",
+      title: "Samsun Google Ads",
       lead: "Arama niyetindeki müşteriye ulaşın. Search, Display ve YouTube.",
       bodyHtml: "<h2>Niyet</h2><p>Anahtar kelime, dönüşüm izleme ve şeffaf medya bütçesi.</p>",
       sortOrder: 4,
     },
     {
       slug: "dijital-pazarlama-ajansi",
-      title: "Dijital Pazarlama Ajansı",
+      title: "Samsun Dijital Pazarlama Ajansı",
       lead: "İçerik, Meta/Google Ads ve ölçümü full funnel sistemde birleştiren dijital pazarlama.",
       bodyHtml: "<h2>Tasarım</h2><p>Tutarlı marka dili ve dönüşüm odaklı görseller.</p>",
       sortOrder: 5,
     },
     {
       slug: "drone-cekimi",
-      title: "Drone Çekimi",
+      title: "Samsun Drone Çekimi",
       lead: "Otel, inşaat, turizm için profesyonel havadan video ve fotoğraf.",
       bodyHtml: "<h2>Havadan içerik</h2><p>Planlama, çekim, kurgu ve sosyal medya formatları.</p>",
       sortOrder: 6,
     },
     {
       slug: "kurumsal-sosyal-medya-yonetimi",
-      title: "Kurumsal Sosyal Medya Yönetimi",
+      title: "Samsun Kurumsal Sosyal Medya Yönetimi",
       lead: "B2B ve kurumsal markalar için LinkedIn, Instagram ve itibar odaklı yönetim.",
       bodyHtml:
         "<h2>Kurumsal yönetim</h2><p>Onaylı süreç, LinkedIn düşünce liderliği, kriz protokolü ve aylık skor kartı.</p>",
@@ -115,14 +136,14 @@ async function main() {
     await prisma.service.upsert({
       where: { slug: s.slug },
       update: { title: s.title, sortOrder: s.sortOrder },
-      create: { ...s, published: true, seoTitle: `${s.title} | Trabzon Sosyal Medya`, seoDesc: s.lead },
+      create: { ...s, published: true, seoTitle: `${s.title} | Samsun Sosyal Medya`, seoDesc: s.lead },
     });
   }
 
   for (let i = 0; i < districts.length; i++) {
     const [slug, name, regionLabel] = districts[i];
-    const lead = `${name}'da Instagram, içerik üretimi ve Meta Ads ile işletmenizi büyütün. Trabzon Sosyal Medya · Wesoco.`;
-    const bodyHtml = `<h2>${name}'da sosyal medya yönetimi neden kritik?</h2><p>${name}, Trabzon'un ${regionLabel.toLowerCase()} bölgesinde yerel işletmeler için yoğun bir rekabet alanı sunar. Cadde trafiği kadar Instagram görünürlüğü de müşteri kararını etkiler. Trabzon Sosyal Medya olarak ${name} işletmelerine Wesoco güvencesiyle hizmet veriyoruz.</p><h2>İçerik ve reklam yaklaşımı</h2><p>${name}'da içerik planı sektöre göre kurulur. Reels ve story ile keşfet; Meta Ads ile yerel hedefleme birleşir. Aylık raporda erişim ve dönüşüm net görülür.</p><h2>Süreç</h2><p>Keşif, strateji, onaylı içerik, yayınlama ve optimizasyon. Şeffaf kapsam, net iletişim.</p>`;
+    const lead = `${name}'da Instagram, içerik üretimi ve Meta Ads ile işletmenizi büyütün. Samsun Sosyal Medya · Wesoco.`;
+    const bodyHtml = `<h2>${name}'da sosyal medya yönetimi neden kritik?</h2><p>${name}, Samsun'un ${regionLabel.toLowerCase()} bölgesinde yerel işletmeler için yoğun bir rekabet alanı sunar. Cadde trafiği kadar Instagram görünürlüğü de müşteri kararını etkiler. Samsun Sosyal Medya olarak ${name} işletmelerine Wesoco güvencesiyle hizmet veriyoruz.</p><h2>İçerik ve reklam yaklaşımı</h2><p>${name}'da içerik planı sektöre göre kurulur. Reels ve story ile keşfet; Meta Ads ile yerel hedefleme birleşir. Aylık raporda erişim ve dönüşüm net görülür.</p><h2>Süreç</h2><p>Keşif, strateji, onaylı içerik, yayınlama ve optimizasyon. Şeffaf kapsam, net iletişim.</p>`;
     await prisma.district.upsert({
       where: { slug },
       update: { name, regionLabel, lead, bodyHtml, sortOrder: i + 1 },
@@ -134,10 +155,10 @@ async function main() {
         bodyHtml,
         sortOrder: i + 1,
         published: true,
-        seoTitle: `${name} Sosyal Medya Yönetimi | Trabzon Sosyal Medya Ajansı`,
+        seoTitle: `${name} Sosyal Medya Yönetimi | Samsun Sosyal Medya Ajansı`,
         seoDesc: lead,
         faqJson: [
-          { q: `${name}'ta sosyal medya yönetimi yapıyor musunuz?`, a: `Evet. ${name} ve tüm Trabzon ilçelerinde hizmet veriyoruz.` },
+          { q: `${name}'da sosyal medya yönetimi yapıyor musunuz?`, a: `Evet. ${name} ve tüm Samsun ilçelerinde hizmet veriyoruz.` },
           { q: "Yerinde çekim olur mu?", a: `Evet. ${name} ve çevresinde planlı çekim yapılabilir.` },
           { q: "Ücretsiz keşif var mı?", a: "Evet. WhatsApp veya form üzerinden." },
         ],
@@ -147,75 +168,75 @@ async function main() {
 
   const posts = [
     {
-      slug: "trabzon-sosyal-medya-ajansi-nasil-secilir",
-      title: "Trabzon'da sosyal medya ajansı seçerken nelere dikkat etmeli?",
+      slug: "samsun-sosyal-medya-ajansi-nasil-secilir",
+      title: "Samsun Samsun'da sosyal medya ajansı seçerken nelere dikkat etmeli?",
       category: "Ajans",
       lead: "Süreç, raporlama, içerik kalitesi ve Meta Ads şeffaflığı. En iyi ajans kriterleri.",
-      coverUrl: "/assets/Trabzon-sosyal-medya.webp",
-      bodyHtml: "<h2>Ajans seçimi</h2><p>Trabzon'da sosyal medya ajansı seçerken referans, raporlama disiplini ve yerel dil kritiktir. Wesoco güvencesiyle çalışan Trabzon Sosyal Medya, şeffaf süreç sunar.</p><h2>Nelere bakmalı?</h2><p>İçerik kalitesi, reklam şeffaflığı, sözleşme netliği ve iletişim hızı.</p>",
+      coverUrl: "/assets/Samsun-sosyal-medya.webp",
+      bodyHtml: "<h2>Ajans seçimi</h2><p>Samsun'da sosyal medya ajansı seçerken referans, raporlama disiplini ve yerel dil kritiktir. Wesoco güvencesiyle çalışan Samsun Sosyal Medya, şeffaf süreç sunar.</p><h2>Nelere bakmalı?</h2><p>İçerik kalitesi, reklam şeffaflığı, sözleşme netliği ve iletişim hızı.</p>",
     },
     {
-      slug: "trabzon-sosyal-medya-yonetimi-rehberi",
-      title: "Trabzon sosyal medya yönetimi rehberi",
+      slug: "samsun-sosyal-medya-yonetimi-rehberi",
+      title: "Samsun sosyal medya yönetimi rehberi",
       category: "Yönetim",
       lead: "Paket, süreç ve fiyat mantığı. İşletmeler için pratik rehber.",
-      coverUrl: "/assets/Trabzon-sosyal-medya.webp",
+      coverUrl: "/assets/Samsun-sosyal-medya.webp",
       bodyHtml: "<h2>Yönetim nedir?</h2><p>İçerik takvimi, yayınlama, etkileşim ve raporlama. Ölçülebilir büyüme için düzenli ritim şarttır.</p>",
     },
     {
-      slug: "trabzon-instagram-yonetimi",
-      title: "Trabzon'da Instagram hesabı yöneten ajans: ne sunmalı?",
+      slug: "samsun-instagram-yonetimi",
+      title: "Samsun Samsun'da Instagram hesabı yöneten ajans: ne sunmalı?",
       category: "Instagram",
       lead: "İçerik takvimi, reels, story, reklam ve raporlama.",
-      coverUrl: "/assets/Trabzon-sosyal-medya.webp",
+      coverUrl: "/assets/Samsun-sosyal-medya.webp",
       bodyHtml: "<h2>Instagram yönetimi</h2><p>Doğru kitleye ulaşıp dönüşüm üreten yönetim; yalnızca takipçi sayısı değil.</p>",
     },
     {
-      slug: "meta-ads-trabzon-isletmeler",
-      title: "Trabzon işletmeleri için Meta Ads neden kritik?",
+      slug: "meta-ads-samsun-isletmeler",
+      title: "Samsun işletmeleri için Meta Ads neden kritik?",
       category: "Meta Ads",
       lead: "Facebook ve Instagram reklamlarıyla doğru kitleye ulaşmak.",
-      coverUrl: "/assets/Trabzon-sosyal-medya.webp",
+      coverUrl: "/assets/Samsun-sosyal-medya.webp",
       bodyHtml: "<h2>Meta Ads</h2><p>Konum hedefleme, retargeting ve şeffaf bütçe. Organik erişim tek başına yetmez.</p>",
     },
     {
-      slug: "trabzon-google-ads-yonetimi",
-      title: "Trabzon Google Ads yönetimi: arama reklamıyla müşteri bulmak",
+      slug: "samsun-google-ads-yonetimi",
+      title: "Samsun Google Ads yönetimi: arama reklamıyla müşteri bulmak",
       category: "Google Ads",
       lead: "Search, Display ve YouTube ile satın alma niyetindeki kitleye ulaşın.",
-      coverUrl: "/assets/Trabzon-sosyal-medya.webp",
-      bodyHtml: "<h2>Google Ads</h2><p>Niyet odaklı arama reklamları Trabzon işletmeleri için güçlü bir kanaldır.</p>",
+      coverUrl: "/assets/Samsun-sosyal-medya.webp",
+      bodyHtml: "<h2>Google Ads</h2><p>Niyet odaklı arama reklamları Samsun işletmeleri için güçlü bir kanaldır.</p>",
     },
     {
-      slug: "trabzon-drone-cekimi",
-      title: "Trabzon drone çekimi: otel, inşaat ve turizm için havadan içerik",
+      slug: "samsun-drone-cekimi",
+      title: "Samsun drone çekimi: otel, inşaat ve turizm için havadan içerik",
       category: "Drone",
       lead: "Profesyonel drone çekimi, kurgu ve sosyal medya uyumu.",
-      coverUrl: "/assets/Trabzon-sosyal-medya.webp",
+      coverUrl: "/assets/Samsun-sosyal-medya.webp",
       bodyHtml: "<h2>Drone</h2><p>Havadan bakış markayı büyütür. Planlama, çekim ve kurgu tek çatıda.</p>",
     },
     {
-      slug: "trabzon-icerik-uretimi-cekim",
-      title: "Trabzon içerik üretimi ve profesyonel çekim",
+      slug: "samsun-icerik-uretimi-cekim",
+      title: "Samsun içerik üretimi ve profesyonel çekim",
       category: "İçerik",
       lead: "Reels, fotoğraf ve video ile aylık içerik stoğu.",
-      coverUrl: "/assets/Trabzon-sosyal-medya.webp",
+      coverUrl: "/assets/Samsun-sosyal-medya.webp",
       bodyHtml: "<h2>İçerik üretimi</h2><p>Yerinde çekim günü ile post, story ve reels stoğu oluşturun.</p>",
     },
     {
       slug: "reels-icerik-uretimi-neden-onemli",
-      title: "Reels içerik üretimi neden büyümeyi hızlandırır?",
+      title: "Samsun Reels içerik üretimi neden büyümeyi hızlandırır?",
       category: "Reels",
       lead: "Keşfet trafiği, marka bilinirliği ve satış.",
-      coverUrl: "/assets/Trabzon-sosyal-medya.webp",
+      coverUrl: "/assets/Samsun-sosyal-medya.webp",
       bodyHtml: "<h2>Reels</h2><p>Kısa video, takipçi olmayan kitleye ulaşmayı kolaylaştırır.</p>",
     },
     {
-      slug: "trabzon-dijital-pazarlama-ajansi",
-      title: "Trabzon dijital pazarlama ajansı nasıl seçilir?",
+      slug: "samsun-dijital-pazarlama-ajansi",
+      title: "Samsun dijital pazarlama ajansı nasıl seçilir?",
       category: "Dijital",
       lead: "Sosyal medya, reklam, içerik ve ölçüm. Yerel markalar için rehber.",
-      coverUrl: "/assets/Trabzon-sosyal-medya.webp",
+      coverUrl: "/assets/Samsun-sosyal-medya.webp",
       bodyHtml: "<h2>Dijital pazarlama</h2><p>Kanal kanal değil, sistem olarak kurun: mesaj, içerik, reklam, ölçüm.</p>",
     },
   ];
@@ -226,7 +247,7 @@ async function main() {
       update: p,
       create: { ...p,
         published: true,
-        seoTitle: `${p.title} | Trabzon Sosyal Medya`,
+        seoTitle: `${p.title} | Samsun Sosyal Medya`,
         seoDesc: p.lead,
       },
     });
@@ -236,19 +257,19 @@ async function main() {
   await prisma.faqItem.createMany({
     data: [
       {
-        question: "Trabzon'da en iyi sosyal medya ajansı hangisi?",
+        question: "Samsun'da en iyi sosyal medya ajansı hangisi?",
         answer:
-          "Trabzon Sosyal Medya, Wesoco bünyesinde Trabzon ve 18 ilçesinde Instagram, TikTok, Facebook ve LinkedIn yönetimi sunan yerel sosyal medya ajansıdır. İçerik üretimi ve Meta Ads reklamlarını tek çatı altında yönetir.",
+          "Samsun Sosyal Medya, Wesoco bünyesinde Samsun ve 17 ilçesinde Instagram, TikTok, Facebook ve LinkedIn yönetimi sunan yerel sosyal medya ajansıdır. İçerik üretimi ve Meta Ads reklamlarını tek çatı altında yönetir.",
         sortOrder: 1,
       },
       {
-        question: "Trabzon Sosyal Medya hangi ilçelerde hizmet verir?",
+        question: "Samsun Sosyal Medya hangi ilçelerde hizmet verir?",
         answer:
-          "Ortahisar, Akçaabat, Of, Yomra, Araklı, Sürmene, Arsin, Vakfıkebir, Beşikdüzü, Maçka, Çaykara, Tonya, Çarşıbaşı, Şalpazarı, Düzköy, Hayrat, Dernekpazarı ve Köprübaşı. Uzaktan yönetim veya yerinde çekim seçenekleri mevcuttur.",
+          "İlkadım, Atakum, Canik, Tekkeköy, Bafra, Çarşamba, Vezirköprü, Terme, Havza, Kavak, Alaçam, 19 Mayıs, Salıpazarı, Asarcık, Ladik, Ayvacık ve Yakakent. Uzaktan yönetim veya yerinde çekim seçenekleri mevcuttur.",
         sortOrder: 2,
       },
       {
-        question: "Trabzon'da Instagram yönetimi nasıl yapılır?",
+        question: "Samsun'da Instagram yönetimi nasıl yapılır?",
         answer:
           "Keşif görüşmesiyle başlanır. Hedef kitle ve rakip analizi sonrası içerik takvimi oluşturulur. Post, story ve reels üretilir; yayınlama, etkileşim ve gerekirse Meta Ads yönetilir. Aylık performans raporu paylaşılır.",
         sortOrder: 3,
@@ -290,7 +311,7 @@ async function main() {
         sortOrder: 9,
       },
       {
-        question: "Trabzon'da TikTok yönetimi yapıyor musunuz?",
+        question: "Samsun'da TikTok yönetimi yapıyor musunuz?",
         answer:
           "Evet. TikTok için kısa video stratejisi, içerik takvimi, yayınlama ve trend takibi sunuyoruz. Instagram Reels ile koordineli büyüme hedefleriz.",
         sortOrder: 10,
@@ -316,7 +337,7 @@ async function main() {
       {
         question: "Fotoğraf ve video çekimi yerinde mi yapılıyor?",
         answer:
-          "Evet. Trabzon genelinde yerinde çekim planlanabilir. Uzaktan yönetim isteyen markalar için stok + tasarım odaklı üretim de mümkündür.",
+          "Evet. Samsun genelinde yerinde çekim planlanabilir. Uzaktan yönetim isteyen markalar için stok + tasarım odaklı üretim de mümkündür.",
         sortOrder: 14,
       },
       {
@@ -348,49 +369,33 @@ async function main() {
 
   await prisma.homeContent.upsert({
     where: { id: "default" },
-    update: {},
-    create: {
-      id: "default",
-      aboutTitle: "Trabzon'da sosyal medya denince akla ilk biz gelelim diye buradayız.",
+    update: {
+      aboutTitle: "Samsun'da sosyal medya denince akla ilk biz gelelim diye buradayız.",
       aboutLead:
-        "Trabzon Sosyal Medya, Wesoco bünyesinde yerel işletmelere Instagram, TikTok, Facebook ve LinkedIn yönetimi sunan sosyal medya ajansıdır.",
+        "Samsun Sosyal Medya, Wesoco bünyesinde yerel işletmelere Instagram, TikTok, Facebook ve LinkedIn yönetimi sunan sosyal medya ajansıdır.",
       aboutBody:
         "İçerik üretimi, reels, topluluk yönetimi ve Meta Ads'i tek çatı altında yönetiyoruz. Şehrin dilini bilen ekibimizle markaları görünür, tutarlı ve ölçülebilir büyütüyoruz.",
-      ctaTitle: "Trabzon sosyal medya teklifi alın.",
+      ctaTitle: "Samsun sosyal medya teklifi alın.",
       ctaText:
         "Ücretsiz keşif görüşmesiyle başlayalım. Instagram, TikTok ve Meta Ads için doğru adres burası.",
-      ctaImage:
-        "https://images.unsplash.com/photo-1663230812927-dedf2bc78fe9?auto=format&fit=crop&w=1800&q=80",
-      heroSlidesJson: [
-        {
-          signal: "Trabzon Sosyal Medya Ajansı",
-          title: "Trabzon sosyal medya yönetimi için güvenilir ajans.",
-          lead: "Instagram, TikTok, Facebook ve LinkedIn'de yerel markaları büyütüyoruz. Ortahisar'dan 18 ilçeye Wesoco güvencesiyle.",
-          image:
-            "https://images.unsplash.com/photo-1663230812927-dedf2bc78fe9?auto=format&fit=crop&w=2000&q=80",
-        },
-        {
-          signal: "Meta Ads Yönetimi",
-          title: "Meta Ads ile doğru kitleye, doğru bütçeyle.",
-          lead: "Gösterim değil sonuç. Dönüşüm odaklı reklam yönetimi ve şeffaf raporlama.",
-          image:
-            "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=2000&q=80",
-        },
-        {
-          signal: "Google Ads Yönetimi",
-          title: "Google Ads ile niyetli müşteriye ulaşın.",
-          lead: "Arama, Display ve YouTube reklamlarıyla Trabzon işletmeleri için ölçülebilir büyüme.",
-          image:
-            "https://images.unsplash.com/photo-1432888498266-38ffec3eaf0a?auto=format&fit=crop&w=2000&q=80",
-        },
-        {
-          signal: "Drone Çekimi",
-          title: "Havadan bakışla markanızı güçlendirin.",
-          lead: "Otel, inşaat, turizm ve kurumsal markalar için profesyonel drone video ve fotoğraf.",
-          image:
-            "https://images.unsplash.com/photo-1473968512647-3e447244af8f?auto=format&fit=crop&w=2000&q=80",
-        },
-      ],
+      heroSlidesJson: DEFAULT_HERO_SLIDES,
+      servicesLead:
+        "Sosyal medya yönetiminden Meta ve Google Ads'e, içerik üretiminden drone çekimine kadar Samsun işletmeleri için uçtan uca büyüme.",
+      refsTitle: "Samsun sosyal medya referanslarımız.",
+      blogTitle: "Samsun işletmeleri için pratik yazılar.",
+      faqTitle: "Samsun sosyal medya hakkında sıkça sorulanlar.",
+    },
+    create: {
+      id: "default",
+      aboutTitle: "Samsun'da sosyal medya denince akla ilk biz gelelim diye buradayız.",
+      aboutLead:
+        "Samsun Sosyal Medya, Wesoco bünyesinde yerel işletmelere Instagram, TikTok, Facebook ve LinkedIn yönetimi sunan sosyal medya ajansıdır.",
+      aboutBody:
+        "İçerik üretimi, reels, topluluk yönetimi ve Meta Ads'i tek çatı altında yönetiyoruz. Şehrin dilini bilen ekibimizle markaları görünür, tutarlı ve ölçülebilir büyütüyoruz.",
+      ctaTitle: "Samsun sosyal medya teklifi alın.",
+      ctaText:
+        "Ücretsiz keşif görüşmesiyle başlayalım. Instagram, TikTok ve Meta Ads için doğru adres burası.",
+      heroSlidesJson: DEFAULT_HERO_SLIDES,
       processJson: [
         { num: "01", title: "Keşif", desc: "Markanızı, hedef kitlenizi ve rakiplerinizi dinliyoruz." },
         { num: "02", title: "Strateji", desc: "İçerik dili, takvim ve kanal planını birlikte netleştiriyoruz." },

@@ -5,8 +5,8 @@ export const dynamic = "force-dynamic";
 
 export function generateMetadata() {
   return buildLegalMetadata(
-    "Çerez Politikası | Trabzon Sosyal Medya",
-    "TrabzonSosyalMedya.com çerez kullanımı ve tercihleriniz hakkında bilgilendirme.",
+    "Çerez Politikası | Samsun Sosyal Medya",
+    "SamsunSosyalMedya.com çerez kullanımı ve tercihleriniz hakkında bilgilendirme.",
     paths.cookies,
   );
 }

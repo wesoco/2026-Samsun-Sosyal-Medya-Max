@@ -7,7 +7,7 @@ type Props = {
   title: string;
 };
 
-/** Harita iframe’ini viewport’a girince yükler — bfcache / ana thread için. */
+/** Harita iframe’ini viewport’a girince yükler  -  bfcache / ana thread için. */
 export function LazyMap({ src, title }: Props) {
   const ref = useRef<HTMLDivElement>(null);
   const [active, setActive] = useState(false);

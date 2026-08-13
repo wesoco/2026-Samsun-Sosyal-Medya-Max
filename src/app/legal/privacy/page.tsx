@@ -5,8 +5,8 @@ export const dynamic = "force-dynamic";
 
 export function generateMetadata() {
   return buildLegalMetadata(
-    "Gizlilik Politikası | Trabzon Sosyal Medya",
-    "TrabzonSosyalMedya.com gizlilik politikası: hangi verileri neden işlediğimiz.",
+    "Gizlilik Politikası | Samsun Sosyal Medya",
+    "SamsunSosyalMedya.com gizlilik politikası: hangi verileri neden işlediğimiz.",
     paths.privacy,
   );
 }
@@ -21,7 +21,7 @@ export default function PrivacyPage() {
     >
       <h2>Kapsam</h2>
       <p>
-        Bu politika trabzonsosyalmedya.com ziyaretçileri ve Trabzon Sosyal Medya (Wesoco) hizmet adayları için geçerlidir.
+        Bu politika samsunsosyalmedya.com ziyaretçileri ve Samsun Sosyal Medya (Wesoco) hizmet adayları için geçerlidir.
       </p>
       <h2>Topladığımız bilgiler</h2>
       <ul>

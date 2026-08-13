@@ -11,7 +11,7 @@ export const dynamic = "force-dynamic";
 
 export async function generateMetadata(): Promise<Metadata> {
   return buildMetadata({
-    title: "İletişim | Trabzon Sosyal Medya",
+    title: "İletişim | Samsun Sosyal Medya",
     description: "Ücretsiz keşif için yazın. 24 saat içinde dönüş.",
     path: paths.contact,
   });

@@ -14,8 +14,8 @@ export async function GET() {
     }),
   ]);
 
-  const title = settings?.siteName || "Trabzon Sosyal Medya";
-  const desc = settings?.defaultDesc || "Trabzon sosyal medya ajansı blog";
+  const title = settings?.siteName || "Samsun Sosyal Medya";
+  const desc = settings?.defaultDesc || "Samsun sosyal medya ajansı blog";
   const items = posts
     .map(
       (p) => `

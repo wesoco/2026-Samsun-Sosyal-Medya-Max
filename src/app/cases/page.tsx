@@ -9,9 +9,9 @@ export const dynamic = "force-dynamic";
 
 export async function generateMetadata(): Promise<Metadata> {
   return buildMetadata({
-    title: "Vaka Çalışmaları | Trabzon Sosyal Medya",
+    title: "Vaka Çalışmaları | Samsun Sosyal Medya",
     description:
-      "Trabzon’da restoran, otomotiv, otel, emlak ve B2B sosyal medya vaka özetleri. Süreç ve ölçülebilir sonuç; sahte yıldız yok.",
+      "Samsun’da restoran, otomotiv, otel, emlak ve B2B sosyal medya vaka özetleri. Süreç ve ölçülebilir sonuç; sahte yıldız yok.",
     path: paths.cases,
   });
 }
@@ -33,7 +33,7 @@ export default async function CasesIndexPage() {
               <span>Vakalar</span>
             </nav>
             <span className="section-label">Vakalar</span>
-            <h1>Trabzon sosyal medya vaka çalışmaları.</h1>
+            <h1>Samsun sosyal medya vaka çalışmaları.</h1>
             <p className="lead">
               Süreç, yapılan iş ve ölçülebilir sonuç özeti. Sahte yıldız veya AggregateRating yok; abartısız kanıt.
             </p>
@@ -65,8 +65,8 @@ export default async function CasesIndexPage() {
                     <h2>{c.title}</h2>
                     <p className="hub-editorial-lead">{c.lead}</p>
                     <p className="hub-editorial-result">
-                      <span>Sonuç</span>
-                      {c.result}
+                      <span className="hub-editorial-result-label">Sonuç</span>
+                      <span className="hub-editorial-result-text">{c.result}</span>
                     </p>
                   </div>
                   <span className="hub-editorial-go">

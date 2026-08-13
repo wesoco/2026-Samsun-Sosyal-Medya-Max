@@ -25,7 +25,7 @@ function polishTitle(title: string, fullTitle: string, filter: string): string {
   // Çok kesilmiş / yarım kalan başlıkları fullTitle'dan toparla
   if (t.endsWith("…") || t.endsWith(" ve") || t.length < 4) {
     t = fullTitle
-      .replace(/^Trabzon\s+/i, "")
+      .replace(/^Samsun\s+/i, "")
       .replace(/^Tanıtım Filmi:\s*/i, "")
       .replace(/^Sosyal Medya İçerik(?: Yönetimi|i):\s*/i, "")
       .replace(/^Sosyal Medya İçeriği:\s*/i, "");

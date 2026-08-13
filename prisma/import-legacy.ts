@@ -102,13 +102,13 @@ async function importDistricts() {
     const slug = slugFromFile(file);
     const html = fs.readFileSync(path.join(dir, file), "utf8");
     const regionLabel =
-      html.match(/<span class="section-label">([^<]*)<\/span>/)?.[1]?.trim() || "Trabzon";
+      html.match(/<span class="section-label">([^<]*)<\/span>/)?.[1]?.trim() || "Samsun";
     const h1 = html.match(/<h1>([^<]*)<\/h1>/)?.[1]?.trim() || `${slug} sosyal medya yönetimi.`;
     const name = h1.replace(/\s*sosyal medya yönetimi\.?\s*$/i, "").trim() || slug;
     const lead = html.match(/<p class="lead">([^<]*)<\/p>/)?.[1]?.trim() || "";
     const faqs = extractFaqs(html);
     const bodyHtml = rewriteLinks(extractPageBlocks(html).join("\n"), "bolgeler");
-    const seoTitle = titleTag(html) || `${name} Sosyal Medya Yönetimi | Trabzon Sosyal Medya Ajansı`;
+    const seoTitle = titleTag(html) || `${name} Sosyal Medya Yönetimi | Samsun Sosyal Medya Ajansı`;
     const seoDesc = meta(html, "description") || lead;
 
     await prisma.district.upsert({
@@ -170,7 +170,7 @@ async function importServices() {
     const lead = html.match(/<p class="lead">([^<]*)<\/p>/)?.[1]?.trim() || "";
     const faqs = extractFaqs(html);
     const bodyHtml = rewriteLinks(extractPageBlocks(html).join("\n"), "hizmet");
-    const seoTitle = titleTag(html) || `${title} | Trabzon Sosyal Medya`;
+    const seoTitle = titleTag(html) || `${title} | Samsun Sosyal Medya`;
     const seoDesc = meta(html, "description") || lead;
 
     await prisma.service.upsert({
@@ -229,7 +229,7 @@ async function importBlogs() {
     // strip nested FAQ from body if present  keep in body as HTML is fine for blogs
     bodyHtml = rewriteLinks(bodyHtml.trim(), "blog");
     const faqs = extractFaqs(html);
-    const seoTitle = titleTag(html) || `${title} | Trabzon Sosyal Medya`;
+    const seoTitle = titleTag(html) || `${title} | Samsun Sosyal Medya`;
     const seoDesc = meta(html, "description") || lead;
 
     await prisma.blogPost.upsert({

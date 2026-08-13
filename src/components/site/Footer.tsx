@@ -33,7 +33,7 @@ const IconPin = () => (
 );
 
 const MAPS_LINK =
-  "https://www.google.com/maps/search/?api=1&query=Trabzon+Sosyal+Medya+Gazipaşa+Mah.+Uzun+Sk.+Can+Bakkal+İş+Merkezi+Ortahisar+Trabzon";
+  "https://www.google.com/maps/search/?api=1&query=Gazipa%C5%9Fa+Mah.+Uzun+Sk.+Can+Bakkal+%C4%B0%C5%9F+Merkezi+Kat+7+Daire+61+Ortahisar+Trabzon";
 
 export async function SiteFooter({
   phone,
@@ -60,7 +60,7 @@ export async function SiteFooter({
           <img className="footer-logo" src="/assets/wesoco-logo-beyaz.svg" alt="Wesoco" width={140} height={22} />
           <span className="footer-brand-divider" aria-hidden="true" />
           <div className="footer-brand-copy">
-            <strong>Trabzon Sosyal Medya</strong>
+            <strong>Samsun Sosyal Medya</strong>
             <p>Yerel işletmeler için Instagram yönetimi, içerik ve performans reklamı.</p>
           </div>
         </div>
@@ -117,7 +117,7 @@ export async function SiteFooter({
         </div>
       </div>
       <div className="container footer-bottom">
-        <p>© {year} Trabzon Sosyal Medya. Tüm hakları saklıdır.</p>
+        <p>© {year} Samsun Sosyal Medya. Tüm hakları saklıdır.</p>
         <nav className="footer-legal" aria-label="Yasal">
           <Link href={paths.kvkk}>KVKK</Link>
           <Link href={paths.privacy}>Gizlilik</Link>

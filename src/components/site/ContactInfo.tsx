@@ -43,7 +43,7 @@ const IconClock = () => (
 );
 
 const MAP_QUERY =
-  "Trabzon+Sosyal+Medya+Gazipaşa+Mah.+Uzun+Sk.+Can+Bakkal+İş+Merkezi+Ortahisar+Trabzon";
+  "Gazipa%C5%9Fa+Mah.+Uzun+Sk.+Can+Bakkal+%C4%B0%C5%9F+Merkezi+Kat+7+Daire+61+Ortahisar+Trabzon";
 
 const MAP_EMBED = `https://maps.google.com/maps?q=${MAP_QUERY}&z=16&output=embed`;
 
@@ -110,13 +110,13 @@ export function ContactInfo({ phone, phoneDisplay, email, whatsapp, addressLine1
         </span>
         <span>
           <span className="contact-label">Çalışma Saatleri</span>
-          <strong>Pzt – Cmt, 09:00 – 18:00</strong>
+          <strong>Pzt - Cmt, 09:00 - 18:00</strong>
         </span>
       </div>
 
       <LazyMap
         src={MAP_EMBED}
-        title="Trabzon Sosyal Medya ofis konumu - Ortahisar Trabzon"
+        title="Samsun Sosyal Medya ofis konumu - Ortahisar Trabzon"
       />
     </aside>
   );

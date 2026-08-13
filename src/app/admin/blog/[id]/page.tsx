@@ -87,7 +87,7 @@ export default async function AdminBlogEditPage({
                 name="coverUrl"
                 label="Kapak görseli"
                 folder="blog"
-                defaultValue={post.coverUrl || "/assets/Trabzon-sosyal-medya.webp"}
+                defaultValue={post.coverUrl || "/assets/Samsun-sosyal-medya.webp"}
               />
             </div>
           }

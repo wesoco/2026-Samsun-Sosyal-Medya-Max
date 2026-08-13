@@ -1,5 +1,5 @@
 /**
- * 18 ilçe - master SEO/GEO/AEO uyumlu, birbirinden bağımsız içerik.
+ * 17 ilçe  -  Samsun master SEO/GEO/AEO uyumlu, birbirinden bağımsız içerik.
  * Ortak şablon cümle YOK. Her sayfa kendi yerel niyetiyle yazıldı.
  *
  *   npm run db:seed-districts
@@ -24,67 +24,67 @@ type DistrictPage = {
 
 const PAGES: DistrictPage[] = [
   {
-    slug: "ortahisar",
-    name: "Ortahisar",
-    regionLabel: "Trabzon merkez",
+    slug: "ilkadim",
+    name: "İlkadım",
+    regionLabel: "Samsun merkez",
     answer:
-      "Ortahisar sosyal medya yönetimi; Trabzon merkezindeki klinik, perakende, kafe ve bayi işletmeleri için Instagram, reels ve mahalle hedeflemeli Meta Ads’i aynı planda yürütmektir. Wesoco bünyesinde Trabzon Sosyal Medya, cadde rekabetine göre içerik takvimi ve ölçülebilir dönüşüm kurar.",
-    seoTitle: "Ortahisar Sosyal Medya Yönetimi | Trabzon Merkez Ajans",
+      "İlkadım sosyal medya yönetimi; şehrin yoğun cadde dokusunda klinik, perakende ve kurumsal işletmelerin Instagram vitrini, story ritmi ve mahalle odaklı Meta Ads'ini aynı planda kurmaktır. Wesoco olarak Samsun Sosyal Medya bünyesinde ölçülebilir sonuçlara bağlarız.",
+    seoTitle: "İlkadım Sosyal Medya Yönetimi | Samsun Merkez Ajans",
     seoDesc:
-      "Ortahisar’da Instagram yönetimi, reels ve Meta Ads. Klinik, perakende ve cadde işletmeleri için yerel sosyal medya ajansı · Wesoco.",
+      "İlkadım'da Instagram yönetimi, reels ve Meta Ads. Klinik, perakende ve cadde işletmeleri için Samsun sosyal medya ajansı · Wesoco.",
     bodyHtml: `
-<h2>Ortahisar’da sosyal medya yönetimi nedir?</h2>
-<p>Ortahisar’da sosyal medya yönetimi; hesapları rastgele doldurmak değil, merkez müşterisinin karar anına (randevu, mağaza ziyareti, mesaj) göre içerik ve reklam üretmektir. Instagram vitrini, story ritmi ve gerektiğinde Meta Ads aynı hedefle ilerler. Google Benim İşletmem bilgileriyle NAP tutarlılığı da güveni güçlendirir.</p>
+<h2>İlkadım'da sosyal medya yönetimi nedir?</h2>
+<p>İlkadım'da yönetim; Cumhuriyet Caddesi ve çevresi gibi yoğun rekabetli bir alanda işletmeyi sıradan "güzel post" döngüsünden çıkarıp müşteri kararına  -  randevu, mağaza ziyareti, DM  -  yönlendirmektir. Instagram vitrini, story temposu ve Meta Ads aynı hedef doğrultusunda birlikte çalışır. Google Benim İşletmem NAP tutarlılığı da güven sinyali üretir.</p>
 
-<h2>Neden Ortahisar’da kritik?</h2>
-<p>Merkezde aynı cadde üzerinde onlarca rakip hesap vardır. Yalnızca “güzel post” yetmez; kimlik, teklif ve konum hedeflemesi net olmalıdır. Kliniklerde güven, perakendede ürün grid’i, otomotivde lansman/reels seti ayrı dil ister. Akçaabat ve Yomra spillover’ı da reklam planına girebilir.</p>
+<h2>Neden İlkadım'da kritik?</h2>
+<p>Merkezdeki kliniklerde güven içerikleri, perakendede ürün grid'i, kafelerde atmosfer ve kampanya ayrı diller ister. Aynı cadde üzerinde onlarca rakip hesap varken hatalı kreatif mesaj maliyetini anında artırır. Atakum ve Canik spillover'ı da reklam coğrafyasına dahil edilebilir.</p>
 <ul>
-<li>Cadde + dijital keşif birlikte satın alma kararı verir.</li>
-<li>Rakip hesaplar sık sık aynı mahalle kitlesine reklam açar.</li>
-<li>Yanlış kreatif = yükselen mesaj maliyeti.</li>
+<li>Cadde içi rekabet dijital + fiziksel karar anında buluşur.</li>
+<li>Kliniklerde güven sinyali, perakendede net ürün görseli dönüşümü belirler.</li>
+<li>Yanlış hedefleme = yüksek tıklama, düşük dönüşüm.</li>
 </ul>
 
-<h2>Ortahisar’da nasıl çalışırız?</h2>
+<h2>İlkadım'da nasıl çalışırız?</h2>
 <ol>
-<li><strong>Cadde audit:</strong> Rakip hesaplar, mevcut reklam geçmişi, bio/vitrin.</li>
+<li><strong>Hesap audit:</strong> Mevcut içerik, rakip profilleri, bio ve vitrin değerlendirmesi.</li>
 <li><strong>Dil + takvim:</strong> Sektöre özel mesaj, haftalık reels/story planı.</li>
-<li><strong>Üretim:</strong> Yerinde veya planlı çekim; stok şablon yok.</li>
-<li><strong>Yayın + Ads:</strong> Mahalle ve ilgi alanı testleri; medya ayrı rapor.</li>
-<li><strong>Aylık skor:</strong> Erişim, mesaj/arama, üç net aksiyon.</li>
+<li><strong>Üretim:</strong> Yerinde veya planlı çekim; stok şablon kullanılmaz.</li>
+<li><strong>Yayın + Ads:</strong> Mahalle ve ilgi alanı testleri; medya şeffaf raporlanır.</li>
+<li><strong>Aylık skor:</strong> Erişim, mesaj/arama ve üç net aksiyon.</li>
 </ol>
 
 <h2>Kimler için uygun?</h2>
-<p>Uzun Sk. / Gazipaşa hattı perakendesi, güzellik klinikleri, kafeler, bayiler ve kurumsal ofisler. Küçük ekiplerde onay hattı WhatsApp ile hızlı kurulur; kurumsalda yazılı onay katmanı eklenir.</p>
+<p>Diş ve estetik klinikleri, güzellik merkezleri, cadde perakendesi, kafeler, bayiler ve kurumsal ofisler. Küçük ekiplerde onay WhatsApp'la hızlı kurulur; kurumsalda yazılı onay katmanı eklenir.</p>
 
 <div class="seo-table-wrap"><table class="seo-comparison-table">
-<caption>Ortahisar: dağınık paylaşım vs planlı yönetim</caption>
+<caption>İlkadım: dağınık paylaşım vs planlı yönetim</caption>
 <thead><tr><th>Ölçüt</th><th>Dağınık</th><th>Planlı (bizim model)</th></tr></thead>
 <tbody>
-<tr><td>Vitrin</td><td>Tutarsız</td><td>Sektöre özel grid</td></tr>
-<tr><td>Reklam</td><td>Tesadüfi</td><td>Mahalle + test. ölçek</td></tr>
-<tr><td>Rapor</td><td>Yok / geç</td><td>Aksiyonlu aylık</td></tr>
+<tr><td>Vitrin</td><td>Tutarsız grid</td><td>Sektöre özel düzen</td></tr>
+<tr><td>Reklam</td><td>Tesadüfi bütçe</td><td>Mahalle + test ölçek</td></tr>
+<tr><td>Rapor</td><td>Yok / geç</td><td>Aksiyonlu aylık özet</td></tr>
 </tbody></table></div>
 
 <h2>Fiyat neye göre değişir?</h2>
-<p>Platform sayısı, içerik hacmi, yerinde çekim ve reklam yönetimine göre keşif sonrası tekliflenir. Medya harcaması ajans ücretinden ayrıdır; uydurma paket fiyatı yazılmaz.</p>
+<p>Platform sayısı, içerik hacmi, yerinde çekim ve reklam yönetimine göre keşif sonrası tekliflenir. Medya harcaması ajans ücretinden ayrıdır; sabit paket fiyatı yazılmaz.</p>
 
 <h2>İlgili hizmetler</h2>
 <p><a href="/hizmetler/instagram-yonetimi">Instagram yönetimi</a> · <a href="/hizmetler/meta-ads">Meta Ads</a> · <a href="/hizmetler/icerik-uretimi-cekim">İçerik üretimi</a> · <a href="/bolgeler">Tüm ilçeler</a></p>
 
 <div class="page-cta">
-  <h2>Ortahisar işletmeniz için ücretsiz keşif.</h2>
-  <p>Mevcut hesaplarınıza bakalım; merkeze özel net bir yol haritası çıkaralım.</p>
+  <h2>İlkadım işletmeniz için ücretsiz keşif.</h2>
+  <p>Mevcut hesaplarınıza bakalım; merkeze özel yol haritası çıkaralım.</p>
   <a href="/#iletisim" class="btn btn-primary">Teklif al</a>
 </div>
 `.trim(),
     faqs: [
       {
-        q: "Ortahisar’da hangi sektörlere odaklanıyorsunuz?",
-        a: "Klinik, perakende, kafe/restoran, otomotiv bayi ve kurumsal ofisler. Her sektörün içerik dili ayrı kurulur.",
+        q: "İlkadım'da hangi sektörlere odaklanıyorsunuz?",
+        a: "Klinik, estetik, perakende, kafe/restoran ve kurumsal ofisler. Her sektörün içerik dili ayrı kurulur.",
       },
       {
-        q: "Merkezde Meta Ads maliyeti neden yükselir?",
-        a: "Rekabet yoğundur. Doğru kitle, kreatife dinlenme ve mahalle katmanlarıyla maliyet kontrol edilir; medya şeffaf raporlanır.",
+        q: "Merkez'de Meta Ads maliyeti neden yükselir?",
+        a: "Rekabet yoğundur. Doğru kitle, kreatifte dinlenme ve mahalle katmanlarıyla maliyet kontrol edilir; medya şeffaf raporlanır.",
       },
       {
         q: "Sadece Instagram yeterli mi?",
@@ -92,188 +92,224 @@ const PAGES: DistrictPage[] = [
       },
       {
         q: "Keşif ücretli mi?",
-        a: "Hayır. Ortahisar işletmeniz için ücretsiz keşif planlanır; 24 saat içinde dönüş yapılır.",
+        a: "Hayır. İlkadım işletmeniz için ücretsiz keşif planlanır; 24 saat içinde dönüş yapılır.",
       },
     ],
   },
 
   {
-    slug: "akcaabat",
-    name: "Akçaabat",
-    regionLabel: "Batı koridoru",
+    slug: "atakum",
+    name: "Atakum",
+    regionLabel: "Sahil / batı",
     answer:
-      "Akçaabat sosyal medya yönetimi; sahil esnafı ve restoranlar için iştah görselleri, usta hikâyesi ve konum odaklı reklam demektir. Menü/story ritmiyle mahalle güvenini dijitalde büyütürüz. Wesoco güvencesiyle Trabzon Sosyal Medya.",
-    seoTitle: "Akçaabat Sosyal Medya Yönetimi | Restoran & Yerel Esnaf",
+      "Atakum sosyal medya yönetimi; sahil kafelerinden denize bakan restoranlar ve butik otellere uzanan çizgide atmosfer içerikleri, iştah görselleri ve konum reklamını birleştirmektir. Yazın rezervasyon kalabalığı, kışın marka sürekliliği  -  ikisi de ayrı ritim ister.",
+    seoTitle: "Atakum Sosyal Medya Yönetimi | Sahil & Restoran",
     seoDesc:
-      "Akçaabat’ta Instagram, reels ve konum reklamı. Restoran, kafe ve yerel işletmeler için sosyal medya ajansı · Wesoco Trabzon.",
+      "Atakum'da Instagram, reels ve konum reklamı. Sahil kafesi, restoran ve otel işletmeleri için Samsun sosyal medya ajansı · Wesoco.",
     bodyHtml: `
-<h2>Akçaabat sosyal medya yönetimi nedir?</h2>
-<p>Akçaabat’ta yönetim; lezzet ve mahalle sadakatini görsele çevirip rezervasyon veya paket servise bağlamaktır. Instagram story temposu yüksektir; reels keşfeti, Meta Ads ise Akçaabat + batı sahil kuşağını hedefler. Abartılı “şehir ajansı” dili tutmaz. samimi ve yerel anlatım işe yarar.</p>
+<h2>Atakum'da sosyal medya yönetimi nedir?</h2>
+<p>Atakum'da yönetim; sahil atmosferini ve müşteri deneyimini tutarlı bir görsel dile çevirip rezervasyon veya masa doluluk hedefine bağlamaktır. Story ritmi yüksektir; reels keşfete taşır, Meta Ads Atakum sahil kuşağını ve İlkadım spillover'ını hedefler. Menü güncellemeleri, yeni sezon kampanyaları ve özel günler aynı takvimde tutulur.</p>
 
-<h2>Neden Akçaabat’ta farklı yapılır?</h2>
-<p>İlçe kimliği lezzetle özdeşleşir. Stok tabak fotoğrafı yerine gerçek mutfak, usta ve günün ürünü etkileşimi artırır. Çarşıbaşı. Vakfıkebir hattı hem rekabet hem müşteri havuzudur; reklam coğrafyası buna göre açılır.</p>
+<h2>Neden Atakum'da sahil dili fark yaratır?</h2>
+<p>Stok tabak fotoğrafı veya şablon plaj görseli yarışta geride kalır. Gerçek mutfak, gün batımı anı, kadro ve menü detayı etkileşimi artırır. Yazın hafta sonu yoğunluğuna önceden hazırlıklı içerik stoğu kritiktir; son dakika üretimi kalite düşürür.</p>
+<ul>
+<li>Yazın story temposu en az 5-7 gün/hafta olmalıdır.</li>
+<li>Konum + "yemek" ilgi alanı çakışması dönüşüm maliyetini düşürür.</li>
+<li>Kışın bilinirlik içerikleri yazın dönüşüm zeminini hazırlar.</li>
+</ul>
 
-<h2>Restoran ve esnaf için nasıl ilerleriz?</h2>
+<h2>Atakum için nasıl çalışırız?</h2>
 <ol>
-<li>Menü ve servis CTA’sını netleştiririz (rezervasyon / paket / adres).</li>
-<li>Haftalık story + reels seti: iştah, ekip, kampanya.</li>
-<li>Yoğun akşam/hafta sonu için önceden stoğa alınmış içerik.</li>
-<li>Konum reklamı ile mahalle ve komşu sahil testi.</li>
+<li>Menü ve rezervasyon CTA'sını netleştiririz.</li>
+<li>Haftalık story + aylık reels setini hazırlarız: atmosfer, iştah, ekip.</li>
+<li>Yoğun sezon öncesi içerik stoğa alınır.</li>
+<li>Konum reklamı Atakum merkezden komşu mahallelere kademeli açılır.</li>
+<li>Sade aylık rapor: erişim, mesaj/rezervasyon, üç aksiyon.</li>
 </ol>
 
 <h2>Kimler için?</h2>
-<p>Restoran, kafe, market, tarım/yerel ürün ve mahalle hizmet işletmeleri. Küçük mutfak ekiplerinde çekim sakin saatlere alınır; onay hızlı tutulur.</p>
-
-<h2>Fiyat mantığı</h2>
-<p>Çekim günü sayısı, reels hacmi ve reklam yönetimine göre değişir. Keşif sonrası net teklif; medya ayrı satırdır.</p>
-
-<h2>Bağlantılar</h2>
-<p><a href="/hizmetler/icerik-uretimi-cekim">İçerik & çekim</a> · <a href="/hizmetler/instagram-yonetimi">Instagram</a> · <a href="/hizmetler/meta-ads">Meta Ads</a> · <a href="/bolgeler/carsibasi">Çarşıbaşı</a></p>
-
-<div class="page-cta">
-  <h2>Akçaabat için ücretsiz keşif.</h2>
-  <p>Menü ve hesabınıza bakalım; sahile özel ritim çıkaralım.</p>
-  <a href="/#iletisim" class="btn btn-primary">Teklif al</a>
-</div>
-`.trim(),
-    faqs: [
-      {
-        q: "Akçaabat restoranında öncelik nedir?",
-        a: "İştah görseli, düzenli reels ve konum odaklı reklam. Rezervasyon/paket CTA’sı bio ve story’de net olmalı.",
-      },
-      {
-        q: "Yerel ağız / dil kullanılır mı?",
-        a: "Evet, abartısız ve samimi. Kopya slogan tutmaz; Akçaabat’a özgü anlatım etkileşimi artırır.",
-      },
-      {
-        q: "Çekim ne zaman yapılır?",
-        a: "İşletme yoğunluğuna göre sabah veya hafta içi sakin saatler tercih edilir.",
-      },
-      {
-        q: "Ücretsiz keşif var mı?",
-        a: "Var. Form veya WhatsApp ile planlanır.",
-      },
-    ],
-  },
-
-  {
-    slug: "yomra",
-    name: "Yomra",
-    regionLabel: "Doğu koridoru",
-    answer:
-      "Yomra sosyal medya yönetimi; büyüyen konut ve ticaret koridorunda emlak, inşaat ve yeni işletmeler için proje güveni, drone/geniş açı ve niyetli Google Ads’i birleştirir. Lansman takvimini içerik + reklam aynı haftada kurarız.",
-    seoTitle: "Yomra Sosyal Medya Yönetimi | Emlak, İnşaat & Lansman",
-    seoDesc:
-      "Yomra’da proje lansmanı, drone, Instagram ve Google Ads. Emlak ve inşaat için Trabzon doğu koridoru sosyal medya ajansı.",
-    bodyHtml: `
-<h2>Yomra’da sosyal medya yönetimi nedir?</h2>
-<p>Yomra’da amaç; yeni yerleşim ve hizmet talebini proje veya işletme güvenine bağlamaktır. Şantiye/süreç anlatımı, drone veya geniş plan, kliniklerde güven içerikleri ve Google’da “Yomra + hizmet” aramaları aynı stratejide birleşebilir.</p>
-
-<h2>Neden Yomra koridoru özel plan ister?</h2>
-<p>Hızlı büyüyen talep, sık lansman ve Ortahisar. Arsin. Araklı hattında hareketli bir kitle demektir. “Cadde esnafı” şablonu yetmez; karar vericiye ölçek ve konum göstermek gerekir.</p>
+<p>Sahil kafeleri, balık restoranları, brunch mekânları, butik oteller ve plaj işletmeleri. Küçük mutfak ekiplerinde çekim sakin saatlere planlanır.</p>
 
 <div class="seo-table-wrap"><table class="seo-comparison-table">
-<caption>Yomra lansman iletişimi</caption>
-<thead><tr><th>Kanal</th><th>Rol</th></tr></thead>
+<caption>Atakum: sezonluk denge</caption>
+<thead><tr><th>Dönem</th><th>Öncelik</th></tr></thead>
 <tbody>
-<tr><td>Instagram / reels</td><td>Görünürlük, şantiye/ürün hikâyesi</td></tr>
-<tr><td>Meta Ads</td><td>Proje ilgi alanı + remarketing</td></tr>
-<tr><td>Google Ads</td><td>Niyetli arama (“Yomra emlak”, hizmet)</td></tr>
-<tr><td>Drone</td><td>Ölçek ve konum avantajı</td></tr>
+<tr><td>Yaz / yüksek sezon</td><td>Dönüşüm Ads, story hızı, rezervasyon CTA</td></tr>
+<tr><td>Kış / düşük sezon</td><td>Marka bilinirliği, stok üretimi, sadık müşteri</td></tr>
 </tbody></table></div>
 
-<h2>Nasıl ilerleriz?</h2>
-<ol>
-<li>Lansman tarihi ve teklif mesajını kilitleriz.</li>
-<li>2. 3 hafta öncesinden görsel stok (drone dahil) üretiriz.</li>
-<li>Açılış haftasında organik + reklam ölçeği açılır.</li>
-<li>Remarketing, site/form ziyaretçilerine ayrı satırda tutulur.</li>
-</ol>
+<h2>Fiyat mantığı</h2>
+<p>Çekim günü sayısı, reels hacmi ve reklam yönetimine göre değişir. Sezonluk yoğunluk farkı teklifte şeffaf gösterilir; medya ayrı satırdır.</p>
 
-<h2>Kimler için?</h2>
-<p>Emlak ofisleri, inşaat firmaları, yeni kafe/klinik ve yerel hizmetler. Yeni açılan işletmelerde ilk 90 gün kimlik + test reklamı önerilir.</p>
-
-<h2>Fiyat</h2>
-<p>Drone, lansman hacmi ve Google Ads yönetimine göre keşif sonrası. Medya ayrıdır.</p>
-
-<p><a href="/hizmetler/drone-cekimi">Drone çekimi</a> · <a href="/hizmetler/google-ads">Google Ads</a> · <a href="/hizmetler/meta-ads">Meta Ads</a> · <a href="/bolgeler/arsin">Arsin</a></p>
+<h2>İlgili hizmetler</h2>
+<p><a href="/hizmetler/icerik-uretimi-cekim">İçerik & çekim</a> · <a href="/hizmetler/instagram-yonetimi">Instagram yönetimi</a> · <a href="/hizmetler/meta-ads">Meta Ads</a> · <a href="/bolgeler">Tüm ilçeler</a></p>
 
 <div class="page-cta">
-  <h2>Yomra projesi için keşif.</h2>
-  <p>Lansman takviminize göre net plan çıkaralım.</p>
+  <h2>Atakum işletmeniz için ücretsiz keşif.</h2>
+  <p>Sahile özel içerik ritminizi birlikte planlayalım.</p>
   <a href="/#iletisim" class="btn btn-primary">Teklif al</a>
 </div>
 `.trim(),
     faqs: [
       {
-        q: "Yomra’da drone şart mı?",
-        a: "Zorunlu değil; konum ve ölçek anlatımında güçlü fark yaratır. Pakete göre planlanır.",
+        q: "Atakum restoranında öncelik nedir?",
+        a: "İştah görseli, düzenli reels ve konum odaklı reklam. Rezervasyon/paket CTA'sı bio ve story'de net olmalı.",
       },
       {
-        q: "Yeni işletme için ne önerirsiniz?",
+        q: "Yazın içerik hızı nasıl artırılır?",
+        a: "Sezon öncesi stok üretimi yapılır; sahada hızlı onay ve telefon destekli story ile tempo korunur.",
+      },
+      {
+        q: "Kışın neden yayına devam edilmeli?",
+        a: "Kış bilinirliği yazın dönüşüm zeminini kurar. Tamamen susmak sadık müşteriyi de kaybettirir.",
+      },
+      {
+        q: "Keşif ücretsiz mi?",
+        a: "Evet. Form veya WhatsApp ile planlanır.",
+      },
+    ],
+  },
+
+  {
+    slug: "canik",
+    name: "Canik",
+    regionLabel: "Merkez doğu",
+    answer:
+      "Canik sosyal medya yönetimi; İlkadım'ın doğusunda hızla gelişen konut ve ticaret alanında esnaf, klinik ve yeni işletmelerin güvenilir dijital varlığını kurmaktır. Cadde rekabetine göre içerik takvimi, mahalle hedeflemeli Meta Ads ve Google Benim İşletmem uyumu aynı planda yürür.",
+    seoTitle: "Canik Sosyal Medya Yönetimi | Samsun Merkez Doğu",
+    seoDesc:
+      "Canik'te Instagram yönetimi, reels ve Meta Ads. Klinik, esnaf ve yeni işletmeler için Samsun sosyal medya ajansı · Wesoco.",
+    bodyHtml: `
+<h2>Canik'te sosyal medya yönetimi nedir?</h2>
+<p>Canik'te yönetim; büyüyen yerleşim alanında işletmenin ilçe sakinlerine düzenli ve güvenilir görünmesidir. Yeni açılan mekânlarda kimlik inşası, köklü esnafta ise müşteri tabanını dijitale taşımak ön plana çıkar. Meta Ads'te İlkadım ve Canik çakışma bölgesi sık kullanılan bir hedefleme katmanıdır.</p>
+
+<h2>Neden Canik'te içerik sürekliliği şart?</h2>
+<p>İlçe nüfusu büyüdükçe rekabet de artıyor. Aynı mahallede iki kafe veya iki klinik varken düzenli vitrin ve net teklif fark yaratır. Yanlış konumlandırma bütçeyi boşa harcar.</p>
+<ul>
+<li>Yeni açılan işletmelerde ilk 90 gün kimlik + test reklamı kritiktir.</li>
+<li>Klinik ve güzellik merkezlerinde güven içeriği dönüşüm üretir.</li>
+<li>Gıda/kafe işletmelerinde hızlı story ve menü güncellemesi önemlidir.</li>
+</ul>
+
+<h2>Canik için nasıl çalışırız?</h2>
+<ol>
+<li>Hesap ve rakip audit; CTA'yı netleştiririz.</li>
+<li>Haftalık sürdürülebilir içerik takvimi kurulur.</li>
+<li>Planlı çekim veya mevcut görsellerle üretim yapılır.</li>
+<li>Mahalle + komşu ilçe Ads testi açılır.</li>
+<li>Aylık rapor: erişim, mesaj/arama, üç aksiyon önerisi.</li>
+</ol>
+
+<h2>Kimler için uygun?</h2>
+<p>Klinik, güzellik merkezi, kafe/restoran, perakende ve yeni açılan tüm işletmeler. WhatsApp onay hattıyla küçük ekiplerde süreç hızlı tutulur.</p>
+
+<div class="seo-table-wrap"><table class="seo-comparison-table">
+<caption>Canik: pasif varlık vs aktif yönetim</caption>
+<thead><tr><th>Ölçüt</th><th>Pasif</th><th>Aktif (bizim model)</th></tr></thead>
+<tbody>
+<tr><td>Grid</td><td>Karmaşık, tutarsız</td><td>Marka rengine uygun</td></tr>
+<tr><td>Reklam</td><td>Yok / denemeli</td><td>Test + ölçek planı</td></tr>
+<tr><td>Müşteri verisi</td><td>Birikmez</td><td>Aylık raporda izlenir</td></tr>
+</tbody></table></div>
+
+<h2>Fiyat neye göre değişir?</h2>
+<p>İçerik hacmi, çekim sıklığı ve reklam kanallarına göre. Keşif sonrası net teklif; medya harcaması ayrıdır.</p>
+
+<h2>İlgili hizmetler</h2>
+<p><a href="/hizmetler/instagram-yonetimi">Instagram yönetimi</a> · <a href="/hizmetler/meta-ads">Meta Ads</a> · <a href="/hizmetler/icerik-uretimi-cekim">İçerik üretimi</a> · <a href="/bolgeler">Tüm ilçeler</a></p>
+
+<div class="page-cta">
+  <h2>Canik işletmeniz için ücretsiz keşif.</h2>
+  <p>Hesabınıza bakalım; mahalle odaklı net plan çıkaralım.</p>
+  <a href="/#iletisim" class="btn btn-primary">Teklif al</a>
+</div>
+`.trim(),
+    faqs: [
+      {
+        q: "Canik'te yeni açılan işletme için ne önerirsiniz?",
         a: "İlk 90 günde kimlik, içerik stoğu ve düşük bütçeli test reklamı.",
       },
       {
-        q: "Google Ads ne zaman eklenir?",
-        a: "Arama niyeti (randevu, satış, keşif) netse. Dönüşüm izleme olmadan ölçeklenmez.",
+        q: "İlkadım reklamıyla Canik aynı anda hedeflenebilir mi?",
+        a: "Evet. Çakışma bölgesi verimli bir kitle katmanı sunar; coğrafi sınırlar bütçeyle ayarlanır.",
+      },
+      {
+        q: "Klinik için içerik stratejisi nasıl farklılaşır?",
+        a: "Güven öne çıkar: ekip tanıtımı, süreç şeffaflığı, hasta dönüşüm hikâyesi. Sahte yorum veya rating kullanılmaz.",
       },
       {
         q: "Keşif ücretsiz mi?",
-        a: "Evet.",
+        a: "Evet. 24 saat içinde dönüş yapılır.",
       },
     ],
   },
 
   {
-    slug: "of",
-    name: "Of",
-    regionLabel: "Doğu sahil",
+    slug: "tekkekoy",
+    name: "Tekkeköy",
+    regionLabel: "Sanayi / doğu",
     answer:
-      "Of sosyal medya yönetimi; doğu sahil ticaret temposuna uygun düzenli Instagram vitrini ve Of + sahil kuşağı Meta Ads demektir. Restoran, perakende ve hizmet işletmelerine uzaktan yönetim veya periyodik çekim sunarız.",
-    seoTitle: "Of Sosyal Medya Yönetimi | Doğu Sahil Trabzon",
+      "Tekkeköy sosyal medya yönetimi; OSB ve sanayi hattındaki B2B firmaların güven iletişimidir. Fabrika sahneleri, referans ve standart belgeler tüketici reels trendinden farklı bir ritim ister. LinkedIn, kurumsal Instagram ve Google Ads hedefe göre seçilir.",
+    seoTitle: "Tekkeköy Sosyal Medya Yönetimi | OSB & Sanayi",
     seoDesc:
-      "Of’ta Instagram yönetimi, story ritmi ve konum reklamı. Doğu sahil işletmeleri için Trabzon sosyal medya ajansı · Wesoco.",
+      "Tekkeköy'de kurumsal sosyal medya, LinkedIn ve Google Ads. Sanayi ve B2B firmalar için Samsun dijital iletişim ajansı · Wesoco.",
     bodyHtml: `
-<h2>Of’ta sosyal medya yönetimi nedir?</h2>
-<p>Of’ta yönetim; günlük ticaret ve sahil işletme ritmine ayak uyduran yayın disiplinidir. Story ile anlık duyuru, reels ile keşfet, reklamda Of. Sürmene. Araklı kuşağı düşünülür. Turizm sezonunda Çaykara spillover’ı dikkatli test edilir; Of sayfası yayla oteli diline öykünmez.</p>
+<h2>Tekkeköy'de sosyal medya yönetimi nedir?</h2>
+<p>Tekkeköy'de amaç karar vericiye güven vermektir. Saha/fabrika görselleri, ekip, kalite belgesi ve proje teslimi anlatılır. "Viral reels" hedefi dayatılmaz; form ve arama odaklı kampanyalar öne çıkar. Samsun merkez köprüsü hem tedarik hem müşteri hattıdır.</p>
 
-<h2>Neden Of’ta düzenli vitrin şart?</h2>
-<p>Geçiş ve ticaret noktası olduğu için müşteri hem yerelden hem komşu ilçelerden gelir. Eksik NAP, eski menü görseli veya ölü hesap güveni düşürür. Taze ürün ve hızlı duyuru özellikle balık/sahil işletmelerinde dönüşüm üretir.</p>
-
-<h2>Nasıl çalışırız?</h2>
+<h2>Neden B2B dili ayrı tutulur?</h2>
+<p>Sanayi ve lojistik çevresi tüketici içeriğinin dilinden farklı konuşur. Abartılı vaat kurumsal itibarı zedeler; somut referans ve süreç şeffaflığı daha iyi dönüşüm sağlar.</p>
 <ul>
-<li>Uzaktan onaylı yayın + gerektiğinde Of’ta çekim günü</li>
-<li>Haftalık story temposu; aylık reels seti</li>
-<li>Konum reklamı: Of merkez, sonra komşu sahil</li>
-<li>Aylık sade rapor: erişim ve mesaj/arama</li>
+<li>Saha çekimleri güvenlik protokolüne göre planlanır.</li>
+<li>Kurumsal onay hattı ve kriz protokolü önceden yazılır.</li>
+<li>Rapor: nitelikli lead/form, vanity like değil.</li>
 </ul>
 
-<h2>Kimler için?</h2>
-<p>Sahil işletmeleri, restoranlar, perakende ve yerel hizmet. Balıkçı restoranda taze ürün görseli ve aynı gün story kritiktir.</p>
+<h2>Tekkeköy için nasıl çalışırız?</h2>
+<ol>
+<li>Onay hatları ve mesaj kısıtları netleştirilir.</li>
+<li>Kanal karışımı belirlenir: LinkedIn ve/veya kurumsal Instagram + Google Ads.</li>
+<li>Saha çekimi güvenlik kurallarıyla planlanır.</li>
+<li>İçerik; referans, süreç, standart ve ekip odaklı üretilir.</li>
+<li>Aylık rapor nitelikli mesaj/form üzerine kurulur.</li>
+</ol>
 
-<h2>Fiyat</h2>
-<p>Uzaktan paket ile yerinde çekimli paket ayrılır. Keşif sonrası netleşir; medya ayrıdır.</p>
+<h2>Kimler için uygun?</h2>
+<p>Üretim, lojistik, inşaat malzemeleri, metal-makine ve B2B hizmet firmaları.</p>
 
-<p><a href="/hizmetler/sosyal-medya-yonetimi">Sosyal medya yönetimi</a> · <a href="/hizmetler/instagram-yonetimi">Instagram</a> · <a href="/bolgeler/surmene">Sürmene</a> · <a href="/bolgeler/arakli">Araklı</a></p>
+<div class="seo-table-wrap"><table class="seo-comparison-table">
+<caption>Tekkeköy B2B kanalları</caption>
+<thead><tr><th>Kanal</th><th>Rol</th></tr></thead>
+<tbody>
+<tr><td>LinkedIn</td><td>Karar verici görünürlüğü, B2B ağ</td></tr>
+<tr><td>Kurumsal Instagram</td><td>Referans, ekip, süreç sahneleri</td></tr>
+<tr><td>Google Ads</td><td>Niyetli arama ("Tekkeköy üretim", hizmet adı)</td></tr>
+</tbody></table></div>
+
+<h2>Fiyat neye göre değişir?</h2>
+<p>Kanal sayısı, onay derinliği ve çekim koşullarına göre. Medya harcaması ayrı satırdadır.</p>
+
+<h2>İlgili hizmetler</h2>
+<p><a href="/hizmetler/instagram-yonetimi">Kurumsal Instagram</a> · <a href="/hizmetler/meta-ads">Meta Ads</a> · <a href="/hizmetler/icerik-uretimi-cekim">İçerik üretimi</a> · <a href="/bolgeler">Tüm ilçeler</a></p>
 
 <div class="page-cta">
-  <h2>Of işletmeniz için yazın.</h2>
-  <p>Hesabınıza bakıp sahile uygun ritim önerelim.</p>
+  <h2>Tekkeköy firmanız için ücretsiz keşif.</h2>
+  <p>B2B iletişim hedefinizi birlikte netleştirelim.</p>
   <a href="/#iletisim" class="btn btn-primary">Teklif al</a>
 </div>
 `.trim(),
     faqs: [
       {
-        q: "Of’tan uzaktan yönetim olur mu?",
-        a: "Evet. İçerik onaylı yayınlanır; gerektiğinde yerinde çekim planlanır.",
+        q: "OSB firması için LinkedIn şart mı?",
+        a: "Zorunlu değil ama B2B görünürlükte oldukça etkilidir; hedefe göre eklenir.",
       },
       {
-        q: "Balıkçı / sahil işletmesi için ne önemli?",
-        a: "Taze ürün görseli, hızlı story ve konum hedeflemeli reklam.",
+        q: "Saha çekimi güvenli planlanır mı?",
+        a: "Evet. Firma güvenlik kurallarına göre shot list ve izin alınarak ilerlenir.",
       },
       {
-        q: "Çaykara turizmine reklam verilir mi?",
-        a: "İşletme tipine göre dikkatli test edilir; Of ticaret kimliği bozulmaz.",
+        q: "B2B reklam nasıl çalışır?",
+        a: "Mesaj/form ve arama odaklı; karar verici kitleye göre hedefleme yapılır, medya şeffaf raporlanır.",
       },
       {
         q: "Keşif ücretsiz mi?",
@@ -283,50 +319,398 @@ const PAGES: DistrictPage[] = [
   },
 
   {
-    slug: "arakli",
-    name: "Araklı",
-    regionLabel: "Doğu sahil",
+    slug: "bafra",
+    name: "Bafra",
+    regionLabel: "Batı ovalar",
     answer:
-      "Araklı sosyal medya yönetimi; mahalle güveni ve tutarlı dijital vitrinle küçük-orta esnafı büyütmektir. Önce sürdürülebilir Instagram ritmi, sonra düşük bütçeli konum reklamı. abartılı 360 paket dayatması yok.",
-    seoTitle: "Araklı Sosyal Medya Yönetimi | Esnaf & Yerel İşletme",
+      "Bafra sosyal medya yönetimi; pirinç, tarım ve batı ova ticaretinin dijital vitrinini kurmaktır. Yerel üretim hikâyesi, pazar temposu ve bölge esnafı için sürdürülebilir Instagram ritmi + isteğe bağlı konum reklamı öneririz. Samsun şehir ajansı dili dayatılmaz.",
+    seoTitle: "Bafra Sosyal Medya Yönetimi | Tarım & Yerel Ticaret",
     seoDesc:
-      "Araklı’da Instagram vitrini, reels ve konum reklamı. Küçük esnaf için ölçeklenebilir Trabzon sosyal medya yönetimi · Wesoco.",
+      "Bafra'da üretim hikâyesi, Instagram yönetimi ve konum reklamı. Tarım, gıda ve yerel işletmeler için Samsun sosyal medya ajansı · Wesoco.",
     bodyHtml: `
-<h2>Araklı’da sosyal medya yönetimi nedir?</h2>
-<p>Araklı’da hedef; tanıdık yüz + dijitalde düzenli vitrin kombinasyonudur. İşletme hikâyesi, ürün yakın planı ve haftalık kampanya story’si omurgadır. Sürmene. Yomra. Of üçgeni reklamda genişletilebilir.</p>
+<h2>Bafra'da sosyal medya yönetimi nedir?</h2>
+<p>Bafra'da yönetim; tarım ve gıda üretiminin güçlü yerel kimliğini dijitalde görünür kılmaktır. Pirinç hasadı, tarladan sofraya süreç anlatımı ve pazar günü hikâyeleri samimi dille işlenir. Ticaret esnafı içinse hizmet süreci, net CTA ve haftalık vitrin omurga oluşturur.</p>
 
-<h2>Neden sade paketle başlanır?</h2>
-<p>Küçük ekiplerde sürdürülemeyen “her gün viral” planı zarar verir. Önce bio, grid ve net CTA; organik ritim oturunca reklam eklenir. Kurumsal jargon yerine anlaşılır dil kullanılır.</p>
+<h2>Neden yerel kimlik korunmalı?</h2>
+<p>Bafra pirinç ve tarım kültürüyle özdeşleşen bir ilçedir. Şehir kafe şablonları yerine gerçek üretim sahnesi, ürün detayı ve yerel referans hem güven hem keşfet trafiği üretir. Çarşamba ile birlikte doğu-batı ova hattında reklam testi yapılabilir.</p>
+<ul>
+<li>Ürün makro görseli stok fotoğraftan çok daha güçlüdür.</li>
+<li>Hasat/sezon dönemleri önceden takvime işlenir.</li>
+<li>Pazar ve ticaret günleri story temposunu doğal olarak artırır.</li>
+</ul>
 
-<h2>Nasıl ilerleriz?</h2>
+<h2>Bafra için nasıl çalışırız?</h2>
 <ol>
-<li>Hesap ve rakip hızlı audit</li>
-<li>Haftalık sürdürülebilir takvim</li>
-<li>Planlı çekim veya mevcut görsellerle tasarım</li>
-<li>İsteğe bağlı Araklı + komşu sahil Ads testi</li>
+<li>İşletme türüne göre sezon ve pazar takvimi çıkarılır.</li>
+<li>Üretim veya hizmet gününe göre çekim planlanır.</li>
+<li>Haftalık sürdürülebilir ritim kurulur; abartılı vaat yazılmaz.</li>
+<li>İsteğe bağlı Bafra + ova kuşağı Meta Ads testi açılır.</li>
+<li>Sipariş/iletişim CTA'sı her içerikte net tutulur.</li>
 </ol>
 
-<h2>Kimler için?</h2>
-<p>Perakende, kafe/restoran, atölye ve hizmet işletmeleri.</p>
+<h2>Kimler için uygun?</h2>
+<p>Tarım ve gıda üreticileri, yerel perakende, restoran/kafe, market ve hizmet işletmeleri.</p>
 
-<h2>Fiyat</h2>
-<p>İçerik hacmine göre ölçeklenir. Büyüdükçe çekim ve reklam katmanı eklenir.</p>
+<div class="seo-table-wrap"><table class="seo-comparison-table">
+<caption>Bafra işletme türlerine göre öncelikler</caption>
+<thead><tr><th>İşletme türü</th><th>Öncelikli içerik</th></tr></thead>
+<tbody>
+<tr><td>Tarım / gıda üretimi</td><td>Üretim süreci, ürün detayı, hasat anı</td></tr>
+<tr><td>Perakende / esnaf</td><td>Ürün vitrin, kampanya, story duyurusu</td></tr>
+<tr><td>Restoran / kafe</td><td>Menü, atmosfer, günün önerisi</td></tr>
+</tbody></table></div>
 
-<p><a href="/hizmetler/instagram-yonetimi">Instagram yönetimi</a> · <a href="/hizmetler/icerik-uretimi-cekim">İçerik</a> · <a href="/bolgeler/of">Of</a></p>
+<h2>Fiyat mantığı</h2>
+<p>Çekim sıklığı ve içerik hacmine göre minimal paketle başlanır; büyüdükçe reklam katmanı eklenir. Keşif sonrası net teklif.</p>
+
+<h2>İlgili hizmetler</h2>
+<p><a href="/hizmetler/instagram-yonetimi">Instagram yönetimi</a> · <a href="/hizmetler/icerik-uretimi-cekim">İçerik üretimi</a> · <a href="/hizmetler/meta-ads">Meta Ads</a> · <a href="/bolgeler">Tüm ilçeler</a></p>
 
 <div class="page-cta">
-  <h2>Araklı için ücretsiz keşif.</h2>
+  <h2>Bafra işletmeniz için ücretsiz keşif.</h2>
+  <p>Üretim veya ticaret ritminize uygun plan çıkaralım.</p>
   <a href="/#iletisim" class="btn btn-primary">Teklif al</a>
 </div>
 `.trim(),
     faqs: [
       {
-        q: "Küçük esnaf paketi var mı?",
+        q: "Tarım işletmesi için sosyal medya işe yarar mı?",
+        a: "Evet. Üretim sürecini görünür kılmak, doğrudan sipariş ve dağıtım kanalı kurar.",
+      },
+      {
+        q: "Bafra'da yerinde çekim yapılır mı?",
+        a: "Evet. Hasat veya üretim gününe göre planlanır.",
+      },
+      {
+        q: "Şehir dışı ilçeden uzaktan yönetim olur mu?",
+        a: "Evet. İçerik onaylı yayınlanır; ihtiyaç halinde planlı yerinde çekim eklenir.",
+      },
+      {
+        q: "Keşif ücretsiz mi?",
+        a: "Evet.",
+      },
+    ],
+  },
+
+  {
+    slug: "carsamba",
+    name: "Çarşamba",
+    regionLabel: "Doğu ovalar",
+    answer:
+      "Çarşamba sosyal medya yönetimi; doğu ovasının ticaret ve sanayi yoğunluğuna uygun kurumsal vitrin ve dönüşüm odaklı reklamdır. Ticaret işletmeleri için net teklif dili, gıda ve perakende için ürün kahramanı içerik, B2B için güven iletişimi ayrı planlanır.",
+    seoTitle: "Çarşamba Sosyal Medya Yönetimi | Ticaret & Sanayi",
+    seoDesc:
+      "Çarşamba'da Instagram yönetimi, Meta Ads ve kurumsal içerik. Ticaret ve sanayi işletmeleri için Samsun sosyal medya ajansı · Wesoco.",
+    bodyHtml: `
+<h2>Çarşamba'da sosyal medya yönetimi nedir?</h2>
+<p>Çarşamba'da yönetim; Samsun doğusundaki ticaret yoğunluğuna  -  havalimanı, sanayi ve ovalar  -  uygun içerik ve reklam stratejisidir. Perakende ve gıda işletmelerinde ürün görseli ve günlük story öne çıkar; kurumsal ve B2B'de referans, süreç ve güven iletişimi baskındır.</p>
+
+<h2>Neden Çarşamba için ayrı plan?</h2>
+<p>İlçe hem tarım/gıda hem sanayi hem de ticaret aksı üzerindedir. Aynı şablonla tüm sektörlere ulaşılmaz. Havalimanı yakınlığı lojistik ve kurumsal müşteriler için coğrafi avantaj sunar; reklam coğrafyası buna göre planlanabilir.</p>
+<ul>
+<li>Ticaret işletmeleri için net CTA ve fiyat şeffaflığı güven üretir.</li>
+<li>Gıda/tarım için üretim ve taze ürün hikâyesi işe yarar.</li>
+<li>Sanayi/B2B için referans ve standart belgeler öne çıkar.</li>
+</ul>
+
+<h2>Çarşamba için nasıl çalışırız?</h2>
+<ol>
+<li>İşletme türüne göre öncelikli mesaj ve kanal belirlenir.</li>
+<li>Haftalık yayın takvimi ve içerik üretim planı kurulur.</li>
+<li>Yerinde veya uzaktan çekim planlanır.</li>
+<li>Çarşamba merkez + bölge kuşağı reklam testi açılır.</li>
+<li>Aylık sade rapor: erişim, mesaj/form ve aksiyon önerileri.</li>
+</ol>
+
+<h2>Kimler için uygun?</h2>
+<p>Perakende ve ticaret işletmeleri, gıda/tarım, sanayi firmaları, kafe/restoran ve kurumsal hizmetler.</p>
+
+<div class="seo-table-wrap"><table class="seo-comparison-table">
+<caption>Çarşamba: sektöre göre içerik önceliği</caption>
+<thead><tr><th>Sektör</th><th>Öncelikli içerik</th></tr></thead>
+<tbody>
+<tr><td>Gıda / tarım</td><td>Üretim, taze ürün, hikâye</td></tr>
+<tr><td>Perakende</td><td>Ürün vitrin, kampanya story</td></tr>
+<tr><td>B2B / sanayi</td><td>Referans, ekip, süreç</td></tr>
+</tbody></table></div>
+
+<h2>Fiyat neye göre değişir?</h2>
+<p>Kanal sayısı, içerik hacmi ve reklam yönetimine göre. Keşif sonrası net teklif; medya ayrıdır.</p>
+
+<h2>İlgili hizmetler</h2>
+<p><a href="/hizmetler/instagram-yonetimi">Instagram yönetimi</a> · <a href="/hizmetler/meta-ads">Meta Ads</a> · <a href="/hizmetler/icerik-uretimi-cekim">İçerik üretimi</a> · <a href="/bolgeler">Tüm ilçeler</a></p>
+
+<div class="page-cta">
+  <h2>Çarşamba işletmeniz için ücretsiz keşif.</h2>
+  <p>Sektörünüze özel dil ve plan çıkaralım.</p>
+  <a href="/#iletisim" class="btn btn-primary">Teklif al</a>
+</div>
+`.trim(),
+    faqs: [
+      {
+        q: "Çarşamba'da hangi sektörlere hizmet veriyorsunuz?",
+        a: "Perakende, gıda/tarım, sanayi/B2B ve kafe/restoran. Her sektörün içerik dili ayrı kurulur.",
+      },
+      {
+        q: "B2B firma için Instagram mı LinkedIn mi?",
+        a: "Hedefe göre belirlenir. B2B görünürlük için LinkedIn, müşteri tanıtımı için kurumsal Instagram önerilir; ikisi birlikte de çalışabilir.",
+      },
+      {
+        q: "Havalimanı yakınlığı reklamda kullanılır mı?",
+        a: "Lojistik veya kurumsal müşteri hedefinde konum katmanı olarak değerlendirilebilir.",
+      },
+      {
+        q: "Keşif ücretsiz mi?",
+        a: "Evet.",
+      },
+    ],
+  },
+
+  {
+    slug: "vezirkopru",
+    name: "Vezirköprü",
+    regionLabel: "İç kesim",
+    answer:
+      "Vezirköprü sosyal medya yönetimi; iç kesimdeki tarım, ormancılık ve yerel ticaretin dijital vitrinini sade ama güçlü bir dille kurmaktır. Uzaktan yönetim yeterlidir; ihtiyaç halinde periyodik çekim planlanır. viral hedef dayatılmaz.",
+    seoTitle: "Vezirköprü Sosyal Medya Yönetimi | İç Kesim & Tarım",
+    seoDesc:
+      "Vezirköprü'de Instagram yönetimi ve bölge görünürlüğü. Tarım, esnaf ve yerel işletmeler için Samsun sosyal medya ajansı · Wesoco.",
+    bodyHtml: `
+<h2>Vezirköprü'de sosyal medya yönetimi nedir?</h2>
+<p>Vezirköprü'de yönetim; tarım, orman ürünleri ve yerel ticaret kimliğini abartısız bir dille dijitale taşımaktır. Büyük şehir reklamcılığı dili yerine samimi ürün ve hizmet anlatımı, net iletişim bilgisi ve haftalık sürdürülebilir ritim önceliklidir.</p>
+
+<h2>Neden süreklilik önce gelir?</h2>
+<p>İç kesim işletmelerinde ani kampanya dili uyumsuz görünür. Güvenilir vitrin ve düzenli NAP (isim, adres, telefon) yerel müşterinin güvenini kazanır. Havza ve Ladik hattı komşu kuşak olarak reklamda değerlendirilebilir.</p>
+<ul>
+<li>Ürün hikâyesi stok görselden çok daha etkilidir.</li>
+<li>Hızlı onay için WhatsApp hattı tercih edilir.</li>
+<li>Organik ritim oturduktan sonra düşük bütçeli test eklenebilir.</li>
+</ul>
+
+<h2>Vezirköprü için nasıl çalışırız?</h2>
+<ol>
+<li>Hesap audit ve sürdürülebilir takvim kurulur.</li>
+<li>Uzaktan onaylı yayın başlatılır.</li>
+<li>İhtiyaç halinde yerinde çekim planlanır.</li>
+<li>İsteğe bağlı komşu kuşak Ads testi açılır.</li>
+</ol>
+
+<h2>Kimler için uygun?</h2>
+<p>Tarım ve orman ürünleri, yerel esnaf, perakende ve hizmet işletmeleri.</p>
+
+<h2>Fiyat mantığı</h2>
+<p>Uzaktan sade paketle başlanır; çekim ve reklam ihtiyaç halinde eklenir. Keşif sonrası netleşir.</p>
+
+<h2>İlgili hizmetler</h2>
+<p><a href="/hizmetler/instagram-yonetimi">Instagram yönetimi</a> · <a href="/hizmetler/icerik-uretimi-cekim">İçerik üretimi</a> · <a href="/hizmetler/meta-ads">Meta Ads</a> · <a href="/bolgeler">Tüm ilçeler</a></p>
+
+<div class="page-cta">
+  <h2>Vezirköprü işletmeniz için ücretsiz keşif.</h2>
+  <p>İçinizi rahatlatacak sade bir plan çıkaralım.</p>
+  <a href="/#iletisim" class="btn btn-primary">Teklif al</a>
+</div>
+`.trim(),
+    faqs: [
+      {
+        q: "Vezirköprü'den uzaktan yönetim olur mu?",
+        a: "Evet. İçerik onaylı yayınlanır; gerektiğinde planlı yerinde çekim eklenir.",
+      },
+      {
+        q: "Tarım ürünleri için hangi platform?",
+        a: "Instagram öncelikli; sipariş hedefi varsa Facebook ve Ads testi eklenir.",
+      },
+      {
+        q: "Komşu ilçelere reklam verilir mi?",
+        a: "Evet. Havza, Ladik ve Bafra hattı hedefe göre coğrafi katman olarak eklenebilir.",
+      },
+      {
+        q: "Keşif ücretsiz mi?",
+        a: "Evet.",
+      },
+    ],
+  },
+
+  {
+    slug: "terme",
+    name: "Terme",
+    regionLabel: "Doğu sahil",
+    answer:
+      "Terme sosyal medya yönetimi; doğu sahil ticaret temposuna uygun düzenli Instagram vitrini, taze ürün ve konum odaklı reklamdır. Restoran, perakende ve hizmet işletmelerinde aynı gün story ve haftalık reels ritmi güveni artırır.",
+    seoTitle: "Terme Sosyal Medya Yönetimi | Doğu Sahil",
+    seoDesc:
+      "Terme'de Instagram yönetimi, story ritmi ve konum reklamı. Doğu sahil işletmeleri için Samsun sosyal medya ajansı · Wesoco.",
+    bodyHtml: `
+<h2>Terme'de sosyal medya yönetimi nedir?</h2>
+<p>Terme'de yönetim; günlük ticaret ve sahil işletme ritmine ayak uyduran yayın disiplinidir. Story ile anlık duyuru, reels ile keşfet, reklamda Terme + Çarşamba kuşağı düşünülür. Sahil restoranlarında taze ürün görseli ve aynı gün duyurusu dönüşümü doğrudan etkiler.</p>
+
+<h2>Neden düzenli vitrin şart?</h2>
+<p>Terme hem geçiş hem ticaret noktasıdır; müşteri yerelden ve komşu ilçelerden gelir. Ölü hesap veya eski menü görseli güveni düşürür. Hızlı duyuru ve konum hedeflemeli reklam bu gap'i kapatır.</p>
+<ul>
+<li>Taze ürün duyurusu aynı gün yapılmalıdır.</li>
+<li>Story temposu restoranlar için en az 4-5 gün/hafta olmalıdır.</li>
+<li>Konum reklamında Terme + Çarşamba geçiş kuşağı test edilebilir.</li>
+</ul>
+
+<h2>Terme için nasıl çalışırız?</h2>
+<ol>
+<li>Hesap audit ve CTA netleştirilir.</li>
+<li>Haftalık story temposu ve aylık reels seti planlanır.</li>
+<li>Uzaktan onaylı yayın; gerektiğinde yerinde çekim.</li>
+<li>Konum reklamı Terme merkezden komşu sahile açılır.</li>
+<li>Sade aylık rapor: erişim ve mesaj/arama.</li>
+</ol>
+
+<h2>Kimler için uygun?</h2>
+<p>Sahil restoranları, kafeler, perakende ve yerel hizmet işletmeleri.</p>
+
+<h2>Fiyat neye göre değişir?</h2>
+<p>Uzaktan ve yerinde çekimli paket ayrı tekliflenir. Medya harcaması ayrı satırdadır.</p>
+
+<h2>İlgili hizmetler</h2>
+<p><a href="/hizmetler/instagram-yonetimi">Instagram yönetimi</a> · <a href="/hizmetler/meta-ads">Meta Ads</a> · <a href="/hizmetler/icerik-uretimi-cekim">İçerik üretimi</a> · <a href="/bolgeler">Tüm ilçeler</a></p>
+
+<div class="page-cta">
+  <h2>Terme işletmeniz için ücretsiz keşif.</h2>
+  <p>Sahile uygun ritim önerelim.</p>
+  <a href="/#iletisim" class="btn btn-primary">Teklif al</a>
+</div>
+`.trim(),
+    faqs: [
+      {
+        q: "Terme'den uzaktan yönetim olur mu?",
+        a: "Evet. İçerik onaylı yayınlanır; gerektiğinde yerinde çekim günü planlanır.",
+      },
+      {
+        q: "Sahil restoranı için ne önemli?",
+        a: "Taze ürün görseli, hızlı story ve konum hedeflemeli reklam birlikte çalışmalıdır.",
+      },
+      {
+        q: "Çarşamba hattına reklam verilir mi?",
+        a: "Evet. İşletme tipine göre komşu sahil kuşağı test edilebilir.",
+      },
+      {
+        q: "Keşif ücretsiz mi?",
+        a: "Evet.",
+      },
+    ],
+  },
+
+  {
+    slug: "havza",
+    name: "Havza",
+    regionLabel: "İç kesim",
+    answer:
+      "Havza sosyal medya yönetimi; kaplıca turizmi ve yerel ticaretin dijital görünürlüğünü sade bir dille kurmaktır. Konaklama işletmelerinde termal deneyim anlatımı, esnafta ise hizmet sürecinin tutarlı paylaşımı omurga oluşturur.",
+    seoTitle: "Havza Sosyal Medya Yönetimi | Kaplıca & Yerel Ticaret",
+    seoDesc:
+      "Havza'da Instagram yönetimi, konaklama içeriği ve konum reklamı. Kaplıca oteli ve yerel esnaf için Samsun sosyal medya ajansı · Wesoco.",
+    bodyHtml: `
+<h2>Havza'da sosyal medya yönetimi nedir?</h2>
+<p>Havza'da yönetim; kaplıca ve termal turizmin özgün deneyim anlatımıyla konaklama doluluk hedefine bağlanmasıdır. Jenerik "sağlıklı yaşam" stoğu yerine tesisin kendi atmosferi, havuz ortamı, ekip ve erişim kolaylığı öne çıkar. Yerel esnaf içinse haftalık düzenli vitrin yeterlidir.</p>
+
+<h2>Neden termal oteliçin özgün içerik şart?</h2>
+<p>Kaplıca işletmelerinde birbirinin kopyası görseller kitleyi karıştırır. İşletmeye özel oda, havuz atmosferi ve konum avantajı  -  Samsun'a yakınlık, erişim kolaylığı  -  ayrıştırıcı mesajlardır. Sezon öncesi stok ve retargeting doluluk için kritiktir.</p>
+<ul>
+<li>Termal + dinlenme deneyimi görsel + metin olarak birlikte anlatılır.</li>
+<li>Sezon öncesi içerik stoğu üretilir; sezon içi reklam ölçeklenir.</li>
+<li>Yerel esnaf için minimal haftalık ritim önerilir.</li>
+</ul>
+
+<h2>Havza için nasıl çalışırız?</h2>
+<ol>
+<li>İşletme türüne göre öncelikli mesaj belirlenir.</li>
+<li>Konaklama: sezon takvimi, çekim planı, sezon öncesi stok.</li>
+<li>Yerel esnaf: sade takvim, uzaktan yönetim, isteğe bağlı Ads.</li>
+<li>Meta Ads Havza + Vezirköprü/Ladik kuşağında test edilir.</li>
+<li>Sade aylık rapor.</li>
+</ol>
+
+<h2>Kimler için uygun?</h2>
+<p>Kaplıca ve termal oteller, pansiyon, kafe ve yerel hizmet işletmeleri.</p>
+
+<h2>Fiyat mantığı</h2>
+<p>Konaklama için sezonluk yoğunluk farkı teklifte gösterilir. Yerel esnaf için sade paket yeterlidir. Keşif sonrası netleşir.</p>
+
+<h2>İlgili hizmetler</h2>
+<p><a href="/hizmetler/instagram-yonetimi">Instagram yönetimi</a> · <a href="/hizmetler/meta-ads">Meta Ads</a> · <a href="/hizmetler/icerik-uretimi-cekim">İçerik üretimi</a> · <a href="/bolgeler">Tüm ilçeler</a></p>
+
+<div class="page-cta">
+  <h2>Havza işletmeniz için ücretsiz keşif.</h2>
+  <p>Kaplıca deneyimini veya yerel ticaret vitrinini birlikte planlayalım.</p>
+  <a href="/#iletisim" class="btn btn-primary">Teklif al</a>
+</div>
+`.trim(),
+    faqs: [
+      {
+        q: "Kaplıca oteli için hangi platform öncelikli?",
+        a: "Instagram + Meta Ads önceliklidir. Google arama hedefi varsa Google Ads eklenir.",
+      },
+      {
+        q: "Sezon dışında ne yapılır?",
+        a: "Marka bilinirliği ve erken rezervasyon mesajları; yüksek sezonda dönüşüm ölçeği açılır.",
+      },
+      {
+        q: "Yerel esnaf için büyük paket şart mı?",
+        a: "Hayır. Minimal haftalık ritimle başlanır; büyüdükçe reklam/çekim eklenir.",
+      },
+      {
+        q: "Keşif ücretsiz mi?",
+        a: "Evet.",
+      },
+    ],
+  },
+
+  {
+    slug: "kavak",
+    name: "Kavak",
+    regionLabel: "İç kesim",
+    answer:
+      "Kavak sosyal medya yönetimi; iç kesim esnafının dijital vitrinini abartısız dil ve sürdürülebilir içerik temposuyla kurmaktır. Küçük bütçeye uygun organik ritim önce gelir; dönüşüm hedefi netleşince düşük test reklamı eklenir.",
+    seoTitle: "Kavak Sosyal Medya Yönetimi | Yerel Esnaf & Hizmet",
+    seoDesc:
+      "Kavak'ta sade Instagram yönetimi ve bölge görünürlüğü. Küçük işletmeler için Samsun sosyal medya ajansı · Wesoco.",
+    bodyHtml: `
+<h2>Kavak'ta sosyal medya yönetimi nedir?</h2>
+<p>Kavak'ta yönetim; işletmeye özgü hizmet ve ürün anlatımının düzenli ve güvenilir şekilde paylaşılmasıdır. Anlaşılır dil, net CTA ve sade vitrin yerel müşterinin güvenini kazanır. Komşu ilçelere görünürlük için düşük bütçeli reklam ihtiyaç halinde planlanır.</p>
+
+<h2>Neden sürdürülebilir ritim?</h2>
+<p>Aşırı içerik taahhüdü küçük ekiplerde tutulmaz ve hesabın ölmesine yol açar. Haftada birkaç kaliteli paylaşım, günde zoraki post'tan çok daha değerlidir.</p>
+<ul>
+<li>Önce bio, grid ve net iletişim bilgisi düzenlenir.</li>
+<li>Organik ritim oturduğunda reklam eklenir.</li>
+<li>Uzaktan yönetim ve WhatsApp onay hattıyla tempo korunur.</li>
+</ul>
+
+<h2>Kavak için nasıl çalışırız?</h2>
+<ol>
+<li>Hesap ve rakip hızlı audit.</li>
+<li>Haftalık sürdürülebilir takvim kurulur.</li>
+<li>Planlı çekim veya mevcut görsellerle üretim.</li>
+<li>İsteğe bağlı komşu kuşak Ads testi.</li>
+</ol>
+
+<h2>Kimler için uygun?</h2>
+<p>Perakende, kafe, atölye ve yerel hizmet işletmeleri.</p>
+
+<h2>Fiyat mantığı</h2>
+<p>İçerik hacmine göre ölçeklenir. Büyüdükçe çekim ve reklam katmanı eklenir.</p>
+
+<h2>İlgili hizmetler</h2>
+<p><a href="/hizmetler/instagram-yonetimi">Instagram yönetimi</a> · <a href="/hizmetler/icerik-uretimi-cekim">İçerik üretimi</a> · <a href="/hizmetler/meta-ads">Meta Ads</a> · <a href="/bolgeler">Tüm ilçeler</a></p>
+
+<div class="page-cta">
+  <h2>Kavak işletmeniz için ücretsiz keşif.</h2>
+  <a href="/#iletisim" class="btn btn-primary">Teklif al</a>
+</div>
+`.trim(),
+    faqs: [
+      {
+        q: "Küçük işletme paketi var mı?",
         a: "Evet. Platform ve hacme göre başlanır; büyüdükçe reklam/çekim eklenir.",
       },
       {
-        q: "Çekim Araklı’da yapılır mı?",
-        a: "Evet. Planlı yerinde çekim veya mevcut görsellerle üretim mümkün.",
+        q: "Çekim Kavak'ta yapılır mı?",
+        a: "Evet. Planlı yerinde çekim veya mevcut görsellerle üretim mümkündür.",
       },
       {
         q: "Reklam şart mı?",
@@ -340,233 +724,64 @@ const PAGES: DistrictPage[] = [
   },
 
   {
-    slug: "surmene",
-    name: "Sürmene",
-    regionLabel: "Doğu sahil",
-    answer:
-      "Sürmene sosyal medya yönetimi; zanaat ve imalat hikâyesini B2B güven diline çevirmektir. Atölye sahneleri, ürün detayı ve referans anlatımıyla markayı güçlendiririz. sahil restoran şablonuna indirgemeyiz.",
-    seoTitle: "Sürmene Sosyal Medya Yönetimi | İmalat & Zanaat",
-    seoDesc:
-      "Sürmene’de üretim hikâyesi, kurumsal Instagram ve B2B görünürlük. İmalat ve atölye için Trabzon sosyal medya ajansı · Wesoco.",
-    bodyHtml: `
-<h2>Sürmene’de sosyal medya yönetimi nedir?</h2>
-<p>Sürmene’de yönetim; üretim kalitesi ve güveni görünür kılmaktır. Atölye videosu, makro ürün çekimi, ekip ve teslim hikâyeleri öne çıkar. LinkedIn veya daha kurumsal Instagram dili seçilebilir; Meta Ads’te yerel + sektörel katman kullanılır.</p>
-
-<h2>Neden üretim görseli kritik?</h2>
-<p>Stok fotoğraf B2B’de güven üretmez. Of. Araklı. Köprübaşı hattı iş ve müşteri ağıdır; referans ve süreç şeffaflığı dönüşüm metrikleridir.</p>
-
-<h2>Nasıl çalışırız?</h2>
-<ol>
-<li>Kurumsal onay hattı ve kriz protokolü netleştirilir.</li>
-<li>Üretim gününe göre çekim planlanır.</li>
-<li>İçerik dili abartılı vaatten uzak tutulur.</li>
-<li>Aylık skor kartı: erişim + nitelikli mesaj/form.</li>
-</ol>
-
-<h2>Kimler için?</h2>
-<p>İmalat, atölye, perakende ve yerel hizmet; B2B görünürlük isteyen firmalar.</p>
-
-<h2>Fiyat</h2>
-<p>Onay katmanı, çekim ve kanal sayısına göre. Keşif sonrası teklif.</p>
-
-<p><a href="/hizmetler/kurumsal-sosyal-medya-yonetimi">Kurumsal sosyal medya</a> · <a href="/hizmetler/icerik-uretimi-cekim">İçerik</a> · <a href="/bolgeler/koprubasi">Köprübaşı</a></p>
-
-<div class="page-cta">
-  <h2>Sürmene firmanız için keşif.</h2>
-  <a href="/#iletisim" class="btn btn-primary">Teklif al</a>
-</div>
-`.trim(),
-    faqs: [
-      {
-        q: "İmalat firması için sosyal medya işe yarar mı?",
-        a: "Evet. Üretim kalitesi, referans ve B2B görünürlük için güçlü kanaldır.",
-      },
-      {
-        q: "Kurumsal paket nasıl işler?",
-        a: "Yazılı onay, kriz protokolü ve aylık skor kartı ile yönetilir.",
-      },
-      {
-        q: "LinkedIn şart mı?",
-        a: "Zorunlu değil; B2B’de sık eklenir.",
-      },
-      {
-        q: "Keşif ücretsiz mi?",
-        a: "Evet.",
-      },
-    ],
-  },
-
-  {
-    slug: "arsin",
-    name: "Arsin",
-    regionLabel: "Doğu koridoru",
-    answer:
-      "Arsin sosyal medya yönetimi; OSB ve B2B güven iletişimidir. Referans, süreç ve standartlar; tüketici reels trendlerinden ayrı bir editoryal ritim ister. LinkedIn, Instagram ve Google Ads ihtiyaca göre seçilir.",
-    seoTitle: "Arsin Sosyal Medya Yönetimi | OSB & B2B",
-    seoDesc:
-      "Arsin’de kurumsal sosyal medya, LinkedIn ve Google Ads. OSB firmaları için Trabzon B2B dijital iletişim · Wesoco.",
-    bodyHtml: `
-<h2>Arsin’de sosyal medya yönetimi nedir?</h2>
-<p>Arsin’de amaç karar vericiye güven vermektir. Fabrika/saha görselleri, ekip, sertifika/standart ve proje teslimi anlatılır. “Viral reels” hedefi dayatılmaz; form ve arama odaklı kampanyalar öne çıkar.</p>
-
-<h2>Neden B2B dili ayrıdır?</h2>
-<p>Sanayi ve lojistik çevresi tüketici dilinden farklıdır. Yomra. Ortahisar hattı tedarik ve görünürlük alanıdır. Abartılı vaat kurumsal itibarı zedeler.</p>
-
-<h2>Nasıl ilerleriz?</h2>
-<ol>
-<li>Onay hatları ve mesaj kısıtları yazılır.</li>
-<li>Kanal karışımı: LinkedIn ve/veya Instagram + Google Ads.</li>
-<li>Saha çekimi planlı; güvenlik kurallarına uygun.</li>
-<li>Rapor: nitelikli lead / form, değil vanity like.</li>
-</ol>
-
-<h2>Kimler için?</h2>
-<p>Sanayi, lojistik, B2B hizmet ve lokal ticaret firmaları.</p>
-
-<h2>Fiyat</h2>
-<p>Kanal sayısı ve onay derinliğine göre. Medya ayrıdır.</p>
-
-<p><a href="/hizmetler/kurumsal-sosyal-medya-yonetimi">Kurumsal yönetim</a> · <a href="/hizmetler/google-ads">Google Ads</a> · <a href="/bolgeler/yomra">Yomra</a></p>
-
-<div class="page-cta">
-  <h2>Arsin OSB / firmanız için keşif.</h2>
-  <a href="/#iletisim" class="btn btn-primary">Teklif al</a>
-</div>
-`.trim(),
-    faqs: [
-      {
-        q: "OSB için LinkedIn şart mı?",
-        a: "Zorunlu değil ama B2B görünürlükte çok etkilidir.",
-      },
-      {
-        q: "B2B reklam nasıl çalışır?",
-        a: "Mesaj/form ve arama odaklı; karar verici kitleye göre hedefleme.",
-      },
-      {
-        q: "Saha çekimi güvenli mi planlanır?",
-        a: "Evet. Firma kurallarına göre shot list ve izinle ilerlenir.",
-      },
-      {
-        q: "Keşif ücretsiz mi?",
-        a: "Evet.",
-      },
-    ],
-  },
-
-  {
-    slug: "vakfikebir",
-    name: "Vakfıkebir",
+    slug: "alacam",
+    name: "Alaçam",
     regionLabel: "Batı sahil",
     answer:
-      "Vakfıkebir sosyal medya yönetimi; fırın, gastronomi ve pazar kültürünü ürün kahramanı görsellerle satışa bağlamaktır. Coğrafi işaret çağrışımları abartılmadan, hijyen ve iştah dengesiyle işlenir.",
-    seoTitle: "Vakfıkebir Sosyal Medya Yönetimi | Gastronomi & Fırın",
+      "Alaçam sosyal medya yönetimi; yazlık ve sahil işletmelerin sezon öncesi içerik stoğunu hazırlayıp yaz aylarında rezervasyon ve doluluğa bağlamaktır. Kışın marka bilinirliği, yazın dönüşüm reklamı  -  12 ay aynı yoğunluk dayatılmaz.",
+    seoTitle: "Alaçam Sosyal Medya Yönetimi | Sahil & Konaklama",
     seoDesc:
-      "Vakfıkebir’de ürün fotoğrafı, reels ve konum reklamı. Fırın ve gıda işletmeleri için Trabzon sosyal medya ajansı · Wesoco.",
+      "Alaçam'da sezonluk Instagram yönetimi ve rezervasyon reklamı. Otel, pansiyon ve sahil işletmeleri için Samsun sosyal medya ajansı · Wesoco.",
     bodyHtml: `
-<h2>Vakfıkebir’de sosyal medya yönetimi nedir?</h2>
-<p>Vakfıkebir’de yönetim; ekmek ve gastronomi kimliğini güncel satış kanalına (tezgahtan DM’ye) taşımaktır. Fırın arkası, ürün yakın planı ve pazar günü story’si doğal kampanya üretir. Beşikdüzü. Çarşıbaşı hattı müşteri ve tedarik bağını taşır.</p>
-
-<h2>Neden ürün kahramanı kritik?</h2>
-<p>Turistik nostalji tek başına sipariş getirmez. Hijyen algısı, taze çıkış anı ve net CTA (paket, adres, saat) dönüşümü büyütür.</p>
-
-<h2>Nasıl çalışırız?</h2>
-<ul>
-<li>Ürün makro + üretim videosu</li>
-<li>Sezonluk/bayram öncesi stok artışı</li>
-<li>Batı sahil konum + ilgi Ads testi</li>
-<li>Pazar yoğunluğuna özel story planı</li>
-</ul>
-
-<h2>Kimler için?</h2>
-<p>Fırın, market, restoran ve yerel gıda ticareti.</p>
-
-<h2>Fiyat</h2>
-<p>Çekim ve kampanya yoğunluğuna göre. Keşif sonrası teklif.</p>
-
-<p><a href="/hizmetler/icerik-uretimi-cekim">İçerik & çekim</a> · <a href="/bolgeler/besikduzu">Beşikdüzü</a> · <a href="/bolgeler/akcaabat">Akçaabat</a></p>
-
-<div class="page-cta">
-  <h2>Vakfıkebir işletmeniz için keşif.</h2>
-  <a href="/#iletisim" class="btn btn-primary">Teklif al</a>
-</div>
-`.trim(),
-    faqs: [
-      {
-        q: "Fırın için neye odaklanıyorsunuz?",
-        a: "İştah, hijyen algısı, düzenli story ve konum reklamı.",
-      },
-      {
-        q: "Pazar günü özel içerik olur mu?",
-        a: "Evet. Yoğun günler için story ve kısa reels planı çıkarılır.",
-      },
-      {
-        q: "Coğrafi işaret dili nasıl kullanılır?",
-        a: "Abartısız ve doğru; yanıltıcı iddia üretilmez.",
-      },
-      {
-        q: "Keşif ücretsiz mi?",
-        a: "Evet.",
-      },
-    ],
-  },
-
-  {
-    slug: "besikduzu",
-    name: "Beşikdüzü",
-    regionLabel: "Batı sahil",
-    answer:
-      "Beşikdüzü sosyal medya yönetimi; yazlık ve sahil turizminde sezonu kaçırmayan erken içerik + rezervasyon reklamıdır. Kışın bilinirlik, yazın dönüşüm. 12 ay aynı ritim dayatılmaz.",
-    seoTitle: "Beşikdüzü Sosyal Medya Yönetimi | Sahil & Konaklama",
-    seoDesc:
-      "Beşikdüzü’nde sezonluk Instagram, drone ve rezervasyon Ads. Otel, pansiyon ve sahil işletmeleri için Trabzon ajansı · Wesoco.",
-    bodyHtml: `
-<h2>Beşikdüzü’nde sosyal medya yönetimi nedir?</h2>
-<p>Beşikdüzü’nde yönetim; sezon dalgalanmasına göre içerik ve reklam ağırlığını değiştirmektir. Sahil/drone, oda turu ve menü setleri sezon öncesi stoğa alınır; yazın Meta/Google ile erken rezervasyon ölçeklenir.</p>
+<h2>Alaçam'da sosyal medya yönetimi nedir?</h2>
+<p>Alaçam'da yönetim; sezon dalgalanmasına göre içerik ve reklam ağırlığını doğru zamanda değiştirmektir. Sahil ve yazlık atmosfer görsellerı, oda/konaklama turu ile menü setleri sezon öncesi üretilir; yaz aylarında Meta Ads ile erken rezervasyon hedeflenir.</p>
 
 <h2>Neden sezon planı şart?</h2>
-<p>Yazlık talep ani yükselir. Kışın sessiz hesap, yazın yetişmeyen içerik demektir. Vakfıkebir. Şalpazarı komşuluğu hem müşteri hem tedarik bağını etkiler.</p>
+<p>Yazlık talep ani yükselir. Kışın sessiz hesap, yazın yetişemeyen içerik demektir. Yakakent ve Bafra komşuluğu hem müşteri hem kıyaslama alanıdır.</p>
 
 <div class="seo-table-wrap"><table class="seo-comparison-table">
-<caption>Beşikdüzü sezon dengesi</caption>
+<caption>Alaçam sezon dengesi</caption>
 <thead><tr><th>Dönem</th><th>Öncelik</th></tr></thead>
 <tbody>
-<tr><td>Kış / düşük sezon</td><td>Marka, stok, erken rezervasyon mesajı</td></tr>
-<tr><td>Yaz / yüksek sezon</td><td>Dönüşüm Ads, hızlı yanıt, story hızı</td></tr>
+<tr><td>Kış / düşük sezon</td><td>Marka, stok üretimi, erken rezervasyon mesajı</td></tr>
+<tr><td>Yaz / yüksek sezon</td><td>Dönüşüm Ads, hızlı story, rezervasyon CTA</td></tr>
 </tbody></table></div>
 
-<h2>Nasıl çalışırız?</h2>
+<h2>Alaçam için nasıl çalışırız?</h2>
 <ol>
 <li>Sezon takvimi keşifte çıkarılır.</li>
-<li>Drone ve konaklama çekimi planlanır.</li>
+<li>Sahil ve konaklama çekimi planlanır.</li>
 <li>Sezon öncesi organik stok tamamlanır.</li>
-<li>Sezon içi reklam ve yanıt süresi artırılır.</li>
+<li>Sezon içi Meta Ads ve yanıt süresi artırılır.</li>
 </ol>
 
-<h2>Kimler için?</h2>
-<p>Otel, pansiyon, kafe, restoran ve sahil hizmetleri.</p>
+<h2>Kimler için uygun?</h2>
+<p>Otel, pansiyon, yazlık kiralama, kafe, restoran ve sahil hizmetleri.</p>
 
-<h2>Fiyat</h2>
-<p>Sezonluk hacim farkı teklifte şeffaf gösterilir. Medya ayrıdır.</p>
+<h2>Fiyat neye göre değişir?</h2>
+<p>Sezonluk hacim farkı teklifte şeffaf gösterilir. Medya ayrı satırdadır.</p>
 
-<p><a href="/hizmetler/drone-cekimi">Drone</a> · <a href="/hizmetler/meta-ads">Meta Ads</a> · <a href="/hizmetler/google-ads">Google Ads</a></p>
+<h2>İlgili hizmetler</h2>
+<p><a href="/hizmetler/instagram-yonetimi">Instagram yönetimi</a> · <a href="/hizmetler/meta-ads">Meta Ads</a> · <a href="/hizmetler/icerik-uretimi-cekim">İçerik üretimi</a> · <a href="/bolgeler">Tüm ilçeler</a></p>
 
 <div class="page-cta">
-  <h2>Beşikdüzü sezon planı için keşif.</h2>
+  <h2>Alaçam sezon planı için ücretsiz keşif.</h2>
+  <p>Sezon öncesi ne hazırlanmalı, birlikte bakalım.</p>
   <a href="/#iletisim" class="btn btn-primary">Teklif al</a>
 </div>
 `.trim(),
     faqs: [
       {
         q: "Sezonluk paket nasıl olur?",
-        a: "Yoğun sezonda içerik/reklam artar; düşük sezonda temel ritim korunur.",
-      },
-      {
-        q: "Drone yapılır mı?",
-        a: "Evet. Sahil ve konaklama için planlı drone sunuyoruz.",
+        a: "Yoğun sezonda içerik/reklam artırılır; düşük sezonda temel ritim ve marka çalışması korunur.",
       },
       {
         q: "Kışın reklam gerekir mi?",
-        a: "Çoğunlukla bilinirlik ve erken rezervasyon için düşük ölçek yeterlidir.",
+        a: "Çoğunlukla bilinirlik ve erken rezervasyon için düşük bütçe yeterlidir.",
+      },
+      {
+        q: "Yazlık kiralama işletmeleri için ne önerirsiniz?",
+        a: "Sezon öncesi ilan görseli, süreç anlatımı ve hedefli Ads testi.",
       },
       {
         q: "Keşif ücretsiz mi?",
@@ -576,267 +791,45 @@ const PAGES: DistrictPage[] = [
   },
 
   {
-    slug: "macka",
-    name: "Maçka",
-    regionLabel: "Yayla ve turizm",
+    slug: "19-mayis",
+    name: "19 Mayıs",
+    regionLabel: "Batı",
     answer:
-      "Maçka sosyal medya yönetimi; Sümela ve yayla deneyimini konaklama işletmesine özel görsel dille anlatmaktır. Sezon takvimi, drone/reels ve erken rezervasyon Ads birlikte planlanır. jenerik yayla stoğu kullanılmaz.",
-    seoTitle: "Maçka Sosyal Medya Yönetimi | Yayla & Turizm",
+      "19 Mayıs sosyal medya yönetimi; batı Samsun'da tarım ve ticaret ağırlıklı yerel işletmeler için sade ve sürdürülebilir dijital varlıktır. Komşu Bafra ve Alaçam hattında görünürlük artırmak isteyen işletmelere özel reklam planı sunulur.",
+    seoTitle: "19 Mayıs Sosyal Medya Yönetimi | Batı Samsun",
     seoDesc:
-      "Maçka’da otel/pansiyon için drone, reels ve sezon reklamı. Sümela hattı turizm işletmeleri · Trabzon Sosyal Medya · Wesoco.",
+      "19 Mayıs ilçesinde Instagram yönetimi ve bölge görünürlüğü. Yerel esnaf ve işletmeler için Samsun sosyal medya ajansı · Wesoco.",
     bodyHtml: `
-<h2>Maçka’da sosyal medya yönetimi nedir?</h2>
-<p>Maçka’da yönetim; doğa, kültür ve konforu işletmenin kendi farkıyla göstermektir. Manzara/drone, oda turu, kahvaltı ve etkinlik içerikleri sezon öncesi üretilir. Sümela ve doğal alanlar etik çerçevede, markanın deneyimine bağlı kullanılır.</p>
+<h2>19 Mayıs'ta sosyal medya yönetimi nedir?</h2>
+<p>19 Mayıs'ta yönetim; yerel işletmenin dijitalde güvenilir ve düzenli görünmesidir. Tarım, ticaret veya hizmet sektörü olsun; samimi ürün/hizmet anlatımı ve net iletişim bilgisi yerel müşteriyi çeker. Bafra ve Alaçam hattı reklam coğrafyasında değerlendirilebilir.</p>
 
-<h2>Neden özgün dil şart?</h2>
-<p>Aynı manzara stoğu herkesde vardır. Fark; hijyen, yemek, erişim ve misafir yolu anlatımındadır. Ortahisar çıkışlı günübirlik + konaklamalı kitle ayrı hedeflenebilir.</p>
-
-<h2>Nasıl çalışırız?</h2>
-<ol>
-<li>Sezon ve hafta sonu yoğunluğu takvime işlenir.</li>
-<li>Hava/ışık penceresine göre çekim planlanır.</li>
-<li>Sezon öncesi stok; sezon içi dönüşüm Ads.</li>
-<li>Remarketing site ziyaretçilerine açılır.</li>
-</ol>
-
-<h2>Kimler için?</h2>
-<p>Otel, pansiyon, restoran ve doğa deneyimi işletmeleri.</p>
-
-<h2>Fiyat</h2>
-<p>Drone ve sezon hacmine göre. Keşif sonrası teklif.</p>
-
-<p><a href="/hizmetler/drone-cekimi">Drone</a> · <a href="/hizmetler/meta-ads">Meta Ads</a> · <a href="/bolgeler/caykara">Çaykara</a> · <a href="/bolgeler/duzkoy">Düzköy</a></p>
-
-<div class="page-cta">
-  <h2>Maçka konaklamanız için keşif.</h2>
-  <a href="/#iletisim" class="btn btn-primary">Teklif al</a>
-</div>
-`.trim(),
-    faqs: [
-      {
-        q: "Sümela görseli kullanır mısınız?",
-        a: "Etik çerçevede ve işletme deneyimine bağlı özgün içerikle. Şablon stoğa yaslanmayız.",
-      },
-      {
-        q: "Hangi platform öncelikli?",
-        a: "Çoğunlukla Instagram + Meta Ads; isteğe Google arama eklenir.",
-      },
-      {
-        q: "Hafta sonu yoğunluğu nasıl yönetilir?",
-        a: "Önceden stok + hızlı story ritmi ve rezervasyon CTA’sı.",
-      },
-      {
-        q: "Keşif ücretsiz mi?",
-        a: "Evet.",
-      },
-    ],
-  },
-
-  {
-    slug: "caykara",
-    name: "Çaykara",
-    regionLabel: "Yayla turizmi",
-    answer:
-      "Çaykara (Uzungöl hattı) sosyal medya yönetimi; yüksek rekabette özgün konaklama dili ve erken rezervasyondur. Şablon göl fotoğrafı yarışı yerine oda detayı, ekip ve misafir deneyimiyle öne çıkarırız.",
-    seoTitle: "Çaykara Sosyal Medya Yönetimi | Uzungöl Konaklama",
-    seoDesc:
-      "Çaykara / Uzungöl’de otel ve bungalov için reels, kapak görseli ve sezon öncesi reklam. Trabzon yayla turizmi ajansı · Wesoco.",
-    bodyHtml: `
-<h2>Çaykara’da sosyal medya yönetimi nedir?</h2>
-<p>Çaykara’da yönetim; Uzungöl rekabetinde işletmeyi ayırt edilebilir kılmaktır. Oda/ortak alan reels’i, kahvaltı, yağmur-güneş atmosferi ve rezervasyon kolaylığı anlatılır. Sezon öncesi stok + retargeting doluluk için kritiktir.</p>
-
-<h2>Neden “daha güzel göl” yetmez?</h2>
-<p>Görsel rekabet yoğundur. Kazanan; hijyen, oda detayı ve net rezervasyon yoludur. Of. Dernekpazarı. Hayrat kuşağı lojistik ve müşteri taşır.</p>
-
-<h2>Nasıl çalışırız?</h2>
-<ol>
-<li>Rakip taraması ve kapak görseli yenileme</li>
-<li>Oda/ortam reels seti</li>
-<li>Sezon öncesi Ads + retargeting</li>
-<li>Yoğun sezonda yanıt süresi ve story hızı artışı</li>
-<li>Kış: marka + erken rezervasyon mesajı</li>
-</ol>
-
-<h2>Kimler için?</h2>
-<p>Otel, bungalov, restoran, tur ve yerel hizmet.</p>
-
-<h2>Fiyat</h2>
-<p>Sezon öncesi üretim yoğunluğu teklifte belirtilir. Medya ayrıdır.</p>
-
-<p><a href="/hizmetler/drone-cekimi">Drone</a> · <a href="/hizmetler/instagram-yonetimi">Instagram</a> · <a href="/bolgeler/dernekpazari">Dernekpazarı</a></p>
-
-<div class="page-cta">
-  <h2>Çaykara / Uzungöl için keşif.</h2>
-  <a href="/#iletisim" class="btn btn-primary">Teklif al</a>
-</div>
-`.trim(),
-    faqs: [
-      {
-        q: "Uzungöl otelleri için ne önerirsiniz?",
-        a: "Güçlü kapak, oda reels’leri ve sezon öncesi reklam. Keşifte rakip taraması yapılır.",
-      },
-      {
-        q: "Çok rakip varken nasıl öne çıkılır?",
-        a: "Şablon manzara yerine işletmeye özgü detay, ekip ve deneyimle.",
-      },
-      {
-        q: "Kış planı nedir?",
-        a: "Marka bilinirliği ve erken rezervasyon; yazda dönüşüm ölçeği.",
-      },
-      {
-        q: "Keşif ücretsiz mi?",
-        a: "Evet.",
-      },
-    ],
-  },
-
-  {
-    slug: "tonya",
-    name: "Tonya",
-    regionLabel: "İç kesim",
-    answer:
-      "Tonya sosyal medya yönetimi; süt, tarım ve yerel üretim hikâyesini güvenle anlatmaktır. Küçük üreticiye sade Instagram vitrini ve üretim günü çekimi. şehir restoran reels şablonu dayatılmaz.",
-    seoTitle: "Tonya Sosyal Medya Yönetimi | Yerel Üretim & Gıda",
-    seoDesc:
-      "Tonya’da üretim hikâyesi, ürün fotoğrafı ve sade Instagram yönetimi. Tarım/gıda üreticileri için Trabzon ajansı · Wesoco.",
-    bodyHtml: `
-<h2>Tonya’da sosyal medya yönetimi nedir?</h2>
-<p>Tonya’da yönetim; üretim süreci, ürün makro ve aile/işletme hikâyesini görünür kılmaktır. Samimi dil; gerektiğinde Vakfıkebir. Düzköy. Maçka hattına düşük bütçeli Ads açılır.</p>
-
-<h2>Neden üretim günü çekimi önemli?</h2>
-<p>Stok görsel güven üretmez. Dağıtım ve sipariş hedefi varsa reklam eklenir; yoksa organik vitrin çoğu zaman yeterlidir.</p>
-
-<h2>Nasıl çalışırız?</h2>
+<h2>Neden sade başlamak daha iyi?</h2>
+<p>Küçük ekiplerde sürdürülemeyen içerik planı hesabın ölmesine yol açar. Önce bio düzenlemesi, tutarlı grid ve net CTA kurulur; organik ritim oturduğunda reklam eklenir.</p>
 <ul>
-<li>Sade haftalık ritim</li>
-<li>Üretim gününe göre çekim</li>
-<li>Net sipariş/iletişim CTA’sı</li>
-<li>İsteğe bağlı iç kesim Ads</li>
+<li>Haftada az ama kaliteli paylaşım, günde zoraki içerikten değerlidir.</li>
+<li>Uzaktan yönetim büyük şehire ihtiyaç duymadan mümkündür.</li>
+<li>Komşu ilçe hedeflemesiyle erişim alanı genişletilebilir.</li>
 </ul>
 
-<h2>Kimler için?</h2>
-<p>Gıda, tarım, yerel üretim ve küçük ticaret.</p>
-
-<h2>Fiyat</h2>
-<p>Minimal paketle başlanır. Keşif sonrası netleşir.</p>
-
-<p><a href="/hizmetler/icerik-uretimi-cekim">İçerik</a> · <a href="/hizmetler/instagram-yonetimi">Instagram</a> · <a href="/bolgeler/vakfikebir">Vakfıkebir</a></p>
-
-<div class="page-cta">
-  <h2>Tonya üretiminiz için keşif.</h2>
-  <a href="/#iletisim" class="btn btn-primary">Teklif al</a>
-</div>
-`.trim(),
-    faqs: [
-      {
-        q: "Gıda üreticisi reklam kullanmalı mı?",
-        a: "Organikle başlanabilir; sipariş/dağıtım hedefi varsa düşük test eklenir.",
-      },
-      {
-        q: "Tonya’da çekim olur mu?",
-        a: "Evet. Üretim gününe göre planlanır.",
-      },
-      {
-        q: "Ne sıklıkta içerik?",
-        a: "Sürdürülebilir haftalık ritim; keşifte netleşir.",
-      },
-      {
-        q: "Keşif ücretsiz mi?",
-        a: "Evet.",
-      },
-    ],
-  },
-
-  {
-    slug: "carsibasi",
-    name: "Çarşıbaşı",
-    regionLabel: "Batı sahil",
-    answer:
-      "Çarşıbaşı sosyal medya yönetimi; taze ürün ve balık/sahil esnaf temposuna uygun hızlı story + dürüst vitrindir. Günlük ürün anlatımı, yavaş kurumsal dilden daha çok işe yarar.",
-    seoTitle: "Çarşıbaşı Sosyal Medya Yönetimi | Sahil Esnafı",
-    seoDesc:
-      "Çarşıbaşı’nda günlük story, reels ve konum reklamı. Balık restoranı ve sahil esnafı için Trabzon sosyal medya · Wesoco.",
-    bodyHtml: `
-<h2>Çarşıbaşı’nda sosyal medya yönetimi nedir?</h2>
-<p>Çarşıbaşı’nda yönetim; günün ürününü aynı gün anlatmaktır. Tezgâh/mutfak sahneleri, kısa reels ve yüksek story temposu omurgadır. Onay hattı hızlı; telefon + kurgu hibriti sık kullanılır. Akçaabat. Vakfıkebir geçiş müşterisi için konum hedeflemesi kritiktir.</p>
-
-<h2>Neden “lüks restoran” dili tutmaz?</h2>
-<p>İlçe temposu taze, net fiyat/CTA ve samimi yüz ister. Yavaş kurumsal takvim ürünü bayatlatır.</p>
-
-<h2>Nasıl çalışırız?</h2>
+<h2>19 Mayıs için nasıl çalışırız?</h2>
 <ol>
-<li>Günün ürünü story formatı</li>
-<li>Haftalık kısa reels stoğu</li>
-<li>Düşük bütçeli mahalle Ads</li>
-<li>Hızlı onay hattı</li>
+<li>Hesap audit ve öncelikli mesaj netleştirmesi.</li>
+<li>Haftalık minimal takvim kurulur.</li>
+<li>Uzaktan yayın; ihtiyaç halinde çekim planı yapılır.</li>
+<li>İsteğe bağlı komşu kuşak Ads testi.</li>
 </ol>
 
-<h2>Kimler için?</h2>
-<p>Balık restoranı, kafe, perakende ve yerel hizmet.</p>
+<h2>Kimler için uygun?</h2>
+<p>Tarım, perakende, kafe ve yerel hizmet işletmeleri.</p>
 
-<h2>Fiyat</h2>
-<p>Story yoğunluğu ve çekim sıklığına göre. Keşif sonrası.</p>
+<h2>Fiyat mantığı</h2>
+<p>Minimal paketle başlanır; büyüdükçe çekim ve reklam katmanı eklenir. Keşif sonrası netleşir.</p>
 
-<p><a href="/hizmetler/instagram-yonetimi">Instagram</a> · <a href="/bolgeler/akcaabat">Akçaabat</a> · <a href="/bolgeler/vakfikebir">Vakfıkebir</a></p>
-
-<div class="page-cta">
-  <h2>Çarşıbaşı için ücretsiz keşif.</h2>
-  <a href="/#iletisim" class="btn btn-primary">Teklif al</a>
-</div>
-`.trim(),
-    faqs: [
-      {
-        q: "Her gün story gerekir mi?",
-        a: "İşletmeye göre değişir. Taze ürün anlatan yoğun ritm çoğu zaman işe yarar.",
-      },
-      {
-        q: "Reklam şart mı?",
-        a: "Organik oturduktan sonra düşük test çoğu zaman dönüşümü hızlandırır.",
-      },
-      {
-        q: "Çekim nasıl olur?",
-        a: "Haftalık kısa çekim veya telefon + kurgu hibriti.",
-      },
-      {
-        q: "Keşif ücretsiz mi?",
-        a: "Evet.",
-      },
-    ],
-  },
-
-  {
-    slug: "salpazari",
-    name: "Şalpazarı",
-    regionLabel: "İç kesim",
-    answer:
-      "Şalpazarı sosyal medya yönetimi; sakin tempo ve yerel güvenle sürdürülebilir dijital vitrindir. Uzaktan yönetim + aralıklı çekim yeterlidir. viral reels dayatması yok.",
-    seoTitle: "Şalpazarı Sosyal Medya Yönetimi | Yerel Esnaf",
-    seoDesc:
-      "Şalpazarı’nda sade Instagram yönetimi ve komşu ilçe görünürlüğü. Küçük esnaf için Trabzon sosyal medya · Wesoco.",
-    bodyHtml: `
-<h2>Şalpazarı’nda sosyal medya yönetimi nedir?</h2>
-<p>Şalpazarı’nda yönetim; abartısız dil, hizmet süreci ve müşteri güvenini düzenli göstermektir. Beşikdüzü. Tonya spillover’ı reklamda kullanılabilir. WhatsApp onay hattı küçük ekiplerde hız kazandırır.</p>
-
-<h2>Neden süreklilik kampanyadan önemli?</h2>
-<p>İç kesimde ani kampanya dili yerine güvenilir vitrin ve net iletişim bilgisi daha çok işe yarar.</p>
-
-<h2>Nasıl çalışırız?</h2>
-<ul>
-<li>Minimal haftalık ritim</li>
-<li>Uzaktan yayın + aralıklı çekim</li>
-<li>İsteğe bağlı komşu kuşak Ads</li>
-</ul>
-
-<h2>Kimler için?</h2>
-<p>Yerel esnaf, hizmet ve küçük üretim.</p>
-
-<h2>Fiyat</h2>
-<p>Ölçeklenebilir küçük paket. Keşif sonrası.</p>
-
-<p><a href="/hizmetler/sosyal-medya-yonetimi">Sosyal medya yönetimi</a> · <a href="/bolgeler/besikduzu">Beşikdüzü</a> · <a href="/bolgeler/tonya">Tonya</a></p>
+<h2>İlgili hizmetler</h2>
+<p><a href="/hizmetler/instagram-yonetimi">Instagram yönetimi</a> · <a href="/hizmetler/icerik-uretimi-cekim">İçerik üretimi</a> · <a href="/hizmetler/meta-ads">Meta Ads</a> · <a href="/bolgeler">Tüm ilçeler</a></p>
 
 <div class="page-cta">
-  <h2>Şalpazarı için keşif.</h2>
+  <h2>19 Mayıs işletmeniz için ücretsiz keşif.</h2>
   <a href="/#iletisim" class="btn btn-primary">Teklif al</a>
 </div>
 `.trim(),
@@ -846,12 +839,75 @@ const PAGES: DistrictPage[] = [
         a: "Evet. Yerel görünürlük, güven ve komşu ilçe müşterisi için etkilidir.",
       },
       {
+        q: "Ne sıklıkta içerik paylaşılmalı?",
+        a: "Sürdürülebilir ritim keşifte belirlenir; abartılı taahhüt verilmez.",
+      },
+      {
+        q: "Bafra hattına reklam verilir mi?",
+        a: "Evet. Hedefe göre komşu kuşak coğrafi katman olarak eklenebilir.",
+      },
+      {
+        q: "Keşif ücretsiz mi?",
+        a: "Evet.",
+      },
+    ],
+  },
+
+  {
+    slug: "salipazari",
+    name: "Salıpazarı",
+    regionLabel: "Doğu iç",
+    answer:
+      "Salıpazarı sosyal medya yönetimi; doğu iç kesimde yerel güven ve hizmet sürekliliğini dijital vitrinle desteklemektir. Uzaktan yönetim ve aralıklı çekim yeterlidir; viral hedef dayatılmaz.",
+    seoTitle: "Salıpazarı Sosyal Medya Yönetimi | Doğu İç Kesim",
+    seoDesc:
+      "Salıpazarı'nda sade Instagram yönetimi ve komşu ilçe görünürlüğü. Yerel esnaf için Samsun sosyal medya ajansı · Wesoco.",
+    bodyHtml: `
+<h2>Salıpazarı'nda sosyal medya yönetimi nedir?</h2>
+<p>Salıpazarı'nda yönetim; abartısız dil, hizmet süreci ve müşteri güvenini haftalık düzenli paylaşımla göstermektir. Terme ve Çarşamba komşuluğu reklam coğrafyasında değerlendirilebilir. WhatsApp onay hattı küçük ekiplerde süreci hızlandırır.</p>
+
+<h2>Neden süreklilik kampanyadan önce gelir?</h2>
+<p>İç kesim işletmelerinde ani büyük kampanya dili uyumsuz görünür. Güvenilir vitrin ve net iletişim bilgisi zaman içinde daha sağlam dönüşüm üretir.</p>
+<ul>
+<li>Uzaktan yönetim ile yerinde çekime gerek duymadan başlanabilir.</li>
+<li>Organik ritim oturduktan sonra düşük test reklamı eklenir.</li>
+<li>Komşu sahil kuşağı spillover test edilebilir.</li>
+</ul>
+
+<h2>Salıpazarı için nasıl çalışırız?</h2>
+<ol>
+<li>Hesap audit ve sade takvim kurulur.</li>
+<li>Uzaktan onaylı yayın başlatılır.</li>
+<li>İhtiyaç halinde yerinde çekim planlanır.</li>
+<li>İsteğe bağlı komşu kuşak Ads testi açılır.</li>
+</ol>
+
+<h2>Kimler için uygun?</h2>
+<p>Yerel esnaf, hizmet ve küçük üretim işletmeleri.</p>
+
+<h2>Fiyat mantığı</h2>
+<p>Ölçeklenebilir küçük paket. Keşif sonrası netleşir.</p>
+
+<h2>İlgili hizmetler</h2>
+<p><a href="/hizmetler/instagram-yonetimi">Instagram yönetimi</a> · <a href="/hizmetler/icerik-uretimi-cekim">İçerik üretimi</a> · <a href="/hizmetler/meta-ads">Meta Ads</a> · <a href="/bolgeler">Tüm ilçeler</a></p>
+
+<div class="page-cta">
+  <h2>Salıpazarı için ücretsiz keşif.</h2>
+  <a href="/#iletisim" class="btn btn-primary">Teklif al</a>
+</div>
+`.trim(),
+    faqs: [
+      {
+        q: "Küçük ilçede sosyal medya yönetimi mümkün mü?",
+        a: "Evet. Uzaktan yönetim ve sade içerik planıyla kolayca başlanır.",
+      },
+      {
         q: "Ne sıklıkta içerik?",
         a: "Sürdürülebilir ritim keşifte belirlenir.",
       },
       {
         q: "Viral hedef koyuyor musunuz?",
-        a: "Hayır. Güvenilir vitrin önceliklidir.",
+        a: "Hayır. Güvenilir vitrin ve yerel görünürlük önceliklidir.",
       },
       {
         q: "Keşif ücretsiz mi?",
@@ -861,110 +917,60 @@ const PAGES: DistrictPage[] = [
   },
 
   {
-    slug: "duzkoy",
-    name: "Düzköy",
+    slug: "asarcik",
+    name: "Asarcık",
     regionLabel: "İç kesim",
     answer:
-      "Düzköy sosyal medya yönetimi; sakin yayla/doğa deneyimini net görsellerle anlatıp hafta sonu talebini erken planlamaktır. Uzungöl diline öykünmeden yakın kaçış vaadi kurulur.",
-    seoTitle: "Düzköy Sosyal Medya Yönetimi | Doğa & Konaklama",
+      "Asarcık sosyal medya yönetimi; iç Samsun'daki yerel işletmelerin güvenilir dijital varlığını minimal maliyetle sürdürmektir. Uzaktan yönetim ve düşük bütçeli test reklamıyla başlanır; büyüdükçe katman eklenir.",
+    seoTitle: "Asarcık Sosyal Medya Yönetimi | İç Kesim Yerel",
     seoDesc:
-      "Düzköy’de doğa reels, konaklama turu ve hafta sonu duyurusu. Maçka hattı turizm işletmeleri · Trabzon Sosyal Medya · Wesoco.",
+      "Asarcık'ta sade Instagram yönetimi ve bölge görünürlüğü. Yerel işletmeler için Samsun sosyal medya ajansı · Wesoco.",
     bodyHtml: `
-<h2>Düzköy’de sosyal medya yönetimi nedir?</h2>
-<p>Düzköy’de yönetim; doğa, konaklama ve yerel lezzeti sakin ama güçlü karelerle anlatmaktır. Hafta sonu öncesi story/reels dalgası; sezon dışı marka stoğu. Maçka koridoru hem fırsat hem rekabettir.</p>
+<h2>Asarcık'ta sosyal medya yönetimi nedir?</h2>
+<p>Asarcık'ta yönetim; hizmet anlatımı, ekip güveni ve tutarlı vitrindir. Canik ve İlkadım hattı hem müşteri havuzu hem de reklam coğrafyası olarak değerlendirilebilir. Turizm otel dili kullanılmaz; işletmeye özgü sade ve samimi anlatım tercih edilir.</p>
 
-<h2>Neden Uzungöl kopyası yapılmaz?</h2>
-<p>Düzköy’ün vaadi yakın kaçış ve sakinliktir. Yanlış konumlandırma beklenti yaratır, dönüşümü düşürür.</p>
-
-<h2>Nasıl çalışırız?</h2>
-<ol>
-<li>Hafta sonu odaklı takvim</li>
-<li>Işık/hava penceresine göre çekim</li>
-<li>Sezon dışı stok</li>
-<li>Günübirlik Ortahisar çıkışlı ilgi Ads (ihtiyaca göre)</li>
-</ol>
-
-<h2>Kimler için?</h2>
-<p>Konaklama, kafe, yerel ürün ve turizm.</p>
-
-<h2>Fiyat</h2>
-<p>Sezon ve çekim planına göre. Keşif sonrası.</p>
-
-<p><a href="/hizmetler/icerik-uretimi-cekim">İçerik</a> · <a href="/bolgeler/macka">Maçka</a> · <a href="/bolgeler/tonya">Tonya</a></p>
-
-<div class="page-cta">
-  <h2>Düzköy için keşif.</h2>
-  <a href="/#iletisim" class="btn btn-primary">Teklif al</a>
-</div>
-`.trim(),
-    faqs: [
-      {
-        q: "Sezon dışında ne yapılır?",
-        a: "Marka bilinirliği, içerik stoğu ve erken rezervasyon mesajları.",
-      },
-      {
-        q: "Yerinde çekim var mı?",
-        a: "Evet. Işık ve hava uygunluğuna göre planlanır.",
-      },
-      {
-        q: "Maçka ile aynı dil mi kullanılır?",
-        a: "Hayır. Düzköy’e özgü sakin kaçış vaadi kurulur.",
-      },
-      {
-        q: "Keşif ücretsiz mi?",
-        a: "Evet.",
-      },
-    ],
-  },
-
-  {
-    slug: "hayrat",
-    name: "Hayrat",
-    regionLabel: "Doğu iç kesim",
-    answer:
-      "Hayrat sosyal medya yönetimi; Of/Çaykara komşuluğundan da müşteri açan sade dijital varlıktır. Küçük bütçede organik ritim + isteğe bağlı düşük test reklamı önerilir.",
-    seoTitle: "Hayrat Sosyal Medya Yönetimi | Küçük İşletme",
-    seoDesc:
-      "Hayrat’ta sade Instagram ve komşu ilçe hedeflemesi. Küçük işletmeler için Trabzon sosyal medya yönetimi · Wesoco.",
-    bodyHtml: `
-<h2>Hayrat’ta sosyal medya yönetimi nedir?</h2>
-<p>Hayrat’ta yönetim; hizmet anlatımı, ekip güveni ve sade vitrindir. Reklamda Hayrat + Of; Çaykara spillover işletme tipine göre açılır. Turizm oteli dili kullanılmaz.</p>
-
-<h2>Neden komşu kuşak önemli?</h2>
-<p>Küçük ölçekli yerleşimde büyüme çoğu zaman komşu ilçe görünürlüğünden gelir. Of hattı lojistik ve görünürlük köprüsüdür.</p>
-
-<h2>Nasıl çalışırız?</h2>
+<h2>Neden komşu ilçe görünürlüğü önemli?</h2>
+<p>İç kesim yerleşiminde büyüme çoğunlukla komşu ilçe kitlesiyle başlar. Doğru konum hedeflemesi küçük bütçeyle etki alanını genişletir.</p>
 <ul>
-<li>Organik ritim ve net CTA</li>
-<li>İsteğe bağlı düşük Ads testi</li>
-<li>Uzaktan yönetim veya planlı çekim</li>
+<li>Organik ritim güven zeminini kurar.</li>
+<li>Düşük test reklamı isteğe bağlı eklenir.</li>
+<li>Uzaktan yönetim ve WhatsApp onay hattıyla süreç basitleşir.</li>
 </ul>
 
-<h2>Kimler için?</h2>
+<h2>Asarcık için nasıl çalışırız?</h2>
+<ol>
+<li>Hesap audit ve öncelikli mesaj netleştirmesi.</li>
+<li>Haftalık minimal takvim kurulur.</li>
+<li>Uzaktan yayın; ihtiyaç halinde çekim günü planlanır.</li>
+<li>İsteğe bağlı komşu ilçe Ads testi.</li>
+</ol>
+
+<h2>Kimler için uygun?</h2>
 <p>Yerel esnaf, hizmet ve küçük işletmeler.</p>
 
-<h2>Fiyat</h2>
-<p>Küçük bütçeye uygun sade paket. Keşif sonrası.</p>
+<h2>Fiyat mantığı</h2>
+<p>Küçük bütçeye uygun sade paket. Keşif sonrası netleşir.</p>
 
-<p><a href="/hizmetler/instagram-yonetimi">Instagram</a> · <a href="/bolgeler/of">Of</a> · <a href="/bolgeler/caykara">Çaykara</a></p>
+<h2>İlgili hizmetler</h2>
+<p><a href="/hizmetler/instagram-yonetimi">Instagram yönetimi</a> · <a href="/hizmetler/meta-ads">Meta Ads</a> · <a href="/hizmetler/icerik-uretimi-cekim">İçerik üretimi</a> · <a href="/bolgeler">Tüm ilçeler</a></p>
 
 <div class="page-cta">
-  <h2>Hayrat için keşif.</h2>
+  <h2>Asarcık için ücretsiz keşif.</h2>
   <a href="/#iletisim" class="btn btn-primary">Teklif al</a>
 </div>
 `.trim(),
     faqs: [
       {
-        q: "Hayrat’ta ajans hizmeti var mı?",
-        a: "Evet. 18 ilçede uzaktan veya yerinde çekimle hizmet veriyoruz.",
+        q: "Asarcık'ta ajans hizmeti var mı?",
+        a: "Evet. 17 ilçede uzaktan veya yerinde çekimle hizmet veriyoruz.",
       },
       {
         q: "Bütçe küçükse ne yapılır?",
-        a: "Önce organik ve net CTA; reklam isteğe bağlı düşük testle eklenir.",
+        a: "Önce organik ritim ve net CTA; reklam isteğe bağlı düşük testle eklenir.",
       },
       {
-        q: "Çaykara’ya reklam verilir mi?",
-        a: "İşletme tipine göre spillover test edilir.",
+        q: "Canik veya İlkadım'a reklam verilir mi?",
+        a: "İşletme tipine göre komşu ilçe coğrafi katman olarak eklenebilir.",
       },
       {
         q: "Keşif ücretsiz mi?",
@@ -974,38 +980,109 @@ const PAGES: DistrictPage[] = [
   },
 
   {
-    slug: "dernekpazari",
-    name: "Dernekpazarı",
-    regionLabel: "Doğu iç kesim",
+    slug: "ladik",
+    name: "Ladik",
+    regionLabel: "Göl / yayla",
     answer:
-      "Dernekpazarı sosyal medya yönetimi; mahalle güveni, düzenli vitrin ve gerektiğinde Çaykara turizm spillover hedeflemesidir. Çoğu işletmede Instagram omurga yeterlidir.",
-    seoTitle: "Dernekpazarı Sosyal Medya Yönetimi",
+      "Ladik sosyal medya yönetimi; göl ve yayla turizm deneyimini işletmeye özgün bir dille anlatıp hafta sonu ve sezon rezervasyonuna bağlamaktır. Jenerik doğa stoğu yerine tesisin kendi atmosferi, gölün mevsimsel değişimi ve erişim kolaylığı öne çıkarılır.",
+    seoTitle: "Ladik Sosyal Medya Yönetimi | Göl & Yayla Turizmi",
     seoDesc:
-      "Dernekpazarı’nda Instagram vitrini ve Çaykara hattı görünürlüğü. Yerel esnaf için Trabzon sosyal medya · Wesoco.",
+      "Ladik'te göl ve yayla konaklama için Instagram, reels ve sezon reklamı. Turizm işletmeleri için Samsun sosyal medya ajansı · Wesoco.",
     bodyHtml: `
-<h2>Dernekpazarı’nda sosyal medya yönetimi nedir?</h2>
-<p>Dernekpazarı’nda yönetim; işletmeye özel ürün/hizmet görselleri, samimi dil ve haftalık ritimdir. Çaykara turizm trafiği doğru konum hedeflemesiyle fırsata dönebilir; sayfa Uzungöl otel kopyası değildir.</p>
+<h2>Ladik'te sosyal medya yönetimi nedir?</h2>
+<p>Ladik'te yönetim; gölün ve yaylanın işletmenin kendi penceresiyle görünmesidir. Oda turu, sabah sisi, göl kenarı atmosfer ve mevsimsel değişim sahneleri sezon öncesi üretilir. Hafta sonu önce Samsun, sezon içi daha geniş kuşak hedeflenir.</p>
 
-<h2>Neden sade takvim?</h2>
-<p>Küçük işletme temposu abartılı içerik planını taşımaz. Sürdürülebilirlik dönüşümden önce gelir.</p>
+<h2>Neden özgün içerik şart?</h2>
+<p>Göl manzarası fotoğrafı her işletmede benzerdir. Fark; hijyen, konum rahatlığı, erişim ve konuk deneyimi anlatımındadır. Havza komşuluğu termal + doğa paketi kombinasyonu için fırsat sunar.</p>
+<ul>
+<li>Hafta sonu odaklı yayın takvimi kurulur.</li>
+<li>Sezon öncesi stok; sezon içi dönüşüm Ads.</li>
+<li>Kış: marka bilinirliği + erken rezervasyon mesajı.</li>
+</ul>
 
-<h2>Nasıl çalışırız?</h2>
+<h2>Ladik için nasıl çalışırız?</h2>
 <ol>
-<li>Keşif sonrası minimal takvim</li>
-<li>Gerektiğinde Dernekpazarı veya Çaykara hattında çekim</li>
-<li>Instagram öncelikli; Facebook/Ads ihtiyaca göre</li>
+<li>Sezon ve hafta sonu yoğunluğu takvime işlenir.</li>
+<li>Hava/ışık penceresine göre çekim planlanır.</li>
+<li>Sezon öncesi stok tamamlanır; sezon içi reklam ölçeklenir.</li>
+<li>Retargeting site/profil ziyaretçilerine açılır.</li>
 </ol>
 
-<h2>Kimler için?</h2>
-<p>Yerel esnaf, kafe/market ve hizmet.</p>
+<h2>Kimler için uygun?</h2>
+<p>Otel, pansiyon, bungalov, kafe ve doğa deneyimi işletmeleri.</p>
 
-<h2>Fiyat</h2>
-<p>Minimal paket. Keşif sonrası.</p>
+<h2>Fiyat neye göre değişir?</h2>
+<p>Sezon hacmi ve çekim planına göre. Keşif sonrası net teklif; medya ayrıdır.</p>
 
-<p><a href="/hizmetler/instagram-yonetimi">Instagram</a> · <a href="/bolgeler/caykara">Çaykara</a> · <a href="/bolgeler/hayrat">Hayrat</a></p>
+<h2>İlgili hizmetler</h2>
+<p><a href="/hizmetler/instagram-yonetimi">Instagram yönetimi</a> · <a href="/hizmetler/meta-ads">Meta Ads</a> · <a href="/hizmetler/icerik-uretimi-cekim">İçerik üretimi</a> · <a href="/bolgeler">Tüm ilçeler</a></p>
 
 <div class="page-cta">
-  <h2>Dernekpazarı için keşif.</h2>
+  <h2>Ladik konaklamanız için ücretsiz keşif.</h2>
+  <p>Göl deneyiminizi ayrıştıran bir içerik planı çıkaralım.</p>
+  <a href="/#iletisim" class="btn btn-primary">Teklif al</a>
+</div>
+`.trim(),
+    faqs: [
+      {
+        q: "Ladik göl oteli için hangi platform öncelikli?",
+        a: "Instagram + Meta Ads önceliklidir. Google arama hedefi varsa Google Ads eklenir.",
+      },
+      {
+        q: "Sezon dışında ne yapılır?",
+        a: "Marka bilinirliği ve erken rezervasyon içerikleri; yazda dönüşüm ölçeği açılır.",
+      },
+      {
+        q: "Havza kaplıca turizmiyle birlikte hedefleme yapılır mı?",
+        a: "İki ilçeyi kapsayan bir doğa + termal paketiyle işletme tipine göre değerlendirilebilir.",
+      },
+      {
+        q: "Keşif ücretsiz mi?",
+        a: "Evet.",
+      },
+    ],
+  },
+
+  {
+    slug: "ayvacik",
+    name: "Ayvacık",
+    regionLabel: "Doğu iç",
+    answer:
+      "Ayvacık sosyal medya yönetimi; doğu iç Samsun'daki küçük işletmelerin mahalle güveni ve yerel görünürlüğünü dijitalde sürdürmektir. Sade ritim, uzaktan yönetim ve isteğe bağlı komşu kuşak reklamıyla başlanır.",
+    seoTitle: "Ayvacık Sosyal Medya Yönetimi | Doğu İç Samsun",
+    seoDesc:
+      "Ayvacık'ta sade Instagram yönetimi ve bölge görünürlüğü. Küçük işletmeler için Samsun sosyal medya ajansı · Wesoco.",
+    bodyHtml: `
+<h2>Ayvacık'ta sosyal medya yönetimi nedir?</h2>
+<p>Ayvacık'ta yönetim; işletme hikâyesini ve hizmet sürecini net, samimi bir dille dijitale taşımaktır. Terme ve Salıpazarı komşuluğu reklam coğrafyasında değerlendirilebilir. Büyük ajans jargonu ve sahte vaat kullanılmaz.</p>
+
+<h2>Neden güvenilirlik önce gelir?</h2>
+<p>Küçük ölçekli yerleşimde müşteri güveni kişisel tavsiyeden gelir; dijital varlık bunu destekler. Tutarsız veya ölü hesap bu güveni zedeler.</p>
+<ul>
+<li>Haftalık sade ritim sürdürülebilirdir.</li>
+<li>WhatsApp onay hattı küçük ekiplerde hız kazandırır.</li>
+<li>Organik vitrin oturduğunda düşük test reklamı eklenir.</li>
+</ul>
+
+<h2>Ayvacık için nasıl çalışırız?</h2>
+<ol>
+<li>Hesap audit ve minimal takvim kurulur.</li>
+<li>Uzaktan onaylı yayın başlatılır.</li>
+<li>İhtiyaç halinde yerinde çekim planlanır.</li>
+<li>İsteğe bağlı komşu kuşak Ads testi açılır.</li>
+</ol>
+
+<h2>Kimler için uygun?</h2>
+<p>Yerel esnaf, kafe/market ve hizmet işletmeleri.</p>
+
+<h2>Fiyat mantığı</h2>
+<p>Minimal paket. Keşif sonrası netleşir.</p>
+
+<h2>İlgili hizmetler</h2>
+<p><a href="/hizmetler/instagram-yonetimi">Instagram yönetimi</a> · <a href="/hizmetler/icerik-uretimi-cekim">İçerik üretimi</a> · <a href="/hizmetler/meta-ads">Meta Ads</a> · <a href="/bolgeler">Tüm ilçeler</a></p>
+
+<div class="page-cta">
+  <h2>Ayvacık için ücretsiz keşif.</h2>
   <a href="/#iletisim" class="btn btn-primary">Teklif al</a>
 </div>
 `.trim(),
@@ -1015,12 +1092,12 @@ const PAGES: DistrictPage[] = [
         a: "Çoğu işletme için Instagram yeterlidir.",
       },
       {
-        q: "Çaykara turizminden nasıl faydalanılır?",
+        q: "Terme veya Salıpazarı kitlesine nasıl ulaşılır?",
         a: "Konum ve ilgi alanı hedeflemesiyle komşu kuşağa görünürlük planlanabilir.",
       },
       {
         q: "Çekim nerede yapılır?",
-        a: "Dernekpazarı veya ihtiyaç halinde Çaykara hattında.",
+        a: "Ayvacık'ta veya ihtiyaç halinde yakın ilçede planlanır.",
       },
       {
         q: "Keşif ücretsiz mi?",
@@ -1030,54 +1107,64 @@ const PAGES: DistrictPage[] = [
   },
 
   {
-    slug: "koprubasi",
-    name: "Köprübaşı",
-    regionLabel: "Doğu iç kesim",
+    slug: "yakakent",
+    name: "Yakakent",
+    regionLabel: "Batı sahil",
     answer:
-      "Köprübaşı sosyal medya yönetimi; Sürmene/Of sahil ilçelerine de erişim sağlayan yerel hizmet vitrinidir. Uzaktan yönetim ve sade aylık raporla ilerleriz.",
-    seoTitle: "Köprübaşı Sosyal Medya Yönetimi",
+      "Yakakent sosyal medya yönetimi; yazlık ve sahil konaklama işletmelerinin sezon boyunca doluluk hedefine ulaşması için erken içerik stoğu ve Meta Ads'tir. Kışın sessiz hesap, yazın yetişemeyen içerik anlamına gelir; iki dönem ayrı planlanır.",
+    seoTitle: "Yakakent Sosyal Medya Yönetimi | Batı Sahil & Yazlık",
     seoDesc:
-      "Köprübaşı’nda uzaktan Instagram yönetimi ve Sürmene/Of kuşak reklamı. Yerel hizmet işletmeleri · Trabzon Sosyal Medya · Wesoco.",
+      "Yakakent'te yazlık ve sahil konaklama için sezonluk Instagram ve rezervasyon reklamı. Samsun sosyal medya ajansı · Wesoco.",
     bodyHtml: `
-<h2>Köprübaşı’nda sosyal medya yönetimi nedir?</h2>
-<p>Köprübaşı’nda yönetim; hizmet süreci, güven ve yerel referansı anlatıp yakındaki sahil kuşağına görünürlük açmaktır. Sahil restoran şablonuna girilmez.</p>
+<h2>Yakakent'te sosyal medya yönetimi nedir?</h2>
+<p>Yakakent'te yönetim; sahil ve yazlık atmosfer görsellerini sezon öncesi hazırlayıp yaz aylarında dönüşüme bağlamaktır. Oda turu, sahil görüntüsü, menü ve konaklama süreci; sezon başlamadan stoğa alınır. Sezon içinde Meta Ads ile erken rezervasyon ölçeklenir.</p>
 
-<h2>Neden Sürmene/Of hedeflemesi?</h2>
-<p>İç kesim işletmesi için büyüme çoğu zaman komşu sahil hareketinden gelir. Reklam coğrafyası buna göre kurulur.</p>
+<h2>Neden sezon planlaması kritik?</h2>
+<p>Batı sahil kuşağında yazlık talep ani yükselir. Alaçam ve Bafra komşuluğu hem rekabet hem müşteri havuzudur. Son dakika içerik üretimi kaliteyi düşürür ve fırsatı kaçırır.</p>
 
-<h2>Nasıl çalışırız?</h2>
-<ul>
-<li>Uzaktan onaylı yayın</li>
-<li>İhtiyaç halinde planlı çekim</li>
-<li>Köprübaşı + Sürmene/Of Ads (hedefe göre)</li>
-<li>Sade, anlaşılır aylık rapor</li>
-</ul>
+<div class="seo-table-wrap"><table class="seo-comparison-table">
+<caption>Yakakent sezon dengesi</caption>
+<thead><tr><th>Dönem</th><th>Öncelik</th></tr></thead>
+<tbody>
+<tr><td>Kış / düşük sezon</td><td>Stok üretimi, marka, erken rezervasyon mesajı</td></tr>
+<tr><td>Yaz / yüksek sezon</td><td>Dönüşüm Ads, hızlı story, rezervasyon CTA</td></tr>
+</tbody></table></div>
 
-<h2>Kimler için?</h2>
-<p>Yerel hizmet, esnaf ve küçük işletmeler.</p>
+<h2>Yakakent için nasıl çalışırız?</h2>
+<ol>
+<li>Sezon takvimi keşifte çıkarılır.</li>
+<li>Sahil ve konaklama çekimi sezon öncesi planlanır.</li>
+<li>Organik stok tamamlanır; sezon içi reklam açılır.</li>
+<li>Yanıt süresi ve story hızı yoğun sezonda artırılır.</li>
+</ol>
 
-<h2>Fiyat</h2>
-<p>Uzaktan paket öncelikli. Keşif sonrası.</p>
+<h2>Kimler için uygun?</h2>
+<p>Otel, pansiyon, yazlık kiralama, kafe, restoran ve sahil hizmetleri.</p>
 
-<p><a href="/hizmetler/sosyal-medya-yonetimi">Sosyal medya yönetimi</a> · <a href="/bolgeler/surmene">Sürmene</a> · <a href="/bolgeler/of">Of</a></p>
+<h2>Fiyat neye göre değişir?</h2>
+<p>Sezonluk hacim farkı teklifte şeffaf gösterilir. Medya ayrı satırdadır.</p>
+
+<h2>İlgili hizmetler</h2>
+<p><a href="/hizmetler/instagram-yonetimi">Instagram yönetimi</a> · <a href="/hizmetler/meta-ads">Meta Ads</a> · <a href="/hizmetler/icerik-uretimi-cekim">İçerik üretimi</a> · <a href="/bolgeler">Tüm ilçeler</a></p>
 
 <div class="page-cta">
-  <h2>Köprübaşı için keşif.</h2>
+  <h2>Yakakent sezon planı için ücretsiz keşif.</h2>
+  <p>Sahil sezonunu birlikte hazırlayalım.</p>
   <a href="/#iletisim" class="btn btn-primary">Teklif al</a>
 </div>
 `.trim(),
     faqs: [
       {
-        q: "Yerinde çekim olur mu?",
-        a: "Evet. İhtiyaç halinde planlı; uzaktan üretim de mümkün.",
+        q: "Sezonluk paket nasıl çalışır?",
+        a: "Yoğun sezonda içerik/reklam artırılır; düşük sezonda temel ritim ve stok üretimi korunur.",
       },
       {
-        q: "Komşu ilçelere reklam verilir mi?",
-        a: "Evet. Hedefe göre Sürmene/Of kuşağı eklenebilir.",
+        q: "Kışın reklam gerekli mi?",
+        a: "Çoğunlukla bilinirlik ve erken rezervasyon için düşük ölçek yeterlidir.",
       },
       {
-        q: "Rapor nasıl olur?",
-        a: "Sade ve anlaşılır; erişim + mesaj/arama odaklı.",
+        q: "Alaçam ile aynı hedefleme yapılır mı?",
+        a: "Her işletme için ayrı plan kurulur; coğrafi örtüşme bütçe dengesiyle yönetilir.",
       },
       {
         q: "Keşif ücretsiz mi?",
@@ -1120,9 +1207,10 @@ async function main() {
     console.log("ok", d.slug, "words~", words, "faqs", d.faqs.length);
   }
   console.log("Districts seeded:", PAGES.length);
-  // İnce sayfaları derinleştir (deepen-districts.ts)
+  // Tüm ilçeleri zengin içerikle güncelle (improve-districts-samsun.ts + patch)
   const { spawnSync } = await import("child_process");
-  spawnSync("npx", ["tsx", "prisma/deepen-districts.ts"], { stdio: "inherit", cwd: process.cwd() });
+  spawnSync("npx", ["tsx", "prisma/improve-districts-samsun.ts"], { stdio: "inherit", cwd: process.cwd() });
+  spawnSync("npx", ["tsx", "prisma/patch-district-words.ts"], { stdio: "inherit", cwd: process.cwd() });
 }
 
 main()

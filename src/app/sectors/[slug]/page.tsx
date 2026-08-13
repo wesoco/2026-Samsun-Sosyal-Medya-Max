@@ -106,7 +106,7 @@ export default async function SectorPage({ params }: Props) {
               title="Bunlara da bakın"
               services={services.slice(0, 3).map((x) => ({
                 href: paths.service(x.slug),
-                label: x.title.replace(/^Trabzon\s+/i, ""),
+                label: x.title.replace(/^Samsun\s+/i, ""),
               }))}
               regions={[
                 ...otherSectors.slice(0, 2).map((x) => ({

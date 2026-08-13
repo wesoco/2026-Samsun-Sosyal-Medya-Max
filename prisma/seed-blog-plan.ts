@@ -9,10 +9,10 @@ import { BLOG_CONTENT_PLAN } from "./content-plan-blogs";
 const prisma = new PrismaClient();
 
 const PLACEHOLDER = `<h2>Taslak</h2>
-<p>Bu yazı topical authority planındandır. Yayınlanmadan önce 2000. 3500 kelime özgün içerik, SSS, tablo ve iç linklerle doldurulmalıdır. Sahte istatistik veya uydurma yorum eklenmez.</p>
+<p>Bu yazı topical authority planındandır. Yayınlanmadan önce 2000-3500 kelime özgün içerik, SSS, tablo ve iç linklerle doldurulmalıdır. Sahte istatistik veya uydurma yorum eklenmez.</p>
 <ul>
 <li>Nedir / Neden / Nasıl / Kimler / Fiyat mantığı</li>
-<li>Trabzon ve ilgili ilçe entity’leri</li>
+<li>Samsun ve ilgili ilçe entity'leri</li>
 <li>Hizmet + bölge iç linkleri</li>
 </ul>`;
 
@@ -35,7 +35,7 @@ async function main() {
             title: item.title,
             lead: item.lead,
             category: item.category,
-            seoTitle: `${item.title} | Trabzon Sosyal Medya`,
+            seoTitle: `${item.title} | Samsun Sosyal Medya`,
             seoDesc: item.lead.slice(0, 155),
           },
         });
@@ -54,7 +54,7 @@ async function main() {
         bodyHtml: PLACEHOLDER,
         category: item.category,
         published: false,
-        seoTitle: `${item.title} | Trabzon Sosyal Medya`,
+        seoTitle: `${item.title} | Samsun Sosyal Medya`,
         seoDesc: item.lead.slice(0, 155),
         faqJson: [
           {

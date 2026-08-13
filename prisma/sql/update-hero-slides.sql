@@ -5,7 +5,7 @@
 -- 2) Şunu yaz:  psql -U postgres -d postgres
 -- 3) Bu dosyanın HEPSİNİ yapıştır (kesme!)
 -- 4) Çıktıda mutlaka görmelisin:  UPDATE 1
---    ve kontrol tablosunda 6 satır (title/lead/image dolu)
+--    ve kontrol tablosunda 5 satır (title/lead/image dolu)
 -- 5) Coolify → site uygulaması → Restart (yoksa eski HTML cache kalır)
 -- =============================================================================
 
@@ -22,10 +22,10 @@ SET
 [
   {
     "signal": "",
-    "title": "Trabzon Sosyal Medya & Dijital Pazarlama",
-    "lead": "Trabzon'da Instagram, Facebook, TikTok ve LinkedIn'de markanızı büyütmek için strateji ve içerik yönetimi.",
+    "title": "Samsun Sosyal Medya & Dijital Pazarlama",
+    "lead": "Samsun'da Instagram, Facebook, TikTok ve LinkedIn'de markanızı büyütmek için strateji ve içerik yönetimi.",
     "image": "/assets/hero/03.webp",
-    "alt": "Trabzon sosyal medya ve dijital pazarlama",
+    "alt": "Samsun sosyal medya ve dijital pazarlama",
     "tags": [
       "sosyal medya yönetimi",
       "dijital pazarlama",
@@ -41,10 +41,10 @@ SET
   },
   {
     "signal": "",
-    "title": "Trabzon Web Yazılım & Tasarım",
-    "lead": "Trabzon işletmeleri için markaya özel web siteleri, modern altyapı ve mobil uyumlu tasarımla dijital varlığınızı güçlendiriyoruz.",
+    "title": "Samsun Web Yazılım & Tasarım",
+    "lead": "Samsun işletmeleri için markaya özel web siteleri, modern altyapı ve mobil uyumlu tasarımla dijital varlığınızı güçlendiriyoruz.",
     "image": "/assets/hero/01.webp",
-    "alt": "Trabzon web yazılım ve tasarım",
+    "alt": "Samsun web yazılım ve tasarım",
     "tags": [
       "web tasarım",
       "web yazılım",
@@ -60,10 +60,10 @@ SET
   },
   {
     "signal": "",
-    "title": "Trabzon Video Prodüksiyon & Reels",
-    "lead": "Trabzon'da tanıtım filmleri, reels ve sosyal medya videolarıyla markanızı hareketle anlatıyoruz.",
+    "title": "Samsun Video Prodüksiyon & Reels",
+    "lead": "Samsun'da tanıtım filmleri, reels ve sosyal medya videolarıyla markanızı hareketle anlatıyoruz.",
     "image": "/assets/hero/02.webp",
-    "alt": "Trabzon video prodüksiyon ve reels",
+    "alt": "Samsun video prodüksiyon ve reels",
     "tags": [
       "video prodüksiyon",
       "reels",
@@ -79,10 +79,10 @@ SET
   },
   {
     "signal": "",
-    "title": "Trabzon E-Ticaret Web Sitesi",
-    "lead": "Trabzon'daki işletmenizin online mağazası için profesyonel altyapı, ödeme sistemleri ve stok yönetimi çözümleri.",
+    "title": "Samsun E-Ticaret Web Sitesi",
+    "lead": "Samsun'daki işletmenizin online mağazası için profesyonel altyapı, ödeme sistemleri ve stok yönetimi çözümleri.",
     "image": "/assets/hero/04.webp",
-    "alt": "Trabzon e-ticaret web sitesi",
+    "alt": "Samsun e-ticaret web sitesi",
     "tags": [
       "e-ticaret",
       "online mağaza",
@@ -98,10 +98,10 @@ SET
   },
   {
     "signal": "",
-    "title": "Trabzon Kurumsal Kimlik & Grafik Tasarım",
-    "lead": "Trabzon markaları için logo, kurumsal kimlik, katalog ve baskılı ürünlerle tutarlı bir görünüm.",
+    "title": "Samsun Kurumsal Kimlik & Grafik Tasarım",
+    "lead": "Samsun markaları için logo, kurumsal kimlik, katalog ve baskılı ürünlerle tutarlı bir görünüm.",
     "image": "/assets/hero/05.webp",
-    "alt": "Trabzon kurumsal kimlik ve grafik tasarım",
+    "alt": "Samsun kurumsal kimlik ve grafik tasarım",
     "tags": [
       "kurumsal kimlik",
       "logo tasarımı",
@@ -113,25 +113,6 @@ SET
       "marka rehberi",
       "broşür",
       "kurumsal görünüm"
-    ]
-  },
-  {
-    "signal": "",
-    "title": "Wcard & Qretna Dijital Çözümler",
-    "lead": "QR menü, dijital kartvizit ve NFC teknolojisiyle işletmenizi geleceğe taşıyoruz.",
-    "image": "/assets/hero/06.webp",
-    "alt": "Wcard & Qretna Dijital Çözümler",
-    "tags": [
-      "wcard",
-      "qretna",
-      "QR menü",
-      "dijital kartvizit",
-      "NFC",
-      "QR menü sistemi",
-      "restoran menü",
-      "dijital menü",
-      "akıllı kartvizit",
-      "temassız menü"
     ]
   }
 ]

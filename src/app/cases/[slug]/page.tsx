@@ -105,7 +105,7 @@ export default async function CaseStudyPage({ params }: Props) {
                   {related.map((s) => (
                     <li key={s.slug}>
                       <Link href={paths.service(s.slug)}>
-                        {s.title.replace(/^Trabzon\s+/i, "")}
+                        {s.title.replace(/^Samsun\s+/i, "")}
                       </Link>
                     </li>
                   ))}
@@ -125,7 +125,7 @@ export default async function CaseStudyPage({ params }: Props) {
               title="Bunlara da bakın"
               services={related.slice(0, 3).map((x) => ({
                 href: paths.service(x.slug),
-                label: x.title.replace(/^Trabzon\s+/i, ""),
+                label: x.title.replace(/^Samsun\s+/i, ""),
               }))}
               posts={posts.map((p) => ({
                 href: paths.blogPost(p.slug),

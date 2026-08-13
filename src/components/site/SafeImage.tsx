@@ -6,7 +6,7 @@ function isAbsoluteUrl(src: string) {
 
 /**
  * Harici CDN (ör. blog.wesoco.com.tr) görsellerini next/image optimizer
- * üzerinden geçirme — Coolify içinde fetch 400 verebiliyor; tarayıcı doğrudan yükler.
+ * üzerinden geçirme  -  Coolify içinde fetch 400 verebiliyor; tarayıcı doğrudan yükler.
  */
 export function SafeImage({ src, alt, unoptimized, ...rest }: ImageProps) {
   const url = typeof src === "string" ? src : "";

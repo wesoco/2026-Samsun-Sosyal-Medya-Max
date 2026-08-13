@@ -141,11 +141,11 @@ export default async function BlogPostPage({ params }: Props) {
 
   const faqs = post.faqJson;
   const nap: SiteNap = {
-    siteName: settings?.siteName || "Trabzon Sosyal Medya",
+    siteName: settings?.siteName || "Samsun Sosyal Medya",
     phone: settings?.phone || "+905380581122",
     email: settings?.email || "info@wesoco.com",
-    addressLine1: settings?.addressLine1 || "Gazipaşa Mah. Uzun Sk.",
-    addressLine2: settings?.addressLine2 || "Can Bakkal İş Merkezi, Ortahisar / Trabzon",
+    addressLine1: settings?.addressLine1 || "Gazipaşa Mah. Uzun Sk., Can Bakkal İş Merkezi",
+    addressLine2: settings?.addressLine2 || "Kat:7 Daire:61, Ortahisar / Trabzon",
   };
   const wa = settings?.whatsapp || "905380581122";
 
@@ -163,7 +163,7 @@ export default async function BlogPostPage({ params }: Props) {
       datePublished: post.publishedAt.toISOString(),
       dateModified: post.updatedAt.toISOString(),
       nap,
-      keywords: [post.category, "Trabzon", "sosyal medya", "Wesoco"],
+      keywords: [post.category, "Samsun", "sosyal medya", "Wesoco"],
     }),
     faqPageJsonLd(faqs),
   ].filter(Boolean);
@@ -232,7 +232,7 @@ export default async function BlogPostPage({ params }: Props) {
                 variant="compact"
                 services={services.slice(0, 3).map((x) => ({
                   href: paths.service(x.slug),
-                  label: x.title.replace(/^Trabzon\s+/i, ""),
+                  label: x.title.replace(/^Samsun\s+/i, ""),
                 }))}
                 regions={districts.slice(0, 3).map((d) => ({
                   href: paths.region(d.slug),

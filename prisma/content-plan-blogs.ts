@@ -12,1404 +12,1383 @@ export type BlogPlanItem = {
 
 export const BLOG_CONTENT_PLAN: BlogPlanItem[] = [
   {
-    "slug": "trabzon-instagram-reklami-nasil-verilir",
-    "title": "Trabzon'da Instagram Reklamı Nasıl Verilir?",
+    "slug": "samsun-instagram-reklami-nasil-verilir",
+    "title": "Samsun'da Instagram Reklamı Nasıl Verilir?",
     "category": "Meta Ads",
     "cluster": "Meta Ads",
-    "lead": "Trabzon'da Instagram Reklamı Nasıl Verilir?. Trabzon işletmeleri için pratik rehber."
+    "lead": "Samsun'da Instagram Reklamı Nasıl Verilir?. Samsun işletmeleri için pratik rehber."
   },
   {
-    "slug": "trabzon-sosyal-medya-ajansi-secimi",
-    "title": "Trabzon'da Sosyal Medya Ajansı Seçerken Nelere Dikkat Edilmeli?",
+    "slug": "samsun-sosyal-medya-ajansi-secimi",
+    "title": "Samsun'da Sosyal Medya Ajansı Seçerken Nelere Dikkat Edilmeli?",
     "category": "Ajans",
     "cluster": "Ajans",
-    "lead": "Trabzon'da Sosyal Medya Ajansı Seçerken Nelere Dikkat Edilmeli?. Trabzon işletmeleri için pratik rehber."
+    "lead": "Samsun'da Sosyal Medya Ajansı Seçerken Nelere Dikkat Edilmeli?. Samsun işletmeleri için pratik rehber."
   },
   {
     "slug": "reels-izlenmesi-nasil-artirilir",
     "title": "Reels İzlenmesi Nasıl Artırılır?",
     "category": "Reels",
     "cluster": "Reels",
-    "lead": "Reels İzlenmesi Nasıl Artırılır?. Trabzon işletmeleri için pratik rehber."
+    "lead": "Reels İzlenmesi Nasıl Artırılır?. Samsun işletmeleri için pratik rehber."
   },
   {
     "slug": "meta-reklamlari-nedir",
     "title": "Meta Reklamları Nedir?",
     "category": "Meta Ads",
     "cluster": "Meta Ads",
-    "lead": "Meta Reklamları Nedir?. Trabzon işletmeleri için pratik rehber."
+    "lead": "Meta Reklamları Nedir?. Samsun işletmeleri için pratik rehber."
   },
   {
     "slug": "google-ads-mi-meta-ads-mi",
     "title": "Google Reklamları mı Meta Reklamları mı?",
     "category": "Reklam",
     "cluster": "Reklam",
-    "lead": "Google Reklamları mı Meta Reklamları mı?. Trabzon işletmeleri için pratik rehber."
+    "lead": "Google Reklamları mı Meta Reklamları mı?. Samsun işletmeleri için pratik rehber."
   },
   {
     "slug": "kurumsal-kimlik-neden-onemli",
     "title": "Kurumsal Kimlik Neden Önemlidir?",
     "category": "Marka",
     "cluster": "Marka",
-    "lead": "Kurumsal Kimlik Neden Önemlidir?. Trabzon işletmeleri için pratik rehber."
+    "lead": "Kurumsal Kimlik Neden Önemlidir?. Samsun işletmeleri için pratik rehber."
   },
   {
     "slug": "kucuk-isletmeler-icin-sosyal-medya",
     "title": "Küçük İşletmeler İçin Sosyal Medya",
     "category": "Strateji",
     "cluster": "Strateji",
-    "lead": "Küçük İşletmeler İçin Sosyal Medya. Trabzon işletmeleri için pratik rehber."
+    "lead": "Küçük İşletmeler İçin Sosyal Medya. Samsun işletmeleri için pratik rehber."
   },
   {
-    "slug": "trabzon-dijital-pazarlama",
-    "title": "Trabzon'da Dijital Pazarlama",
+    "slug": "samsun-dijital-pazarlama",
+    "title": "Samsun'da Dijital Pazarlama",
     "category": "Dijital Pazarlama",
     "cluster": "Dijital Pazarlama",
-    "lead": "Trabzon'da Dijital Pazarlama. Trabzon işletmeleri için pratik rehber."
+    "lead": "Samsun'da Dijital Pazarlama. Samsun işletmeleri için pratik rehber."
   },
   {
     "slug": "facebook-reklam-butcesi",
     "title": "Facebook Reklam Bütçesi Nasıl Planlanır?",
     "category": "Meta Ads",
     "cluster": "Meta Ads",
-    "lead": "Facebook Reklam Bütçesi Nasıl Planlanır?. Trabzon işletmeleri için pratik rehber."
+    "lead": "Facebook Reklam Bütçesi Nasıl Planlanır?. Samsun işletmeleri için pratik rehber."
   },
   {
     "slug": "instagram-hikaye-stratejisi",
     "title": "Instagram Hikâye Stratejisi",
     "category": "Instagram",
     "cluster": "Instagram",
-    "lead": "Instagram Hikâye Stratejisi. Trabzon işletmeleri için pratik rehber."
+    "lead": "Instagram Hikâye Stratejisi. Samsun işletmeleri için pratik rehber."
   },
   {
-    "slug": "tiktok-trabzon-isletmeler",
-    "title": "Trabzon İşletmeleri İçin TikTok",
+    "slug": "tiktok-samsun-isletmeler",
+    "title": "Samsun İşletmeleri İçin TikTok",
     "category": "TikTok",
     "cluster": "TikTok",
-    "lead": "Trabzon İşletmeleri İçin TikTok. Trabzon işletmeleri için pratik rehber."
+    "lead": "Samsun İşletmeleri İçin TikTok. Samsun işletmeleri için pratik rehber."
   },
   {
-    "slug": "linkedin-b2b-trabzon",
-    "title": "Trabzon'da LinkedIn ile B2B Büyüme",
+    "slug": "linkedin-b2b-samsun",
+    "title": "Samsun'da LinkedIn ile B2B Büyüme",
     "category": "LinkedIn",
     "cluster": "LinkedIn",
-    "lead": "Trabzon'da LinkedIn ile B2B Büyüme. Trabzon işletmeleri için pratik rehber."
+    "lead": "Samsun'da LinkedIn ile B2B Büyüme. Samsun işletmeleri için pratik rehber."
   },
   {
     "slug": "google-benim-isletmem-optimizasyonu",
     "title": "Google Benim İşletmem Optimizasyonu",
     "category": "Yerel SEO",
     "cluster": "Yerel SEO",
-    "lead": "Google Benim İşletmem Optimizasyonu. Trabzon işletmeleri için pratik rehber."
+    "lead": "Google Benim İşletmem Optimizasyonu. Samsun işletmeleri için pratik rehber."
   },
   {
     "slug": "sosyal-medya-raporlama",
     "title": "Sosyal Medya Raporlama Nasıl Olmalı?",
     "category": "Ölçüm",
     "cluster": "Ölçüm",
-    "lead": "Sosyal Medya Raporlama Nasıl Olmalı?. Trabzon işletmeleri için pratik rehber."
+    "lead": "Sosyal Medya Raporlama Nasıl Olmalı?. Samsun işletmeleri için pratik rehber."
   },
   {
     "slug": "icerik-takvimi-nasil-yapilir",
     "title": "İçerik Takvimi Nasıl Yapılır?",
     "category": "İçerik",
     "cluster": "İçerik",
-    "lead": "İçerik Takvimi Nasıl Yapılır?. Trabzon işletmeleri için pratik rehber."
+    "lead": "İçerik Takvimi Nasıl Yapılır?. Samsun işletmeleri için pratik rehber."
   },
   {
     "slug": "drone-cekimi-sosyal-medya",
     "title": "Drone Çekimi Sosyal Medyada Nasıl Kullanılır?",
     "category": "Prodüksiyon",
     "cluster": "Prodüksiyon",
-    "lead": "Drone Çekimi Sosyal Medyada Nasıl Kullanılır?. Trabzon işletmeleri için pratik rehber."
+    "lead": "Drone Çekimi Sosyal Medyada Nasıl Kullanılır?. Samsun işletmeleri için pratik rehber."
   },
   {
     "slug": "profesyonel-fotograf-marka",
     "title": "Profesyonel Fotoğraf Markayı Nasıl Güçlendirir?",
     "category": "Prodüksiyon",
     "cluster": "Prodüksiyon",
-    "lead": "Profesyonel Fotoğraf Markayı Nasıl Güçlendirir?. Trabzon işletmeleri için pratik rehber."
+    "lead": "Profesyonel Fotoğraf Markayı Nasıl Güçlendirir?. Samsun işletmeleri için pratik rehber."
   },
   {
     "slug": "video-prodüksiyon-maliyeti",
     "title": "Video Prodüksiyon Maliyeti Neye Göre Değişir?",
     "category": "Prodüksiyon",
     "cluster": "Prodüksiyon",
-    "lead": "Video Prodüksiyon Maliyeti Neye Göre Değişir?. Trabzon işletmeleri için pratik rehber."
+    "lead": "Video Prodüksiyon Maliyeti Neye Göre Değişir?. Samsun işletmeleri için pratik rehber."
   },
   {
     "slug": "remarketing-nedir",
     "title": "Remarketing Nedir, Nasıl Çalışır?",
     "category": "Reklam",
     "cluster": "Reklam",
-    "lead": "Remarketing Nedir, Nasıl Çalışır?. Trabzon işletmeleri için pratik rehber."
+    "lead": "Remarketing Nedir, Nasıl Çalışır?. Samsun işletmeleri için pratik rehber."
   },
   {
     "slug": "lead-generation-sosyal-medya",
     "title": "Sosyal Medyada Lead Generation",
     "category": "Performans",
     "cluster": "Performans",
-    "lead": "Sosyal Medyada Lead Generation. Trabzon işletmeleri için pratik rehber."
+    "lead": "Sosyal Medyada Lead Generation. Samsun işletmeleri için pratik rehber."
   },
   {
     "slug": "donusum-orani-artirma",
     "title": "Dönüşüm Oranı Nasıl Artırılır?",
     "category": "Performans",
     "cluster": "Performans",
-    "lead": "Dönüşüm Oranı Nasıl Artırılır?. Trabzon işletmeleri için pratik rehber."
+    "lead": "Dönüşüm Oranı Nasıl Artırılır?. Samsun işletmeleri için pratik rehber."
   },
   {
     "slug": "marka-bilinirligi-yerel",
     "title": "Yerel Marka Bilinirliği Nasıl Artar?",
     "category": "Marka",
     "cluster": "Marka",
-    "lead": "Yerel Marka Bilinirliği Nasıl Artar?. Trabzon işletmeleri için pratik rehber."
+    "lead": "Yerel Marka Bilinirliği Nasıl Artar?. Samsun işletmeleri için pratik rehber."
   },
   {
     "slug": "wesoco-sosyal-medya-sureci",
     "title": "Wesoco Sosyal Medya Yönetim Süreci",
     "category": "Ajans",
     "cluster": "Ajans",
-    "lead": "Wesoco Sosyal Medya Yönetim Süreci. Trabzon işletmeleri için pratik rehber."
+    "lead": "Wesoco Sosyal Medya Yönetim Süreci. Samsun işletmeleri için pratik rehber."
   },
   {
     "slug": "ucretsiz-kesif-gorusmesi",
     "title": "Ücretsiz Keşif Görüşmesinde Neler Konuşulur?",
     "category": "Ajans",
     "cluster": "Ajans",
-    "lead": "Ücretsiz Keşif Görüşmesinde Neler Konuşulur?. Trabzon işletmeleri için pratik rehber."
+    "lead": "Ücretsiz Keşif Görüşmesinde Neler Konuşulur?. Samsun işletmeleri için pratik rehber."
   },
   {
     "slug": "sosyal-medya-paket-fiyatlari",
     "title": "Sosyal Medya Paket Fiyatları Neye Göre Değişir?",
     "category": "Fiyat",
     "cluster": "Fiyat",
-    "lead": "Sosyal Medya Paket Fiyatları Neye Göre Değişir?. Trabzon işletmeleri için pratik rehber."
+    "lead": "Sosyal Medya Paket Fiyatları Neye Göre Değişir?. Samsun işletmeleri için pratik rehber."
   },
   {
     "slug": "instagram-bio-optimizasyonu",
     "title": "Instagram Bio Optimizasyonu",
     "category": "Instagram",
     "cluster": "Instagram",
-    "lead": "Instagram Bio Optimizasyonu. Trabzon işletmeleri için pratik rehber."
+    "lead": "Instagram Bio Optimizasyonu. Samsun işletmeleri için pratik rehber."
   },
   {
     "slug": "hashtag-stratejisi-2026",
     "title": "2026 Hashtag Stratejisi",
     "category": "Instagram",
     "cluster": "Instagram",
-    "lead": "2026 Hashtag Stratejisi. Trabzon işletmeleri için pratik rehber."
+    "lead": "2026 Hashtag Stratejisi. Samsun işletmeleri için pratik rehber."
   },
   {
     "slug": "ugc-icerik-uretimi",
     "title": "UGC İçerik Üretimi Nedir?",
     "category": "İçerik",
     "cluster": "İçerik",
-    "lead": "UGC İçerik Üretimi Nedir?. Trabzon işletmeleri için pratik rehber."
+    "lead": "UGC İçerik Üretimi Nedir?. Samsun işletmeleri için pratik rehber."
   },
   {
     "slug": "influencer-mi-ajans-mi",
     "title": "Influencer mı Ajans mı?",
     "category": "Strateji",
     "cluster": "Strateji",
-    "lead": "Influencer mı Ajans mı?. Trabzon işletmeleri için pratik rehber."
+    "lead": "Influencer mı Ajans mı?. Samsun işletmeleri için pratik rehber."
   },
   {
     "slug": "kriz-yonetimi-sosyal-medya",
     "title": "Sosyal Medyada Kriz Yönetimi",
     "category": "Marka",
     "cluster": "Marka",
-    "lead": "Sosyal Medyada Kriz Yönetimi. Trabzon işletmeleri için pratik rehber."
+    "lead": "Sosyal Medyada Kriz Yönetimi. Samsun işletmeleri için pratik rehber."
   },
   {
     "slug": "seo-sosyal-medya-iliskisi",
     "title": "SEO ve Sosyal Medya İlişkisi",
     "category": "SEO",
     "cluster": "SEO",
-    "lead": "SEO ve Sosyal Medya İlişkisi. Trabzon işletmeleri için pratik rehber."
+    "lead": "SEO ve Sosyal Medya İlişkisi. Samsun işletmeleri için pratik rehber."
   },
   {
     "slug": "search-console-yerel",
     "title": "Search Console Yerel İşletmeler İçin",
     "category": "SEO",
     "cluster": "SEO",
-    "lead": "Search Console Yerel İşletmeler İçin. Trabzon işletmeleri için pratik rehber."
+    "lead": "Search Console Yerel İşletmeler İçin. Samsun işletmeleri için pratik rehber."
   },
   {
     "slug": "google-analytics-4-temeller",
     "title": "Google Analytics 4 Temelleri",
     "category": "Ölçüm",
     "cluster": "Ölçüm",
-    "lead": "Google Analytics 4 Temelleri. Trabzon işletmeleri için pratik rehber."
+    "lead": "Google Analytics 4 Temelleri. Samsun işletmeleri için pratik rehber."
   },
   {
     "slug": "meta-pixel-kurulumu",
     "title": "Meta Pixel Kurulumu ve Olaylar",
     "category": "Meta Ads",
     "cluster": "Meta Ads",
-    "lead": "Meta Pixel Kurulumu ve Olaylar. Trabzon işletmeleri için pratik rehber."
+    "lead": "Meta Pixel Kurulumu ve Olaylar. Samsun işletmeleri için pratik rehber."
   },
   {
     "slug": "katalog-reklamlari",
     "title": "Katalog Reklamları Ne Zaman Mantıklı?",
     "category": "Meta Ads",
     "cluster": "Meta Ads",
-    "lead": "Katalog Reklamları Ne Zaman Mantıklı?. Trabzon işletmeleri için pratik rehber."
+    "lead": "Katalog Reklamları Ne Zaman Mantıklı?. Samsun işletmeleri için pratik rehber."
   },
   {
     "slug": "mesaj-reklamlari",
     "title": "Mesaj / WhatsApp Reklamları",
     "category": "Meta Ads",
     "cluster": "Meta Ads",
-    "lead": "Mesaj / WhatsApp Reklamları. Trabzon işletmeleri için pratik rehber."
+    "lead": "Mesaj / WhatsApp Reklamları. Samsun işletmeleri için pratik rehber."
   },
   {
     "slug": "carousel-vs-reels-ads",
     "title": "Carousel mi Reels Ads mi?",
     "category": "Meta Ads",
     "cluster": "Meta Ads",
-    "lead": "Carousel mi Reels Ads mi?. Trabzon işletmeleri için pratik rehber."
+    "lead": "Carousel mi Reels Ads mi?. Samsun işletmeleri için pratik rehber."
   },
   {
     "slug": "organik-erisim-dustu",
     "title": "Organik Erişim Düştüyse Ne Yapmalı?",
     "category": "Strateji",
     "cluster": "Strateji",
-    "lead": "Organik Erişim Düştüyse Ne Yapmalı?. Trabzon işletmeleri için pratik rehber."
+    "lead": "Organik Erişim Düştüyse Ne Yapmalı?. Samsun işletmeleri için pratik rehber."
   },
   {
     "slug": "rakip-analizi-sosyal-medya",
     "title": "Sosyal Medyada Rakip Analizi",
     "category": "Strateji",
     "cluster": "Strateji",
-    "lead": "Sosyal Medyada Rakip Analizi. Trabzon işletmeleri için pratik rehber."
+    "lead": "Sosyal Medyada Rakip Analizi. Samsun işletmeleri için pratik rehber."
   },
   {
     "slug": "hedef-kitle-tanimi",
     "title": "Hedef Kitle Nasıl Tanımlanır?",
     "category": "Strateji",
     "cluster": "Strateji",
-    "lead": "Hedef Kitle Nasıl Tanımlanır?. Trabzon işletmeleri için pratik rehber."
+    "lead": "Hedef Kitle Nasıl Tanımlanır?. Samsun işletmeleri için pratik rehber."
   },
   {
     "slug": "brand-voice-yerel",
     "title": "Yerel Marka Dili (Brand Voice)",
     "category": "Marka",
     "cluster": "Marka",
-    "lead": "Yerel Marka Dili (Brand Voice). Trabzon işletmeleri için pratik rehber."
+    "lead": "Yerel Marka Dili (Brand Voice). Samsun işletmeleri için pratik rehber."
   },
   {
     "slug": "logo-tasarimi-dijital",
     "title": "Logo Tasarımı Dijitalde Neden Kritik?",
     "category": "Tasarım",
     "cluster": "Tasarım",
-    "lead": "Logo Tasarımı Dijitalde Neden Kritik?. Trabzon işletmeleri için pratik rehber."
+    "lead": "Logo Tasarımı Dijitalde Neden Kritik?. Samsun işletmeleri için pratik rehber."
   },
   {
     "slug": "grafik-tasarim-sosyal",
     "title": "Sosyal Medya Grafik Tasarım İpuçları",
     "category": "Tasarım",
     "cluster": "Tasarım",
-    "lead": "Sosyal Medya Grafik Tasarım İpuçları. Trabzon işletmeleri için pratik rehber."
+    "lead": "Sosyal Medya Grafik Tasarım İpuçları. Samsun işletmeleri için pratik rehber."
   },
   {
     "slug": "web-sitesi-sosyal-medya",
     "title": "Web Sitesi ve Sosyal Medya Uyumu",
     "category": "Web",
     "cluster": "Web",
-    "lead": "Web Sitesi ve Sosyal Medya Uyumu. Trabzon işletmeleri için pratik rehber."
+    "lead": "Web Sitesi ve Sosyal Medya Uyumu. Samsun işletmeleri için pratik rehber."
   },
   {
     "slug": "landing-page-lead",
     "title": "Lead İçin Landing Page",
     "category": "Performans",
     "cluster": "Performans",
-    "lead": "Lead İçin Landing Page. Trabzon işletmeleri için pratik rehber."
+    "lead": "Lead İçin Landing Page. Samsun işletmeleri için pratik rehber."
   },
   {
-    "slug": "e-ticaret-trabzon",
-    "title": "Trabzon'da E-ticaret ve Sosyal Satış",
+    "slug": "e-ticaret-samsun",
+    "title": "Samsun'da E-ticaret ve Sosyal Satış",
     "category": "E-ticaret",
     "cluster": "E-ticaret",
-    "lead": "Trabzon'da E-ticaret ve Sosyal Satış. Trabzon işletmeleri için pratik rehber."
+    "lead": "Samsun'da E-ticaret ve Sosyal Satış. Samsun işletmeleri için pratik rehber."
   },
   {
     "slug": "sezonluk-kampanya-karadeniz",
     "title": "Karadeniz Sezonluk Kampanya Takvimi",
     "category": "Strateji",
     "cluster": "Strateji",
-    "lead": "Karadeniz Sezonluk Kampanya Takvimi. Trabzon işletmeleri için pratik rehber."
+    "lead": "Karadeniz Sezonluk Kampanya Takvimi. Samsun işletmeleri için pratik rehber."
   },
   {
     "slug": "turizm-sezonu-sosyal-medya",
     "title": "Turizm Sezonunda Sosyal Medya",
     "category": "Turizm",
     "cluster": "Turizm",
-    "lead": "Turizm Sezonunda Sosyal Medya. Trabzon işletmeleri için pratik rehber."
+    "lead": "Turizm Sezonunda Sosyal Medya. Samsun işletmeleri için pratik rehber."
   },
   {
     "slug": "egitim-donemi-reklam",
     "title": "Eğitim Dönemi Reklam Planı",
     "category": "Reklam",
     "cluster": "Reklam",
-    "lead": "Eğitim Dönemi Reklam Planı. Trabzon işletmeleri için pratik rehber."
+    "lead": "Eğitim Dönemi Reklam Planı. Samsun işletmeleri için pratik rehber."
   },
   {
     "slug": "bayram-kampanyasi",
     "title": "Bayram Kampanyası Nasıl Kurgulanır?",
     "category": "Kampanya",
     "cluster": "Kampanya",
-    "lead": "Bayram Kampanyası Nasıl Kurgulanır?. Trabzon işletmeleri için pratik rehber."
+    "lead": "Bayram Kampanyası Nasıl Kurgulanır?. Samsun işletmeleri için pratik rehber."
   },
   {
     "slug": "restoran-sosyal-medya-yonetimi",
     "title": "Restoran Sosyal Medya Yönetimi",
     "category": "Sektör",
     "cluster": "Restoran",
-    "lead": "Restoran Sosyal Medya Yönetimi. Trabzon işletmeleri için pratik rehber."
+    "lead": "Restoran Sosyal Medya Yönetimi. Samsun işletmeleri için pratik rehber."
   },
   {
-    "slug": "trabzon-restoran-instagram",
-    "title": "Trabzon'da Restoran İçin Instagram Stratejisi",
+    "slug": "samsun-restoran-instagram",
+    "title": "Samsun'da Restoran İçin Instagram Stratejisi",
     "category": "Sektör",
     "cluster": "Restoran",
-    "lead": "Trabzon'da Restoran İçin Instagram Stratejisi. Trabzon işletmeleri için pratik rehber."
+    "lead": "Samsun'da Restoran İçin Instagram Stratejisi. Samsun işletmeleri için pratik rehber."
   },
   {
     "slug": "restoran-meta-ads",
     "title": "Restoran İçin Meta Ads Rehberi",
     "category": "Meta Ads",
     "cluster": "Restoran",
-    "lead": "Restoran İçin Meta Ads Rehberi. Trabzon işletmeleri için pratik rehber."
+    "lead": "Restoran İçin Meta Ads Rehberi. Samsun işletmeleri için pratik rehber."
   },
   {
     "slug": "kafe-sosyal-medya-yonetimi",
     "title": "Kafe Sosyal Medya Yönetimi",
     "category": "Sektör",
     "cluster": "Kafe",
-    "lead": "Kafe Sosyal Medya Yönetimi. Trabzon işletmeleri için pratik rehber."
+    "lead": "Kafe Sosyal Medya Yönetimi. Samsun işletmeleri için pratik rehber."
   },
   {
-    "slug": "trabzon-kafe-instagram",
-    "title": "Trabzon'da Kafe İçin Instagram Stratejisi",
+    "slug": "samsun-kafe-instagram",
+    "title": "Samsun'da Kafe İçin Instagram Stratejisi",
     "category": "Sektör",
     "cluster": "Kafe",
-    "lead": "Trabzon'da Kafe İçin Instagram Stratejisi. Trabzon işletmeleri için pratik rehber."
+    "lead": "Samsun'da Kafe İçin Instagram Stratejisi. Samsun işletmeleri için pratik rehber."
   },
   {
     "slug": "kafe-meta-ads",
     "title": "Kafe İçin Meta Ads Rehberi",
     "category": "Meta Ads",
     "cluster": "Kafe",
-    "lead": "Kafe İçin Meta Ads Rehberi. Trabzon işletmeleri için pratik rehber."
+    "lead": "Kafe İçin Meta Ads Rehberi. Samsun işletmeleri için pratik rehber."
   },
   {
     "slug": "otel-sosyal-medya-yonetimi",
     "title": "Otel Sosyal Medya Yönetimi",
     "category": "Sektör",
     "cluster": "Otel",
-    "lead": "Otel Sosyal Medya Yönetimi. Trabzon işletmeleri için pratik rehber."
+    "lead": "Otel Sosyal Medya Yönetimi. Samsun işletmeleri için pratik rehber."
   },
   {
-    "slug": "trabzon-otel-instagram",
-    "title": "Trabzon'da Otel İçin Instagram Stratejisi",
+    "slug": "samsun-otel-instagram",
+    "title": "Samsun'da Otel İçin Instagram Stratejisi",
     "category": "Sektör",
     "cluster": "Otel",
-    "lead": "Trabzon'da Otel İçin Instagram Stratejisi. Trabzon işletmeleri için pratik rehber."
+    "lead": "Samsun'da Otel İçin Instagram Stratejisi. Samsun işletmeleri için pratik rehber."
   },
   {
     "slug": "otel-meta-ads",
     "title": "Otel İçin Meta Ads Rehberi",
     "category": "Meta Ads",
     "cluster": "Otel",
-    "lead": "Otel İçin Meta Ads Rehberi. Trabzon işletmeleri için pratik rehber."
+    "lead": "Otel İçin Meta Ads Rehberi. Samsun işletmeleri için pratik rehber."
   },
   {
     "slug": "klinik-sosyal-medya-yonetimi",
     "title": "Klinik Sosyal Medya Yönetimi",
     "category": "Sektör",
     "cluster": "Klinik",
-    "lead": "Klinik Sosyal Medya Yönetimi. Trabzon işletmeleri için pratik rehber."
+    "lead": "Klinik Sosyal Medya Yönetimi. Samsun işletmeleri için pratik rehber."
   },
   {
-    "slug": "trabzon-klinik-instagram",
-    "title": "Trabzon'da Klinik İçin Instagram Stratejisi",
+    "slug": "samsun-klinik-instagram",
+    "title": "Samsun'da Klinik İçin Instagram Stratejisi",
     "category": "Sektör",
     "cluster": "Klinik",
-    "lead": "Trabzon'da Klinik İçin Instagram Stratejisi. Trabzon işletmeleri için pratik rehber."
+    "lead": "Samsun'da Klinik İçin Instagram Stratejisi. Samsun işletmeleri için pratik rehber."
   },
   {
     "slug": "klinik-meta-ads",
     "title": "Klinik İçin Meta Ads Rehberi",
     "category": "Meta Ads",
     "cluster": "Klinik",
-    "lead": "Klinik İçin Meta Ads Rehberi. Trabzon işletmeleri için pratik rehber."
+    "lead": "Klinik İçin Meta Ads Rehberi. Samsun işletmeleri için pratik rehber."
   },
   {
     "slug": "dis-klinigi-sosyal-medya-yonetimi",
     "title": "Diş Kliniği Sosyal Medya Yönetimi",
     "category": "Sektör",
     "cluster": "Diş Kliniği",
-    "lead": "Diş Kliniği Sosyal Medya Yönetimi. Trabzon işletmeleri için pratik rehber."
+    "lead": "Diş Kliniği Sosyal Medya Yönetimi. Samsun işletmeleri için pratik rehber."
   },
   {
-    "slug": "trabzon-dis-klinigi-instagram",
-    "title": "Trabzon'da Diş Kliniği İçin Instagram Stratejisi",
+    "slug": "samsun-dis-klinigi-instagram",
+    "title": "Samsun'da Diş Kliniği İçin Instagram Stratejisi",
     "category": "Sektör",
     "cluster": "Diş Kliniği",
-    "lead": "Trabzon'da Diş Kliniği İçin Instagram Stratejisi. Trabzon işletmeleri için pratik rehber."
+    "lead": "Samsun'da Diş Kliniği İçin Instagram Stratejisi. Samsun işletmeleri için pratik rehber."
   },
   {
     "slug": "dis-klinigi-meta-ads",
     "title": "Diş Kliniği İçin Meta Ads Rehberi",
     "category": "Meta Ads",
     "cluster": "Diş Kliniği",
-    "lead": "Diş Kliniği İçin Meta Ads Rehberi. Trabzon işletmeleri için pratik rehber."
+    "lead": "Diş Kliniği İçin Meta Ads Rehberi. Samsun işletmeleri için pratik rehber."
   },
   {
     "slug": "guzellik-merkezi-sosyal-medya-yonetimi",
     "title": "Güzellik Merkezi Sosyal Medya Yönetimi",
     "category": "Sektör",
     "cluster": "Güzellik Merkezi",
-    "lead": "Güzellik Merkezi Sosyal Medya Yönetimi. Trabzon işletmeleri için pratik rehber."
+    "lead": "Güzellik Merkezi Sosyal Medya Yönetimi. Samsun işletmeleri için pratik rehber."
   },
   {
-    "slug": "trabzon-guzellik-merkezi-instagram",
-    "title": "Trabzon'da Güzellik Merkezi İçin Instagram Stratejisi",
+    "slug": "samsun-guzellik-merkezi-instagram",
+    "title": "Samsun'da Güzellik Merkezi İçin Instagram Stratejisi",
     "category": "Sektör",
     "cluster": "Güzellik Merkezi",
-    "lead": "Trabzon'da Güzellik Merkezi İçin Instagram Stratejisi. Trabzon işletmeleri için pratik rehber."
+    "lead": "Samsun'da Güzellik Merkezi İçin Instagram Stratejisi. Samsun işletmeleri için pratik rehber."
   },
   {
     "slug": "guzellik-merkezi-meta-ads",
     "title": "Güzellik Merkezi İçin Meta Ads Rehberi",
     "category": "Meta Ads",
     "cluster": "Güzellik Merkezi",
-    "lead": "Güzellik Merkezi İçin Meta Ads Rehberi. Trabzon işletmeleri için pratik rehber."
+    "lead": "Güzellik Merkezi İçin Meta Ads Rehberi. Samsun işletmeleri için pratik rehber."
   },
   {
     "slug": "emlak-sosyal-medya-yonetimi",
     "title": "Emlak Sosyal Medya Yönetimi",
     "category": "Sektör",
     "cluster": "Emlak",
-    "lead": "Emlak Sosyal Medya Yönetimi. Trabzon işletmeleri için pratik rehber."
+    "lead": "Emlak Sosyal Medya Yönetimi. Samsun işletmeleri için pratik rehber."
   },
   {
-    "slug": "trabzon-emlak-instagram",
-    "title": "Trabzon'da Emlak İçin Instagram Stratejisi",
+    "slug": "samsun-emlak-instagram",
+    "title": "Samsun'da Emlak İçin Instagram Stratejisi",
     "category": "Sektör",
     "cluster": "Emlak",
-    "lead": "Trabzon'da Emlak İçin Instagram Stratejisi. Trabzon işletmeleri için pratik rehber."
+    "lead": "Samsun'da Emlak İçin Instagram Stratejisi. Samsun işletmeleri için pratik rehber."
   },
   {
     "slug": "emlak-meta-ads",
     "title": "Emlak İçin Meta Ads Rehberi",
     "category": "Meta Ads",
     "cluster": "Emlak",
-    "lead": "Emlak İçin Meta Ads Rehberi. Trabzon işletmeleri için pratik rehber."
+    "lead": "Emlak İçin Meta Ads Rehberi. Samsun işletmeleri için pratik rehber."
   },
   {
     "slug": "i-nsaat-sosyal-medya-yonetimi",
     "title": "İnşaat Sosyal Medya Yönetimi",
     "category": "Sektör",
     "cluster": "İnşaat",
-    "lead": "İnşaat Sosyal Medya Yönetimi. Trabzon işletmeleri için pratik rehber."
+    "lead": "İnşaat Sosyal Medya Yönetimi. Samsun işletmeleri için pratik rehber."
   },
   {
-    "slug": "trabzon-i-nsaat-instagram",
-    "title": "Trabzon'da İnşaat İçin Instagram Stratejisi",
+    "slug": "samsun-i-nsaat-instagram",
+    "title": "Samsun'da İnşaat İçin Instagram Stratejisi",
     "category": "Sektör",
     "cluster": "İnşaat",
-    "lead": "Trabzon'da İnşaat İçin Instagram Stratejisi. Trabzon işletmeleri için pratik rehber."
+    "lead": "Samsun'da İnşaat İçin Instagram Stratejisi. Samsun işletmeleri için pratik rehber."
   },
   {
     "slug": "i-nsaat-meta-ads",
     "title": "İnşaat İçin Meta Ads Rehberi",
     "category": "Meta Ads",
     "cluster": "İnşaat",
-    "lead": "İnşaat İçin Meta Ads Rehberi. Trabzon işletmeleri için pratik rehber."
+    "lead": "İnşaat İçin Meta Ads Rehberi. Samsun işletmeleri için pratik rehber."
   },
   {
     "slug": "avukat-sosyal-medya-yonetimi",
     "title": "Avukat Sosyal Medya Yönetimi",
     "category": "Sektör",
     "cluster": "Avukat",
-    "lead": "Avukat Sosyal Medya Yönetimi. Trabzon işletmeleri için pratik rehber."
+    "lead": "Avukat Sosyal Medya Yönetimi. Samsun işletmeleri için pratik rehber."
   },
   {
-    "slug": "trabzon-avukat-instagram",
-    "title": "Trabzon'da Avukat İçin Instagram Stratejisi",
+    "slug": "samsun-avukat-instagram",
+    "title": "Samsun'da Avukat İçin Instagram Stratejisi",
     "category": "Sektör",
     "cluster": "Avukat",
-    "lead": "Trabzon'da Avukat İçin Instagram Stratejisi. Trabzon işletmeleri için pratik rehber."
+    "lead": "Samsun'da Avukat İçin Instagram Stratejisi. Samsun işletmeleri için pratik rehber."
   },
   {
     "slug": "avukat-meta-ads",
     "title": "Avukat İçin Meta Ads Rehberi",
     "category": "Meta Ads",
     "cluster": "Avukat",
-    "lead": "Avukat İçin Meta Ads Rehberi. Trabzon işletmeleri için pratik rehber."
+    "lead": "Avukat İçin Meta Ads Rehberi. Samsun işletmeleri için pratik rehber."
   },
   {
     "slug": "muhasebe-sosyal-medya-yonetimi",
     "title": "Muhasebe Sosyal Medya Yönetimi",
     "category": "Sektör",
     "cluster": "Muhasebe",
-    "lead": "Muhasebe Sosyal Medya Yönetimi. Trabzon işletmeleri için pratik rehber."
+    "lead": "Muhasebe Sosyal Medya Yönetimi. Samsun işletmeleri için pratik rehber."
   },
   {
-    "slug": "trabzon-muhasebe-instagram",
-    "title": "Trabzon'da Muhasebe İçin Instagram Stratejisi",
+    "slug": "samsun-muhasebe-instagram",
+    "title": "Samsun'da Muhasebe İçin Instagram Stratejisi",
     "category": "Sektör",
     "cluster": "Muhasebe",
-    "lead": "Trabzon'da Muhasebe İçin Instagram Stratejisi. Trabzon işletmeleri için pratik rehber."
+    "lead": "Samsun'da Muhasebe İçin Instagram Stratejisi. Samsun işletmeleri için pratik rehber."
   },
   {
     "slug": "muhasebe-meta-ads",
     "title": "Muhasebe İçin Meta Ads Rehberi",
     "category": "Meta Ads",
     "cluster": "Muhasebe",
-    "lead": "Muhasebe İçin Meta Ads Rehberi. Trabzon işletmeleri için pratik rehber."
+    "lead": "Muhasebe İçin Meta Ads Rehberi. Samsun işletmeleri için pratik rehber."
   },
   {
     "slug": "spor-salonu-sosyal-medya-yonetimi",
     "title": "Spor Salonu Sosyal Medya Yönetimi",
     "category": "Sektör",
     "cluster": "Spor Salonu",
-    "lead": "Spor Salonu Sosyal Medya Yönetimi. Trabzon işletmeleri için pratik rehber."
+    "lead": "Spor Salonu Sosyal Medya Yönetimi. Samsun işletmeleri için pratik rehber."
   },
   {
-    "slug": "trabzon-spor-salonu-instagram",
-    "title": "Trabzon'da Spor Salonu İçin Instagram Stratejisi",
+    "slug": "samsun-spor-salonu-instagram",
+    "title": "Samsun'da Spor Salonu İçin Instagram Stratejisi",
     "category": "Sektör",
     "cluster": "Spor Salonu",
-    "lead": "Trabzon'da Spor Salonu İçin Instagram Stratejisi. Trabzon işletmeleri için pratik rehber."
+    "lead": "Samsun'da Spor Salonu İçin Instagram Stratejisi. Samsun işletmeleri için pratik rehber."
   },
   {
     "slug": "spor-salonu-meta-ads",
     "title": "Spor Salonu İçin Meta Ads Rehberi",
     "category": "Meta Ads",
     "cluster": "Spor Salonu",
-    "lead": "Spor Salonu İçin Meta Ads Rehberi. Trabzon işletmeleri için pratik rehber."
+    "lead": "Spor Salonu İçin Meta Ads Rehberi. Samsun işletmeleri için pratik rehber."
   },
   {
     "slug": "egitim-sosyal-medya-yonetimi",
     "title": "Eğitim Sosyal Medya Yönetimi",
     "category": "Sektör",
     "cluster": "Eğitim",
-    "lead": "Eğitim Sosyal Medya Yönetimi. Trabzon işletmeleri için pratik rehber."
+    "lead": "Eğitim Sosyal Medya Yönetimi. Samsun işletmeleri için pratik rehber."
   },
   {
-    "slug": "trabzon-egitim-instagram",
-    "title": "Trabzon'da Eğitim İçin Instagram Stratejisi",
+    "slug": "samsun-egitim-instagram",
+    "title": "Samsun'da Eğitim İçin Instagram Stratejisi",
     "category": "Sektör",
     "cluster": "Eğitim",
-    "lead": "Trabzon'da Eğitim İçin Instagram Stratejisi. Trabzon işletmeleri için pratik rehber."
+    "lead": "Samsun'da Eğitim İçin Instagram Stratejisi. Samsun işletmeleri için pratik rehber."
   },
   {
     "slug": "egitim-meta-ads",
     "title": "Eğitim İçin Meta Ads Rehberi",
     "category": "Meta Ads",
     "cluster": "Eğitim",
-    "lead": "Eğitim İçin Meta Ads Rehberi. Trabzon işletmeleri için pratik rehber."
+    "lead": "Eğitim İçin Meta Ads Rehberi. Samsun işletmeleri için pratik rehber."
   },
   {
     "slug": "perakende-sosyal-medya-yonetimi",
     "title": "Perakende Sosyal Medya Yönetimi",
     "category": "Sektör",
     "cluster": "Perakende",
-    "lead": "Perakende Sosyal Medya Yönetimi. Trabzon işletmeleri için pratik rehber."
+    "lead": "Perakende Sosyal Medya Yönetimi. Samsun işletmeleri için pratik rehber."
   },
   {
-    "slug": "trabzon-perakende-instagram",
-    "title": "Trabzon'da Perakende İçin Instagram Stratejisi",
+    "slug": "samsun-perakende-instagram",
+    "title": "Samsun'da Perakende İçin Instagram Stratejisi",
     "category": "Sektör",
     "cluster": "Perakende",
-    "lead": "Trabzon'da Perakende İçin Instagram Stratejisi. Trabzon işletmeleri için pratik rehber."
+    "lead": "Samsun'da Perakende İçin Instagram Stratejisi. Samsun işletmeleri için pratik rehber."
   },
   {
     "slug": "perakende-meta-ads",
     "title": "Perakende İçin Meta Ads Rehberi",
     "category": "Meta Ads",
     "cluster": "Perakende",
-    "lead": "Perakende İçin Meta Ads Rehberi. Trabzon işletmeleri için pratik rehber."
+    "lead": "Perakende İçin Meta Ads Rehberi. Samsun işletmeleri için pratik rehber."
   },
   {
     "slug": "oto-galeri-sosyal-medya-yonetimi",
     "title": "Oto Galeri Sosyal Medya Yönetimi",
     "category": "Sektör",
     "cluster": "Oto Galeri",
-    "lead": "Oto Galeri Sosyal Medya Yönetimi. Trabzon işletmeleri için pratik rehber."
+    "lead": "Oto Galeri Sosyal Medya Yönetimi. Samsun işletmeleri için pratik rehber."
   },
   {
-    "slug": "trabzon-oto-galeri-instagram",
-    "title": "Trabzon'da Oto Galeri İçin Instagram Stratejisi",
+    "slug": "samsun-oto-galeri-instagram",
+    "title": "Samsun'da Oto Galeri İçin Instagram Stratejisi",
     "category": "Sektör",
     "cluster": "Oto Galeri",
-    "lead": "Trabzon'da Oto Galeri İçin Instagram Stratejisi. Trabzon işletmeleri için pratik rehber."
+    "lead": "Samsun'da Oto Galeri İçin Instagram Stratejisi. Samsun işletmeleri için pratik rehber."
   },
   {
     "slug": "oto-galeri-meta-ads",
     "title": "Oto Galeri İçin Meta Ads Rehberi",
     "category": "Meta Ads",
     "cluster": "Oto Galeri",
-    "lead": "Oto Galeri İçin Meta Ads Rehberi. Trabzon işletmeleri için pratik rehber."
+    "lead": "Oto Galeri İçin Meta Ads Rehberi. Samsun işletmeleri için pratik rehber."
   },
   {
     "slug": "turizm-sosyal-medya-yonetimi",
     "title": "Turizm Sosyal Medya Yönetimi",
     "category": "Sektör",
     "cluster": "Turizm",
-    "lead": "Turizm Sosyal Medya Yönetimi. Trabzon işletmeleri için pratik rehber."
+    "lead": "Turizm Sosyal Medya Yönetimi. Samsun işletmeleri için pratik rehber."
   },
   {
-    "slug": "trabzon-turizm-instagram",
-    "title": "Trabzon'da Turizm İçin Instagram Stratejisi",
+    "slug": "samsun-turizm-instagram",
+    "title": "Samsun'da Turizm İçin Instagram Stratejisi",
     "category": "Sektör",
     "cluster": "Turizm",
-    "lead": "Trabzon'da Turizm İçin Instagram Stratejisi. Trabzon işletmeleri için pratik rehber."
+    "lead": "Samsun'da Turizm İçin Instagram Stratejisi. Samsun işletmeleri için pratik rehber."
   },
   {
     "slug": "turizm-meta-ads",
     "title": "Turizm İçin Meta Ads Rehberi",
     "category": "Meta Ads",
     "cluster": "Turizm",
-    "lead": "Turizm İçin Meta Ads Rehberi. Trabzon işletmeleri için pratik rehber."
+    "lead": "Turizm İçin Meta Ads Rehberi. Samsun işletmeleri için pratik rehber."
   },
   {
     "slug": "firin-sosyal-medya-yonetimi",
     "title": "Fırın Sosyal Medya Yönetimi",
     "category": "Sektör",
     "cluster": "Fırın",
-    "lead": "Fırın Sosyal Medya Yönetimi. Trabzon işletmeleri için pratik rehber."
+    "lead": "Fırın Sosyal Medya Yönetimi. Samsun işletmeleri için pratik rehber."
   },
   {
-    "slug": "trabzon-firin-instagram",
-    "title": "Trabzon'da Fırın İçin Instagram Stratejisi",
+    "slug": "samsun-firin-instagram",
+    "title": "Samsun'da Fırın İçin Instagram Stratejisi",
     "category": "Sektör",
     "cluster": "Fırın",
-    "lead": "Trabzon'da Fırın İçin Instagram Stratejisi. Trabzon işletmeleri için pratik rehber."
+    "lead": "Samsun'da Fırın İçin Instagram Stratejisi. Samsun işletmeleri için pratik rehber."
   },
   {
     "slug": "firin-meta-ads",
     "title": "Fırın İçin Meta Ads Rehberi",
     "category": "Meta Ads",
     "cluster": "Fırın",
-    "lead": "Fırın İçin Meta Ads Rehberi. Trabzon işletmeleri için pratik rehber."
+    "lead": "Fırın İçin Meta Ads Rehberi. Samsun işletmeleri için pratik rehber."
   },
   {
     "slug": "butik-sosyal-medya-yonetimi",
     "title": "Butik Sosyal Medya Yönetimi",
     "category": "Sektör",
     "cluster": "Butik",
-    "lead": "Butik Sosyal Medya Yönetimi. Trabzon işletmeleri için pratik rehber."
+    "lead": "Butik Sosyal Medya Yönetimi. Samsun işletmeleri için pratik rehber."
   },
   {
-    "slug": "trabzon-butik-instagram",
-    "title": "Trabzon'da Butik İçin Instagram Stratejisi",
+    "slug": "samsun-butik-instagram",
+    "title": "Samsun'da Butik İçin Instagram Stratejisi",
     "category": "Sektör",
     "cluster": "Butik",
-    "lead": "Trabzon'da Butik İçin Instagram Stratejisi. Trabzon işletmeleri için pratik rehber."
+    "lead": "Samsun'da Butik İçin Instagram Stratejisi. Samsun işletmeleri için pratik rehber."
   },
   {
     "slug": "butik-meta-ads",
     "title": "Butik İçin Meta Ads Rehberi",
     "category": "Meta Ads",
     "cluster": "Butik",
-    "lead": "Butik İçin Meta Ads Rehberi. Trabzon işletmeleri için pratik rehber."
+    "lead": "Butik İçin Meta Ads Rehberi. Samsun işletmeleri için pratik rehber."
   },
   {
     "slug": "eczane-sosyal-medya-yonetimi",
     "title": "Eczane Sosyal Medya Yönetimi",
     "category": "Sektör",
     "cluster": "Eczane",
-    "lead": "Eczane Sosyal Medya Yönetimi. Trabzon işletmeleri için pratik rehber."
+    "lead": "Eczane Sosyal Medya Yönetimi. Samsun işletmeleri için pratik rehber."
   },
   {
-    "slug": "trabzon-eczane-instagram",
-    "title": "Trabzon'da Eczane İçin Instagram Stratejisi",
+    "slug": "samsun-eczane-instagram",
+    "title": "Samsun'da Eczane İçin Instagram Stratejisi",
     "category": "Sektör",
     "cluster": "Eczane",
-    "lead": "Trabzon'da Eczane İçin Instagram Stratejisi. Trabzon işletmeleri için pratik rehber."
+    "lead": "Samsun'da Eczane İçin Instagram Stratejisi. Samsun işletmeleri için pratik rehber."
   },
   {
     "slug": "eczane-meta-ads",
     "title": "Eczane İçin Meta Ads Rehberi",
     "category": "Meta Ads",
     "cluster": "Eczane",
-    "lead": "Eczane İçin Meta Ads Rehberi. Trabzon işletmeleri için pratik rehber."
+    "lead": "Eczane İçin Meta Ads Rehberi. Samsun işletmeleri için pratik rehber."
   },
   {
-    "slug": "ortahisar-sosyal-medya-yonetimi-rehber",
-    "title": "Ortahisar Sosyal Medya Yönetimi Rehberi",
+    "slug": "ilkadim-sosyal-medya-yonetimi-rehber",
+    "title": "İlkadım Sosyal Medya Yönetimi Rehberi",
     "category": "İlçe",
-    "cluster": "Ortahisar",
-    "lead": "Ortahisar Sosyal Medya Yönetimi Rehberi. Trabzon işletmeleri için pratik rehber."
+    "cluster": "İlkadım",
+    "lead": "İlkadım Sosyal Medya Yönetimi Rehberi. Samsun işletmeleri için pratik rehber."
   },
   {
-    "slug": "ortahisar-instagram-yonetimi",
-    "title": "Ortahisar'da Instagram Yönetimi",
+    "slug": "ilkadim-instagram-yonetimi",
+    "title": "İlkadım'da Instagram Yönetimi",
     "category": "İlçe",
-    "cluster": "Ortahisar",
-    "lead": "Ortahisar'da Instagram Yönetimi. Trabzon işletmeleri için pratik rehber."
+    "cluster": "İlkadım",
+    "lead": "İlkadım'da Instagram Yönetimi. Samsun işletmeleri için pratik rehber."
   },
   {
-    "slug": "ortahisar-meta-reklam",
-    "title": "Ortahisar'da Meta Reklamları",
+    "slug": "ilkadim-meta-reklam",
+    "title": "İlkadım'da Meta Reklamları",
     "category": "İlçe",
-    "cluster": "Ortahisar",
-    "lead": "Ortahisar'da Meta Reklamları. Trabzon işletmeleri için pratik rehber."
+    "cluster": "İlkadım",
+    "lead": "İlkadım'da Meta Reklamları. Samsun işletmeleri için pratik rehber."
   },
   {
-    "slug": "akcaabat-sosyal-medya-yonetimi-rehber",
-    "title": "Akçaabat Sosyal Medya Yönetimi Rehberi",
+    "slug": "atakum-sosyal-medya-yonetimi-rehber",
+    "title": "Atakum Sosyal Medya Yönetimi Rehberi",
     "category": "İlçe",
-    "cluster": "Akçaabat",
-    "lead": "Akçaabat Sosyal Medya Yönetimi Rehberi. Trabzon işletmeleri için pratik rehber."
+    "cluster": "Atakum",
+    "lead": "Atakum Sosyal Medya Yönetimi Rehberi. Samsun işletmeleri için pratik rehber."
   },
   {
-    "slug": "akcaabat-instagram-yonetimi",
-    "title": "Akçaabat'da Instagram Yönetimi",
+    "slug": "atakum-instagram-yonetimi",
+    "title": "Atakum'da Instagram Yönetimi",
     "category": "İlçe",
-    "cluster": "Akçaabat",
-    "lead": "Akçaabat'da Instagram Yönetimi. Trabzon işletmeleri için pratik rehber."
+    "cluster": "Atakum",
+    "lead": "Atakum'da Instagram Yönetimi. Samsun işletmeleri için pratik rehber."
   },
   {
-    "slug": "akcaabat-meta-reklam",
-    "title": "Akçaabat'da Meta Reklamları",
+    "slug": "atakum-meta-reklam",
+    "title": "Atakum'da Meta Reklamları",
     "category": "İlçe",
-    "cluster": "Akçaabat",
-    "lead": "Akçaabat'da Meta Reklamları. Trabzon işletmeleri için pratik rehber."
+    "cluster": "Atakum",
+    "lead": "Atakum'da Meta Reklamları. Samsun işletmeleri için pratik rehber."
   },
   {
-    "slug": "yomra-sosyal-medya-yonetimi-rehber",
-    "title": "Yomra Sosyal Medya Yönetimi Rehberi",
+    "slug": "canik-sosyal-medya-yonetimi-rehber",
+    "title": "Canik Sosyal Medya Yönetimi Rehberi",
     "category": "İlçe",
-    "cluster": "Yomra",
-    "lead": "Yomra Sosyal Medya Yönetimi Rehberi. Trabzon işletmeleri için pratik rehber."
+    "cluster": "Canik",
+    "lead": "Canik Sosyal Medya Yönetimi Rehberi. Samsun işletmeleri için pratik rehber."
   },
   {
-    "slug": "yomra-instagram-yonetimi",
-    "title": "Yomra'da Instagram Yönetimi",
+    "slug": "canik-instagram-yonetimi",
+    "title": "Canik'te Instagram Yönetimi",
     "category": "İlçe",
-    "cluster": "Yomra",
-    "lead": "Yomra'da Instagram Yönetimi. Trabzon işletmeleri için pratik rehber."
+    "cluster": "Canik",
+    "lead": "Canik'te Instagram Yönetimi. Samsun işletmeleri için pratik rehber."
   },
   {
-    "slug": "yomra-meta-reklam",
-    "title": "Yomra'da Meta Reklamları",
+    "slug": "canik-meta-reklam",
+    "title": "Canik'te Meta Reklamları",
     "category": "İlçe",
-    "cluster": "Yomra",
-    "lead": "Yomra'da Meta Reklamları. Trabzon işletmeleri için pratik rehber."
+    "cluster": "Canik",
+    "lead": "Canik'te Meta Reklamları. Samsun işletmeleri için pratik rehber."
   },
   {
-    "slug": "arsin-sosyal-medya-yonetimi-rehber",
-    "title": "Arsin Sosyal Medya Yönetimi Rehberi",
+    "slug": "tekkekoy-sosyal-medya-yonetimi-rehber",
+    "title": "Tekkeköy Sosyal Medya Yönetimi Rehberi",
     "category": "İlçe",
-    "cluster": "Arsin",
-    "lead": "Arsin Sosyal Medya Yönetimi Rehberi. Trabzon işletmeleri için pratik rehber."
+    "cluster": "Tekkeköy",
+    "lead": "Tekkeköy Sosyal Medya Yönetimi Rehberi. Samsun işletmeleri için pratik rehber."
   },
   {
-    "slug": "arsin-instagram-yonetimi",
-    "title": "Arsin'da Instagram Yönetimi",
+    "slug": "tekkekoy-instagram-yonetimi",
+    "title": "Tekkeköy'de Instagram Yönetimi",
     "category": "İlçe",
-    "cluster": "Arsin",
-    "lead": "Arsin'da Instagram Yönetimi. Trabzon işletmeleri için pratik rehber."
+    "cluster": "Tekkeköy",
+    "lead": "Tekkeköy'de Instagram Yönetimi. Samsun işletmeleri için pratik rehber."
   },
   {
-    "slug": "arsin-meta-reklam",
-    "title": "Arsin'da Meta Reklamları",
+    "slug": "tekkekoy-meta-reklam",
+    "title": "Tekkeköy'de Meta Reklamları",
     "category": "İlçe",
-    "cluster": "Arsin",
-    "lead": "Arsin'da Meta Reklamları. Trabzon işletmeleri için pratik rehber."
+    "cluster": "Tekkeköy",
+    "lead": "Tekkeköy'de Meta Reklamları. Samsun işletmeleri için pratik rehber."
   },
   {
-    "slug": "surmene-sosyal-medya-yonetimi-rehber",
-    "title": "Sürmene Sosyal Medya Yönetimi Rehberi",
+    "slug": "bafra-sosyal-medya-yonetimi-rehber",
+    "title": "Bafra Sosyal Medya Yönetimi Rehberi",
     "category": "İlçe",
-    "cluster": "Sürmene",
-    "lead": "Sürmene Sosyal Medya Yönetimi Rehberi. Trabzon işletmeleri için pratik rehber."
+    "cluster": "Bafra",
+    "lead": "Bafra Sosyal Medya Yönetimi Rehberi. Samsun işletmeleri için pratik rehber."
   },
   {
-    "slug": "surmene-instagram-yonetimi",
-    "title": "Sürmene'da Instagram Yönetimi",
+    "slug": "bafra-instagram-yonetimi",
+    "title": "Bafra'da Instagram Yönetimi",
     "category": "İlçe",
-    "cluster": "Sürmene",
-    "lead": "Sürmene'da Instagram Yönetimi. Trabzon işletmeleri için pratik rehber."
+    "cluster": "Bafra",
+    "lead": "Bafra'da Instagram Yönetimi. Samsun işletmeleri için pratik rehber."
   },
   {
-    "slug": "surmene-meta-reklam",
-    "title": "Sürmene'da Meta Reklamları",
+    "slug": "bafra-meta-reklam",
+    "title": "Bafra'da Meta Reklamları",
     "category": "İlçe",
-    "cluster": "Sürmene",
-    "lead": "Sürmene'da Meta Reklamları. Trabzon işletmeleri için pratik rehber."
+    "cluster": "Bafra",
+    "lead": "Bafra'da Meta Reklamları. Samsun işletmeleri için pratik rehber."
   },
   {
-    "slug": "of-sosyal-medya-yonetimi-rehber",
-    "title": "Of Sosyal Medya Yönetimi Rehberi",
+    "slug": "carsamba-sosyal-medya-yonetimi-rehber",
+    "title": "Çarşamba Sosyal Medya Yönetimi Rehberi",
     "category": "İlçe",
-    "cluster": "Of",
-    "lead": "Of Sosyal Medya Yönetimi Rehberi. Trabzon işletmeleri için pratik rehber."
+    "cluster": "Çarşamba",
+    "lead": "Çarşamba Sosyal Medya Yönetimi Rehberi. Samsun işletmeleri için pratik rehber."
   },
   {
-    "slug": "of-instagram-yonetimi",
-    "title": "Of'da Instagram Yönetimi",
+    "slug": "carsamba-instagram-yonetimi",
+    "title": "Çarşamba'da Instagram Yönetimi",
     "category": "İlçe",
-    "cluster": "Of",
-    "lead": "Of'da Instagram Yönetimi. Trabzon işletmeleri için pratik rehber."
+    "cluster": "Çarşamba",
+    "lead": "Çarşamba'da Instagram Yönetimi. Samsun işletmeleri için pratik rehber."
   },
   {
-    "slug": "of-meta-reklam",
-    "title": "Of'da Meta Reklamları",
+    "slug": "carsamba-meta-reklam",
+    "title": "Çarşamba'da Meta Reklamları",
     "category": "İlçe",
-    "cluster": "Of",
-    "lead": "Of'da Meta Reklamları. Trabzon işletmeleri için pratik rehber."
+    "cluster": "Çarşamba",
+    "lead": "Çarşamba'da Meta Reklamları. Samsun işletmeleri için pratik rehber."
   },
   {
-    "slug": "vakfikebir-sosyal-medya-yonetimi-rehber",
-    "title": "Vakfıkebir Sosyal Medya Yönetimi Rehberi",
+    "slug": "vezirkopru-sosyal-medya-yonetimi-rehber",
+    "title": "Vezirköprü Sosyal Medya Yönetimi Rehberi",
     "category": "İlçe",
-    "cluster": "Vakfıkebir",
-    "lead": "Vakfıkebir Sosyal Medya Yönetimi Rehberi. Trabzon işletmeleri için pratik rehber."
+    "cluster": "Vezirköprü",
+    "lead": "Vezirköprü Sosyal Medya Yönetimi Rehberi. Samsun işletmeleri için pratik rehber."
   },
   {
-    "slug": "vakfikebir-instagram-yonetimi",
-    "title": "Vakfıkebir'da Instagram Yönetimi",
+    "slug": "vezirkopru-instagram-yonetimi",
+    "title": "Vezirköprü'de Instagram Yönetimi",
     "category": "İlçe",
-    "cluster": "Vakfıkebir",
-    "lead": "Vakfıkebir'da Instagram Yönetimi. Trabzon işletmeleri için pratik rehber."
+    "cluster": "Vezirköprü",
+    "lead": "Vezirköprü'de Instagram Yönetimi. Samsun işletmeleri için pratik rehber."
   },
   {
-    "slug": "vakfikebir-meta-reklam",
-    "title": "Vakfıkebir'da Meta Reklamları",
+    "slug": "vezirkopru-meta-reklam",
+    "title": "Vezirköprü'de Meta Reklamları",
     "category": "İlçe",
-    "cluster": "Vakfıkebir",
-    "lead": "Vakfıkebir'da Meta Reklamları. Trabzon işletmeleri için pratik rehber."
+    "cluster": "Vezirköprü",
+    "lead": "Vezirköprü'de Meta Reklamları. Samsun işletmeleri için pratik rehber."
   },
   {
-    "slug": "macka-sosyal-medya-yonetimi-rehber",
-    "title": "Maçka Sosyal Medya Yönetimi Rehberi",
+    "slug": "terme-sosyal-medya-yonetimi-rehber",
+    "title": "Terme Sosyal Medya Yönetimi Rehberi",
     "category": "İlçe",
-    "cluster": "Maçka",
-    "lead": "Maçka Sosyal Medya Yönetimi Rehberi. Trabzon işletmeleri için pratik rehber."
+    "cluster": "Terme",
+    "lead": "Terme Sosyal Medya Yönetimi Rehberi. Samsun işletmeleri için pratik rehber."
   },
   {
-    "slug": "macka-instagram-yonetimi",
-    "title": "Maçka'da Instagram Yönetimi",
+    "slug": "terme-instagram-yonetimi",
+    "title": "Terme'de Instagram Yönetimi",
     "category": "İlçe",
-    "cluster": "Maçka",
-    "lead": "Maçka'da Instagram Yönetimi. Trabzon işletmeleri için pratik rehber."
+    "cluster": "Terme",
+    "lead": "Terme'de Instagram Yönetimi. Samsun işletmeleri için pratik rehber."
   },
   {
-    "slug": "macka-meta-reklam",
-    "title": "Maçka'da Meta Reklamları",
+    "slug": "terme-meta-reklam",
+    "title": "Terme'de Meta Reklamları",
     "category": "İlçe",
-    "cluster": "Maçka",
-    "lead": "Maçka'da Meta Reklamları. Trabzon işletmeleri için pratik rehber."
+    "cluster": "Terme",
+    "lead": "Terme'de Meta Reklamları. Samsun işletmeleri için pratik rehber."
   },
   {
-    "slug": "besikduzu-sosyal-medya-yonetimi-rehber",
-    "title": "Beşikdüzü Sosyal Medya Yönetimi Rehberi",
+    "slug": "havza-sosyal-medya-yonetimi-rehber",
+    "title": "Havza Sosyal Medya Yönetimi Rehberi",
     "category": "İlçe",
-    "cluster": "Beşikdüzü",
-    "lead": "Beşikdüzü Sosyal Medya Yönetimi Rehberi. Trabzon işletmeleri için pratik rehber."
+    "cluster": "Havza",
+    "lead": "Havza Sosyal Medya Yönetimi Rehberi. Samsun işletmeleri için pratik rehber."
   },
   {
-    "slug": "besikduzu-instagram-yonetimi",
-    "title": "Beşikdüzü'da Instagram Yönetimi",
+    "slug": "havza-instagram-yonetimi",
+    "title": "Havza'da Instagram Yönetimi",
     "category": "İlçe",
-    "cluster": "Beşikdüzü",
-    "lead": "Beşikdüzü'da Instagram Yönetimi. Trabzon işletmeleri için pratik rehber."
+    "cluster": "Havza",
+    "lead": "Havza'da Instagram Yönetimi. Samsun işletmeleri için pratik rehber."
   },
   {
-    "slug": "besikduzu-meta-reklam",
-    "title": "Beşikdüzü'da Meta Reklamları",
+    "slug": "havza-meta-reklam",
+    "title": "Havza'da Meta Reklamları",
     "category": "İlçe",
-    "cluster": "Beşikdüzü",
-    "lead": "Beşikdüzü'da Meta Reklamları. Trabzon işletmeleri için pratik rehber."
+    "cluster": "Havza",
+    "lead": "Havza'da Meta Reklamları. Samsun işletmeleri için pratik rehber."
   },
   {
-    "slug": "carsibasi-sosyal-medya-yonetimi-rehber",
-    "title": "Çarşıbaşı Sosyal Medya Yönetimi Rehberi",
+    "slug": "kavak-sosyal-medya-yonetimi-rehber",
+    "title": "Kavak Sosyal Medya Yönetimi Rehberi",
     "category": "İlçe",
-    "cluster": "Çarşıbaşı",
-    "lead": "Çarşıbaşı Sosyal Medya Yönetimi Rehberi. Trabzon işletmeleri için pratik rehber."
+    "cluster": "Kavak",
+    "lead": "Kavak Sosyal Medya Yönetimi Rehberi. Samsun işletmeleri için pratik rehber."
   },
   {
-    "slug": "carsibasi-instagram-yonetimi",
-    "title": "Çarşıbaşı'da Instagram Yönetimi",
+    "slug": "kavak-instagram-yonetimi",
+    "title": "Kavak'ta Instagram Yönetimi",
     "category": "İlçe",
-    "cluster": "Çarşıbaşı",
-    "lead": "Çarşıbaşı'da Instagram Yönetimi. Trabzon işletmeleri için pratik rehber."
+    "cluster": "Kavak",
+    "lead": "Kavak'ta Instagram Yönetimi. Samsun işletmeleri için pratik rehber."
   },
   {
-    "slug": "carsibasi-meta-reklam",
-    "title": "Çarşıbaşı'da Meta Reklamları",
+    "slug": "kavak-meta-reklam",
+    "title": "Kavak'ta Meta Reklamları",
     "category": "İlçe",
-    "cluster": "Çarşıbaşı",
-    "lead": "Çarşıbaşı'da Meta Reklamları. Trabzon işletmeleri için pratik rehber."
+    "cluster": "Kavak",
+    "lead": "Kavak'ta Meta Reklamları. Samsun işletmeleri için pratik rehber."
   },
   {
-    "slug": "arakli-sosyal-medya-yonetimi-rehber",
-    "title": "Araklı Sosyal Medya Yönetimi Rehberi",
+    "slug": "alacam-sosyal-medya-yonetimi-rehber",
+    "title": "Alaçam Sosyal Medya Yönetimi Rehberi",
     "category": "İlçe",
-    "cluster": "Araklı",
-    "lead": "Araklı Sosyal Medya Yönetimi Rehberi. Trabzon işletmeleri için pratik rehber."
+    "cluster": "Alaçam",
+    "lead": "Alaçam Sosyal Medya Yönetimi Rehberi. Samsun işletmeleri için pratik rehber."
   },
   {
-    "slug": "arakli-instagram-yonetimi",
-    "title": "Araklı'da Instagram Yönetimi",
+    "slug": "alacam-instagram-yonetimi",
+    "title": "Alaçam'da Instagram Yönetimi",
     "category": "İlçe",
-    "cluster": "Araklı",
-    "lead": "Araklı'da Instagram Yönetimi. Trabzon işletmeleri için pratik rehber."
+    "cluster": "Alaçam",
+    "lead": "Alaçam'da Instagram Yönetimi. Samsun işletmeleri için pratik rehber."
   },
   {
-    "slug": "arakli-meta-reklam",
-    "title": "Araklı'da Meta Reklamları",
+    "slug": "alacam-meta-reklam",
+    "title": "Alaçam'da Meta Reklamları",
     "category": "İlçe",
-    "cluster": "Araklı",
-    "lead": "Araklı'da Meta Reklamları. Trabzon işletmeleri için pratik rehber."
+    "cluster": "Alaçam",
+    "lead": "Alaçam'da Meta Reklamları. Samsun işletmeleri için pratik rehber."
   },
   {
-    "slug": "caykara-sosyal-medya-yonetimi-rehber",
-    "title": "Çaykara Sosyal Medya Yönetimi Rehberi",
+    "slug": "19-mayis-sosyal-medya-yonetimi-rehber",
+    "title": "19 Mayıs Sosyal Medya Yönetimi Rehberi",
     "category": "İlçe",
-    "cluster": "Çaykara",
-    "lead": "Çaykara Sosyal Medya Yönetimi Rehberi. Trabzon işletmeleri için pratik rehber."
+    "cluster": "19 Mayıs",
+    "lead": "19 Mayıs Sosyal Medya Yönetimi Rehberi. Samsun işletmeleri için pratik rehber."
   },
   {
-    "slug": "caykara-instagram-yonetimi",
-    "title": "Çaykara'da Instagram Yönetimi",
+    "slug": "19-mayis-instagram-yonetimi",
+    "title": "19 Mayıs'ta Instagram Yönetimi",
     "category": "İlçe",
-    "cluster": "Çaykara",
-    "lead": "Çaykara'da Instagram Yönetimi. Trabzon işletmeleri için pratik rehber."
+    "cluster": "19 Mayıs",
+    "lead": "19 Mayıs'ta Instagram Yönetimi. Samsun işletmeleri için pratik rehber."
   },
   {
-    "slug": "caykara-meta-reklam",
-    "title": "Çaykara'da Meta Reklamları",
+    "slug": "19-mayis-meta-reklam",
+    "title": "19 Mayıs'ta Meta Reklamları",
     "category": "İlçe",
-    "cluster": "Çaykara",
-    "lead": "Çaykara'da Meta Reklamları. Trabzon işletmeleri için pratik rehber."
+    "cluster": "19 Mayıs",
+    "lead": "19 Mayıs'ta Meta Reklamları. Samsun işletmeleri için pratik rehber."
   },
   {
-    "slug": "tonya-sosyal-medya-yonetimi-rehber",
-    "title": "Tonya Sosyal Medya Yönetimi Rehberi",
+    "slug": "salipazari-sosyal-medya-yonetimi-rehber",
+    "title": "Salıpazarı Sosyal Medya Yönetimi Rehberi",
     "category": "İlçe",
-    "cluster": "Tonya",
-    "lead": "Tonya Sosyal Medya Yönetimi Rehberi. Trabzon işletmeleri için pratik rehber."
+    "cluster": "Salıpazarı",
+    "lead": "Salıpazarı Sosyal Medya Yönetimi Rehberi. Samsun işletmeleri için pratik rehber."
   },
   {
-    "slug": "tonya-instagram-yonetimi",
-    "title": "Tonya'da Instagram Yönetimi",
+    "slug": "salipazari-instagram-yonetimi",
+    "title": "Salıpazarı'nda Instagram Yönetimi",
     "category": "İlçe",
-    "cluster": "Tonya",
-    "lead": "Tonya'da Instagram Yönetimi. Trabzon işletmeleri için pratik rehber."
+    "cluster": "Salıpazarı",
+    "lead": "Salıpazarı'nda Instagram Yönetimi. Samsun işletmeleri için pratik rehber."
   },
   {
-    "slug": "tonya-meta-reklam",
-    "title": "Tonya'da Meta Reklamları",
+    "slug": "salipazari-meta-reklam",
+    "title": "Salıpazarı'nda Meta Reklamları",
     "category": "İlçe",
-    "cluster": "Tonya",
-    "lead": "Tonya'da Meta Reklamları. Trabzon işletmeleri için pratik rehber."
+    "cluster": "Salıpazarı",
+    "lead": "Salıpazarı'nda Meta Reklamları. Samsun işletmeleri için pratik rehber."
   },
   {
-    "slug": "duzkoy-sosyal-medya-yonetimi-rehber",
-    "title": "Düzköy Sosyal Medya Yönetimi Rehberi",
+    "slug": "asarcik-sosyal-medya-yonetimi-rehber",
+    "title": "Asarcık Sosyal Medya Yönetimi Rehberi",
     "category": "İlçe",
-    "cluster": "Düzköy",
-    "lead": "Düzköy Sosyal Medya Yönetimi Rehberi. Trabzon işletmeleri için pratik rehber."
+    "cluster": "Asarcık",
+    "lead": "Asarcık Sosyal Medya Yönetimi Rehberi. Samsun işletmeleri için pratik rehber."
   },
   {
-    "slug": "duzkoy-instagram-yonetimi",
-    "title": "Düzköy'da Instagram Yönetimi",
+    "slug": "asarcik-instagram-yonetimi",
+    "title": "Asarcık'ta Instagram Yönetimi",
     "category": "İlçe",
-    "cluster": "Düzköy",
-    "lead": "Düzköy'da Instagram Yönetimi. Trabzon işletmeleri için pratik rehber."
+    "cluster": "Asarcık",
+    "lead": "Asarcık'ta Instagram Yönetimi. Samsun işletmeleri için pratik rehber."
   },
   {
-    "slug": "duzkoy-meta-reklam",
-    "title": "Düzköy'da Meta Reklamları",
+    "slug": "asarcik-meta-reklam",
+    "title": "Asarcık'ta Meta Reklamları",
     "category": "İlçe",
-    "cluster": "Düzköy",
-    "lead": "Düzköy'da Meta Reklamları. Trabzon işletmeleri için pratik rehber."
+    "cluster": "Asarcık",
+    "lead": "Asarcık'ta Meta Reklamları. Samsun işletmeleri için pratik rehber."
   },
   {
-    "slug": "salpazari-sosyal-medya-yonetimi-rehber",
-    "title": "Şalpazarı Sosyal Medya Yönetimi Rehberi",
+    "slug": "ladik-sosyal-medya-yonetimi-rehber",
+    "title": "Ladik Sosyal Medya Yönetimi Rehberi",
     "category": "İlçe",
-    "cluster": "Şalpazarı",
-    "lead": "Şalpazarı Sosyal Medya Yönetimi Rehberi. Trabzon işletmeleri için pratik rehber."
+    "cluster": "Ladik",
+    "lead": "Ladik Sosyal Medya Yönetimi Rehberi. Samsun işletmeleri için pratik rehber."
   },
   {
-    "slug": "salpazari-instagram-yonetimi",
-    "title": "Şalpazarı'da Instagram Yönetimi",
+    "slug": "ladik-instagram-yonetimi",
+    "title": "Ladik'te Instagram Yönetimi",
     "category": "İlçe",
-    "cluster": "Şalpazarı",
-    "lead": "Şalpazarı'da Instagram Yönetimi. Trabzon işletmeleri için pratik rehber."
+    "cluster": "Ladik",
+    "lead": "Ladik'te Instagram Yönetimi. Samsun işletmeleri için pratik rehber."
   },
   {
-    "slug": "salpazari-meta-reklam",
-    "title": "Şalpazarı'da Meta Reklamları",
+    "slug": "ladik-meta-reklam",
+    "title": "Ladik'te Meta Reklamları",
     "category": "İlçe",
-    "cluster": "Şalpazarı",
-    "lead": "Şalpazarı'da Meta Reklamları. Trabzon işletmeleri için pratik rehber."
+    "cluster": "Ladik",
+    "lead": "Ladik'te Meta Reklamları. Samsun işletmeleri için pratik rehber."
   },
   {
-    "slug": "hayrat-sosyal-medya-yonetimi-rehber",
-    "title": "Hayrat Sosyal Medya Yönetimi Rehberi",
+    "slug": "ayvacik-sosyal-medya-yonetimi-rehber",
+    "title": "Ayvacık Sosyal Medya Yönetimi Rehberi",
     "category": "İlçe",
-    "cluster": "Hayrat",
-    "lead": "Hayrat Sosyal Medya Yönetimi Rehberi. Trabzon işletmeleri için pratik rehber."
+    "cluster": "Ayvacık",
+    "lead": "Ayvacık Sosyal Medya Yönetimi Rehberi. Samsun işletmeleri için pratik rehber."
   },
   {
-    "slug": "hayrat-instagram-yonetimi",
-    "title": "Hayrat'da Instagram Yönetimi",
+    "slug": "ayvacik-instagram-yonetimi",
+    "title": "Ayvacık'ta Instagram Yönetimi",
     "category": "İlçe",
-    "cluster": "Hayrat",
-    "lead": "Hayrat'da Instagram Yönetimi. Trabzon işletmeleri için pratik rehber."
+    "cluster": "Ayvacık",
+    "lead": "Ayvacık'ta Instagram Yönetimi. Samsun işletmeleri için pratik rehber."
   },
   {
-    "slug": "hayrat-meta-reklam",
-    "title": "Hayrat'da Meta Reklamları",
+    "slug": "ayvacik-meta-reklam",
+    "title": "Ayvacık'ta Meta Reklamları",
     "category": "İlçe",
-    "cluster": "Hayrat",
-    "lead": "Hayrat'da Meta Reklamları. Trabzon işletmeleri için pratik rehber."
+    "cluster": "Ayvacık",
+    "lead": "Ayvacık'ta Meta Reklamları. Samsun işletmeleri için pratik rehber."
   },
   {
-    "slug": "dernekpazari-sosyal-medya-yonetimi-rehber",
-    "title": "Dernekpazarı Sosyal Medya Yönetimi Rehberi",
+    "slug": "yakakent-sosyal-medya-yonetimi-rehber",
+    "title": "Yakakent Sosyal Medya Yönetimi Rehberi",
     "category": "İlçe",
-    "cluster": "Dernekpazarı",
-    "lead": "Dernekpazarı Sosyal Medya Yönetimi Rehberi. Trabzon işletmeleri için pratik rehber."
+    "cluster": "Yakakent",
+    "lead": "Yakakent Sosyal Medya Yönetimi Rehberi. Samsun işletmeleri için pratik rehber."
   },
   {
-    "slug": "dernekpazari-instagram-yonetimi",
-    "title": "Dernekpazarı'da Instagram Yönetimi",
+    "slug": "yakakent-instagram-yonetimi",
+    "title": "Yakakent'te Instagram Yönetimi",
     "category": "İlçe",
-    "cluster": "Dernekpazarı",
-    "lead": "Dernekpazarı'da Instagram Yönetimi. Trabzon işletmeleri için pratik rehber."
+    "cluster": "Yakakent",
+    "lead": "Yakakent'te Instagram Yönetimi. Samsun işletmeleri için pratik rehber."
   },
   {
-    "slug": "dernekpazari-meta-reklam",
-    "title": "Dernekpazarı'da Meta Reklamları",
+    "slug": "yakakent-meta-reklam",
+    "title": "Yakakent'te Meta Reklamları",
     "category": "İlçe",
-    "cluster": "Dernekpazarı",
-    "lead": "Dernekpazarı'da Meta Reklamları. Trabzon işletmeleri için pratik rehber."
+    "cluster": "Yakakent",
+    "lead": "Yakakent'te Meta Reklamları. Samsun işletmeleri için pratik rehber."
   },
   {
-    "slug": "koprubasi-sosyal-medya-yonetimi-rehber",
-    "title": "Köprübaşı Sosyal Medya Yönetimi Rehberi",
-    "category": "İlçe",
-    "cluster": "Köprübaşı",
-    "lead": "Köprübaşı Sosyal Medya Yönetimi Rehberi. Trabzon işletmeleri için pratik rehber."
-  },
-  {
-    "slug": "koprubasi-instagram-yonetimi",
-    "title": "Köprübaşı'da Instagram Yönetimi",
-    "category": "İlçe",
-    "cluster": "Köprübaşı",
-    "lead": "Köprübaşı'da Instagram Yönetimi. Trabzon işletmeleri için pratik rehber."
-  },
-  {
-    "slug": "koprubasi-meta-reklam",
-    "title": "Köprübaşı'da Meta Reklamları",
-    "category": "İlçe",
-    "cluster": "Köprübaşı",
-    "lead": "Köprübaşı'da Meta Reklamları. Trabzon işletmeleri için pratik rehber."
-  },
-  {
-    "slug": "trabzon-stories-reklamlari-ne-zaman-ise-yarar",
-    "title": "Trabzon: Stories reklamları ne zaman işe yarar",
+    "slug": "samsun-stories-reklamlari-ne-zaman-ise-yarar",
+    "title": "Samsun: Stories reklamları ne zaman işe yarar",
     "category": "Rehber",
     "cluster": "Genel",
-    "lead": "Trabzon: Stories reklamları ne zaman işe yarar. Trabzon işletmeleri için pratik rehber."
+    "lead": "Samsun: Stories reklamları ne zaman işe yarar. Samsun işletmeleri için pratik rehber."
   },
   {
-    "slug": "trabzon-carousel-icerik-fikirleri",
-    "title": "Trabzon: Carousel içerik fikirleri",
+    "slug": "samsun-carousel-icerik-fikirleri",
+    "title": "Samsun: Carousel içerik fikirleri",
     "category": "Rehber",
     "cluster": "Genel",
-    "lead": "Trabzon: Carousel içerik fikirleri. Trabzon işletmeleri için pratik rehber."
+    "lead": "Samsun: Carousel içerik fikirleri. Samsun işletmeleri için pratik rehber."
   },
   {
-    "slug": "trabzon-before-after-icerik-formati",
-    "title": "Trabzon: Before after içerik formatı",
+    "slug": "samsun-before-after-icerik-formati",
+    "title": "Samsun: Before after içerik formatı",
     "category": "Rehber",
     "cluster": "Genel",
-    "lead": "Trabzon: Before after içerik formatı. Trabzon işletmeleri için pratik rehber."
+    "lead": "Samsun: Before after içerik formatı. Samsun işletmeleri için pratik rehber."
   },
   {
-    "slug": "trabzon-musteri-yorumunu-icerige-cevirmek",
-    "title": "Trabzon: Müşteri yorumunu içeriğe çevirmek",
+    "slug": "samsun-musteri-yorumunu-icerige-cevirmek",
+    "title": "Samsun: Müşteri yorumunu içeriğe çevirmek",
     "category": "Rehber",
     "cluster": "Genel",
-    "lead": "Trabzon: Müşteri yorumunu içeriğe çevirmek. Trabzon işletmeleri için pratik rehber."
+    "lead": "Samsun: Müşteri yorumunu içeriğe çevirmek. Samsun işletmeleri için pratik rehber."
   },
   {
-    "slug": "trabzon-canli-yayin-stratejisi",
-    "title": "Trabzon: Canlı yayın stratejisi",
+    "slug": "samsun-canli-yayin-stratejisi",
+    "title": "Samsun: Canlı yayın stratejisi",
     "category": "Rehber",
     "cluster": "Genel",
-    "lead": "Trabzon: Canlı yayın stratejisi. Trabzon işletmeleri için pratik rehber."
+    "lead": "Samsun: Canlı yayın stratejisi. Samsun işletmeleri için pratik rehber."
   },
   {
-    "slug": "trabzon-youtube-shorts-vs-reels",
-    "title": "Trabzon: YouTube Shorts vs Reels",
+    "slug": "samsun-youtube-shorts-vs-reels",
+    "title": "Samsun: YouTube Shorts vs Reels",
     "category": "Rehber",
     "cluster": "Genel",
-    "lead": "Trabzon: YouTube Shorts vs Reels. Trabzon işletmeleri için pratik rehber."
+    "lead": "Samsun: YouTube Shorts vs Reels. Samsun işletmeleri için pratik rehber."
   },
   {
-    "slug": "trabzon-kapak-fotografi-optimizasyonu",
-    "title": "Trabzon: Kapak fotoğrafı optimizasyonu",
+    "slug": "samsun-kapak-fotografi-optimizasyonu",
+    "title": "Samsun: Kapak fotoğrafı optimizasyonu",
     "category": "Rehber",
     "cluster": "Genel",
-    "lead": "Trabzon: Kapak fotoğrafı optimizasyonu. Trabzon işletmeleri için pratik rehber."
+    "lead": "Samsun: Kapak fotoğrafı optimizasyonu. Samsun işletmeleri için pratik rehber."
   },
   {
-    "slug": "trabzon-cta-butonlari-sosyal-medyada",
-    "title": "Trabzon: CTA butonları sosyal medyada",
+    "slug": "samsun-cta-butonlari-sosyal-medyada",
+    "title": "Samsun: CTA butonları sosyal medyada",
     "category": "Rehber",
     "cluster": "Genel",
-    "lead": "Trabzon: CTA butonları sosyal medyada. Trabzon işletmeleri için pratik rehber."
+    "lead": "Samsun: CTA butonları sosyal medyada. Samsun işletmeleri için pratik rehber."
   },
   {
-    "slug": "trabzon-form-doldurma-reklamlari",
-    "title": "Trabzon: Form doldurma reklamları",
+    "slug": "samsun-form-doldurma-reklamlari",
+    "title": "Samsun: Form doldurma reklamları",
     "category": "Rehber",
     "cluster": "Genel",
-    "lead": "Trabzon: Form doldurma reklamları. Trabzon işletmeleri için pratik rehber."
+    "lead": "Samsun: Form doldurma reklamları. Samsun işletmeleri için pratik rehber."
   },
   {
-    "slug": "trabzon-lookalike-kitleler",
-    "title": "Trabzon: Lookalike kitleler",
+    "slug": "samsun-lookalike-kitleler",
+    "title": "Samsun: Lookalike kitleler",
     "category": "Rehber",
     "cluster": "Genel",
-    "lead": "Trabzon: Lookalike kitleler. Trabzon işletmeleri için pratik rehber."
+    "lead": "Samsun: Lookalike kitleler. Samsun işletmeleri için pratik rehber."
   },
   {
-    "slug": "trabzon-ozel-kitle-olusturma",
-    "title": "Trabzon: Özel kitle oluşturma",
+    "slug": "samsun-ozel-kitle-olusturma",
+    "title": "Samsun: Özel kitle oluşturma",
     "category": "Rehber",
     "cluster": "Genel",
-    "lead": "Trabzon: Özel kitle oluşturma. Trabzon işletmeleri için pratik rehber."
+    "lead": "Samsun: Özel kitle oluşturma. Samsun işletmeleri için pratik rehber."
   },
   {
-    "slug": "trabzon-frekans-ve-yorgunluk",
-    "title": "Trabzon: Frekans ve yorgunluk",
+    "slug": "samsun-frekans-ve-yorgunluk",
+    "title": "Samsun: Frekans ve yorgunluk",
     "category": "Rehber",
     "cluster": "Genel",
-    "lead": "Trabzon: Frekans ve yorgunluk. Trabzon işletmeleri için pratik rehber."
+    "lead": "Samsun: Frekans ve yorgunluk. Samsun işletmeleri için pratik rehber."
   },
   {
-    "slug": "trabzon-a-b-test-kreatif",
-    "title": "Trabzon: A/B test kreatif",
+    "slug": "samsun-a-b-test-kreatif",
+    "title": "Samsun: A/B test kreatif",
     "category": "Rehber",
     "cluster": "Genel",
-    "lead": "Trabzon: A/B test kreatif. Trabzon işletmeleri için pratik rehber."
+    "lead": "Samsun: A/B test kreatif. Samsun işletmeleri için pratik rehber."
   },
   {
-    "slug": "trabzon-hook-ilk-3-saniye",
-    "title": "Trabzon: Hook ilk 3 saniye",
+    "slug": "samsun-hook-ilk-3-saniye",
+    "title": "Samsun: Hook ilk 3 saniye",
     "category": "Rehber",
     "cluster": "Genel",
-    "lead": "Trabzon: Hook ilk 3 saniye. Trabzon işletmeleri için pratik rehber."
+    "lead": "Samsun: Hook ilk 3 saniye. Samsun işletmeleri için pratik rehber."
   },
   {
-    "slug": "trabzon-altyazili-video-neden-sart",
-    "title": "Trabzon: Altyazılı video neden şart",
+    "slug": "samsun-altyazili-video-neden-sart",
+    "title": "Samsun: Altyazılı video neden şart",
     "category": "Rehber",
     "cluster": "Genel",
-    "lead": "Trabzon: Altyazılı video neden şart. Trabzon işletmeleri için pratik rehber."
+    "lead": "Samsun: Altyazılı video neden şart. Samsun işletmeleri için pratik rehber."
   },
   {
-    "slug": "trabzon-muzik-hakki-ve-reels",
-    "title": "Trabzon: Müzik hakkı ve Reels",
+    "slug": "samsun-muzik-hakki-ve-reels",
+    "title": "Samsun: Müzik hakkı ve Reels",
     "category": "Rehber",
     "cluster": "Genel",
-    "lead": "Trabzon: Müzik hakkı ve Reels. Trabzon işletmeleri için pratik rehber."
+    "lead": "Samsun: Müzik hakkı ve Reels. Samsun işletmeleri için pratik rehber."
   },
   {
-    "slug": "trabzon-marka-isbirligi-sozlesmesi",
-    "title": "Trabzon: Marka işbirliği sözleşmesi",
+    "slug": "samsun-marka-isbirligi-sozlesmesi",
+    "title": "Samsun: Marka işbirliği sözleşmesi",
     "category": "Rehber",
     "cluster": "Genel",
-    "lead": "Trabzon: Marka işbirliği sözleşmesi. Trabzon işletmeleri için pratik rehber."
+    "lead": "Samsun: Marka işbirliği sözleşmesi. Samsun işletmeleri için pratik rehber."
   },
   {
-    "slug": "trabzon-ajans-brief-nasil-yazilir",
-    "title": "Trabzon: Ajans brief nasıl yazılır",
+    "slug": "samsun-ajans-brief-nasil-yazilir",
+    "title": "Samsun: Ajans brief nasıl yazılır",
     "category": "Rehber",
     "cluster": "Genel",
-    "lead": "Trabzon: Ajans brief nasıl yazılır. Trabzon işletmeleri için pratik rehber."
+    "lead": "Samsun: Ajans brief nasıl yazılır. Samsun işletmeleri için pratik rehber."
   },
   {
-    "slug": "trabzon-aylik-rapor-ornegi",
-    "title": "Trabzon: Aylık rapor örneği",
+    "slug": "samsun-aylik-rapor-ornegi",
+    "title": "Samsun: Aylık rapor örneği",
     "category": "Rehber",
     "cluster": "Genel",
-    "lead": "Trabzon: Aylık rapor örneği. Trabzon işletmeleri için pratik rehber."
+    "lead": "Samsun: Aylık rapor örneği. Samsun işletmeleri için pratik rehber."
   },
   {
-    "slug": "trabzon-kpi-secimi-yerel-isletme",
-    "title": "Trabzon: KPI seçimi yerel işletme",
+    "slug": "samsun-kpi-secimi-yerel-isletme",
+    "title": "Samsun: KPI seçimi yerel işletme",
     "category": "Rehber",
     "cluster": "Genel",
-    "lead": "Trabzon: KPI seçimi yerel işletme. Trabzon işletmeleri için pratik rehber."
+    "lead": "Samsun: KPI seçimi yerel işletme. Samsun işletmeleri için pratik rehber."
   },
   {
-    "slug": "trabzon-roas-vs-cpa",
-    "title": "Trabzon: ROAS vs CPA",
+    "slug": "samsun-roas-vs-cpa",
+    "title": "Samsun: ROAS vs CPA",
     "category": "Rehber",
     "cluster": "Genel",
-    "lead": "Trabzon: ROAS vs CPA. Trabzon işletmeleri için pratik rehber."
+    "lead": "Samsun: ROAS vs CPA. Samsun işletmeleri için pratik rehber."
   },
   {
-    "slug": "trabzon-marka-guveni-sinyalleri",
-    "title": "Trabzon: Marka güveni sinyalleri",
+    "slug": "samsun-marka-guveni-sinyalleri",
+    "title": "Samsun: Marka güveni sinyalleri",
     "category": "Rehber",
     "cluster": "Genel",
-    "lead": "Trabzon: Marka güveni sinyalleri. Trabzon işletmeleri için pratik rehber."
+    "lead": "Samsun: Marka güveni sinyalleri. Samsun işletmeleri için pratik rehber."
   },
   {
-    "slug": "trabzon-seffaf-sozlesme-maddeleri",
-    "title": "Trabzon: Şeffaf sözleşme maddeleri",
+    "slug": "samsun-seffaf-sozlesme-maddeleri",
+    "title": "Samsun: Şeffaf sözleşme maddeleri",
     "category": "Rehber",
     "cluster": "Genel",
-    "lead": "Trabzon: Şeffaf sözleşme maddeleri. Trabzon işletmeleri için pratik rehber."
+    "lead": "Samsun: Şeffaf sözleşme maddeleri. Samsun işletmeleri için pratik rehber."
   },
   {
-    "slug": "trabzon-i-lk-ay-cayma-hakki-neden-onemli",
-    "title": "Trabzon: İlk ay cayma hakkı neden önemli",
+    "slug": "samsun-i-lk-ay-cayma-hakki-neden-onemli",
+    "title": "Samsun: İlk ay cayma hakkı neden önemli",
     "category": "Rehber",
     "cluster": "Genel",
-    "lead": "Trabzon: İlk ay cayma hakkı neden önemli. Trabzon işletmeleri için pratik rehber."
+    "lead": "Samsun: İlk ay cayma hakkı neden önemli. Samsun işletmeleri için pratik rehber."
   },
   {
-    "slug": "trabzon-ortahisar-vs-ilce-hedefleme",
-    "title": "Trabzon: Ortahisar vs ilçe hedefleme",
+    "slug": "samsun-ilkadim-vs-ilce-hedefleme",
+    "title": "Samsun: İlkadım vs ilçe hedefleme",
     "category": "Rehber",
     "cluster": "Genel",
-    "lead": "Trabzon: Ortahisar vs ilçe hedefleme. Trabzon işletmeleri için pratik rehber."
+    "lead": "Samsun: İlkadım vs ilçe hedefleme. Samsun işletmeleri için pratik rehber."
   },
   {
-    "slug": "trabzon-karadeniz-gorsel-dili",
-    "title": "Trabzon: Karadeniz görsel dili",
+    "slug": "samsun-karadeniz-gorsel-dili",
+    "title": "Samsun: Karadeniz görsel dili",
     "category": "Rehber",
     "cluster": "Genel",
-    "lead": "Trabzon: Karadeniz görsel dili. Trabzon işletmeleri için pratik rehber."
+    "lead": "Samsun: Karadeniz görsel dili. Samsun işletmeleri için pratik rehber."
   },
   {
-    "slug": "trabzon-yagmurlu-gun-icerik-fikirleri",
-    "title": "Trabzon: Yağmurlu gün içerik fikirleri",
+    "slug": "samsun-yagmurlu-gun-icerik-fikirleri",
+    "title": "Samsun: Yağmurlu gün içerik fikirleri",
     "category": "Rehber",
     "cluster": "Genel",
-    "lead": "Trabzon: Yağmurlu gün içerik fikirleri. Trabzon işletmeleri için pratik rehber."
+    "lead": "Samsun: Yağmurlu gün içerik fikirleri. Samsun işletmeleri için pratik rehber."
   },
   {
-    "slug": "trabzon-sahil-isletmeleri-icin-icerik",
-    "title": "Trabzon: Sahil işletmeleri için içerik",
+    "slug": "samsun-sahil-isletmeleri-icin-icerik",
+    "title": "Samsun: Sahil işletmeleri için içerik",
     "category": "Rehber",
     "cluster": "Genel",
-    "lead": "Trabzon: Sahil işletmeleri için içerik. Trabzon işletmeleri için pratik rehber."
+    "lead": "Samsun: Sahil işletmeleri için içerik. Samsun işletmeleri için pratik rehber."
   },
   {
-    "slug": "trabzon-dag-turizmi-sosyal-medya",
-    "title": "Trabzon: Dağ turizmi sosyal medya",
+    "slug": "samsun-yayla-turizmi-sosyal-medya",
+    "title": "Samsun: Yayla turizmi sosyal medya",
     "category": "Rehber",
     "cluster": "Genel",
-    "lead": "Trabzon: Dağ turizmi sosyal medya. Trabzon işletmeleri için pratik rehber."
+    "lead": "Samsun: Yayla turizmi sosyal medya. Samsun işletmeleri için pratik rehber."
   },
   {
-    "slug": "trabzon-balik-restorani-icerik",
-    "title": "Trabzon: Balık restoranı içerik",
+    "slug": "samsun-balik-restorani-icerik",
+    "title": "Samsun: Balık restoranı içerik",
     "category": "Rehber",
     "cluster": "Genel",
-    "lead": "Trabzon: Balık restoranı içerik. Trabzon işletmeleri için pratik rehber."
+    "lead": "Samsun: Balık restoranı içerik. Samsun işletmeleri için pratik rehber."
   },
   {
-    "slug": "trabzon-kahve-dukkani-reels",
-    "title": "Trabzon: Kahve dükkanı Reels",
+    "slug": "samsun-kahve-dukkani-reels",
+    "title": "Samsun: Kahve dükkanı Reels",
     "category": "Rehber",
     "cluster": "Genel",
-    "lead": "Trabzon: Kahve dükkanı Reels. Trabzon işletmeleri için pratik rehber."
+    "lead": "Samsun: Kahve dükkanı Reels. Samsun işletmeleri için pratik rehber."
   },
   {
-    "slug": "trabzon-klinik-randevu-lead",
-    "title": "Trabzon: Klinik randevu lead",
+    "slug": "samsun-klinik-randevu-lead",
+    "title": "Samsun: Klinik randevu lead",
     "category": "Rehber",
     "cluster": "Genel",
-    "lead": "Trabzon: Klinik randevu lead. Trabzon işletmeleri için pratik rehber."
+    "lead": "Samsun: Klinik randevu lead. Samsun işletmeleri için pratik rehber."
   },
   {
-    "slug": "trabzon-dis-klinigi-guven-icerigi",
-    "title": "Trabzon: Diş kliniği güven içeriği",
+    "slug": "samsun-dis-klinigi-guven-icerigi",
+    "title": "Samsun: Diş kliniği güven içeriği",
     "category": "Rehber",
     "cluster": "Genel",
-    "lead": "Trabzon: Diş kliniği güven içeriği. Trabzon işletmeleri için pratik rehber."
+    "lead": "Samsun: Diş kliniği güven içeriği. Samsun işletmeleri için pratik rehber."
   },
   {
-    "slug": "trabzon-emlak-portfoy-vitrini",
-    "title": "Trabzon: Emlak portföy vitrini",
+    "slug": "samsun-emlak-portfoy-vitrini",
+    "title": "Samsun: Emlak portföy vitrini",
     "category": "Rehber",
     "cluster": "Genel",
-    "lead": "Trabzon: Emlak portföy vitrini. Trabzon işletmeleri için pratik rehber."
+    "lead": "Samsun: Emlak portföy vitrini. Samsun işletmeleri için pratik rehber."
   },
   {
-    "slug": "trabzon-i-nsaat-proje-tanitimi",
-    "title": "Trabzon: İnşaat proje tanıtımı",
+    "slug": "samsun-i-nsaat-proje-tanitimi",
+    "title": "Samsun: İnşaat proje tanıtımı",
     "category": "Rehber",
     "cluster": "Genel",
-    "lead": "Trabzon: İnşaat proje tanıtımı. Trabzon işletmeleri için pratik rehber."
+    "lead": "Samsun: İnşaat proje tanıtımı. Samsun işletmeleri için pratik rehber."
   },
   {
-    "slug": "trabzon-avukat-linkedin-icerik",
-    "title": "Trabzon: Avukat LinkedIn içerik",
+    "slug": "samsun-avukat-linkedin-icerik",
+    "title": "Samsun: Avukat LinkedIn içerik",
     "category": "Rehber",
     "cluster": "Genel",
-    "lead": "Trabzon: Avukat LinkedIn içerik. Trabzon işletmeleri için pratik rehber."
+    "lead": "Samsun: Avukat LinkedIn içerik. Samsun işletmeleri için pratik rehber."
   },
   {
-    "slug": "trabzon-spor-salonu-uyelik-kampanyasi",
-    "title": "Trabzon: Spor salonu üyelik kampanyası",
+    "slug": "samsun-spor-salonu-uyelik-kampanyasi",
+    "title": "Samsun: Spor salonu üyelik kampanyası",
     "category": "Rehber",
     "cluster": "Genel",
-    "lead": "Trabzon: Spor salonu üyelik kampanyası. Trabzon işletmeleri için pratik rehber."
+    "lead": "Samsun: Spor salonu üyelik kampanyası. Samsun işletmeleri için pratik rehber."
   },
   {
-    "slug": "trabzon-ozel-okul-kayit-donemi",
-    "title": "Trabzon: Özel okul kayıt dönemi",
+    "slug": "samsun-ozel-okul-kayit-donemi",
+    "title": "Samsun: Özel okul kayıt dönemi",
     "category": "Rehber",
     "cluster": "Genel",
-    "lead": "Trabzon: Özel okul kayıt dönemi. Trabzon işletmeleri için pratik rehber."
+    "lead": "Samsun: Özel okul kayıt dönemi. Samsun işletmeleri için pratik rehber."
   },
   {
-    "slug": "trabzon-butik-urun-cekimi",
-    "title": "Trabzon: Butik ürün çekimi",
+    "slug": "samsun-butik-urun-cekimi",
+    "title": "Samsun: Butik ürün çekimi",
     "category": "Rehber",
     "cluster": "Genel",
-    "lead": "Trabzon: Butik ürün çekimi. Trabzon işletmeleri için pratik rehber."
+    "lead": "Samsun: Butik ürün çekimi. Samsun işletmeleri için pratik rehber."
   },
   {
-    "slug": "trabzon-eczane-bilgilendirici-icerik",
-    "title": "Trabzon: Eczane bilgilendirici içerik",
+    "slug": "samsun-eczane-bilgilendirici-icerik",
+    "title": "Samsun: Eczane bilgilendirici içerik",
     "category": "Rehber",
     "cluster": "Genel",
-    "lead": "Trabzon: Eczane bilgilendirici içerik. Trabzon işletmeleri için pratik rehber."
+    "lead": "Samsun: Eczane bilgilendirici içerik. Samsun işletmeleri için pratik rehber."
   },
   {
-    "slug": "trabzon-oto-galeri-video-tur",
-    "title": "Trabzon: Oto galeri video tur",
+    "slug": "samsun-oto-galeri-video-tur",
+    "title": "Samsun: Oto galeri video tur",
     "category": "Rehber",
     "cluster": "Genel",
-    "lead": "Trabzon: Oto galeri video tur. Trabzon işletmeleri için pratik rehber."
+    "lead": "Samsun: Oto galeri video tur. Samsun işletmeleri için pratik rehber."
   },
   {
-    "slug": "trabzon-tur-acentesi-paket-tanitimi",
-    "title": "Trabzon: Tur acentesi paket tanıtımı",
+    "slug": "samsun-tur-acentesi-paket-tanitimi",
+    "title": "Samsun: Tur acentesi paket tanıtımı",
     "category": "Rehber",
     "cluster": "Genel",
-    "lead": "Trabzon: Tur acentesi paket tanıtımı. Trabzon işletmeleri için pratik rehber."
+    "lead": "Samsun: Tur acentesi paket tanıtımı. Samsun işletmeleri için pratik rehber."
   }
 ];
 

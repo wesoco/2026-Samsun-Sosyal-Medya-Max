@@ -17,7 +17,7 @@ export default async function AdminSettingsPage() {
     const existing = await prisma.siteSetting.findUnique({ where: { id: "default" } });
     const smtpPassRaw = String(formData.get("smtpPass") || "");
     const data = {
-      siteName: String(formData.get("siteName") || "Trabzon Sosyal Medya"),
+      siteName: String(formData.get("siteName") || "Samsun Sosyal Medya"),
       phone: String(formData.get("phone") || ""),
       phoneDisplay: String(formData.get("phoneDisplay") || ""),
       email: String(formData.get("email") || ""),
@@ -69,7 +69,7 @@ export default async function AdminSettingsPage() {
           <div className="admin-field-grid">
             <label>
               Site adı
-              <input name="siteName" defaultValue={s?.siteName || "Trabzon Sosyal Medya"} />
+              <input name="siteName" defaultValue={s?.siteName || "Samsun Sosyal Medya"} />
             </label>
             <label>
               E-posta (sitede görünen)

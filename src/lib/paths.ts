@@ -48,7 +48,7 @@ export const internal = {
 } as const;
 
 /** Sitemap / canonical / schema için sabit production domain */
-export const CANONICAL_SITE_URL = "https://trabzonsosyalmedya.com";
+export const CANONICAL_SITE_URL = "https://samsunsosyalmedya.com";
 
 /**
  * Public site origin. Asla localhost / Coolify preview / wesoco staging yazmaz
@@ -67,7 +67,7 @@ function isPublicProductionOrigin(value: string) {
     if (u.protocol !== "https:") return false;
     const host = u.hostname.toLowerCase();
     if (host === "localhost" || host === "127.0.0.1" || host.endsWith(".local")) return false;
-    if (host.includes("wesoco.com") && host !== "trabzonsosyalmedya.com") return false;
+    if (host.includes("wesoco.com") && host !== "samsunsosyalmedya.com") return false;
     if (/^[a-z0-9]+\.wesoco\.com(\.tr)?$/i.test(host)) return false;
     return true;
   } catch {

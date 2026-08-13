@@ -1,5 +1,5 @@
 {
-  "name": "trabzon-sosyal-medya",
+  "name": "samsun-sosyal-medya",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -26,7 +26,8 @@
     "check:links": "npx tsx scripts/check-internal-links.ts",
     "db:studio": "prisma studio",
     "postinstall": "prisma generate",
-    "db:seed-refs": "tsx prisma/seed-wesoco-refs.ts"
+    "db:seed-refs": "tsx prisma/seed-wesoco-refs.ts",
+    "db:improve-services": "npx tsx prisma/improve-services-samsun.ts"
   },
   "dependencies": {
     "@prisma/client": "^6.19.3",

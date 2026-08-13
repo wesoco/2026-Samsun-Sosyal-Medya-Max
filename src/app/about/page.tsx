@@ -9,9 +9,9 @@ export const dynamic = "force-dynamic";
 
 export async function generateMetadata(): Promise<Metadata> {
   return buildMetadata({
-    title: "Hakkımızda | Trabzon Sosyal Medya Ajansı. Wesoco",
+    title: "Hakkımızda | Samsun Sosyal Medya Ajansı. Wesoco",
     description:
-      "Trabzon Sosyal Medya, Wesoco bünyesinde yerel işletmelere Instagram yönetimi, içerik, Meta Ads ve raporlama sunar. Neden ajans, kim yönetir, nasıl çalışırız.",
+      "Samsun Sosyal Medya, Wesoco bünyesinde yerel işletmelere Instagram yönetimi, içerik, Meta Ads ve raporlama sunar. Neden ajans, kim yönetir, nasıl çalışırız.",
     path: paths.about,
   });
 }
@@ -34,9 +34,9 @@ export default function AboutPage() {
               <span>Hakkımızda</span>
             </nav>
             <span className="section-label">Hakkımızda</span>
-            <h1>Trabzon&apos;da sosyal medya denince akla ilk biz.</h1>
+            <h1>Samsun&apos;da sosyal medya denince akla ilk biz.</h1>
             <p className="lead">
-              Wesoco bünyesinde Trabzon Sosyal Medya; 18 ilçede Instagram, içerik üretimi, Meta Ads ve Google Ads ile
+              Wesoco bünyesinde Samsun Sosyal Medya; 17 ilçede Instagram, içerik üretimi, Meta Ads ve Google Ads ile
               yerel markaları büyütür.
             </p>
           </div>
@@ -46,14 +46,14 @@ export default function AboutPage() {
           <div className="container narrow">
             <AnswerBox title="Kısa cevap">
               <p>
-                Trabzon Sosyal Medya, Wesoco güvencesiyle çalışan yerel sosyal medya ajansıdır. Strateji, içerik, yayın,
+                Samsun Sosyal Medya, Wesoco güvencesiyle çalışan yerel sosyal medya ajansıdır. Strateji, içerik, yayın,
                 reklam yönetimi ve aylık rapor tek çatıdadır. İçerikleri ekip hazırlar; onayınızdan sonra yayınlanır.
               </p>
             </AnswerBox>
 
             <h2>Bu firma kim? Wesoco ilişkisi</h2>
             <p>
-              Trabzon Sosyal Medya, Wesoco’nun Trabzon’daki sosyal medya ve performans odaklı yüzüdür. Yerel işletmeler
+              Samsun Sosyal Medya, Wesoco’nun Samsun’daki sosyal medya ve performans odaklı yüzüdür. Yerel işletmeler
               için sade dil, yerinde çekim ve şeffaf medya raporlaması sunarız. Amaç abartılı vaat değil; ölçülebilir
               mesaj, arama ve mağaza trafiği.
             </p>
@@ -83,7 +83,7 @@ export default function AboutPage() {
 
             <h2>Neden sizi tercih etmeliyim?</h2>
             <ComparisonTable
-              caption="Kendi yönetmek vs freelance vs ajans (Trabzon)"
+              caption="Kendi yönetmek vs freelance vs ajans (Samsun)"
               headers={["Ölçüt", "Kendi yönetmek", "Freelance", "Ajans (biz)"]}
               rows={[
                 ["Süreklilik", "Zamana bağlı", "Tek kişi riski", "Ekip + yedek"],
@@ -101,7 +101,7 @@ export default function AboutPage() {
 
             <h2>Nerede hizmet veriyoruz?</h2>
             <p>
-              Ortahisar merkez ofis; Trabzon’un 18 ilçesinde uzaktan yönetim veya yerinde çekim.{" "}
+              İlkadım merkez ofis; Samsun’un 17 ilçesinde uzaktan yönetim veya yerinde çekim.{" "}
               <Link href={paths.regions}>Hizmet bölgeleri</Link>.
             </p>
 

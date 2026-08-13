@@ -17,7 +17,7 @@ const prisma = new PrismaClient();
 const DEFAULT_SOURCE = "https://v0so0o884wo4ksckkow4ssc0.wesoco.com";
 const SOURCE = (process.env.OLD_BLOG_SOURCE || DEFAULT_SOURCE).replace(/\/$/, "");
 /** Tüm yazılar için marka kapak — çeşitlilik istenirse sonradan admin’den değiştirilir */
-const BRAND_COVER = "/assets/Trabzon-sosyal-medya.webp";
+const BRAND_COVER = "/assets/Samsun-sosyal-medya.webp";
 
 type LegacyPost = {
   id: string;
@@ -92,7 +92,7 @@ async function main() {
   console.log("Kaynak:", SOURCE);
   const res = await fetch(`${SOURCE}/api/blog`, {
     headers: {
-      "User-Agent": "TrabzonSosyalMedya-Importer/1.0",
+      "User-Agent": "SamsunSosyalMedya-Importer/1.0",
       Accept: "application/json",
     },
   });
@@ -121,7 +121,7 @@ async function main() {
     const published = p.isPublished !== false;
     const coverUrl = BRAND_COVER;
 
-    const seoTitle = `${title} | Trabzon Sosyal Medya`;
+    const seoTitle = `${title} | Samsun Sosyal Medya`;
     const seoDesc = lead.slice(0, 160);
 
     const existing = await prisma.blogPost.findUnique({

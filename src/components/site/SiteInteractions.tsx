@@ -106,9 +106,13 @@ export function SiteInteractions({ variant = "home" }: { variant?: "home" | "inn
       matching.forEach((card, i) => {
         const visible = expanded || i < REF_PAGE;
         card.hidden = !visible;
+        card.classList.toggle("is-hidden", !visible);
       });
       refCards.forEach((card) => {
-        if ((card.getAttribute("data-cat") || "") !== filter) card.hidden = true;
+        if ((card.getAttribute("data-cat") || "") !== filter) {
+          card.hidden = true;
+          card.classList.add("is-hidden");
+        }
       });
       if (moreBtn) {
         const needsMore = matching.length > REF_PAGE && !expanded;

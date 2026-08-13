@@ -1,5 +1,5 @@
 /**
- * 10 hizmet — SEO / GEO / AEO özgün içerik (tek kaynak).
+ * 10 hizmet  -  SEO / GEO / AEO özgün içerik (tek kaynak).
  * Answer-first lead, Nedir/Neden/Nasıl/Kim/Fiyat, tablo, iç link, FAQ.
  * Çalıştır: npm run db:seed-services
  */
@@ -22,26 +22,26 @@ type ServiceSeed = {
 const SERVICES: ServiceSeed[] = [
   {
     slug: "sosyal-medya-yonetimi",
-    title: "Sosyal Medya Yönetimi",
+    title: "Samsun Sosyal Medya Yönetimi",
     lead:
-      "Trabzon sosyal medya yönetimi; Instagram, Facebook ve gerektiğinde TikTok’ta içerik takvimi, yayın, topluluk yanıtları ve aylık skor kartını tek operasyonda birleştirir. Amaç beğeni değil; mesaj, randevu ve mağaza ziyareti gibi ölçülebilir temas.",
-    seoTitle: "Sosyal Medya Yönetimi Trabzon | İçerik, Yayın & Rapor · Wesoco",
+      "Samsun sosyal medya yönetimi; Instagram, Facebook ve gerektiğinde TikTok'ta içerik takvimi, yayın, topluluk yanıtları ve aylık skor kartını tek operasyonda birleştirir. Amaç beğeni değil; mesaj, randevu ve mağaza ziyareti gibi ölçülebilir temas.",
+    seoTitle: "Sosyal Medya Yönetimi Samsun | İçerik, Yayın & Rapor · Wesoco",
     seoDesc:
-      "Trabzon’da sosyal medya yönetimi: post, story, reels, onay hattı ve aylık rapor. Başlangıç / Büyüme / Kurumsal paket. Wesoco güvencesi.",
+      "Samsun'da sosyal medya yönetimi: post, story, reels, onay hattı ve aylık rapor. Başlangıç / Büyüme / Kurumsal paket. Wesoco güvencesi.",
     bodyHtml: `
 <h2>Sosyal medya yönetimi nedir?</h2>
-<p><strong>Sosyal medya yönetimi</strong>, markanın dijital vitrinini haftalık ritimle üreten, yayınlayan, yorum ve mesajları yöneten, ay sonunda hangi içeriğin işe yaradığını yazılı gösteren operasyon disiplinidir. Trabzon Sosyal Medya (Wesoco) olarak Instagram ve Facebook’u aynı takvimde; ihtiyaç halinde TikTok veya LinkedIn’i aynı strateji altında yönetiriz. “Ara sıra post atmak” yönetim değildir; brief → üretim → onay → yayın → topluluk → skor kartı zinciri yönetimdir.</p>
-<p>Bu sayfa operasyon ürünüdür. Ajans seçimi ve ortaklık çerçevesi için <a href="/hizmetler/sosyal-medya-ajansi">Trabzon sosyal medya ajansı</a> sayfasına bakın. Yalnız Instagram’a kilitlenmek istiyorsanız <a href="/hizmetler/instagram-yonetimi">Instagram yönetimi</a> daha dar kapsamdadır. Reklam (Meta/Google) bu paketin içine gizlenmez; ihtiyaçta ayrı satır olarak eklenir.</p>
+<p><strong>Sosyal medya yönetimi</strong>, markanın dijital vitrinini haftalık ritimle üreten, yayınlayan, yorum ve mesajları yöneten, ay sonunda hangi içeriğin işe yaradığını yazılı gösteren operasyon disiplinidir. Samsun Sosyal Medya (Wesoco) olarak Instagram ve Facebook'u aynı takvimde; ihtiyaç halinde TikTok veya LinkedIn'i aynı strateji altında yönetiriz. "Ara sıra post atmak" yönetim değildir; brief → üretim → onay → yayın → topluluk → skor kartı zinciri yönetimdir.</p>
+<p>Bu sayfa operasyon ürünüdür. Ajans seçimi ve ortaklık çerçevesi için <a href="/hizmetler/sosyal-medya-ajansi">Samsun sosyal medya ajansı</a> sayfasına bakın. Yalnız Instagram'a kilitlenmek istiyorsanız <a href="/hizmetler/instagram-yonetimi">Instagram yönetimi</a> daha dar kapsamdadır. Reklam (Meta/Google) bu paketin içine gizlenmez; ihtiyaçta ayrı satır olarak eklenir.</p>
 
-<h2>Trabzon’da neden kritik?</h2>
-<p>Ortahisar’dan Of’a, Akçaabat’tan Yomra’ya yerel rekabet artık cadde kadar telefonda da yaşanır. Müşteri menüye, randevuya veya fiyata bakmadan önce profili tarar. Organik erişim düşerken story ve reels ritmi kesilince hesap “kapalı işyeri” gibi görünür. Düzenli yönetim; turizm, eğitim ve bayram sezonlarını takvime işler, mahalle dilini korur, ekip değişse bile süreklilik sağlar.</p>
-<p>Küçük işletmede darboğaz zamandır: mutfak veya klinik akşamı bitince içerik kalmaz. Kurumsalda darboğaz onaydıır: kim neyi yayınlayacak belli değilse ay kaybedilir. Paketler bu iki gerçeğe göre ayrılır. Raporlarda vanity like listesi değil; kaydetme, profil ziyareti, DM, arama ve form sinyalleri izlenir.</p>
+<h2>Samsun'da neden kritik?</h2>
+<p>İlkadım'dan Bafra'ya, Atakum'dan Canik'e yerel rekabet artık cadde kadar telefonda da yaşanır. Müşteri menüye, randevuya veya fiyata bakmadan önce profili tarar. Organik erişim düşerken story ve reels ritmi kesilince hesap "kapalı işyeri" gibi görünür. Düzenli yönetim; turizm, eğitim ve bayram sezonlarını takvime işler, mahalle dilini korur, ekip değişse bile süreklilik sağlar.</p>
+<p>Küçük işletmede darboğaz zamandır: mutfak veya klinik akşamı bitince içerik kalmaz. Kurumsalda darboğaz onaydır: kim neyi yayınlayacak belli değilse ay kaybedilir. Paketler bu iki gerçeğe göre ayrılır. Raporlarda vanity like listesi değil; kaydetme, profil ziyareti, DM, arama ve form sinyalleri izlenir.</p>
 
 <h2>Nasıl yönetilir? (adım adım)</h2>
 <ol>
 <li><strong>Keşif ve audit:</strong> Bio, grid, mevcut stok, rakip hesaplar, hedef CTA (mesaj / rezervasyon / adres / form).</li>
-<li><strong>Paket seçimi:</strong> Başlangıç (~8–12 post + story ritmi + 2–4 reels), Büyüme (yüksek kota ve daha sık story), Kurumsal (çok katmanlı onay, kriz protokolü, derin rapor).</li>
-<li><strong>Takvim ve üretim:</strong> Ay başında onaylı plan; yerinde çekim veya stoktan kırılım. Senaryo brief’i çekimden önce yazılır.</li>
+<li><strong>Paket seçimi:</strong> Başlangıç (~8-12 post + story ritmi + 2-4 reels), Büyüme (yüksek kota ve daha sık story), Kurumsal (çok katmanlı onay, kriz protokolü, derin rapor).</li>
+<li><strong>Takvim ve üretim:</strong> Ay başında onaylı plan; yerinde çekim veya stoktan kırılım. Senaryo brief'i çekimden önce yazılır.</li>
 <li><strong>Yayın + topluluk:</strong> Yorum ve DM ton rehberi; acil konular size eskalasyon.</li>
 <li><strong>Aylık skor kartı:</strong> Erişim, kaydetme, mesaj/arama ve sonraki ayın üç net aksiyonu.</li>
 </ol>
@@ -51,53 +51,53 @@ const SERVICES: ServiceSeed[] = [
 <caption>Sosyal medya yönetimi paket karşılaştırması</caption>
 <thead><tr><th>Ölçüt</th><th>Başlangıç</th><th>Büyüme</th><th>Kurumsal</th></tr></thead>
 <tbody>
-<tr><td>Post / ay</td><td>~8–12</td><td>Daha yüksek kota</td><td>Geniş + kampanya setleri</td></tr>
+<tr><td>Post / ay</td><td>~8-12</td><td>Daha yüksek kota</td><td>Geniş + kampanya setleri</td></tr>
 <tr><td>Story</td><td>Haftalık ritim</td><td>Yoğun ritim</td><td>Kampanya + kriz hazırlığı</td></tr>
-<tr><td>Reels</td><td>2–4</td><td>Artırılmış set</td><td>Seri + lansman</td></tr>
+<tr><td>Reels</td><td>2-4</td><td>Artırılmış set</td><td>Seri + lansman</td></tr>
 <tr><td>Onay</td><td>Tek hat</td><td>Tek hat, hızlı tur</td><td>Çok katmanlı yazılı hat</td></tr>
 <tr><td>Rapor</td><td>Aylık skor</td><td>Aylık + aksiyon</td><td>Derin skor + yönetim özeti</td></tr>
 </tbody></table></div>
 
 <h2>Kimler için uygundur?</h2>
-<p>Restoran, kafe, klinik, güzellik, perakende, emlak, otel, eğitim ve yerel hizmet işletmeleri. İçerik üretmek isteyip düzenli yetiştiremeyen ekipler Başlangıç veya Büyüme ile başlar; birden fazla onay mercii olan markalar Kurumsal’a geçer. B2B LinkedIn omurgası için <a href="/hizmetler/kurumsal-sosyal-medya-yonetimi">kurumsal sosyal medya yönetimi</a> ayrıdır.</p>
+<p>Restoran, kafe, klinik, güzellik, perakende, emlak, otel, eğitim ve yerel hizmet işletmeleri. İçerik üretmek isteyip düzenli yetiştiremeyen ekipler Başlangıç veya Büyüme ile başlar; birden fazla onay mercii olan markalar Kurumsal'a geçer. B2B LinkedIn omurgası için <a href="/hizmetler/kurumsal-sosyal-medya-yonetimi">kurumsal sosyal medya yönetimi</a> ayrıdır.</p>
 
 <h2>Avantajlar</h2>
 <ul>
-<li>Marka dili tek elden; dağınık “herkes bir şey atsın” kaosu biter.</li>
+<li>Marka dili tek elden; dağınık "herkes bir şey atsın" kaosu biter.</li>
 <li>Sezon ve kampanya takvime işlenir; panik paylaşımı azalır.</li>
 <li>Onay hattı yazılıdır; yanlış yayın riski düşer.</li>
 <li>Skor kartı vanity metrik değil, CTA sinyallerine bakar.</li>
-<li>18 ilçede uzaktan yönetim + planlı yerinde çekim mümkün.</li>
+<li>17 ilçede uzaktan yönetim + planlı yerinde çekim mümkün.</li>
 </ul>
 
 <h2>Fiyat mantığı</h2>
-<p>Platform sayısı, aylık kota, yerinde çekim günü ve onay derinliği teklifi şekillendirir. Sabit TL listesi yayınlamıyoruz; keşif sonrası paket ve kapsam yazılı gelir. Medya harcaması ajans ücretinden ayrı satırdır. “Yönetim fiyatına reklam dahil” belirsizliği yoktur.</p>
+<p>Platform sayısı, aylık kota, yerinde çekim günü ve onay derinliği teklifi şekillendirir. Sabit TL listesi yayınlamıyoruz; keşif sonrası paket ve kapsam yazılı gelir. Medya harcaması ajans ücretinden ayrı satırdır. "Yönetim fiyatına reklam dahil" belirsizliği yoktur.</p>
 
 <h2>Sektöre göre planlama</h2>
-<p>Restoran ve kafede menü, story temposu ve rezervasyon CTA’sı; klinik ve güzellikte güven, uzmanlık ve randevu yolu; otel ve turizmde konum, deneyim ve sezon takvimi; otomotiv ve emlakta lansman ile showroom ölçeği; perakende ve B2B’de ürün vitrini veya LinkedIn güveni öne çıkar. Tek şablonla tüm sektörleri yönetmek mümkün değildir.</p>
-<p>İçerik stoğu yoksa <a href="/hizmetler/icerik-uretimi-cekim">çekim</a> aynı aya eklenir. Reklam ihtiyacı doğduğunda <a href="/hizmetler/meta-ads">Meta Ads</a> veya <a href="/hizmetler/google-ads">Google Ads</a> ayrı satırdır — yönetim paketinin içine “gizli medya” gömülmez. 18 ilçede uzaktan operasyon ve planlı yerinde gün aynı kalite çubuğunda yürür.</p>
+<p>Restoran ve kafede menü, story temposu ve rezervasyon CTA'sı; klinik ve güzellikte güven, uzmanlık ve randevu yolu; otel ve turizmde konum, deneyim ve sezon takvimi; otomotiv ve emlakta lansman ile showroom ölçeği; perakende ve B2B'de ürün vitrini veya LinkedIn güveni öne çıkar. Tek şablonla tüm sektörleri yönetmek mümkün değildir.</p>
+<p>İçerik stoğu yoksa <a href="/hizmetler/icerik-uretimi-cekim">çekim</a> aynı aya eklenir. Reklam ihtiyacı doğduğunda <a href="/hizmetler/meta-ads">Meta Ads</a> veya <a href="/hizmetler/google-ads">Google Ads</a> ayrı satırdır  -  yönetim paketinin içine "gizli medya" gömülmez. 17 ilçede uzaktan operasyon ve planlı yerinde gün aynı kalite çubuğunda yürür.</p>
 
 <h2>İlgili sayfalar</h2>
 <p><a href="/hizmetler/instagram-yonetimi">Instagram yönetimi</a> · <a href="/hizmetler/icerik-uretimi-cekim">İçerik &amp; çekim</a> · <a href="/hizmetler/sosyal-medya-ajansi">Sosyal medya ajansı</a> · <a href="/bolgeler">İlçeler</a> · <a href="/blog">Blog</a></p>
 
 <div class="page-cta">
   <h2>Yönetim paketini netleştirelim</h2>
-  <p>Mevcut hesabınıza bakalım; Başlangıç, Büyüme veya Kurumsal’dan hangisinin size uyduğunu birlikte seçelim.</p>
+  <p>Mevcut hesabınıza bakalım; Başlangıç, Büyüme veya Kurumsal'dan hangisinin size uyduğunu birlikte seçelim.</p>
   <a href="/#iletisim" class="btn btn-primary">Ücretsiz keşif</a>
 </div>
 `.trim(),
     faqJson: [
       {
-        q: "Trabzon’da sosyal medya yönetimi ne işe yarar?",
+        q: "Samsun'da sosyal medya yönetimi ne işe yarar?",
         a: "Hesabı düzenli ritimle besler; içerik, yayın, topluluk ve aylık skor kartını tek operasyonda toplar. Amaç görünürlük + mesaj/randevu gibi ölçülebilir temas.",
       },
       {
         q: "Başlangıç paketinde ne kadar içerik var?",
-        a: "Yaklaşık 8–12 post, düzenli story ritmi ve ayda 2–4 reels. Nihai kota keşifte sektöre göre netleşir.",
+        a: "Yaklaşık 8-12 post, düzenli story ritmi ve ayda 2-4 reels. Nihai kota keşifte sektöre göre netleşir.",
       },
       {
         q: "Büyüme ile Kurumsal farkı nedir?",
-        a: "Büyüme daha yüksek hacim ve tempo demektir. Kurumsal’da onay katmanları, kriz protokolü ve daha derin rapor vardır.",
+        a: "Büyüme daha yüksek hacim ve tempo demektir. Kurumsal'da onay katmanları, kriz protokolü ve daha derin rapor vardır.",
       },
       {
         q: "Reklam yönetim paketinin içinde mi?",
@@ -105,7 +105,7 @@ const SERVICES: ServiceSeed[] = [
       },
       {
         q: "Hangi platformlar yönetilir?",
-        a: "Omurga Instagram ve Facebook’tur. TikTok veya LinkedIn ihtiyaç ve sektöre göre eklenir.",
+        a: "Omurga Instagram ve Facebook'tur. TikTok veya LinkedIn ihtiyaç ve sektöre göre eklenir.",
       },
       {
         q: "Onay süreci nasıl işler?",
@@ -113,32 +113,32 @@ const SERVICES: ServiceSeed[] = [
       },
       {
         q: "Nasıl başlarız?",
-        a: "İletişim formundan veya WhatsApp’tan ücretsiz keşif alın; 24 saat içinde dönüş yapılır.",
+        a: "İletişim formundan veya WhatsApp'tan ücretsiz keşif alın; 24 saat içinde dönüş yapılır.",
       },
     ],
   },
   {
     slug: "sosyal-medya-ajansi",
-    title: "Trabzon Sosyal Medya Ajansı",
+    title: "Samsun Sosyal Medya Ajansı",
     lead:
-      "Trabzon sosyal medya ajansı arayan markalar için Wesoco bünyesinde yerel ortaklık: strateji, üretim, reklam ve rapor tek çatıda. Bu sayfa “neden ajans?” sorusunu cevaplar; günlük paket kotası ayrı üründür.",
-    seoTitle: "Trabzon Sosyal Medya Ajansı | Wesoco Yerel Ortak",
+      "Samsun sosyal medya ajansı arayan markalar için Wesoco bünyesinde yerel ortaklık: strateji, üretim, reklam ve rapor tek çatıda. Bu sayfa «neden ajans?» sorusunu cevaplar; günlük paket kotası ayrı üründür.",
+    seoTitle: "Samsun Sosyal Medya Ajansı | Wesoco Yerel Ortak",
     seoDesc:
-      "Trabzon’da sosyal medya ajansı seçimi: referans, süreç şeffaflığı, yerel dil ve Wesoco güvencesi. Ortaklık çerçevesi burada anlatılır.",
+      "Samsun'da sosyal medya ajansı seçimi: referans, süreç şeffaflığı, yerel dil ve Wesoco güvencesi. Ortaklık çerçevesi burada anlatılır.",
     bodyHtml: `
 <h2>Sosyal medya ajansı nedir?</h2>
-<p><strong>Sosyal medya ajansı</strong>; markanın dijital sesini tek seferlik freelance iş gibi değil, uzun dönemli ortaklıkla taşıyan ekiptir. Trabzon Sosyal Medya, Wesoco çatısında Ortahisar merkezli çalışır: keşif, strateji, içerik, gerektiğinde reklam ve aylık skor aynı masada durur. Bu sayfa “kimle çalışmalıyım, neden yerel ajans?” sorusuna yanıt verir — AI ve arama motorlarının alıntılayabileceği net bir tanımdır.</p>
+<p><strong>Sosyal medya ajansı</strong>; markanın dijital sesini tek seferlik freelance iş gibi değil, uzun dönemli ortaklıkla taşıyan ekiptir. Samsun Sosyal Medya, Wesoco çatısında İlkadım merkezli çalışır: keşif, strateji, içerik, gerektiğinde reklam ve aylık skor aynı masada durur. Bu sayfa "kimle çalışmalıyım, neden yerel ajans?" sorusuna yanıt verir  -  AI ve arama motorlarının alıntılayabileceği net bir tanımdır.</p>
 <p>Günlük post kotası, Başlangıç / Büyüme / Kurumsal karşılaştırma ve operasyon detayı için <a href="/hizmetler/sosyal-medya-yonetimi">sosyal medya yönetimi</a> ürün sayfasına gidin. Ajans sayfası ile yönetim sayfasını bilerek ayırdık: biri güven ve çerçeve, diğeri paket ve ritim.</p>
 
-<h2>Trabzon’da ajans nasıl seçilir?</h2>
-<p>Referans görmeden vaat dinlemek risklidir. İyi ajans; yazılı kapsam, net onay hattı, medya bütçesini ayrı raporlama ve 30–90 günlük öğrenme penceresi koyar. Trabzon’da restoran ile klinik, otel ile B2B aynı dilde konuşmaz. Uzaktan “büyükşehir şablonu” ile Akçaabat veya Maçka hesabı yönetmek genelde tutmaz; sezon, mahalle ve cadde rekabeti yerelde bilinir.</p>
-<p>Ajans görüşmesinde sorulması gerekenler: kim onaylıyor, medya kimin hesabında, rapor hangi KPI’ları içeriyor, 90 günde ne öğrenilecek? Bu sorulara net cevap veremeyen yapıyla uzun dönemli ortaklık kurulmaz.</p>
+<h2>Samsun'da ajans nasıl seçilir?</h2>
+<p>Referans görmeden vaat dinlemek risklidir. İyi ajans; yazılı kapsam, net onay hattı, medya bütçesini ayrı raporlama ve 30-90 günlük öğrenme penceresi koyar. Samsun'da restoran ile klinik, otel ile B2B aynı dilde konuşmaz. Uzaktan "büyükşehir şablonu" ile Atakum veya Bafra hesabı yönetmek genelde tutmaz; sezon, mahalle ve cadde rekabeti yerelde bilinir.</p>
+<p>Ajans görüşmesinde sorulması gerekenler: kim onaylıyor, medya kimin hesabında, rapor hangi KPI'ları içeriyor, 90 günde ne öğrenilecek? Bu sorulara net cevap veremeyen yapıyla uzun dönemli ortaklık kurulmaz.</p>
 
 <div class="seo-table-wrap"><table class="seo-comparison-table">
 <caption>Ajans seçim kontrol listesi</caption>
 <thead><tr><th>Kriter</th><th>Zayıf işaret</th><th>Güçlü işaret</th></tr></thead>
 <tbody>
-<tr><td>Kapsam</td><td>“Her şeyi yaparız” belirsizliği</td><td>Yazılı dahil/hariç maddeleri</td></tr>
+<tr><td>Kapsam</td><td>"Her şeyi yaparız" belirsizliği</td><td>Yazılı dahil/hariç maddeleri</td></tr>
 <tr><td>Medya</td><td>Bütçe ajans faturasında kaybolur</td><td>Harcama sizin hesapta, ayrı satır</td></tr>
 <tr><td>Rapor</td><td>Sadece beğeni ekran görüntüsü</td><td>CTA + sonraki ayın üç aksiyonu</td></tr>
 <tr><td>Yerel dil</td><td>Şablon metin / stok fotoğraf</td><td>Mekân, sezon, ilçe gerçekliği</td></tr>
@@ -157,12 +157,12 @@ const SERVICES: ServiceSeed[] = [
 <p>Ajans arayan yerel işletmeler, franchise / bayi yapıları ve içerik + reklam + ölçümü tek muhatapta toplamak isteyen markalar. Full funnel (içerik + Ads + ölçüm) arıyorsanız <a href="/hizmetler/dijital-pazarlama-ajansi">dijital pazarlama ajansı</a> çerçevesi daha geniştir.</p>
 
 <h2>Fiyat mantığı</h2>
-<p>Ajans ücreti kapsam ve ekip yüküne göre keşif sonrası tekliflenir. Uydurma “en ucuz paket” listesi yoktur. Medya harcaması sizin hesabınızda kalır; ajans yönetim ücreti ayrı ve şeffaf yazılır.</p>
+<p>Ajans ücreti kapsam ve ekip yüküne göre keşif sonrası tekliflenir. Uydurma "en ucuz paket" listesi yoktur. Medya harcaması sizin hesabınızda kalır; ajans yönetim ücreti ayrı ve şeffaf yazılır.</p>
 
 <h2>Wesoco ile yerel ortaklık ne demek?</h2>
-<p>Wesoco güvencesi; sözleşme disiplini, teslim standardı ve şeffaf iletişim demektir. WhatsApp hızı ile kurumsal mail disiplini aynı anda yönetilebilir. “En ucuz post” yarışına girmeyiz; ölçülebilir temas ve tutarlı marka dili önceliklidir. Ortahisar ofisinden 18 ilçeye planlı çekim ve uzaktan operasyon aynı kalite çubuğunda yürür.</p>
-<p>Keşifte “her şeyi yaparız” demek yerine hangi ürünün size yettiğini söyleriz. Bazen yalnızca çekim, bazen yalnızca Ads, bazen tam yönetim doğrudur. Ajansın işi doğru çerçeveyi seçmektir — yanlış ürünle başlamak hem bütçeyi hem motivasyonu eritir.</p>
-<p>Referans ve sektör deneyimi vaatten daha değerlidir. Turizm sezonu, bayram takvimi ve mahalle rekabeti Trabzon’a özgüdür; genel Türkiye şablonu çoğu zaman tutmaz. Bu yüzden ilk 30 gün dil ve vitrin oturtmaya, sonraki 60 gün öğrenmeye ayrılır.</p>
+<p>Wesoco güvencesi; sözleşme disiplini, teslim standardı ve şeffaf iletişim demektir. WhatsApp hızı ile kurumsal mail disiplini aynı anda yönetilebilir. "En ucuz post" yarışına girmeyiz; ölçülebilir temas ve tutarlı marka dili önceliklidir. İlkadım ofisinden 17 ilçeye planlı çekim ve uzaktan operasyon aynı kalite çubuğunda yürür.</p>
+<p>Keşifte "her şeyi yaparız" demek yerine hangi ürünün size yettiğini söyleriz. Bazen yalnızca çekim, bazen yalnızca Ads, bazen tam yönetim doğrudur. Ajansın işi doğru çerçeveyi seçmektir  -  yanlış ürünle başlamak hem bütçeyi hem motivasyonu eritir.</p>
+<p>Referans ve sektör deneyimi vaatten daha değerlidir. Turizm sezonu, bayram takvimi ve mahalle rekabeti Samsun'a özgüdür; genel Türkiye şablonu çoğu zaman tutmaz. Bu yüzden ilk 30 gün dil ve vitrin oturtmaya, sonraki 60 gün öğrenmeye ayrılır.</p>
 
 <h2>İlgili sayfalar</h2>
 <p><a href="/hizmetler/sosyal-medya-yonetimi">Sosyal medya yönetimi</a> · <a href="/hizmetler/dijital-pazarlama-ajansi">Dijital pazarlama</a> · <a href="/hizmetler/reklam-ajansi">Reklam ajansı</a> · <a href="/blog">Blog</a></p>
@@ -180,7 +180,7 @@ const SERVICES: ServiceSeed[] = [
       },
       {
         q: "Wesoco nedir?",
-        a: "Trabzon Sosyal Medya’nın bağlı olduğu yapısal güvencedir; süreç, sözleşme ve kalite standardı Wesoco disipliniyle yürür.",
+        a: "Samsun Sosyal Medya'nın bağlı olduğu yapısal güvencedir; süreç, sözleşme ve kalite standardı Wesoco disipliniyle yürür.",
       },
       {
         q: "Sadece danışmanlık olur mu?",
@@ -188,11 +188,11 @@ const SERVICES: ServiceSeed[] = [
       },
       {
         q: "Hangi ilçelerde hizmet veriyorsunuz?",
-        a: "Trabzon’un 18 ilçesinde uzaktan yönetim ve planlı yerinde çekim ile çalışıyoruz.",
+        a: "Samsun'un 17 ilçesinde uzaktan yönetim ve planlı yerinde çekim ile çalışıyoruz.",
       },
       {
         q: "Ajans seçerken en kritik soru nedir?",
-        a: "Medya kimin hesabında, rapor hangi KPI’ları içeriyor ve 90 günde ne öğrenilecek — bu üçü net değilse ortaklık risklidir.",
+        a: "Medya kimin hesabında, rapor hangi KPI'ları içeriyor ve 90 günde ne öğrenilecek  -  bu üçü net değilse ortaklık risklidir.",
       },
       {
         q: "Nasıl başlarız?",
@@ -202,26 +202,26 @@ const SERVICES: ServiceSeed[] = [
   },
   {
     slug: "instagram-yonetimi",
-    title: "Trabzon Instagram Yönetimi",
+    title: "Samsun Instagram Yönetimi",
     lead:
-      "Trabzon Instagram yönetimi; bio, grid, reels hook, story CTA ve topluluk yanıtlarını tek sistemde tutar. Amaç takipçi satın almak değil; keşfet, profil ziyareti ve mesaj dönüşümüdür.",
-    seoTitle: "Instagram Yönetimi Trabzon | Reels, Story & Grid · Wesoco",
+      "Samsun Instagram yönetimi; bio, grid, reels hook, story CTA ve topluluk yanıtlarını tek sistemde tutar. Amaç takipçi satın almak değil; keşfet, profil ziyareti ve mesaj dönüşümüdür.",
+    seoTitle: "Instagram Yönetimi Samsun | Reels, Story & Grid · Wesoco",
     seoDesc:
-      "Trabzon’da Instagram hesabı yönetimi: içerik takvimi, reels, story, bio/vitrin ve rapor. Keşfet + mesaj odaklı. Wesoco.",
+      "Samsun'da Instagram hesabı yönetimi: içerik takvimi, reels, story, bio/vitrin ve rapor. Keşfet + mesaj odaklı. Wesoco.",
     bodyHtml: `
 <h2>Instagram yönetimi nedir?</h2>
-<p><strong>Instagram yönetimi</strong>; profili vitrin gibi kurup haftalık ritimle beslemektir. Bio’daki tek cümlelik teklif, vurgular (highlights), grid dengesi, reels’in ilk saniyesi ve story’deki CTA aynı hedefe bakar. Trabzon Sosyal Medya olarak bu hizmeti bilerek Instagram’a kilitleriz — Facebook duvarı veya LinkedIn burada yan ürün değildir.</p>
-<p>Çok platformlu paket arıyorsanız <a href="/hizmetler/sosyal-medya-yonetimi">sosyal medya yönetimi</a> sayfasına gidin. Takipçi satın almak, sahte etkileşim veya “günde 5 rastgele post” yaklaşımı yoktur.</p>
+<p><strong>Instagram yönetimi</strong>; profili vitrin gibi kurup haftalık ritimle beslemektir. Bio'daki tek cümlelik teklif, vurgular (highlights), grid dengesi, reels'in ilk saniyesi ve story'deki CTA aynı hedefe bakar. Samsun Sosyal Medya olarak bu hizmeti bilerek Instagram'a kilitleriz  -  Facebook duvarı veya LinkedIn burada yan ürün değildir.</p>
+<p>Çok platformlu paket arıyorsanız <a href="/hizmetler/sosyal-medya-yonetimi">sosyal medya yönetimi</a> sayfasına gidin. Takipçi satın almak, sahte etkileşim veya "günde 5 rastgele post" yaklaşımı yoktur.</p>
 
-<h2>Neden yalnızca Instagram’a odaklanılır?</h2>
-<p>Birçok B2C işletmede müşteri kararı Instagram’da başlar: menü, ekip, mekân, fiyat bandı hissi, WhatsApp’a geçiş. Dağınık platform çabası hem kaliteyi hem onay süresini bozar. Önce Instagram’da dil ve ritim oturur; ihtiyaç halinde <a href="/hizmetler/meta-ads">Meta Ads</a> aynı kreatif setle desteklenir.</p>
-<p>Keşfet algoritması izlenme süresi ve tutarlı yayına bakar. Yerel konum etiketleri (Ortahisar, Akçaabat, Yomra, Of…) doğru kullanıldığında mahalle kitlesine sinyal verir; abartılı etiket yağmuru güveni düşürür. Kaydetme ve paylaşım, ham beğeniden daha değerli KPI’lardır. Grid’in ilk dokuz karesi “vitrin vitrini”dir.</p>
+<h2>Neden yalnızca Instagram'a odaklanılır?</h2>
+<p>Birçok B2C işletmede müşteri kararı Instagram'da başlar: menü, ekip, mekân, fiyat bandı hissi, WhatsApp'a geçiş. Dağınık platform çabası hem kaliteyi hem onay süresini bozar. Önce Instagram'da dil ve ritim oturur; ihtiyaç halinde <a href="/hizmetler/meta-ads">Meta Ads</a> aynı kreatif setle desteklenir.</p>
+<p>Keşfet algoritması izlenme süresi ve tutarlı yayına bakar. Yerel konum etiketleri (İlkadım, Atakum, Canik, Bafra…) doğru kullanıldığında mahalle kitlesine sinyal verir; abartılı etiket yağmuru güveni düşürür. Kaydetme ve paylaşım, ham beğeniden daha değerli KPI'lardır. Grid'in ilk dokuz karesi "vitrin vitrini"dir.</p>
 
 <h2>Nasıl yönetilir?</h2>
 <ol>
 <li><strong>Profil audit:</strong> Bio, kategori, iletişim butonu, vitrin grid, eski içerik temizliği, rakip hesap taraması.</li>
 <li><strong>İçerik sistemi:</strong> Reels hook şablonları, story serileri (arka plan, teklif, sosyal kanıt), pin post stratejisi.</li>
-<li><strong>Çekim veya kırılım:</strong> Yerinde gün veya mevcut stoktan 4:5 / 9:16 formatları — <a href="/hizmetler/icerik-uretimi-cekim">içerik üretimi</a>.</li>
+<li><strong>Çekim veya kırılım:</strong> Yerinde gün veya mevcut stoktan 4:5 / 9:16 formatları  -  <a href="/hizmetler/icerik-uretimi-cekim">içerik üretimi</a>.</li>
 <li><strong>Yayın takvimi:</strong> Haftalık ritim; dense sezonlarda önceden stoklanmış set.</li>
 <li><strong>Topluluk + rapor:</strong> DM/yorum ton rehberi; aylık Instagram skor kartı (erişim, kaydetme, mesaj).</li>
 </ol>
@@ -231,7 +231,7 @@ const SERVICES: ServiceSeed[] = [
 <thead><tr><th>Metrik</th><th>Ne söyler?</th><th>Ne yaparız?</th></tr></thead>
 <tbody>
 <tr><td>Kaydetme</td><td>İçerik değerli bulundu</td><td>Formatı tekrarlar, serileştiririz</td></tr>
-<tr><td>Profil ziyareti</td><td>Merak oluştu</td><td>Bio ve CTA’yı netleştiririz</td></tr>
+<tr><td>Profil ziyareti</td><td>Merak oluştu</td><td>Bio ve CTA'yı netleştiririz</td></tr>
 <tr><td>DM / arama</td><td>Dönüşüm sinyali</td><td>Story ve reels CTA güçlendirilir</td></tr>
 <tr><td>Ham beğeni</td><td>Zayıf tek başına</td><td>Vanity listesine sıkıştırmayız</td></tr>
 </tbody></table></div>
@@ -243,16 +243,16 @@ const SERVICES: ServiceSeed[] = [
 <p>Aylık reels/post hacmi, story yoğunluğu ve yerinde çekim ihtiyacı fiyatı belirler. Sabit TL tarifesi yok; keşif sonrası Instagram kapsamı yazılı tekliflenir. Reklam bütçesi ayrıdır.</p>
 
 <h2>Bio, highlights ve grid neden önce gelir?</h2>
-<p>Reels izlenme getirir; bio dönüştürür. İletişim butonu, konum, WhatsApp veya rezervasyon linki net değilse trafik boşa akar. Highlights (menü, fiyat, sık sorulan, yol) DM yükünü azaltır. Grid’in ilk dokuz karesinde renk, ürün ve insan dengesi bozulursa profil ziyareti düşer — rakip hesabı kopyalamak yerine kendi mekânınızın sesini netleştirmek uzun vadede daha ucuza gelir.</p>
-<p>Trabzon’da restoran hesabı ile klinik hesabı aynı template’i paylaşamaz. Restoranda tempo ve iştah; klinikte güven ve uzmanlık öndedir. Hook cümlesi, kapak karesi ve altyazı çekimden önce yazılır; aksi halde reels “güzel ama sonuçsuz” kalır. Story’de “bugün menü / bugün randevu” gibi net CTA’lar tercih edilir.</p>
-<p>Konum etiketleri ve yerel işbirlikleri (mikro influencer değilse bile mahalle hesabı) organik keşfi destekler. Abartılı etiket yağmuru veya sahte etkileşim hem algoritmayı hem güveni bozar. Aylık skor kartında kaydetme ve DM, ham beğeniden önce okunur.</p>
+<p>Reels izlenme getirir; bio dönüştürür. İletişim butonu, konum, WhatsApp veya rezervasyon linki net değilse trafik boşa akar. Highlights (menü, fiyat, sık sorulan, yol) DM yükünü azaltır. Grid'in ilk dokuz karesinde renk, ürün ve insan dengesi bozulursa profil ziyareti düşer  -  rakip hesabı kopyalamak yerine kendi mekânınızın sesini netleştirmek uzun vadede daha ucuza gelir.</p>
+<p>Samsun'da Atakum'daki restoran hesabı ile İlkadım'daki klinik hesabı aynı template'i paylaşamaz. Restoranda tempo ve iştah; klinikte güven ve uzmanlık öndedir. Hook cümlesi, kapak karesi ve altyazı çekimden önce yazılır; aksi halde reels "güzel ama sonuçsuz" kalır. Story'de "bugün menü / bugün randevu" gibi net CTA'lar tercih edilir.</p>
+<p>Konum etiketleri ve yerel işbirlikleri organik keşfi destekler. Abartılı etiket yağmuru veya sahte etkileşim hem algoritmayı hem güveni bozar. Aylık skor kartında kaydetme ve DM, ham beğeniden önce okunur.</p>
 
 <h2>İlgili sayfalar</h2>
 <p><a href="/hizmetler/sosyal-medya-yonetimi">Çok platformlu yönetim</a> · <a href="/hizmetler/icerik-uretimi-cekim">Reels &amp; çekim</a> · <a href="/hizmetler/meta-ads">Meta Ads</a> · <a href="/bolgeler">İlçeler</a></p>
 
 <div class="page-cta">
   <h2>Instagram hesabınızı birlikte okuyalım</h2>
-  <p>Bio’dan reels’e kadar net bir 30 günlük plan çıkaralım.</p>
+  <p>Bio'dan reels'e kadar net bir 30 günlük plan çıkaralım.</p>
   <a href="/#iletisim" class="btn btn-primary">Ücretsiz keşif</a>
 </div>
 `.trim(),
@@ -271,7 +271,7 @@ const SERVICES: ServiceSeed[] = [
       },
       {
         q: "Story yönetimi dahil mi?",
-        a: "Evet. Story ritmi ve CTA’lar takvimin parçasıdır; yoğunluk pakete göre değişir.",
+        a: "Evet. Story ritmi ve CTA'lar takvimin parçasıdır; yoğunluk pakete göre değişir.",
       },
       {
         q: "Takipçi satın alıyor musunuz?",
@@ -285,25 +285,25 @@ const SERVICES: ServiceSeed[] = [
   },
   {
     slug: "meta-ads",
-    title: "Meta Ads",
+    title: "Samsun Meta Ads",
     lead:
-      "Trabzon Meta Ads yönetimi; Facebook ve Instagram reklamlarında Pixel, kreatif test, konum hedefleme ve şeffaf medya raporu demektir. Organik vitrin ayrı, ücretli erişim ayrı disiplindir.",
-    seoTitle: "Meta Ads Trabzon | Facebook & Instagram Reklam Yönetimi",
+      "Samsun Meta Ads yönetimi; Facebook ve Instagram reklamlarında Pixel, kreatif test, konum hedefleme ve şeffaf medya raporu demektir. Organik vitrin ayrı, ücretli erişim ayrı disiplindir.",
+    seoTitle: "Meta Ads Samsun | Facebook & Instagram Reklam Yönetimi",
     seoDesc:
-      "Trabzon’da Meta Ads: hedefleme, retargeting, kreatif test ve şeffaf bütçe. Facebook & Instagram reklam yönetimi · Wesoco.",
+      "Samsun'da Meta Ads: hedefleme, retargeting, kreatif test ve şeffaf bütçe. Facebook & Instagram reklam yönetimi · Wesoco.",
     bodyHtml: `
 <h2>Meta Ads nedir?</h2>
-<p><strong>Meta Ads</strong>; Facebook ve Instagram envanterinde ücretli gösterim satın alarak doğru kitleye mesaj iletmektir. Trabzon işletmeleri için tipik hedefler mesaj, arama, form veya mağaza trafiğidir. Yönetim; kampanya mimarisi, kreatif setleri, ilçe/konum katmanları, retargeting ve haftalık öğrenme döngüsünü kapsar.</p>
+<p><strong>Meta Ads</strong>; Facebook ve Instagram envanterinde ücretli gösterim satın alarak doğru kitleye mesaj iletmektir. Samsun işletmeleri için tipik hedefler mesaj, arama, form veya mağaza trafiğidir. Yönetim; kampanya mimarisi, kreatif setleri, ilçe/konum katmanları, retargeting ve haftalık öğrenme döngüsünü kapsar.</p>
 <p>Medya parası sizin reklam hesabınızda kalır; ajans ücreti ayrı satırdır. Organik hesap yönetimi bu sayfanın konusu değildir. Şemsiye reklam anlatımı için <a href="/hizmetler/reklam-ajansi">reklam ajansı</a>, arama niyeti için <a href="/hizmetler/google-ads">Google Ads</a> sayfalarına bakın.</p>
 
 <h2>Neden Meta reklamı gerekir?</h2>
-<p>Organik erişim tek başına yetmez; lansman, sezon ve rekabet yoğun mahallelerde ücretli destek öğrenmeyi hızlandırır. Meta, ilgi alanı ve davranış sinyalleriyle “Trabzon + hizmet” kitlesine ulaşmayı kolaylaştırır. Doğru sıra: önce ölçüm (Pixel / CAPI), sonra 2–3 kreatif test, sonra kazananı ölçekleme. Ortahisar ile Of aynı teklif bile olsa konum ve rekabet farklıdır.</p>
+<p>Organik erişim tek başına yetmez; lansman, sezon ve rekabet yoğun mahallelerde ücretli destek öğrenmeyi hızlandırır. Meta, ilgi alanı ve davranış sinyalleriyle "Samsun + hizmet" kitlesine ulaşmayı kolaylaştırır. Doğru sıra: önce ölçüm (Pixel / CAPI), sonra 2-3 kreatif test, sonra kazananı ölçekleme. İlkadım ile Bafra aynı teklif bile olsa konum ve rekabet farklıdır.</p>
 <p>Mesaj kampanyalarında yanıt süresi kritiktir: reklam iyi çalışır, DM geç cevaplanınca lead soğur. Advantage+ körü körüne açılmaz; öğrenme penceresi bitmeden sürekli yapı bozmak maliyeti şişirir.</p>
 
 <h2>Nasıl yönetilir?</h2>
 <ol>
 <li><strong>Hesap ve ölçüm:</strong> Business Manager, Pixel/CAPI, dönüşüm olayları.</li>
-<li><strong>Teklif ve yaratıcı brief:</strong> Tek ana mesaj, net CTA, 2–3 kreatif varyant (statik + reels).</li>
+<li><strong>Teklif ve yaratıcı brief:</strong> Tek ana mesaj, net CTA, 2-3 kreatif varyant (statik + reels).</li>
 <li><strong>Yapı:</strong> Prospecting + retargeting ayrı; konum (ilçe) ve ilgi alanı testleri.</li>
 <li><strong>Öğrenme penceresi:</strong> Erken müdahale yerine veri birikimi; kaybeden kreatif dinlenir.</li>
 <li><strong>Rapor:</strong> Harcama, sonuç, birim maliyet, frekans, sonraki haftanın test planı.</li>
@@ -323,12 +323,12 @@ const SERVICES: ServiceSeed[] = [
 <p>Restoran, klinik, emlak, eğitim, perakende ve randevu/mesaj hedefi olan yerel markalar. Organik hesap dağınıksa önce vitrin düzeltilir. Saf arama niyeti baskınsa Google Ads önceliklidir.</p>
 
 <h2>Fiyat mantığı</h2>
-<p>Ajans yönetim ücreti kampanya sayısı, kreatif üretim ihtiyacı ve rapor frekansına göre keşif sonrası belirlenir. Medya bütçesi işletmeye aittir. “Günde X satış garantisi” dili kullanmayız.</p>
+<p>Ajans yönetim ücreti kampanya sayısı, kreatif üretim ihtiyacı ve rapor frekansına göre keşif sonrası belirlenir. Medya bütçesi işletmeye aittir. "Günde X satış garantisi" dili kullanmayız.</p>
 
 <h2>Ölçüm ve kreatif disiplini</h2>
-<p>Pixel veya CAPI kurulmadan “reklam çalışmıyor” tartışması spekülasyondur. Dönüşüm olayı (mesaj, arama, form) net tanımlanır; sonra kreatif test başlar. Aynı görsel haftalarca dönünce frekans yükselir, maliyet şişer — kreatif yorgunluğu takip edilir. Yerel dil (“randevu al”, “rezervasyon”, “yol tarifi”) genel “şimdi keşfet” kalıplarından daha iyi çalışır.</p>
-<p>Prospecting ve retargeting bütçeleri ayrı satırdadır. Profili veya siteyi ziyaret edenlere ikinci turda daha net CTA taşınır. İlçe bazlı konum katmanları (Ortahisar, Akçaabat, Yomra, Of…) rekabet ve teslimat gerçekliğine göre ayrılır. Erken ölçekleme, öğrenme penceresini bozar; kaybeden kreatif dinlendirilir, kazanan kopyalanır.</p>
-<p>Organik vitrin dağınıksa Ads açmak maliyeti yükseltir. Bu yüzden zayıf grid’de önce <a href="/hizmetler/instagram-yonetimi">Instagram yönetimi</a> veya <a href="/hizmetler/icerik-uretimi-cekim">çekim</a> önerilir. Medya hesabı erişimi ve Business Manager düzeni keşifte kontrol edilir.</p>
+<p>Pixel veya CAPI kurulmadan "reklam çalışmıyor" tartışması spekülasyondur. Dönüşüm olayı (mesaj, arama, form) net tanımlanır; sonra kreatif test başlar. Aynı görsel haftalarca dönünce frekans yükselir, maliyet şişer  -  kreatif yorgunluğu takip edilir. Yerel dil ("randevu al", "rezervasyon", "yol tarifi") genel "şimdi keşfet" kalıplarından daha iyi çalışır.</p>
+<p>Prospecting ve retargeting bütçeleri ayrı satırdadır. Profili veya siteyi ziyaret edenlere ikinci turda daha net CTA taşınır. İlçe bazlı konum katmanları (İlkadım, Atakum, Canik, Bafra…) rekabet ve teslimat gerçekliğine göre ayrılır. Erken ölçekleme, öğrenme penceresini bozar; kaybeden kreatif dinlendirilir, kazanan kopyalanır.</p>
+<p>Organik vitrin dağınıksa Ads açmak maliyeti yükseltir. Bu yüzden zayıf grid'de önce <a href="/hizmetler/instagram-yonetimi">Instagram yönetimi</a> veya <a href="/hizmetler/icerik-uretimi-cekim">çekim</a> önerilir. Medya hesabı erişimi ve Business Manager düzeni keşifte kontrol edilir.</p>
 
 <h2>İlgili sayfalar</h2>
 <p><a href="/hizmetler/reklam-ajansi">Reklam ajansı</a> · <a href="/hizmetler/google-ads">Google Ads</a> · <a href="/hizmetler/instagram-yonetimi">Instagram yönetimi</a> · <a href="/hizmetler/icerik-uretimi-cekim">Kreatif üretim</a></p>
@@ -342,7 +342,7 @@ const SERVICES: ServiceSeed[] = [
     faqJson: [
       {
         q: "Meta Ads nedir?",
-        a: "Facebook ve Instagram’da ücretli reklam yönetmektir. Hedefleme, kreatif test, retargeting ve şeffaf medya raporu kapsar.",
+        a: "Facebook ve Instagram'da ücretli reklam yönetmektir. Hedefleme, kreatif test, retargeting ve şeffaf medya raporu kapsar.",
       },
       {
         q: "Medya bütçesi ajans ücretine dahil mi?",
@@ -350,7 +350,7 @@ const SERVICES: ServiceSeed[] = [
       },
       {
         q: "Ne kadar sürede sonuç görülür?",
-        a: "Öğrenme genelde 1–2 haftada başlar; anlamlı optimizasyon için 30–90 gün penceresi önerilir.",
+        a: "Öğrenme genelde 1-2 haftada başlar; anlamlı optimizasyon için 30-90 gün penceresi önerilir.",
       },
       {
         q: "Yalnızca Instagram reklamı açılır mı?",
@@ -372,20 +372,20 @@ const SERVICES: ServiceSeed[] = [
   },
   {
     slug: "google-ads",
-    title: "Google Ads",
+    title: "Samsun Google Ads",
     lead:
-      "Trabzon Google Ads yönetimi; arama niyetindeki müşteriyi Search, gerektiğinde Performance Max veya YouTube ile yakalar. Anahtar kelime, dönüşüm izleme ve şeffaf medya satırı omurgadır.",
-    seoTitle: "Google Ads Trabzon | Arama & Performans Reklamı · Wesoco",
+      "Samsun Google Ads yönetimi; arama niyetindeki müşteriyi Search, gerektiğinde Performance Max veya YouTube ile yakalar. Anahtar kelime, dönüşüm izleme ve şeffaf medya satırı omurgadır.",
+    seoTitle: "Google Ads Samsun | Arama & Performans Reklamı · Wesoco",
     seoDesc:
-      "Trabzon’da Google Ads: Search, dönüşüm izleme, yerel niyet kelimeleri ve şeffaf bütçe. Niyet odaklı reklam yönetimi · Wesoco.",
+      "Samsun'da Google Ads: Search, dönüşüm izleme, yerel niyet kelimeleri ve şeffaf bütçe. Niyet odaklı reklam yönetimi · Wesoco.",
     bodyHtml: `
 <h2>Google Ads nedir?</h2>
-<p><strong>Google Ads</strong>; Google arama ağı ve bağlı envanterde, kullanıcının yazdığı niyete göre reklam göstermektir. “Trabzon diş kliniği”, “Yomra emlak”, “Of otel” gibi uzun kuyruklar yerel işletmeler için değerlidir. Yönetim; hesap yapısı, negatif kelimeler, uzantılar, dönüşüm izleme ve teklif stratejisini kapsar.</p>
+<p><strong>Google Ads</strong>; Google arama ağı ve bağlı envanterde, kullanıcının yazdığı niyete göre reklam göstermektir. "Samsun diş kliniği", "Canik emlak", "Bafra otel" gibi uzun kuyruklar yerel işletmeler için değerlidir. Yönetim; hesap yapısı, negatif kelimeler, uzantılar, dönüşüm izleme ve teklif stratejisini kapsar.</p>
 <p>Meta sosyal keşifte güçlüyken Google satın alma anına yakındır. Şemsiye plan için <a href="/hizmetler/reklam-ajansi">reklam ajansı</a>, Facebook/Instagram için <a href="/hizmetler/meta-ads">Meta Ads</a> sayfalarına gidin. Medya harcaması sizin Ads hesabınızda kalır.</p>
 
 <h2>Neden Google reklamı?</h2>
-<p>İnsan hizmet ararken Google’a yazar. Organik SEO uzun vadede güçlenirken Ads, hemen görünürlük ve ölçülebilir arama/form sağlar. Yanlış kelime seçimi veya izleme eksikliği bütçeyi boşa yakar. Marka kelimeleri ile genel kategori kelimeleri ayrı yönetilir; konum ve çağrı uzantıları sık kritik fark yaratır.</p>
-<p>Kalite skoru; reklam metni, landing uyumu ve beklenen tıklama oranıyla ilişkilidir. “Trabzon + hizmet” uzun kuyrukları çoğu zaman genel tek kelimeden daha verimlidir.</p>
+<p>İnsan hizmet ararken Google'a yazar. Organik SEO uzun vadede güçlenirken Ads, hemen görünürlük ve ölçülebilir arama/form sağlar. Yanlış kelime seçimi veya izleme eksikliği bütçeyi boşa yakar. Marka kelimeleri ile genel kategori kelimeleri ayrı yönetilir; konum ve çağrı uzantıları sık kritik fark yaratır.</p>
+<p>Kalite skoru; reklam metni, landing uyumu ve beklenen tıklama oranıyla ilişkilidir. "Samsun + hizmet" uzun kuyrukları çoğu zaman genel tek kelimeden daha verimlidir.</p>
 
 <h2>Nasıl yönetilir?</h2>
 <ol>
@@ -401,21 +401,21 @@ const SERVICES: ServiceSeed[] = [
 <thead><tr><th>Özellik</th><th>Google Ads</th><th>Meta Ads</th></tr></thead>
 <tbody>
 <tr><td>Tetikleyici</td><td>Arama niyeti</td><td>İlgi / keşif</td></tr>
-<tr><td>Güçlü olduğu yer</td><td>“Şimdi ara / randevu”</td><td>Görsel keşif, remarketing</td></tr>
-<tr><td>Örnek</td><td>Trabzon klinik araması</td><td>Menü / mekân keşfi</td></tr>
+<tr><td>Güçlü olduğu yer</td><td>"Şimdi ara / randevu"</td><td>Görsel keşif, remarketing</td></tr>
+<tr><td>Örnek</td><td>Samsun klinik araması</td><td>Menü / mekân keşfi</td></tr>
 <tr><td>Önkoşul</td><td>Landing + dönüşüm izleme</td><td>Kreatif + Pixel</td></tr>
 </tbody></table></div>
 
 <h2>Kimler için?</h2>
-<p>Klinik, avukat, emlak, inşaat, eğitim, B2B hizmet ve “şimdi ara” niyeti yüksek kategoriler. Web sitesi yoksa önce landing veya Google Benim İşletmem senaryosu konuşulur.</p>
+<p>Klinik, avukat, emlak, inşaat, eğitim, B2B hizmet ve "şimdi ara" niyeti yüksek kategoriler. Web sitesi yoksa önce landing veya Google Benim İşletmem senaryosu konuşulur.</p>
 
 <h2>Fiyat mantığı</h2>
 <p>Yönetim ücreti hesap karmaşıklığına göre keşif sonrası tekliflenir. Tıklama maliyetleri sektöre göre değişir; sabit TL paket fiyatı vaat etmiyoruz. Medya harcaması reklam hesabınızda şeffaf izlenir.</p>
 
 <h2>Yerel niyet ve kalite skoru</h2>
-<p>Search Console ve Analytics ile birlikte bakıldığında hangi soruların gerçekten dönüştürdüğü netleşir. Marka savunma kampanyası (rakipler sizin isminize teklif veriyorsa) ayrı satır olarak konuşulur. Negatif kelime listesi olmadan geniş eşleme bütçeyi dağıtır — “ucuz”, “ücretsiz iş ilanı”, yanlış şehir gibi terimler düzenli temizlenir.</p>
-<p>Landing sayfa yavaş veya form bozuksa Ads’i büyütmek anlamsızdır; önce dönüşüm yolu kontrol edilir. Çağrı odaklı işletmelerde arama uzantıları, çalışma saatleri ve NAP tutarlılığı kritik fark yaratır. Google Benim İşletmem ile Ads mesajı çelişmemelidir.</p>
-<p>Performance Max veya YouTube ihtiyaç halinde eklenir; herkese varsayılan dayatılmaz. İlk hafta “sihirli satış” beklenmez; öğrenme ve negatif temizliği öndedir. Raporlarda gösterim şişirme değil, birim maliyet ve kaliteli sonuç konuşulur.</p>
+<p>Search Console ve Analytics ile birlikte bakıldığında hangi soruların gerçekten dönüştürdüğü netleşir. Marka savunma kampanyası (rakipler sizin isminize teklif veriyorsa) ayrı satır olarak konuşulur. Negatif kelime listesi olmadan geniş eşleme bütçeyi dağıtır  -  "ucuz", "ücretsiz iş ilanı", yanlış şehir gibi terimler düzenli temizlenir.</p>
+<p>Landing sayfa yavaş veya form bozuksa Ads'i büyütmek anlamsızdır; önce dönüşüm yolu kontrol edilir. Çağrı odaklı işletmelerde arama uzantıları, çalışma saatleri ve NAP tutarlılığı kritik fark yaratır. Google Benim İşletmem ile Ads mesajı çelişmemelidir.</p>
+<p>Performance Max veya YouTube ihtiyaç halinde eklenir; herkese varsayılan dayatılmaz. İlk hafta "sihirli satış" beklenmez; öğrenme ve negatif temizliği öndedir. Raporlarda gösterim şişirme değil, birim maliyet ve kaliteli sonuç konuşulur.</p>
 
 <h2>İlgili sayfalar</h2>
 <p><a href="/hizmetler/reklam-ajansi">Reklam ajansı</a> · <a href="/hizmetler/meta-ads">Meta Ads</a> · <a href="/hizmetler/dijital-pazarlama-ajansi">Dijital pazarlama</a> · <a href="/blog">Blog</a></p>
@@ -429,7 +429,7 @@ const SERVICES: ServiceSeed[] = [
     faqJson: [
       {
         q: "Google Ads nedir?",
-        a: "Google’da arama niyetine göre reklam göstermektir. Anahtar kelime, dönüşüm izleme ve şeffaf medya yönetimi kapsar.",
+        a: "Google'da arama niyetine göre reklam göstermektir. Anahtar kelime, dönüşüm izleme ve şeffaf medya yönetimi kapsar.",
       },
       {
         q: "Google Ads ile Meta Ads farkı nedir?",
@@ -441,7 +441,7 @@ const SERVICES: ServiceSeed[] = [
       },
       {
         q: "Sadece Search mi çalışıyorsunuz?",
-        a: "Öncelik Search’tedir. İhtiyaç halinde Performance Max veya YouTube eklenir.",
+        a: "Öncelik Search'tedir. İhtiyaç halinde Performance Max veya YouTube eklenir.",
       },
       {
         q: "Web sitem zayıfsa Ads olur mu?",
@@ -455,23 +455,23 @@ const SERVICES: ServiceSeed[] = [
   },
   {
     slug: "reklam-ajansi",
-    title: "Trabzon Reklam Ajansı",
+    title: "Samsun Reklam Ajansı",
     lead:
-      "Trabzon reklam ajansı; Meta ve Google’ı kanal fanatizmi olmadan aynı performans çatısında planlar. Bu sayfa ücretli medya şemsiyesidir — derin teknik sayfalar Meta Ads ve Google Ads’tedir.",
-    seoTitle: "Trabzon Reklam Ajansı | Meta & Google Performans · Wesoco",
+      "Samsun reklam ajansı; Meta ve Google'ı kanal fanatizmi olmadan aynı performans çatısında planlar. Bu sayfa ücretli medya şemsiyesidir  -  derin teknik sayfalar Meta Ads ve Google Ads'tedir.",
+    seoTitle: "Samsun Reklam Ajansı | Meta & Google Performans · Wesoco",
     seoDesc:
-      "Trabzon’da reklam ajansı: medya planı, kreatif test, şeffaf maliyet. Meta Ads ve Google Ads’i tek çatıda yöneten performans yaklaşımı.",
+      "Samsun'da reklam ajansı: medya planı, kreatif test, şeffaf maliyet. Meta Ads ve Google Ads'i tek çatıda yöneten performans yaklaşımı.",
     bodyHtml: `
 <h2>Reklam ajansı nedir?</h2>
-<p><strong>Reklam ajansı</strong>; bütçeyi “bir yerlere harcamak” değil, kanal seçimi, kreatif test, ölçüm ve raporla büyümeyi yönetmektir. Trabzon Sosyal Medya (Wesoco) performans odaklı çalışır: iş modeline göre Meta, Google veya ikisinin karışımı. Bu sayfa şemsiye anlatımdır.</p>
+<p><strong>Reklam ajansı</strong>; bütçeyi "bir yerlere harcamak" değil, kanal seçimi, kreatif test, ölçüm ve raporla büyümeyi yönetmektir. Samsun Sosyal Medya (Wesoco) performans odaklı çalışır: iş modeline göre Meta, Google veya ikisinin karışımı. Bu sayfa şemsiye anlatımdır.</p>
 <p>Facebook/Instagram reklam detayı için <a href="/hizmetler/meta-ads">Meta Ads</a>, arama niyeti için <a href="/hizmetler/google-ads">Google Ads</a> sayfalarına gidin. Organik sosyal operasyon burada satılmaz; o kapsam <a href="/hizmetler/sosyal-medya-yonetimi">sosyal medya yönetimi</a> ürünündedir.</p>
 
 <h2>Neden tek çatıda reklam yönetimi?</h2>
-<p>Kanallar birbirini tamamlar: Meta keşfettirir, Google niyeti yakalar, remarketing ikisini bağlar. Ayrı ajanslarla çalışmak mesaj ve rapor dilini böler. Şeffaf reklam ajansı; medya satırını ajans ücretinden ayırır, kaybeden kreatifi dinlendirir ve haftalık öğrenmeyi yazılı bırakır. “Garanti satış” vaadi yoktur; yazılı KPI, test hipotezi ve durdurma kriteri konur.</p>
+<p>Kanallar birbirini tamamlar: Meta keşfettirir, Google niyeti yakalar, remarketing ikisini bağlar. Ayrı ajanslarla çalışmak mesaj ve rapor dilini böler. Şeffaf reklam ajansı; medya satırını ajans ücretinden ayırır, kaybeden kreatifi dinlendirir ve haftalık öğrenmeyi yazılı bırakır. "Garanti satış" vaadi yoktur; yazılı KPI, test hipotezi ve durdurma kriteri konur.</p>
 
 <h2>Nasıl çalışırız?</h2>
 <ol>
-<li><strong>Hedef ve KPI:</strong> Mesaj, form, arama, rezervasyon — tek ana metrik seçilir.</li>
+<li><strong>Hedef ve KPI:</strong> Mesaj, form, arama, rezervasyon  -  tek ana metrik seçilir.</li>
 <li><strong>Kanal karışımı:</strong> Keşifte Meta / Google ağırlığı netleşir.</li>
 <li><strong>Kreatif ve teklif:</strong> Ortak mesaj; platforma özel format ve kopya.</li>
 <li><strong>Yayın ve öğrenme:</strong> Ayrı bütçe satırları, retargeting, frekans kontrolü.</li>
@@ -492,12 +492,12 @@ const SERVICES: ServiceSeed[] = [
 <p>Aylık medya harcaması olan veya yeni başlayacak yerel işletmeler. Yalnızca organik yönetim arıyorsanız reklam ajansı değil, sosyal medya yönetimi ürünü doğrudur. Full funnel için <a href="/hizmetler/dijital-pazarlama-ajansi">dijital pazarlama</a> daha geniş çerçevedir.</p>
 
 <h2>Fiyat mantığı</h2>
-<p>Yönetim ücreti kanal sayısı, kampanya karmaşıklığı ve kreatif üretimine göre keşif sonrası tekliflenir. Medya bütçesi işletmeye aittir. Sabit TL “reklam paketi” listesi yayınlamıyoruz.</p>
+<p>Yönetim ücreti kanal sayısı, kampanya karmaşıklığı ve kreatif üretimine göre keşif sonrası tekliflenir. Medya bütçesi işletmeye aittir. Sabit TL "reklam paketi" listesi yayınlamıyoruz.</p>
 
 <h2>Medya planı ve sezon</h2>
-<p>Medya planı sezonu dikkate alır: turizm öncesi farkındalık, sezon içi dönüşüm, sezon sonrası remarketing farklı ağırlık ister. Aynı kreatifin hem Meta’da hem Google Display’de körü körüne kullanılması nadiren doğru sonuç verir; format ve niyet farklıdır. Haftalık kontrol, aylık strateji revizyonu ile birleşir.</p>
-<p>Küçük bütçede bile yapı doğru kurulursa öğrenme birikir; yanlış yapıda küçük bütçe de boşa gider. Kreatif stoğu yoksa <a href="/hizmetler/icerik-uretimi-cekim">içerik üretimi</a> aynı projeye eklenir. “Garanti lead” dili yerine test hipotezi ve durdurma kriteri yazılır — bu hem etik hem de uzun vadeli performans için şarttır.</p>
-<p>Tek muhatap avantajı: mesaj Meta’da bir vaat, Google’da başka vaat olmaz. Skor kartı kanal bazlı ve birim maliyet odaklıdır; vanity gösterim listesi yönetim özeti sayılmaz.</p>
+<p>Medya planı sezonu dikkate alır: sezon öncesi farkındalık, sezon içi dönüşüm, sezon sonrası remarketing farklı ağırlık ister. Aynı kreatifin hem Meta'da hem Google Display'de körü körüne kullanılması nadiren doğru sonuç verir; format ve niyet farklıdır. Haftalık kontrol, aylık strateji revizyonu ile birleşir.</p>
+<p>Küçük bütçede bile yapı doğru kurulursa öğrenme birikir; yanlış yapıda küçük bütçe de boşa gider. Kreatif stoğu yoksa <a href="/hizmetler/icerik-uretimi-cekim">içerik üretimi</a> aynı projeye eklenir. "Garanti lead" dili yerine test hipotezi ve durdurma kriteri yazılır  -  bu hem etik hem de uzun vadeli performans için şarttır.</p>
+<p>Tek muhatap avantajı: mesaj Meta'da bir vaat, Google'da başka vaat olmaz. Skor kartı kanal bazlı ve birim maliyet odaklıdır; vanity gösterim listesi yönetim özeti sayılmaz.</p>
 
 <h2>İlgili sayfalar</h2>
 <p><a href="/hizmetler/meta-ads">Meta Ads</a> · <a href="/hizmetler/google-ads">Google Ads</a> · <a href="/hizmetler/dijital-pazarlama-ajansi">Dijital pazarlama</a> · <a href="/hizmetler/sosyal-medya-ajansi">Sosyal medya ajansı</a></p>
@@ -514,7 +514,7 @@ const SERVICES: ServiceSeed[] = [
         a: "Kanal seçimi, kreatif test, ölçüm ve şeffaf medya raporuyla ücretli büyümeyi yönetir. Meta ve/veya Google aynı çatıda planlanır.",
       },
       {
-        q: "Meta ve Google’ı aynı anda yönetir misiniz?",
+        q: "Meta ve Google'ı aynı anda yönetir misiniz?",
         a: "Evet. İş modeline göre karışım seçilir; her kanal ayrı satırda raporlanır.",
       },
       {
@@ -537,25 +537,25 @@ const SERVICES: ServiceSeed[] = [
   },
   {
     slug: "icerik-uretimi-cekim",
-    title: "İçerik ve Reels Üretimi",
+    title: "Samsun İçerik ve Reels Üretimi",
     lead:
-      "Trabzon içerik üretimi ve çekim; yerinde fotoğraf, reels kurgu ve sosyal formatlara kırılmış kullanılabilir stok demektir. Stok görsel tek başına güven üretmez — mekân, ekip ve ürün gerçekten görünür.",
-    seoTitle: "İçerik Üretimi & Çekim Trabzon | Reels, Fotoğraf, Video",
+      "Samsun içerik üretimi ve çekim; yerinde fotoğraf, reels kurgu ve sosyal formatlara kırılmış kullanılabilir stok demektir. Stok görsel tek başına güven üretmez  -  mekân, ekip ve ürün gerçekten görünür.",
+    seoTitle: "İçerik Üretimi & Çekim Samsun | Reels, Fotoğraf, Video",
     seoDesc:
-      "Trabzon’da içerik üretimi: yerinde çekim, reels kurgu, profesyonel fotoğraf ve sosyal medya formatları. Satışa odaklı stok · Wesoco.",
+      "Samsun'da içerik üretimi: yerinde çekim, reels kurgu, profesyonel fotoğraf ve sosyal medya formatları. Satışa odaklı stok · Wesoco.",
     bodyHtml: `
 <h2>İçerik üretimi ve çekim nedir?</h2>
-<p><strong>İçerik üretimi</strong>; markanın anlatacağı hikâyeyi görüntüye çevirmektir. Trabzon’da yerinde çekim günü planlarız: brief, shot list, ışık/mekân, ardından kurgu ve platform kırılımları (post, story, reels, gerektiğinde web/hero). Amaç “güzel kare” koleksiyonu değil; satış, randevu veya rezervasyon mesajını taşıyan kullanılabilir stok.</p>
+<p><strong>İçerik üretimi</strong>; markanın anlatacağı hikâyeyi görüntüye çevirmektir. Samsun'da yerinde çekim günü planlarız: brief, shot list, ışık/mekân, ardından kurgu ve platform kırılımları (post, story, reels, gerektiğinde web/hero). Amaç "güzel kare" koleksiyonu değil; satış, randevu veya rezervasyon mesajını taşıyan kullanılabilir stok.</p>
 <p>Ajans yönetimi ayrı üründür; bu sayfa üretim ve prodüksiyon omurgasını anlatır. Çekim sonrası yayın takvimine <a href="/hizmetler/sosyal-medya-yonetimi">yönetim</a> veya <a href="/hizmetler/instagram-yonetimi">Instagram</a> paketi bağlanabilir. Yalnız havadan ölçek için <a href="/hizmetler/drone-cekimi">drone çekimi</a> ayrı hizmettir.</p>
 
 <h2>Neden özgün çekim önemli?</h2>
-<p>Hazır stok fotoğraf mahalle güvenini zayıflatır. Restoranda gerçek tabak, klinikte ekip ve mekân, inşaatta şantiye ilerleyişi izleyiciyi ikna eder. Reels izlenme süresi keşfeti açar; zayıf hook’lu video zamanı boşa harcar. Sezon öncesi stok üretmek, yoğun haftada panik paylaşımı önler. Aynı çekim gününden hem organik hem Ads kreatifleri çıkarmak maliyet verimliliğini artırır.</p>
+<p>Hazır stok fotoğraf mahalle güvenini zayıflatır. Restoranda gerçek tabak, klinikte ekip ve mekân, inşaatta şantiye ilerleyişi izleyiciyi ikna eder. Reels izlenme süresi keşfeti açar; zayıf hook'lu video zamanı boşa harcar. Sezon öncesi stok üretmek, yoğun haftada panik paylaşımı önler. Aynı çekim gününden hem organik hem Ads kreatifleri çıkarmak maliyet verimliliğini artırır.</p>
 
 <h2>Nasıl üretilir?</h2>
 <ol>
 <li><strong>Brief:</strong> Hedef CTA, yasaklar, marka tonu, platformlar, referans örnekler.</li>
 <li><strong>Shot list:</strong> Reels senaryoları, fotoğraf setleri, B-roll, ürün/mekân öncelikleri.</li>
-<li><strong>Çekim günü:</strong> Trabzon / ilçe lokasyonunda planlı saatler.</li>
+<li><strong>Çekim günü:</strong> Samsun / ilçe lokasyonunda planlı saatler.</li>
 <li><strong>Kurgu ve teslim:</strong> Oranlar, altyazı, kapak, sosyal-ready export.</li>
 <li><strong>Onay ve arşiv:</strong> Revizyon turu; sonraki aylar için klasör düzeni.</li>
 </ol>
@@ -577,9 +577,9 @@ const SERVICES: ServiceSeed[] = [
 <p>Çekim günü sayısı, lokasyon, reels adedi, kurgu derinliği ve ek ekipman fiyatı etkiler. Keşif sonrası kapsam yazılır; uydurma paket TL listesi yoktur. Ham dosya ile sosyal-ready teslim farkı teklifte net belirtilir.</p>
 
 <h2>Brief ve onay disiplini</h2>
-<p>Çekim öncesi mekân hazırlığı (temizlik, ışık, ürün dizimi) sonucu belirler; ekip hazır değilse süre uzar. Müşteri yüzü veya hasta görseli gibi hassas içeriklerde onay ve anonimleştirme peşinen konuşulur. Renk ve tipografi marka diline uymazsa sonradan kurguyla kurtarmak zordur — brief’te renk kodları istenir.</p>
-<p>Onay gecikmesi arşivi şişirir; tek muhatap ve yazılı revizyon hakkı teklifte belirtilir. Ses, altyazı ve kapak karesi teslimin parçasıdır; “ham dosya bıraktık” modeli varsayılan değildir. Acil (48 saat) teslim istenirse kurgu önceliği ayrıca konuşulur.</p>
-<p>Aynı çekim gününden Ads varyantları da düşünülürse maliyet verimliliği artar. Hook zayıfsa bütçe değil emek boşa gider; bu yüzden senaryo brief’i çekimden önce yazılır. Yayın sonrası yönetim istenirse sosyal medya paketleri bağlanır.</p>
+<p>Çekim öncesi mekân hazırlığı (temizlik, ışık, ürün dizimi) sonucu belirler; ekip hazır değilse süre uzar. Müşteri yüzü veya hasta görseli gibi hassas içeriklerde onay ve anonimleştirme peşinen konuşulur. Renk ve tipografi marka diline uymazsa sonradan kurguyla kurtarmak zordur  -  brief'te renk kodları istenir.</p>
+<p>Onay gecikmesi arşivi şişirir; tek muhatap ve yazılı revizyon hakkı teklifte belirtilir. Ses, altyazı ve kapak karesi teslimin parçasıdır; "ham dosya bıraktık" modeli varsayılan değildir. Acil (48 saat) teslim istenirse kurgu önceliği ayrıca konuşulur.</p>
+<p>Aynı çekim gününden Ads varyantları da düşünülürse maliyet verimliliği artar. Hook zayıfsa bütçe değil emek boşa gider; bu yüzden senaryo brief'i çekimden önce yazılır. Yayın sonrası yönetim istenirse sosyal medya paketleri bağlanır.</p>
 
 <h2>İlgili sayfalar</h2>
 <p><a href="/hizmetler/drone-cekimi">Drone çekimi</a> · <a href="/hizmetler/instagram-yonetimi">Instagram yönetimi</a> · <a href="/hizmetler/sosyal-medya-yonetimi">Sosyal medya yönetimi</a> · <a href="/hizmetler/meta-ads">Meta Ads kreatif</a></p>
@@ -605,7 +605,7 @@ const SERVICES: ServiceSeed[] = [
       },
       {
         q: "İlçeye geliyor musunuz?",
-        a: "Evet. Trabzon merkez ve 18 ilçede planlı çekim yapılır.",
+        a: "Evet. Samsun merkez ve 17 ilçede planlı çekim yapılır.",
       },
       {
         q: "Drone bu paketin içinde mi?",
@@ -619,19 +619,19 @@ const SERVICES: ServiceSeed[] = [
   },
   {
     slug: "drone-cekimi",
-    title: "Drone Çekimi",
+    title: "Samsun Drone Çekimi",
     lead:
-      "Trabzon drone çekimi; otel, inşaat, turizm ve sahil işletmelerinde ölçek ve konum avantajını havadan gösterir. Uçuş planı, izinler ve sosyal/web formatlarına kurgu tek pakette düşünülür.",
-    seoTitle: "Drone Çekimi Trabzon | Havadan Video & Fotoğraf · Wesoco",
+      "Samsun drone çekimi; otel, inşaat, turizm ve sahil işletmelerinde ölçek ve konum avantajını havadan gösterir. Uçuş planı, izinler ve sosyal/web formatlarına kurgu tek pakette düşünülür.",
+    seoTitle: "Drone Çekimi Samsun | Havadan Video & Fotoğraf · Wesoco",
     seoDesc:
-      "Trabzon’da profesyonel drone çekimi: otel, inşaat, turizm. Planlı uçuş, kurgu ve sosyal medya formatları · Wesoco.",
+      "Samsun'da profesyonel drone çekimi: otel, inşaat, turizm. Planlı uçuş, kurgu ve sosyal medya formatları · Wesoco.",
     bodyHtml: `
 <h2>Drone çekimi nedir?</h2>
-<p><strong>Drone çekimi</strong>; markayı yer seviyesinden görülemeyen açı ve ölçekle anlatmaktır. Trabzon Sosyal Medya olarak uçuş öncesi plan, güvenli operasyon, ham kayıt ve ardından reels/web/hero kırılımlarını sunarız. Tek “havadan gezi” dosyası yetmez — sosyal medyada hook’lu kısa kesitler, web’de geniş master ayrı teslim edilir.</p>
+<p><strong>Drone çekimi</strong>; markayı yer seviyesinden görülemeyen açı ve ölçekle anlatmaktır. Samsun Sosyal Medya olarak uçuş öncesi plan, güvenli operasyon, ham kayıt ve ardından reels/web/hero kırılımlarını sunarız. Tek "havadan gezi" dosyası yetmez  -  sosyal medyada hook'lu kısa kesitler, web'de geniş master ayrı teslim edilir.</p>
 <p>Yer çekimi ve ürün detayı için <a href="/hizmetler/icerik-uretimi-cekim">içerik üretimi</a> ayrı hizmettir. Birçok projede ikisi aynı günde veya ardışık günlerde birleştirilir.</p>
 
 <h2>Neden havadan içerik işe yarar?</h2>
-<p>Otel ve konaklamada çevre ve manzara, inşaatta proje ölçeği, turizmde rota ve doğa, sahil işletmelerinde konum netleşir. Maçka yaylası, Çaykara hattı veya sahil koridorunda havadan bakış, fotoğrafta kaybolan ölçeği geri getirir. Yanlış hava veya izinsiz uçuş hem kaliteyi hem güvenliği bozar; planlı prodüksiyon “uçup çekelim” yaklaşımını reddeder.</p>
+<p>Otel ve konaklamada çevre ve manzara, inşaatta proje ölçeği, turizmde rota ve doğa, sahil işletmelerinde konum netleşir. Bafra ovası, Terme sahil hattı veya Tekkeköy sanayi koridorunda havadan bakış, fotoğrafta kaybolan ölçeği geri getirir. Yanlış hava veya izinsiz uçuş hem kaliteyi hem güvenliği bozar; planlı prodüksiyon "uçup çekelim" yaklaşımını reddeder.</p>
 
 <h2>Nasıl yapılır?</h2>
 <ol>
@@ -646,7 +646,7 @@ const SERVICES: ServiceSeed[] = [
 <caption>Drone ne zaman gerekir?</caption>
 <thead><tr><th>Sektör</th><th>Drone değeri</th><th>Yer çekimi yeterli mi?</th></tr></thead>
 <tbody>
-<tr><td>Otel / villa</td><td>Manzara, çevre, ölçek</td><td>İç mekân için hayır — ikisi birlikte</td></tr>
+<tr><td>Otel / villa</td><td>Manzara, çevre, ölçek</td><td>İç mekân için hayır  -  ikisi birlikte</td></tr>
 <tr><td>İnşaat / emlak</td><td>Proje ölçeği, ilerleme</td><td>Detay daire için yer şart</td></tr>
 <tr><td>Restoran</td><td>Konum / sahil</td><td>Menü için yer çekimi öncelik</td></tr>
 <tr><td>Klinik</td><td>Genelde düşük</td><td>Ekip ve mekân yer çekimi</td></tr>
@@ -659,12 +659,12 @@ const SERVICES: ServiceSeed[] = [
 <p>Lokasyon, uçuş süresi, kurgu uzunluğu, ek gün ve seyahat lojistiği fiyatı etkiler. Keşif sonrası yazılı teklif; sabit TL katalog fiyatı yoktur.</p>
 
 <h2>Güvenlik, izin ve teslim</h2>
-<p>Şantiye ve otel projelerinde güvenlik brifingi zorunludur; uçuş alanı işaretlenir, yaya trafiği dikkate alınır. Gün batımı “golden hour” çoğu lansman için değerlidir ama Trabzon’da ani yağmur senaryosu her zaman yedeklenir. Kısıtlı bölgelerde uçuş yapılmaz — keşifte uygunluk netleşmeden tarih kilitlemeyiz.</p>
-<p>Ham footage arşivi müşteriye verilebilir; sosyal-ready kesitler ayrı iş kalemidir ve teklifte ayrılır. Aynı uçuştan birden fazla dil/altyazı versiyonu istenirse kurgu kalemi artar. “Sınırsız footage” vaadi yoktur; shot list’teki hedefler teslimin ölçüsüdür.</p>
+<p>Şantiye ve otel projelerinde güvenlik brifingi zorunludur; uçuş alanı işaretlenir, yaya trafiği dikkate alınır. Gün batımı "golden hour" çoğu lansman için değerlidir ama Samsun'da ani yağmur senaryosu her zaman yedeklenir. Kısıtlı bölgelerde uçuş yapılmaz  -  keşifte uygunluk netleşmeden tarih kilitlemeyiz.</p>
+<p>Ham footage arşivi müşteriye verilebilir; sosyal-ready kesitler ayrı iş kalemidir ve teklifte ayrılır. Aynı uçuştan birden fazla dil/altyazı versiyonu istenirse kurgu kalemi artar. "Sınırsız footage" vaadi yoktur; shot list'teki hedefler teslimin ölçüsüdür.</p>
 <p>Yayın sonrası yönetim veya Ads kreatif ihtiyacı varsa <a href="/hizmetler/sosyal-medya-yonetimi">sosyal medya yönetimi</a> ve <a href="/hizmetler/meta-ads">Meta Ads</a> aynı projeye bağlanabilir. Yatırımcı sunumu için uzun master film ayrı brief ile planlanır.</p>
 
 <h2>İlgili sayfalar</h2>
-<p><a href="/hizmetler/icerik-uretimi-cekim">İçerik &amp; yer çekimi</a> · <a href="/hizmetler/sosyal-medya-yonetimi">Sosyal medya yönetimi</a> · <a href="/bolgeler/macka">Maçka</a> · <a href="/bolgeler/caykara">Çaykara</a></p>
+<p><a href="/hizmetler/icerik-uretimi-cekim">İçerik &amp; yer çekimi</a> · <a href="/hizmetler/sosyal-medya-yonetimi">Sosyal medya yönetimi</a> · <a href="/bolgeler/bafra">Bafra</a> · <a href="/bolgeler/terme">Terme</a></p>
 
 <div class="page-cta">
   <h2>Havadan planı konuşalım</h2>
@@ -701,19 +701,19 @@ const SERVICES: ServiceSeed[] = [
   },
   {
     slug: "dijital-pazarlama-ajansi",
-    title: "Dijital Pazarlama Ajansı",
+    title: "Samsun Dijital Pazarlama Ajansı",
     lead:
-      "Trabzon dijital pazarlama ajansı; mesaj, içerik, ücretli medya ve ölçümü tek hunide birleştirir. Kanal kanal parçalı iş değil — full funnel sistem: farkındalık → değerlendirme → dönüşüm → sadakat.",
-    seoTitle: "Dijital Pazarlama Ajansı Trabzon | Full Funnel · Wesoco",
+      "Samsun dijital pazarlama ajansı; mesaj, içerik, ücretli medya ve ölçümü tek hunide birleştirir. Kanal kanal parçalı iş değil  -  full funnel sistem: farkındalık → değerlendirme → dönüşüm → sadakat.",
+    seoTitle: "Dijital Pazarlama Ajansı Samsun | Full Funnel · Wesoco",
     seoDesc:
-      "Trabzon’da dijital pazarlama: sosyal, Meta Ads, Google Ads, içerik ve ölçüm tek sistemde. Full funnel ajans yaklaşımı · Wesoco.",
+      "Samsun'da dijital pazarlama: sosyal, Meta Ads, Google Ads, içerik ve ölçüm tek sistemde. Full funnel ajans yaklaşımı · Wesoco.",
     bodyHtml: `
 <h2>Dijital pazarlama ajansı nedir?</h2>
-<p><strong>Dijital pazarlama ajansı</strong>; markayı tek kanala hapsetmeden, müşteri yolculuğunu uçtan uca tasarlayan yapıdır. Trabzon Sosyal Medya (Wesoco) olarak farkındalık (içerik/reels), değerlendirme (site, Google Benim İşletmem, sosyal kanıt), dönüşüm (Meta/Google, form, WhatsApp) ve sadakat (remarketing) aynı planda ilerler.</p>
-<p>“Grafik yaptık” veya “reklam açtık” tek başına sistem sayılmaz. <a href="/hizmetler/sosyal-medya-ajansi">Sosyal medya ajansı</a> sayfası güven ve ortaklık çerçevesini anlatır; bu sayfa full funnel mimariyi anlatır. Yalnız Ads için <a href="/hizmetler/reklam-ajansi">reklam ajansı</a>, yalnız operasyon için <a href="/hizmetler/sosyal-medya-yonetimi">yönetim</a> daha sade kapılardır.</p>
+<p><strong>Dijital pazarlama ajansı</strong>; markayı tek kanala hapsetmeden, müşteri yolculuğunu uçtan uca tasarlayan yapıdır. Samsun Sosyal Medya (Wesoco) olarak farkındalık (içerik/reels), değerlendirme (site, Google Benim İşletmem, sosyal kanıt), dönüşüm (Meta/Google, form, WhatsApp) ve sadakat (remarketing) aynı planda ilerler.</p>
+<p>"Grafik yaptık" veya "reklam açtık" tek başına sistem sayılmaz. <a href="/hizmetler/sosyal-medya-ajansi">Sosyal medya ajansı</a> sayfası güven ve ortaklık çerçevesini anlatır; bu sayfa full funnel mimariyi anlatır. Yalnız Ads için <a href="/hizmetler/reklam-ajansi">reklam ajansı</a>, yalnız operasyon için <a href="/hizmetler/sosyal-medya-yonetimi">yönetim</a> daha sade kapılardır.</p>
 
 <h2>Neden full funnel gerekir?</h2>
-<p>Yalnız reklam açmak, vitrin zayıfsa maliyeti yükseltir. Yalnız içerik üretmek, ölçüm yoksa öğrenmeyi engeller. Full funnel; hangi aşamada neyin kırıldığını gösterir — kreatif mi, teklif mi, hız mı, form mu? Google Benim İşletmem, NAP tutarlılığı ve yorum yanıtları huninin “değerlendirme” basamağıdır; sosyal ve Ads bunları yok sayamaz.</p>
+<p>Yalnız reklam açmak, vitrin zayıfsa maliyeti yükseltir. Yalnız içerik üretmek, ölçüm yoksa öğrenmeyi engeller. Full funnel; hangi aşamada neyin kırıldığını gösterir  -  kreatif mi, teklif mi, hız mı, form mu? Google Benim İşletmem, NAP tutarlılığı ve yorum yanıtları huninin "değerlendirme" basamağıdır; sosyal ve Ads bunları yok sayamaz.</p>
 
 <h2>Nasıl kurulur?</h2>
 <ol>
@@ -721,7 +721,7 @@ const SERVICES: ServiceSeed[] = [
 <li><strong>Mesaj mimarisi:</strong> Tek vaat, segmentlere özel varyantlar.</li>
 <li><strong>Kanal haritası:</strong> Organik sosyal, içerik stoğu, Meta, Google, remarketing sırası.</li>
 <li><strong>Ölçüm:</strong> Analytics olayları, Ads dönüşümleri, aylık skor kartı.</li>
-<li><strong>İterasyon:</strong> 30–90 günde kazananları ölçekle, kaybedenleri kes, üç aksiyon yaz.</li>
+<li><strong>İterasyon:</strong> 30-90 günde kazananları ölçekle, kaybedenleri kes, üç aksiyon yaz.</li>
 </ol>
 
 <div class="seo-table-wrap"><table class="seo-comparison-table">
@@ -735,15 +735,15 @@ const SERVICES: ServiceSeed[] = [
 </tbody></table></div>
 
 <h2>Kimler için?</h2>
-<p>Birden fazla kanalı aynı anda yönetmek isteyen büyüyen işletmeler, franchise/bayi yapıları ve “parça parça freelancer”dan tek muhataba geçmek isteyen markalar. Sadece Instagram takvimi yeterliyse yönetim veya Instagram ürünü yeter.</p>
+<p>Birden fazla kanalı aynı anda yönetmek isteyen büyüyen işletmeler, franchise/bayi yapıları ve "parça parça freelancer"dan tek muhataba geçmek isteyen markalar. Sadece Instagram takvimi yeterliyse yönetim veya Instagram ürünü yeter.</p>
 
 <h2>Fiyat mantığı</h2>
-<p>Kapsam (kaç kanal, içerik hacmi, reklam yönetimi, rapor derinliği) keşif sonrası tekliflenir. Medya bütçesi ayrıdır. Full funnel diye şişirilmiş tek fiyat listesi yoktur — ihtiyaca göre modüler yazılır.</p>
+<p>Kapsam (kaç kanal, içerik hacmi, reklam yönetimi, rapor derinliği) keşif sonrası tekliflenir. Medya bütçesi ayrıdır. Full funnel diye şişirilmiş tek fiyat listesi yoktur  -  ihtiyaca göre modüler yazılır.</p>
 
 <h2>Mesaj tutarlılığı ve ölçüm</h2>
-<p>Instagram’da bir vaat, Google’da başka vaat güveni aşındırır. Bu yüzden kanal ekipleri aynı brief’ten beslenir; “herkes kendi işini yapsın” modeli full funnel değildir. Analytics olayları kurulmadan “satış olmadı” tartışması spekülasyondur — önce ölçüm, sonra ölçek.</p>
-<p>Modüler ilerleriz: herkese aynı “dev paket” dayatılmaz. Önce en kırılgan aşama onarılır; sonra kanal eklenir. Rapor hem kanal bazlı hem huni bazlı okunur. “Gösterim arttı” tek başına başarı değildir. Üç aylık öğrenme penceresi teklifte varsayılan çerçevedir; daha kısa deneme ayrıca tanımlanır.</p>
-<p>Google Benim İşletmem, NAP ve yorum yanıtları değerlendirme basamağının parçasıdır. Sosyal ve Ads bunları yok sayarak sadece “üst huni” şişirmek pahalıya patlar. Remarketing olmadan üst huniden gelen trafik çoğu zaman kaybolur.</p>
+<p>Instagram'da bir vaat, Google'da başka vaat güveni aşındırır. Bu yüzden kanal ekipleri aynı brief'ten beslenir; "herkes kendi işini yapsın" modeli full funnel değildir. Analytics olayları kurulmadan "satış olmadı" tartışması spekülasyondur  -  önce ölçüm, sonra ölçek.</p>
+<p>Modüler ilerleriz: herkese aynı "dev paket" dayatılmaz. Önce en kırılgan aşama onarılır; sonra kanal eklenir. Rapor hem kanal bazlı hem huni bazlı okunur. "Gösterim arttı" tek başına başarı değildir. Üç aylık öğrenme penceresi teklifte varsayılan çerçevedir; daha kısa deneme ayrıca tanımlanır.</p>
+<p>Google Benim İşletmem, NAP ve yorum yanıtları değerlendirme basamağının parçasıdır. Sosyal ve Ads bunları yok sayarak sadece "üst huni" şişirmek pahalıya patlar. Remarketing olmadan üst huniden gelen trafik çoğu zaman kaybolur.</p>
 
 <h2>İlgili sayfalar</h2>
 <p><a href="/hizmetler/sosyal-medya-ajansi">Sosyal medya ajansı</a> · <a href="/hizmetler/reklam-ajansi">Reklam ajansı</a> · <a href="/hizmetler/meta-ads">Meta Ads</a> · <a href="/hizmetler/google-ads">Google Ads</a></p>
@@ -783,19 +783,19 @@ const SERVICES: ServiceSeed[] = [
   },
   {
     slug: "kurumsal-sosyal-medya-yonetimi",
-    title: "Kurumsal Sosyal Medya Yönetimi",
+    title: "Samsun Kurumsal Sosyal Medya Yönetimi",
     lead:
-      "Trabzon kurumsal sosyal medya yönetimi; B2B markalar için LinkedIn düşünce liderliği, onaylı editoryal ritim ve itibar protokolü demektir. B2C hızından farklı — güven ve uzmanlık ön planda.",
-    seoTitle: "Kurumsal Sosyal Medya Yönetimi Trabzon | LinkedIn B2B · Wesoco",
+      "Samsun kurumsal sosyal medya yönetimi; B2B markalar için LinkedIn düşünce liderliği, onaylı editoryal ritim ve itibar protokolü demektir. B2C hızından farklı  -  güven ve uzmanlık ön planda.",
+    seoTitle: "Kurumsal Sosyal Medya Yönetimi Samsun | LinkedIn B2B · Wesoco",
     seoDesc:
-      "Trabzon’da kurumsal sosyal medya: LinkedIn, onay hattı, kriz protokolü ve B2B içerik. Wesoco güvencesiyle itibar odaklı yönetim.",
+      "Samsun'da kurumsal sosyal medya: LinkedIn, onay hattı, kriz protokolü ve B2B içerik. Wesoco güvencesiyle itibar odaklı yönetim.",
     bodyHtml: `
 <h2>Kurumsal sosyal medya yönetimi nedir?</h2>
-<p><strong>Kurumsal sosyal medya yönetimi</strong>; şirketin kamuya açık sesini rastgele stajyer postu olmaktan çıkarıp onaylı, tutarlı ve ölçülebilir hale getirmektir. Trabzon Sosyal Medya olarak omurgayı LinkedIn’e kurarız: şirket sayfası, yönetici düşünce liderliği, sektörel içgörü ve istihdam/itibar dengesi.</p>
-<p>Instagram veya diğer kanallar destekleyici olabilir; B2B’de ana sahne LinkedIn’dir. Restoran tipi B2C hızı arıyorsanız <a href="/hizmetler/sosyal-medya-yonetimi">operasyonel yönetim</a> daha uygundur.</p>
+<p><strong>Kurumsal sosyal medya yönetimi</strong>; şirketin kamuya açık sesini rastgele stajyer postu olmaktan çıkarıp onaylı, tutarlı ve ölçülebilir hale getirmektir. Samsun Sosyal Medya olarak omurgayı LinkedIn'e kurarız: şirket sayfası, yönetici düşünce liderliği, sektörel içgörü ve istihdam/itibar dengesi.</p>
+<p>Instagram veya diğer kanallar destekleyici olabilir; B2B'de ana sahne LinkedIn'dir. Restoran tipi B2C hızı arıyorsanız <a href="/hizmetler/sosyal-medya-yonetimi">operasyonel yönetim</a> daha uygundur.</p>
 
-<h2>Neden B2B’de farklı yönetilir?</h2>
-<p>Satın alma komiteleri “eğlenceli reels” ile ikna olmaz; uzmanlık, referans dili ve tutarlı mesaj ister. Yanlış bir paylaşım itibar riskidir — bu yüzden onay katmanı ve kriz protokolü paketin parçasıdır. Arsin ve benzeri sanayi koridorunda LinkedIn + <a href="/hizmetler/google-ads">Google Ads</a> kombinasyonu sık konuşulur: biri güven, diğeri niyet.</p>
+<h2>Neden B2B'de farklı yönetilir?</h2>
+<p>Satın alma komiteleri "eğlenceli reels" ile ikna olmaz; uzmanlık, referans dili ve tutarlı mesaj ister. Yanlış bir paylaşım itibar riskidir  -  bu yüzden onay katmanı ve kriz protokolü paketin parçasıdır. Tekkeköy ve çevre sanayi koridorunda LinkedIn + <a href="/hizmetler/google-ads">Google Ads</a> kombinasyonu sık konuşulur: biri güven, diğeri niyet.</p>
 
 <h2>Nasıl yönetilir?</h2>
 <ol>
@@ -803,7 +803,7 @@ const SERVICES: ServiceSeed[] = [
 <li><strong>Editoryal hat:</strong> Aylık tema (uzmanlık, proje, insan, haber, istihdam).</li>
 <li><strong>LinkedIn üretimi:</strong> Şirket + seçilmiş yönetici hesapları; native format.</li>
 <li><strong>Onay ve yayın:</strong> Yazılı hat; acil kriz senaryosu (durdur / düzelt / sözcü).</li>
-<li><strong>Skor:</strong> Profil ziyareti, takip kalitesi, lead/form sinyalleri — vanity beğeni değil.</li>
+<li><strong>Skor:</strong> Profil ziyareti, takip kalitesi, lead/form sinyalleri  -  vanity beğeni değil.</li>
 </ol>
 
 <div class="seo-table-wrap"><table class="seo-comparison-table">
@@ -823,12 +823,12 @@ const SERVICES: ServiceSeed[] = [
 <p>Onay katmanı sayısı, yönetici hesap adedi, içerik derinliği ve kriz hazırlığı kapsamı belirler. Keşif sonrası teklif; sabit TL kurumsal paket listesi yoktur. Medya (LinkedIn Ads vb.) ayrı satırdır.</p>
 
 <h2>Editoryal hat ve kriz hazırlığı</h2>
-<p>İşe alım içerikleri ile satış içerikleri aynı feed’de karışırsa hedef kitle bulanıklaşır; editoryal takvimde ayrı bloklar açılır. Hassas sektörlerde (hukuk, sağlık, finans) iddia kontrolü onay hattının parçasıdır. Üç aylık içerik haritası olmadan “her hafta bir şeyler atalım” yaklaşımı kurumsal hesapta tutarsızlık üretir.</p>
-<p>Kriz protokolü “olur bir şey” diye ertelenmez: kim neyi kaldırır, kim konuşur, hangi kanalda ne söylenir peşinen yazılır. Çalışan savunuculuğu (employee advocacy) kontrolsüz bırakılırsa marka sesi dağılır; seçilmiş yönetici hesapları yazılı ton rehberiyle ilerler.</p>
-<p>Holding içi çok markalı yapıda onay matrisi holding seviyesinde kurulur; her marka ayrı skor kartı alabilir. Rapor yönetim özetine indirgenir — kurul sunumuna uygun dil. Saf B2C tempo arayanlar için bu ürün değil, operasyonel yönetim doğrudur.</p>
+<p>İşe alım içerikleri ile satış içerikleri aynı feed'de karışırsa hedef kitle bulanıklaşır; editoryal takvimde ayrı bloklar açılır. Hassas sektörlerde (hukuk, sağlık, finans) iddia kontrolü onay hattının parçasıdır. Üç aylık içerik haritası olmadan "her hafta bir şeyler atalım" yaklaşımı kurumsal hesapta tutarsızlık üretir.</p>
+<p>Kriz protokolü "olur bir şey" diye ertelenmez: kim neyi kaldırır, kim konuşur, hangi kanalda ne söylenir peşinen yazılır. Çalışan savunuculuğu (employee advocacy) kontrolsüz bırakılırsa marka sesi dağılır; seçilmiş yönetici hesapları yazılı ton rehberiyle ilerler.</p>
+<p>Holding içi çok markalı yapıda onay matrisi holding seviyesinde kurulur; her marka ayrı skor kartı alabilir. Rapor yönetim özetine indirgenir  -  kurul sunumuna uygun dil. Saf B2C tempo arayanlar için bu ürün değil, operasyonel yönetim doğrudur.</p>
 
 <h2>İlgili sayfalar</h2>
-<p><a href="/hizmetler/sosyal-medya-yonetimi">Operasyonel yönetim</a> · <a href="/hizmetler/dijital-pazarlama-ajansi">Dijital pazarlama</a> · <a href="/hizmetler/google-ads">Google Ads</a> · <a href="/bolgeler/arsin">Arsin</a></p>
+<p><a href="/hizmetler/sosyal-medya-yonetimi">Operasyonel yönetim</a> · <a href="/hizmetler/dijital-pazarlama-ajansi">Dijital pazarlama</a> · <a href="/hizmetler/google-ads">Google Ads</a> · <a href="/bolgeler/tekkekoy">Tekkeköy</a></p>
 
 <div class="page-cta">
   <h2>Kurumsal editoryal hattı kuralım</h2>
@@ -843,7 +843,7 @@ const SERVICES: ServiceSeed[] = [
       },
       {
         q: "Sadece LinkedIn mi yönetiyorsunuz?",
-        a: "Kurumsal omurga LinkedIn’dir. İhtiyaç halinde Instagram/şirket sayfaları destekleyici kapsama eklenir.",
+        a: "Kurumsal omurga LinkedIn'dir. İhtiyaç halinde Instagram/şirket sayfaları destekleyici kapsama eklenir.",
       },
       {
         q: "Yönetici hesapları da dahil mi?",
@@ -877,30 +877,38 @@ function wordCount(html: string) {
 async function main() {
   let updated = 0;
 
-  for (const s of SERVICES) {
-    const existing = await prisma.service.findUnique({ where: { slug: s.slug } });
-    if (!existing) {
-      console.warn("skip missing slug:", s.slug);
-      continue;
-    }
-
-    await prisma.service.update({
+  for (let i = 0; i < SERVICES.length; i++) {
+    const s = SERVICES[i];
+    await prisma.service.upsert({
       where: { slug: s.slug },
-      data: {
+      create: {
+        slug: s.slug,
         title: s.title,
         lead: s.lead,
         bodyHtml: s.bodyHtml,
         faqJson: s.faqJson,
         seoTitle: s.seoTitle,
         seoDesc: s.seoDesc,
+        published: true,
+        sortOrder: i + 1,
+      },
+      update: {
+        title: s.title,
+        lead: s.lead,
+        bodyHtml: s.bodyHtml,
+        faqJson: s.faqJson,
+        seoTitle: s.seoTitle,
+        seoDesc: s.seoDesc,
+        published: true,
+        sortOrder: i + 1,
       },
     });
 
     updated += 1;
-    console.log("updated", s.slug, "words", wordCount(s.bodyHtml), "faqs", s.faqJson.length);
+    console.log("upserted", s.slug, "words", wordCount(s.bodyHtml), "faqs", s.faqJson.length);
   }
 
-  console.log("updated count:", updated);
+  console.log("upserted count:", updated);
 }
 
 main()

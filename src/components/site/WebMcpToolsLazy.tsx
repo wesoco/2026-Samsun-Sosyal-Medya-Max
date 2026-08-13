@@ -8,7 +8,7 @@ const WebMcpToolsInner = dynamic(
   { ssr: false },
 );
 
-/** WebMCP LCP sonrası — agent araçları ilk boyamayı engellemesin */
+/** WebMCP LCP sonrası  -  agent araçları ilk boyamayı engellemesin */
 export function WebMcpToolsLazy() {
   const [ready, setReady] = useState(false);
 

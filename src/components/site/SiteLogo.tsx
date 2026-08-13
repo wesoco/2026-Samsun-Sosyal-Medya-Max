@@ -17,7 +17,7 @@ export function SiteLogo() {
   }
 
   return (
-    <Link href={paths.home} className="logo" aria-label="Trabzon Sosyal Medya ana sayfa" onClick={onClick}>
+    <Link href={paths.home} className="logo" aria-label="Samsun Sosyal Medya ana sayfa" onClick={onClick}>
       <img
         className="logo-img logo-img-white"
         src="/assets/wesoco-logo-beyaz.svg"

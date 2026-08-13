@@ -33,7 +33,7 @@ export default async function AdminLoginPage({
       <div className="admin-login-stage">
         <div className="admin-login-brand">
           <img src="/assets/wesoco-logo-beyaz.svg" alt="Wesoco" width={160} height={26} />
-          <h1>Trabzon Sosyal Medya</h1>
+          <h1>Samsun Sosyal Medya</h1>
           <p>İçerik, SEO ve mesaj yönetimi paneli. Yalnızca yetkili kullanıcılar.</p>
         </div>
         <form action={login} className="admin-login-card">

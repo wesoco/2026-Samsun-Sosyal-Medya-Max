@@ -5,8 +5,8 @@ export const dynamic = "force-dynamic";
 
 export function generateMetadata() {
   return buildLegalMetadata(
-    "KVKK Aydınlatma ve Veri Politikası | Trabzon Sosyal Medya",
-    "Trabzon Sosyal Medya (Wesoco) KVKK kapsamında kişisel verilerin işlenmesi hakkında bilgilendirme.",
+    "KVKK Aydınlatma ve Veri Politikası | Samsun Sosyal Medya",
+    "Samsun Sosyal Medya (Wesoco) KVKK kapsamında kişisel verilerin işlenmesi hakkında bilgilendirme.",
     paths.kvkk,
   );
 }
@@ -21,7 +21,7 @@ export default function KvkkPage() {
     >
       <h2>Veri sorumlusu</h2>
       <p>
-        Trabzon Sosyal Medya / Wesoco. Gazipaşa Mah. Uzun Sk. Can Bakkal İş Merkezi Kapı No:25, Ortahisar / Trabzon.
+        Samsun Sosyal Medya / Wesoco. Gazipaşa Mah. Uzun Sk., Can Bakkal İş Merkezi Kat:7 Daire:61, Ortahisar / Trabzon.
         İletişim: info@wesoco.com · +90 (538) 058 11 22.
       </p>
       <h2>İşlenen veriler</h2>

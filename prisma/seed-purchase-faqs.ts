@@ -25,12 +25,12 @@ const FAQS: { question: string; answer: string }[] = [
   {
     question: "Hazır paket mi sunuyorsunuz, yoksa markaya özel mi çalışıyorsunuz?",
     answer:
-      "Markaya ve sektöre özel çalışıyoruz. Şablon “Başlangıç / Büyüme” listesi dayatılmaz. İçerik dili, kanal seçimi, onay hattı ve ölçüm çerçevesi keşifte markanıza göre kurulur; kapsam yazılı teklifte netleşir.",
+      "Markaya ve sektöre özel çalışıyoruz. Şablon «Başlangıç / Büyüme» listesi dayatılmaz. İçerik dili, kanal seçimi, onay hattı ve ölçüm çerçevesi keşifte markanıza göre kurulur; kapsam yazılı teklifte netleşir.",
   },
   {
     question: "İçerik planı sektöre göre nasıl değişir?",
     answer:
-      "Restoran’da menü, story temposu ve rezervasyon; klinikte güven ve randevu yolu; otelde sezon ve deneyim; otomotivde lansman ve showroom çağrısı öne çıkar. Aynı şablon herkese basılmaz. Keşifte sektörünüze özel takvim, dil ve başarı sinyalleri (mesaj, arama, rezervasyon vb.) birlikte yazılır.",
+      "Restoranda menü, story temposu ve rezervasyon; klinikte güven ve randevu yolu; otelde sezon ve deneyim; otomotivde lansman ve showroom çağrısı öne çıkar. Aynı şablon herkese basılmaz. Keşifte sektörünüze özel takvim, dil ve başarı sinyalleri (mesaj, arama, rezervasyon vb.) birlikte yazılır.",
   },
   {
     question: "Meta Ads reklam bütçesi ajans ücretine dahil mi?",
@@ -45,7 +45,7 @@ const FAQS: { question: string; answer: string }[] = [
   {
     question: "Profesyonel fotoğraf ve video çekimi yapılıyor mu? Yerinde mi?",
     answer:
-      "Evet. Trabzon genelinde yerinde çekim planlanabilir. Uzaktan yönetim isteyen markalar için mevcut görseller + tasarım odaklı üretim de mümkündür.",
+      "Evet. Samsun genelinde yerinde çekim planlanabilir. Uzaktan yönetim isteyen markalar için mevcut görseller + tasarım odaklı üretim de mümkündür.",
   },
   {
     question: "Sözleşme süresi ne kadar?",
@@ -58,19 +58,19 @@ const FAQS: { question: string; answer: string }[] = [
       "Aylık performans raporu standarttır: erişim, etkileşim, takipçi, mesaj/arama, reklam sonuçları ve sonraki ay üç net aksiyon. İsterseniz ara dönem özetleri de paylaşırız.",
   },
   {
-    question: "Ücretsiz keşif görüşmesi var mı? WhatsApp’tan yazabilir miyim?",
+    question: "Ücretsiz keşif görüşmesi var mı? WhatsApp'tan yazabilir miyim?",
     answer:
-      "Evet. Formu doldurun veya WhatsApp’tan yazın. Mevcut hesaplarınıza bakıp size özel yol haritası önerelim; 24 saat içinde dönüş hedeflenir.",
+      "Evet. Formu doldurun veya WhatsApp'tan yazın. Mevcut hesaplarınıza bakıp size özel yol haritası önerelim; 24 saat içinde dönüş hedeflenir.",
   },
   {
-    question: "Trabzon'da en iyi sosyal medya ajansı hangisi?",
+    question: "Samsun'da en iyi sosyal medya ajansı hangisi?",
     answer:
-      "“En iyi” sektör ve ihtiyaca göre değişir. Trabzon Sosyal Medya (Wesoco), yerel işletmelere Instagram, içerik, Meta Ads ve raporlamayı tek çatıda sunar. Karar için sektöre özel yaklaşım, referanslar ve keşif teklifini karşılaştırmanızı öneririz.",
+      "«En iyi» sektör ve ihtiyaca göre değişir. Samsun Sosyal Medya (Wesoco), yerel işletmelere Instagram, içerik, Meta Ads ve raporlamayı tek çatıda sunar. Karar için sektöre özel yaklaşım, referanslar ve keşif teklifini karşılaştırmanızı öneririz.",
   },
   {
-    question: "Trabzon Sosyal Medya hangi ilçelerde hizmet verir?",
+    question: "Samsun Sosyal Medya hangi ilçelerde hizmet verir?",
     answer:
-      "Ortahisar, Akçaabat, Of, Yomra, Araklı, Sürmene, Arsin, Vakfıkebir, Beşikdüzü, Maçka, Çaykara, Tonya, Çarşıbaşı, Şalpazarı, Düzköy, Hayrat, Dernekpazarı ve Köprübaşı. Uzaktan yönetim veya yerinde çekim seçenekleri mevcuttur.",
+      "İlkadım, Atakum, Canik, Tekkeköy, Bafra, Çarşamba, Vezirköprü, Terme, Havza, Kavak, Alaçam, 19 Mayıs, Salıpazarı, Asarcık, Ladik, Ayvacık ve Yakakent. Uzaktan yönetim veya yerinde çekim seçenekleri mevcuttur.",
   },
   {
     question: "Hangi sektörlerle çalışıyorsunuz?",
@@ -80,20 +80,20 @@ const FAQS: { question: string; answer: string }[] = [
   {
     question: "Neden sizi tercih etmeliyim? Freelance yerine ajans mı?",
     answer:
-      "Ajans modelinde strateji, üretim, yayın ve reklam aynı çatıda; yedek ekip ve yazılı süreç vardır. Freelance tek kişiye bağlı kalabilir. Bizde onay hattı, aylık skor ve medya şeffaflığı standarttır. keşifte farkı somutlaştırırız.",
+      "Ajans modelinde strateji, üretim, yayın ve reklam aynı çatıda; yedek ekip ve yazılı süreç vardır. Freelance tek kişiye bağlı kalabilir. Bizde onay hattı, aylık skor ve medya şeffaflığı standarttır; keşifte farkı somutlaştırırız.",
   },
   {
     question: "İçerikleri kim hazırlıyor?",
     answer:
-      "İçerik stratejisi ve üretimi Wesoco bünyesindeki Trabzon Sosyal Medya ekibi tarafından hazırlanır. Taslaklar onayınıza sunulur; onaydan sonra yayınlanır. Marka diliniz yazılı brief ile korunur.",
+      "İçerik stratejisi ve üretimi Wesoco bünyesindeki Samsun Sosyal Medya ekibi tarafından hazırlanır. Taslaklar onayınıza sunulur; onaydan sonra yayınlanır. Marka diliniz yazılı brief ile korunur.",
   },
   {
     question: "Sosyal medya yönetimi satışları artırır mı?",
     answer:
-      "Doğru CTA, tutarlı vitrin ve gerektiğinde reklam ile mesaj, arama ve mağaza trafiği artabilir. Garanti edilen “satış yüzdesi” vaat etmeyiz; ölçülebilir hedefler (mesaj, form, rezervasyon) keşifte birlikte yazılır.",
+      "Doğru CTA, tutarlı vitrin ve gerektiğinde reklam ile mesaj, arama ve mağaza trafiği artabilir. Garanti edilen «satış yüzdesi» vaat etmeyiz; ölçülebilir hedefler (mesaj, form, rezervasyon) keşifte birlikte yazılır.",
   },
   {
-    question: "Trabzon'da Instagram yönetimi nasıl yapılır?",
+    question: "Samsun'da Instagram yönetimi nasıl yapılır?",
     answer:
       "Keşif görüşmesiyle başlanır. Hedef kitle ve rakip analizi sonrası içerik takvimi oluşturulur. Post, story ve reels üretilir; yayınlama, etkileşim ve gerekirse Meta Ads yönetilir. Aylık performans raporu paylaşılır.",
   },
@@ -108,7 +108,7 @@ const FAQS: { question: string; answer: string }[] = [
       "Organik büyüme genelde 4 ile 8 hafta arasında hissedilir. Meta Ads kampanyalarında ilk haftadan itibaren veri ve optimizasyon başlar. Süre sektör ve rekabete göre değişir.",
   },
   {
-    question: "Trabzon'da TikTok yönetimi yapıyor musunuz?",
+    question: "Samsun'da TikTok yönetimi yapıyor musunuz?",
     answer:
       "Evet. TikTok için kısa video stratejisi, içerik takvimi, yayınlama ve trend takibi sunuyoruz. Instagram Reels ile koordineli büyüme hedefleriz.",
   },

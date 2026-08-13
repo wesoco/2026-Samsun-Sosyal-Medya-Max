@@ -1,5 +1,5 @@
-# AI crawler policy. Trabzon Sosyal Medya
-# https://trabzonsosyalmedya.com
+# AI crawler policy. Samsun Sosyal Medya
+# https://samsunsosyalmedya.com
 
 User-Agent: *
 Allow: /
@@ -7,16 +7,16 @@ Disallow: /admin
 Disallow: /api/
 
 # Preferred canonical host
-Host: https://trabzonsosyalmedya.com
+Host: https://samsunsosyalmedya.com
 
 # Machine-readable site summary
-Sitemap: https://trabzonsosyalmedya.com/sitemap.xml
+Sitemap: https://samsunsosyalmedya.com/sitemap.xml
 LLM-Summary: /llms.txt
 RSS: /feed.xml
 
 # Entity
-Name: Trabzon Sosyal Medya (Wesoco)
+Name: Samsun Sosyal Medya (Wesoco)
 Type: Local digital marketing / social media agency
-Location: Ortahisar, Trabzon, Turkey
+Location: Ortahisar, Trabzon, Turkey (ofis); hizmet alanı Samsun
 Services: Instagram management, Meta Ads, Google Ads, content production, drone, digital marketing
 Contact: info@wesoco.com | +90 538 058 11 22

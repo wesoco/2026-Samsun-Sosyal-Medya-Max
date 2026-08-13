@@ -35,7 +35,7 @@ export function ServiceGeoScaffold({
         <>
           <GeoSection title={`${serviceTitle} nedir?`}>
             <p>
-              {serviceTitle}; Trabzon’daki işletmeler için Instagram, TikTok, Facebook, LinkedIn ve gerektiğinde
+              {serviceTitle}; Samsun’daki işletmeler için Instagram, TikTok, Facebook, LinkedIn ve gerektiğinde
               YouTube kanallarında görünürlük, etkileşim ve müşteri dönüşümünü planlı yönetme hizmetidir. İçerik
               üretimi, Meta Ads, Google Ads, reels çekimi ve raporlama aynı strateji altında ilerler.
             </p>
@@ -43,7 +43,7 @@ export function ServiceGeoScaffold({
 
           <GeoSection title="Neden önemlidir?">
             <ul>
-              <li>Yerel rekabet (Ortahisar, Akçaabat, Yomra, Of…) dijitalde de yoğundur.</li>
+              <li>Yerel rekabet (İlkadım, Atakum, Canik, Bafra…) dijitalde de yoğundur.</li>
               <li>Organik erişim tek başına yetmez; performans pazarlaması ve remarketing gerekir.</li>
               <li>Marka bilinirliği, lead generation ve dönüşüm oranı birlikte ölçülmelidir.</li>
             </ul>

@@ -29,7 +29,7 @@ export async function AdminChrome({
       <div className="admin-workspace">
         <header className="admin-topbar">
           <div className="admin-topbar-copy">
-            <p className="admin-eyebrow">Trabzon Sosyal Medya</p>
+            <p className="admin-eyebrow">Samsun Sosyal Medya</p>
             <h1>{title}</h1>
             {description ? <p className="admin-desc">{description}</p> : null}
           </div>

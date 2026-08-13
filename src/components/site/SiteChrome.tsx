@@ -19,8 +19,8 @@ const FALLBACK: Settings = {
   phoneDisplay: "+90 (538) 058 11 22",
   email: "info@wesoco.com",
   whatsapp: "905380581122",
-  addressLine1: "Gazipaşa Mah. Uzun Sk.",
-  addressLine2: "Can Bakkal İş Merkezi, Ortahisar / Trabzon",
+  addressLine1: "Gazipaşa Mah. Uzun Sk., Can Bakkal İş Merkezi",
+  addressLine2: "Kat:7 Daire:61, Ortahisar / Trabzon",
 };
 
 export async function getSiteSettings(): Promise<Settings> {
