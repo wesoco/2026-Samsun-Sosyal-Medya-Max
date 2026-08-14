@@ -33,7 +33,7 @@ npm run dev
 
 ## Deploy (GitHub → GHCR → Coolify)
 
-Akış: `main` push → GitHub Actions image build → `ghcr.io/<owner>/<repo>` → Coolify image pull + Postgres.
+Akış: `main` push → GitHub Actions image build → `ghcr.io/wesoco/2026-samsun-sosyal-medya-max` → Coolify image pull + Postgres.
 
 ### Repo tarafı
 - [`Dockerfile`](Dockerfile) — Next.js `standalone` + Prisma
@@ -47,7 +47,7 @@ docker build --build-arg DATABASE_URL="$DATABASE_URL" -t samsun-sosyal-medya .
 
 ### Coolify checklist
 1. PostgreSQL servisi oluştur (volume + güçlü şifre); internal `DATABASE_URL` al
-2. Resource: **Docker Image** → `ghcr.io/<owner>/<repo>:latest`
+2. Resource: **Docker Image** → `ghcr.io/wesoco/2026-samsun-sosyal-medya-max:latest`
 3. Private GHCR ise registry credentials (PAT: `read:packages`)
 4. Domain + HTTPS
 5. Env: `DATABASE_URL`, `AUTH_SECRET`, `AUTH_URL`, `NEXT_PUBLIC_SITE_URL`

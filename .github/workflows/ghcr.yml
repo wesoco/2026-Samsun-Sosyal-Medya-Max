@@ -5,6 +5,10 @@ on:
     branches: [main]
   workflow_dispatch:
 
+concurrency:
+  group: ghcr-${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
 permissions:
   contents: read
   packages: write
@@ -12,6 +16,8 @@ permissions:
 env:
   REGISTRY: ghcr.io
   DATABASE_URL: postgresql://postgres:postgres@127.0.0.1:5432/ci_build?schema=public
+  NEXT_PUBLIC_SITE_URL: https://samsunsosyalmedya.com
+  NEXT_PUBLIC_GTM_ID: GTM-M2W8R68W
 
 jobs:
   build-and-push:
@@ -69,6 +75,8 @@ jobs:
           labels: ${{ steps.meta.outputs.labels }}
           build-args: |
             DATABASE_URL=${{ env.DATABASE_URL }}
-            NEXT_PUBLIC_SITE_URL=https://trabzonsosyalmedya.com
+            NEXT_PUBLIC_SITE_URL=${{ env.NEXT_PUBLIC_SITE_URL }}
+            NEXT_PUBLIC_GTM_ID=${{ env.NEXT_PUBLIC_GTM_ID }}
           cache-from: type=gha
           cache-to: type=gha,mode=max
+          provenance: false
