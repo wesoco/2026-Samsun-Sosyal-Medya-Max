@@ -1,4 +1,5 @@
 import { LazyMap } from "@/components/site/LazyMap";
+import { MAP_EMBED, MAPS_LINK } from "@/lib/office-location";
 
 type Props = {
   phone: string;
@@ -41,13 +42,6 @@ const IconClock = () => (
     <polyline points="12 6 12 12 16 14" />
   </svg>
 );
-
-const MAP_QUERY =
-  "Gazipa%C5%9Fa+Mah.+Uzun+Sk.+Can+Bakkal+%C4%B0%C5%9F+Merkezi+Kat+7+Daire+61+Ortahisar+Trabzon";
-
-const MAP_EMBED = `https://maps.google.com/maps?q=${MAP_QUERY}&z=16&output=embed`;
-
-const MAPS_LINK = `https://www.google.com/maps/search/?api=1&query=${MAP_QUERY}`;
 
 export function ContactInfo({ phone, phoneDisplay, email, whatsapp, addressLine1, addressLine2 }: Props) {
   const wa = whatsapp?.replace(/\D/g, "") || "";
@@ -116,7 +110,7 @@ export function ContactInfo({ phone, phoneDisplay, email, whatsapp, addressLine1
 
       <LazyMap
         src={MAP_EMBED}
-        title="Samsun Sosyal Medya ofis konumu - Ortahisar Trabzon"
+        title="Wesoco Teknoloji ofis konumu — Ortahisar, Trabzon"
       />
     </aside>
   );

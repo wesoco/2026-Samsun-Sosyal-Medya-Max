@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { OFFICE_LAT, OFFICE_LNG } from "@/lib/office-location";
 import { absoluteUrl, siteUrl } from "@/lib/paths";
 
 export type FaqPair = { q: string; a: string };
@@ -123,8 +124,8 @@ export function localBusinessJsonLd(nap: SiteNap) {
     address: postalAddress(nap),
     geo: {
       "@type": "GeoCoordinates",
-      latitude: nap.latitude ?? 41.0015,
-      longitude: nap.longitude ?? 39.7178,
+      latitude: nap.latitude ?? OFFICE_LAT,
+      longitude: nap.longitude ?? OFFICE_LNG,
     },
     areaServed: DISTRICTS.map((name) => ({
       "@type": "City",

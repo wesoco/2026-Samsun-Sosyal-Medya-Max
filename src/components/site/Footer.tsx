@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { prisma } from "@/lib/prisma";
+import { MAPS_LINK } from "@/lib/office-location";
 import { paths } from "@/lib/paths";
 
 type Props = {
@@ -31,9 +32,6 @@ const IconPin = () => (
     <circle cx="12" cy="10" r="3" />
   </svg>
 );
-
-const MAPS_LINK =
-  "https://www.google.com/maps/search/?api=1&query=Gazipa%C5%9Fa+Mah.+Uzun+Sk.+Can+Bakkal+%C4%B0%C5%9F+Merkezi+Kat+7+Daire+61+Ortahisar+Trabzon";
 
 export async function SiteFooter({
   phone,
