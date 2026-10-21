@@ -197,8 +197,14 @@ export default async function AdminSettingsPage() {
               <input name="smtpFrom" defaultValue={s?.smtpFrom || ""} placeholder="info@wesoco.com" />
             </label>
             <label>
-              Bildirim alıcısı
-              <input name="notifyEmail" type="email" defaultValue={s?.notifyEmail || ""} placeholder="Boşsa sitedeki e-posta kullanılır" />
+              Bildirim alıcıları (virgülle ayırın)
+              <input
+                name="notifyEmail"
+                type="email"
+                multiple
+                defaultValue={s?.notifyEmail || ""}
+                placeholder="info@wesoco.com, ofis@wesoco.com"
+              />
             </label>
           </div>
           <label className="admin-check">

@@ -3149,6 +3149,40 @@ a.contact-row:hover {
   height: 100%;
 }
 
+.contact-form input[type="file"] {
+  padding: 10px 12px;
+  font-size: 0.8rem;
+  cursor: pointer;
+}
+
+.contact-form input[type="file"]::file-selector-button {
+  margin-right: 12px;
+  padding: 8px 14px;
+  border: 0;
+  border-radius: 8px;
+  background: var(--navy);
+  color: var(--white);
+  font: inherit;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.contact-form .form-hint {
+  margin-top: -2px;
+  font-size: 0.72rem;
+  font-weight: 500;
+  color: var(--navy-muted);
+}
+
+.contact-form .form-hint.form-error {
+  color: var(--red);
+}
+
+.contact-form .form-optional {
+  font-weight: 500;
+  color: var(--navy-muted);
+}
+
 .contact-map {
   margin-top: 4px;
   border-radius: var(--radius);
