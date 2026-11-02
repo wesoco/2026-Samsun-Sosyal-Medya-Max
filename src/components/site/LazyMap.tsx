@@ -16,8 +16,8 @@ export function LazyMap({ src, title }: Props) {
     const el = ref.current;
     if (!el || active) return;
     if (!("IntersectionObserver" in window)) {
-      setActive(true);
-      return;
+      const t = setTimeout(() => setActive(true), 0);
+      return () => clearTimeout(t);
     }
     const io = new IntersectionObserver(
       (entries) => {

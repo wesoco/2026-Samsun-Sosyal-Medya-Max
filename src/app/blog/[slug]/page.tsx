@@ -16,6 +16,7 @@ import { getSeoPost } from "@/lib/seo-posts";
 import { SiteChrome } from "@/components/site/SiteChrome";
 import { SafeImage } from "@/components/site/SafeImage";
 import { AnswerBox } from "@/components/seo/GeoBlocks";
+import { blogCover } from "@/lib/blog-cover";
 import { TopicCluster } from "@/components/seo/TopicCluster";
 
 function bodyHasCover(html: string, coverUrl: string | null) {
@@ -60,7 +61,7 @@ async function loadPost(rawSlug: string): Promise<UnifiedPost | null> {
         title: db.title,
         lead: db.lead,
         bodyHtml: db.bodyHtml,
-        coverUrl: db.coverUrl,
+        coverUrl: blogCover(db.slug, db.coverUrl),
         category: db.category,
         seoTitle: db.seoTitle,
         seoDesc: db.seoDesc,
@@ -89,7 +90,7 @@ async function loadPost(rawSlug: string): Promise<UnifiedPost | null> {
     title: agent.title,
     lead: agent.metaDescription || "",
     bodyHtml: agent.bodyHtml,
-    coverUrl: agent.coverImageUrl || "/images/cover.webp",
+    coverUrl: blogCover(agent.slug, agent.coverImageUrl),
     category: agent.category?.trim() || "Blog",
     seoTitle: agent.title,
     seoDesc: agent.metaDescription || null,
@@ -271,11 +272,9 @@ export default async function BlogPostPage({ params }: Props) {
                     {relatedDb.map((r) => (
                       <li key={r.slug}>
                         <Link href={paths.blogPost(r.slug)} className="blog-aside-item">
-                          {r.coverUrl ? (
-                            <span className="blog-aside-thumb">
-                              <SafeImage src={r.coverUrl} alt="" width={120} height={80} loading="lazy" />
-                            </span>
-                          ) : null}
+                          <span className="blog-aside-thumb">
+                            <SafeImage src={blogCover(r.slug, r.coverUrl)} alt={r.title} width={120} height={80} loading="lazy" />
+                          </span>
                           <span className="blog-aside-body">
                             <span className="blog-aside-cat">{r.category}</span>
                             <strong>{r.title}</strong>

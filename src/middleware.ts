@@ -1,5 +1,9 @@
 import { NextResponse } from "next/server";
 import { auth } from "@/lib/auth";
+import { CANONICAL_SITE_URL } from "@/lib/paths";
+
+const CANONICAL_HOST = new URL(CANONICAL_SITE_URL).host;
+const HSTS = "max-age=31536000; includeSubDomains";
 
 /** İngilizce iç path’ler indekslenmesin - TR kanonik URL’ye 301 */
 const EN_CANONICAL_REDIRECTS: Array<{ match: RegExp; to: (m: RegExpMatchArray) => string }> = [
@@ -38,7 +42,15 @@ const LEGACY_REDIRECTS: Array<{ match: RegExp; to: (m: RegExpMatchArray) => stri
 const LEGACY_FILE_EXT = /\.(html?|php|aspx?|jsp|cgi|cfm)$/i;
 
 export default auth((req) => {
-  const { pathname } = req.nextUrl;
+  const { pathname, search } = req.nextUrl;
+
+  // Tek kanonik host: www → kök alan adı. next.config redirects() başlık taşımadığı için burada; HSTS ile.
+  const host = (req.headers.get("x-forwarded-host") || req.headers.get("host") || "").split(",")[0].trim().toLowerCase().replace(/:\d+$/, "");
+  if (host === `www.${CANONICAL_HOST}`) {
+    const res = NextResponse.redirect(`${CANONICAL_SITE_URL}${pathname}${search}`, 301);
+    res.headers.set("Strict-Transport-Security", HSTS);
+    return res;
+  }
 
   for (const rule of LEGACY_REDIRECTS) {
     const m = pathname.match(rule.match);

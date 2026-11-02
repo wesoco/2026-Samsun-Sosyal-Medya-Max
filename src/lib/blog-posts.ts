@@ -1,5 +1,6 @@
 import { prisma } from "@/lib/prisma";
 import { listSeoPosts, type AgentPost } from "@/lib/seo-posts";
+import { blogCover } from "@/lib/blog-cover";
 
 export type PublicBlogCard = {
   id: string;
@@ -29,7 +30,7 @@ export async function listPublicBlogPosts(opts?: {
       title: p.title,
       lead: p.lead,
       category: p.category,
-      coverUrl: p.coverUrl,
+      coverUrl: blogCover(p.slug, p.coverUrl),
       publishedAt: p.publishedAt,
     });
   }
@@ -50,11 +51,7 @@ export async function listPublicBlogPosts(opts?: {
       title: p.title,
       lead: p.metaDescription || existing?.lead || "",
       category: p.category?.trim() || existing?.category || "Blog",
-      coverUrl:
-        p.coverImageUrl ||
-        bodyImg ||
-        existing?.coverUrl ||
-        "/assets/Samsun-sosyal-medya.webp",
+      coverUrl: blogCover(p.slug, p.coverImageUrl || bodyImg || existing?.coverUrl),
       publishedAt,
     });
   }

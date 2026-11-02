@@ -2,6 +2,8 @@ import Link from "next/link";
 import { prisma } from "@/lib/prisma";
 import { MAPS_LINK } from "@/lib/office-location";
 import { paths } from "@/lib/paths";
+import { SOCIAL_LINKS } from "@/lib/social";
+import { CookiePreferencesButton } from "@/components/site/CookieConsent";
 
 type Props = {
   phone: string;
@@ -111,6 +113,13 @@ export async function SiteFooter({
                 {addressLine2}
               </address>
             </a>
+            <nav className="footer-social" aria-label="Sosyal medya">
+              {SOCIAL_LINKS.map((l) => (
+                <a key={l.name} href={l.href} target="_blank" rel="noopener noreferrer me">
+                  {l.name}
+                </a>
+              ))}
+            </nav>
           </div>
         </div>
       </div>
@@ -121,6 +130,7 @@ export async function SiteFooter({
           <Link href={paths.privacy}>Gizlilik</Link>
           <Link href={paths.cookies}>Çerezler</Link>
           <Link href={paths.disclosure}>Aydınlatma</Link>
+          <CookiePreferencesButton />
         </nav>
         <p className="footer-credit">
           <a

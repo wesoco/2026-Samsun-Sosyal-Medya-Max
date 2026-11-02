@@ -1,5 +1,26 @@
 import type { NextConfig } from "next";
 
+/**
+ * GTM üzerinden gelen etiketler (GA4, Ads) ve YouTube/Maps gömüleri https
+ * kaynaklarından yüklenir; asıl kazanım frame-ancestors, object-src ve base-uri kısıtı.
+ */
+const CONTENT_SECURITY_POLICY = [
+  "default-src 'self'",
+  "script-src 'self' 'unsafe-inline' https:",
+  "style-src 'self' 'unsafe-inline' https:",
+  "img-src 'self' data: blob: https:",
+  "font-src 'self' data: https:",
+  "connect-src 'self' https:",
+  "media-src 'self' blob: https:",
+  "frame-src 'self' https:",
+  "worker-src 'self' blob:",
+  "frame-ancestors 'self'",
+  "form-action 'self'",
+  "base-uri 'self'",
+  "object-src 'none'",
+  "upgrade-insecure-requests",
+].join("; ");
+
 const nextConfig: NextConfig = {
   output: "standalone",
   transpilePackages: ["@wesoco/seo-agent", "@wesoco/seo-core"],
@@ -64,6 +85,10 @@ const nextConfig: NextConfig = {
         headers: [
           { key: "X-Content-Type-Options", value: "nosniff" },
           { key: "Referrer-Policy", value: "strict-origin-when-cross-origin" },
+          { key: "Strict-Transport-Security", value: "max-age=31536000; includeSubDomains" },
+          { key: "X-Frame-Options", value: "SAMEORIGIN" },
+          { key: "Content-Security-Policy", value: CONTENT_SECURITY_POLICY },
+          { key: "Permissions-Policy", value: "camera=(), microphone=(), geolocation=()" },
         ],
       },
     ];

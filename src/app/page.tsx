@@ -6,11 +6,12 @@ import Image from "next/image";
 import { prisma } from "@/lib/prisma";
 import { paths } from "@/lib/paths";
 import { listPublicBlogPosts } from "@/lib/blog-posts";
-import { jsonLdScript, entityGraphJsonLd, faqPageJsonLd, referenceItemListJsonLd, type SiteNap } from "@/lib/seo";
+import { jsonLdScript, entityGraphJsonLd, faqPageJsonLd, type SiteNap } from "@/lib/seo";
 import { SiteChrome } from "@/components/site/SiteChrome";
 import { SafeImage } from "@/components/site/SafeImage";
 import { DEFAULT_HERO_SLIDES, type HeroSlide } from "@/lib/hero-slides";
-import { RefLead } from "@/components/site/RefLead";
+import { HomeRefs } from "@/components/site/HomeRefs";
+import { REF_PAGE, type HomeRef } from "@/lib/home-refs";
 
 export const revalidate = 60;
 
@@ -25,13 +26,6 @@ const FALLBACK_PROCESS: ProcessStep[] = [
   { num: "04", title: "Büyüme", desc: "Reklam, optimizasyon ve aylık rapor." },
 ];
 
-function youtubeId(url: string | null | undefined) {
-  if (!url) return null;
-  if (/^[\w-]{11}$/.test(url)) return url;
-  const m = url.match(/(?:v=|youtu\.be\/|embed\/)([\w-]{11})/);
-  return m?.[1] || null;
-}
-
 export default async function HomePage() {
   const [settings, services, stats, faqs, posts, districts, logos, refs, home] = await Promise.all([
     prisma.siteSetting.findUnique({ where: { id: "default" } }),
@@ -45,9 +39,25 @@ export default async function HomePage() {
     prisma.homeContent.findUnique({ where: { id: "default" } }),
   ]);
 
-  /** Yayınlı tüm tanıtıcı / görsel / reels kartları HTML’e girer; “Devamını gör” JS ile sayfalar */
+  /** Yayınlı tanıtıcı / görsel / reels kartları; HTML'e her türün ilk sayfası girer */
   const homeRefs = ["tanitici", "gorsel", "reels"].flatMap((f) => refs.filter((r) => r.filter === f));
-  const schemaRefs = homeRefs.slice(0, 24);
+  /** HTML'de açık sekmenin ilk REF_PAGE kartı; kalanı istemci /api/refs ile çeker */
+  const refTotals: Record<string, number> = {};
+  const initialRefs: HomeRef[] = [];
+  for (const r of homeRefs) {
+    refTotals[r.filter] = (refTotals[r.filter] ?? 0) + 1;
+    // HTML'de yalnız açık sekme (Tanıtım Filmi); diğerleri tıklanınca /api/refs
+    if (r.filter === "tanitici" && refTotals[r.filter] <= REF_PAGE) {
+      initialRefs.push({
+        id: r.id,
+        title: r.title,
+        lead: r.lead,
+        filter: r.filter,
+        imageUrl: r.imageUrl,
+        videoUrl: r.videoUrl,
+      });
+    }
+  }
   /** Sitede görünen SSS ile FAQPage schema birebir aynı olmalı */
   const homeFaqItems = faqs.slice(0, 10);
   const homeFaqs = homeFaqItems.map((f) => ({ q: f.question, a: f.answer }));
@@ -102,20 +112,8 @@ export default async function HomePage() {
     addressLine2: s.addressLine2,
   };
 
-  const schemas = [
-    entityGraphJsonLd(nap),
-    faqPageJsonLd(homeFaqs),
-    homeRefs.length
-      ? referenceItemListJsonLd(
-          schemaRefs.map((r) => ({
-            title: r.title,
-            lead: (r.lead || "").slice(0, 120),
-            imageUrl: r.imageUrl,
-            filter: r.filter,
-          }))
-        )
-      : null,
-  ].filter(Boolean);
+  // Referans ItemList şeması kaldırıldı (~10 KB, HTML + RSC'de iki kez); arama değeri düşüktü
+  const schemas = [entityGraphJsonLd(nap), faqPageJsonLd(homeFaqs)].filter(Boolean);
 
   return (
     <SiteChrome variant="home">
@@ -207,7 +205,7 @@ export default async function HomePage() {
                   alt={`${l.name} Samsun sosyal medya referansı`}
                   width={120}
                   height={40}
-                  loading="eager"
+                  loading="lazy"
                   decoding="async"
                   draggable={false}
                 />
@@ -216,10 +214,10 @@ export default async function HomePage() {
                 <img
                   key={`dup-${l.id}`}
                   src={l.imageUrl}
-                  alt=""
+                  alt={l.name}
                   width={120}
                   height={40}
-                  loading="eager"
+                  loading="lazy"
                   decoding="async"
                   draggable={false}
                   aria-hidden="true"
@@ -330,78 +328,7 @@ export default async function HomePage() {
                     "Samsun sosyal medya ajansı olarak otomotiv, gastronomi, inşaat, enerji ve kurumsal markalar için ürettiğimiz Instagram postları, reels içerikleri ve tanıtım filmlerinden seçkiler. Her proje yerel hedef kitleye, sektör diline ve ölçülebilir büyüme hedefine göre planlanır."}
                 </p>
               </div>
-              <div className="ref-filters" role="tablist" aria-label="Referans türü">
-                <button type="button" className="filter-btn is-active" data-filter="tanitici" role="tab" aria-selected="true">
-                  Tanıtım Filmi
-                </button>
-                <button type="button" className="filter-btn" data-filter="gorsel" role="tab" aria-selected="false">
-                  Post
-                </button>
-                <button type="button" className="filter-btn" data-filter="reels" role="tab" aria-selected="false">
-                  Reels
-                </button>
-              </div>
-              <div className="ref-grid" id="refGrid">
-                {homeRefs.map((r) => {
-                  const yt = youtubeId(r.videoUrl);
-                  const isVideo = Boolean(yt);
-                  const dims =
-                    r.filter === "reels"
-                      ? { w: 1080, h: 1920, label: "Reels" }
-                      : r.filter === "tanitici"
-                        ? { w: 1920, h: 1080, label: "Tanıtım filmi" }
-                        : { w: 1080, h: 1350, label: "Post" };
-                  return (
-                    <article
-                      key={r.id}
-                      className={`ref-card reveal${isVideo ? " ref-card-video" : ""}`}
-                      data-cat={r.filter}
-                    >
-                      {isVideo && yt ? (
-                        <button
-                          type="button"
-                          className="ref-media ref-play"
-                          data-youtube={yt}
-                          aria-label={`${r.title} videosunu oynat`}
-                        >
-                          <img
-                            src={r.imageUrl}
-                            alt={`${r.title}, Samsun ${dims.label.toLowerCase()} referansı`}
-                            width={dims.w}
-                            height={dims.h}
-                            loading="lazy"
-                            referrerPolicy="no-referrer"
-                            decoding="async"
-                          />
-                          <span className="play-icon" aria-hidden="true" />
-                        </button>
-                      ) : (
-                        <div className="ref-media">
-                          <img
-                            src={r.imageUrl}
-                            alt={`${r.title} Samsun sosyal medya referansı (${dims.label})`}
-                            width={dims.w}
-                            height={dims.h}
-                            loading="lazy"
-                            referrerPolicy="no-referrer"
-                            decoding="async"
-                          />
-                        </div>
-                      )}
-                      <div className="ref-body">
-                        <span className="ref-sector">{dims.label}</span>
-                        <h3>{r.title}</h3>
-                        <RefLead text={r.lead || ""} />
-                      </div>
-                    </article>
-                  );
-                })}
-              </div>
-              <div className="ref-more-wrap">
-                <button type="button" className="btn btn-primary ref-more-btn" id="refMoreBtn" hidden>
-                  Devamını gör
-                </button>
-              </div>
+              <HomeRefs initial={initialRefs} totals={refTotals} />
             </div>
           </section>
         ) : null}
@@ -425,7 +352,7 @@ export default async function HomePage() {
                     {p.coverUrl ? (
                       <SafeImage
                         src={p.coverUrl}
-                        alt=""
+                        alt={p.title}
                         width={900}
                         height={700}
                         loading="lazy"
@@ -457,7 +384,7 @@ export default async function HomePage() {
                     home?.ctaImage ||
                     "https://images.unsplash.com/photo-1663230812927-dedf2bc78fe9?auto=format&fit=crop&w=1800&q=80"
                   }
-                  alt=""
+                  alt="Samsun sosyal medya ajansı ekibiyle teklif görüşmesi"
                   width={1800}
                   height={1200}
                   loading="lazy"

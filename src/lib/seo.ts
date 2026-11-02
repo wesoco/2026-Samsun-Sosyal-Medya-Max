@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { OFFICE_LAT, OFFICE_LNG } from "@/lib/office-location";
 import { absoluteUrl, siteUrl } from "@/lib/paths";
+import { SOCIAL_LINKS } from "@/lib/social";
 
 export type FaqPair = { q: string; a: string };
 
@@ -58,7 +59,7 @@ export function buildMetadata({
     description,
     alternates: {
       canonical: url,
-      languages: { "tr-TR": url },
+      languages: { "tr-TR": url, "x-default": url },
     },
     openGraph: {
       title,
@@ -107,7 +108,7 @@ export function organizationJsonLd(nap: SiteNap) {
     email: nap.email,
     telephone: nap.phone,
     address: postalAddress(nap),
-    sameAs: nap.sameAs || [],
+    sameAs: nap.sameAs || SOCIAL_LINKS.map((l) => l.href),
   };
 }
 
@@ -127,11 +128,10 @@ export function localBusinessJsonLd(nap: SiteNap) {
       latitude: nap.latitude ?? OFFICE_LAT,
       longitude: nap.longitude ?? OFFICE_LNG,
     },
-    areaServed: DISTRICTS.map((name) => ({
-      "@type": "City",
-      name,
-      containedInPlace: { "@type": "AdministrativeArea", name: "Samsun" },
-    })),
+    areaServed: [
+      { "@type": "AdministrativeArea", name: "Samsun" },
+      ...DISTRICTS.map((name) => ({ "@type": "City", name })),
+    ],
     priceRange: "$$",
     openingHoursSpecification: [
       {
@@ -142,7 +142,7 @@ export function localBusinessJsonLd(nap: SiteNap) {
       },
     ],
     parentOrganization: { "@id": `${siteUrl()}/#organization` },
-    sameAs: nap.sameAs || [],
+    sameAs: nap.sameAs || SOCIAL_LINKS.map((l) => l.href),
   };
 }
 

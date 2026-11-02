@@ -21,18 +21,16 @@ export function SiteLogo() {
       <img
         className="logo-img logo-img-white"
         src="/assets/wesoco-logo-beyaz.svg"
-        alt=""
+        alt="Samsun Sosyal Medya logosu"
         width={140}
         height={22}
-        aria-hidden="true"
       />
       <img
         className="logo-img logo-img-navy"
         src="/assets/wesoco-logo-navy.svg"
-        alt=""
+        alt="Samsun Sosyal Medya logosu"
         width={140}
         height={22}
-        aria-hidden="true"
       />
     </Link>
   );

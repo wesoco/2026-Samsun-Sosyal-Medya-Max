@@ -1,18 +1,28 @@
 import type { Metadata } from "next";
-import { Montserrat } from "next/font/google";
+import localFont from "next/font/local";
 import "./globals.css";
 import { prisma } from "@/lib/prisma";
 import { buildMetadata } from "@/lib/seo";
 import { paths } from "@/lib/paths";
-import { GoogleTagManager, GoogleTagManagerNoscript } from "@/components/site/GoogleTagManager";
+import {
+  ConsentDefaults,
+  GoogleTagManager,
+  GoogleTagManagerNoscript,
+} from "@/components/site/GoogleTagManager";
+import { CookieConsent } from "@/components/site/CookieConsent";
 
-const montserrat = Montserrat({
-  subsets: ["latin", "latin-ext"],
-  weight: ["400", "600", "700"],
+/**
+ * Montserrat — Türkçe karakterlere ve 400–700 ağırlığa indirgenmiş tek değişken dosya
+ * (Google Fonts latin + latin-ext: 105 KB → 30 KB). Lisans: ./fonts/OFL.txt
+ */
+const montserrat = localFont({
+  src: "./fonts/montserrat-tr.woff2",
+  weight: "400 700",
+  style: "normal",
   variable: "--font-montserrat",
   display: "swap",
-  preload: true,
-  adjustFontFallback: true,
+  preload: false,
+  adjustFontFallback: "Arial",
 });
 
 export async function generateMetadata(): Promise<Metadata> {
@@ -38,6 +48,7 @@ export default async function RootLayout({ children }: { children: React.ReactNo
   return (
     <html lang="tr">
       <head>
+        <ConsentDefaults />
         <link
           rel="preload"
           as="image"
@@ -53,6 +64,7 @@ export default async function RootLayout({ children }: { children: React.ReactNo
           İçeriğe geç
         </a>
         {children}
+        <CookieConsent />
       </body>
     </html>
   );

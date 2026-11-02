@@ -94,66 +94,6 @@ export function SiteInteractions({ variant = "home" }: { variant?: "home" | "inn
       );
     }
 
-    const REF_PAGE = 9;
-    const filterBtns = Array.from(document.querySelectorAll<HTMLElement>(".filter-btn"));
-    const refCards = Array.from(document.querySelectorAll<HTMLElement>(".ref-card"));
-    const moreBtn = document.getElementById("refMoreBtn") as HTMLButtonElement | null;
-    let expanded = false;
-
-    const applyFilter = (filter: string, resetExpand = true) => {
-      if (resetExpand) expanded = false;
-      const matching = refCards.filter((card) => (card.getAttribute("data-cat") || "") === filter);
-      matching.forEach((card, i) => {
-        const visible = expanded || i < REF_PAGE;
-        card.hidden = !visible;
-        card.classList.toggle("is-hidden", !visible);
-      });
-      refCards.forEach((card) => {
-        if ((card.getAttribute("data-cat") || "") !== filter) {
-          card.hidden = true;
-          card.classList.add("is-hidden");
-        }
-      });
-      if (moreBtn) {
-        const needsMore = matching.length > REF_PAGE && !expanded;
-        moreBtn.hidden = !needsMore;
-        moreBtn.textContent = "Devamını gör";
-      }
-    };
-
-    const onFilter = (btn: HTMLElement) => {
-      const filter = btn.getAttribute("data-filter") || "tanitici";
-      filterBtns.forEach((b) => {
-        const active = b === btn;
-        b.classList.toggle("is-active", active);
-        b.setAttribute("aria-selected", String(active));
-      });
-      applyFilter(filter, true);
-    };
-
-    filterBtns.forEach((btn) => btn.addEventListener("click", () => onFilter(btn)));
-    moreBtn?.addEventListener("click", () => {
-      const active = filterBtns.find((b) => b.classList.contains("is-active"));
-      const filter = active?.getAttribute("data-filter") || "tanitici";
-      expanded = true;
-      applyFilter(filter, false);
-    });
-
-    // İlk yükleme: aktif filtre (tanıtım filmi)
-    const initial = filterBtns.find((b) => b.classList.contains("is-active"));
-    applyFilter(initial?.getAttribute("data-filter") || "tanitici", true);
-
-    const playBtns = Array.from(document.querySelectorAll<HTMLElement>(".ref-play[data-youtube]"));
-    const onPlay = (btn: HTMLElement) => {
-      const id = btn.getAttribute("data-youtube");
-      if (!id) return;
-      const wrap = document.createElement("div");
-      wrap.className = "ref-media";
-      wrap.innerHTML = `<iframe src="https://www.youtube.com/embed/${id}?autoplay=1" title="Video" allow="autoplay; encrypted-media" allowfullscreen loading="lazy"></iframe>`;
-      btn.replaceWith(wrap);
-    };
-    playBtns.forEach((btn) => btn.addEventListener("click", () => onPlay(btn)));
-
     return () => {
       window.removeEventListener("scroll", onScroll);
       toggle?.removeEventListener("click", onToggle);
