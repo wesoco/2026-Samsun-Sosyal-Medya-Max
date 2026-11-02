@@ -12,5 +12,8 @@ mkdir -p "$UPLOAD_DIR"
 echo "Syncing database schema (prisma db push)..."
 prisma db push --skip-generate
 
+# Tek panel girişi: ADMIN_EMAIL + ADMIN_PASSWORD (+ ADMIN_EXCLUSIVE=1) yoksa hiçbir şey yapmaz
+node scripts/ensure-admin.cjs
+
 echo "Starting Next.js..."
 exec node server.js

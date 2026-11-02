@@ -1,6 +1,7 @@
 import { AuthError } from "next-auth";
 import { redirect } from "next/navigation";
-import { signIn, auth } from "@/lib/auth";
+import { signIn } from "@/lib/auth";
+import { currentStaff } from "@/lib/admin";
 import { paths } from "@/lib/paths";
 
 export const dynamic = "force-dynamic";
@@ -10,7 +11,8 @@ export default async function AdminLoginPage({
 }: {
   searchParams: Promise<{ error?: string }>;
 }) {
-  const session = await auth();
+  // DB'de olmayan kullanıcının JWT'si /admin ↔ /admin/login döngüsü yapmasın
+  const session = await currentStaff();
   if (session?.user) redirect(paths.admin);
   const sp = await searchParams;
 
