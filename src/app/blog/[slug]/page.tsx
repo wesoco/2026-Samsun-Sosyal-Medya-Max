@@ -18,6 +18,7 @@ import { SafeImage } from "@/components/site/SafeImage";
 import { AnswerBox } from "@/components/seo/GeoBlocks";
 import { blogCover } from "@/lib/blog-cover";
 import { TopicCluster } from "@/components/seo/TopicCluster";
+import { sanitizeHtml } from "@/lib/sanitize";
 
 function bodyHasCover(html: string, coverUrl: string | null) {
   if (!coverUrl) return false;
@@ -215,7 +216,7 @@ export default async function BlogPostPage({ params }: Props) {
               <AnswerBox title="Özet">
                 <p>{post.seoDesc || post.lead}</p>
               </AnswerBox>
-              <div className="blog-content" dangerouslySetInnerHTML={{ __html: post.bodyHtml }} />
+              <div className="blog-content" dangerouslySetInnerHTML={{ __html: sanitizeHtml(post.bodyHtml) }} />
               {faqs.length > 0 ? (
                 <div className="blog-faq">
                   <h2>Sıkça sorulanlar</h2>

@@ -38,3 +38,37 @@ export function hasAllowedExtension(filename: string, key: JobFileKey): boolean 
   const lower = filename.toLowerCase();
   return JOB_FILES[key].extensions.some((ext) => lower.endsWith(ext));
 }
+
+function fileExtension(filename: string) {
+  const m = /\.[^.]+$/.exec(filename.toLowerCase());
+  return m ? m[0] : "";
+}
+
+/**
+ * Sunucu tarafı: dosyanın ilk baytları uzantısıyla uyuşmalı (yeniden adlandırılmış
+ * çalıştırılabilir dosya ya da betik e-postaya ek olarak gitmesin).
+ */
+export function matchesFileSignature(filename: string, bytes: Uint8Array): boolean {
+  const at = (i: number, ...sig: number[]) => sig.every((b, j) => bytes[i + j] === b);
+  const ascii = (i: number, text: string) => at(i, ...Array.from(text, (c) => c.charCodeAt(0)));
+  switch (fileExtension(filename)) {
+    case ".pdf":
+      return ascii(0, "%PDF");
+    case ".doc":
+    case ".ppt":
+      return at(0, 0xd0, 0xcf, 0x11, 0xe0, 0xa1, 0xb1, 0x1a, 0xe1);
+    case ".docx":
+    case ".pptx":
+    case ".zip":
+      return at(0, 0x50, 0x4b, 0x03, 0x04);
+    case ".jpg":
+    case ".jpeg":
+      return at(0, 0xff, 0xd8, 0xff);
+    case ".png":
+      return at(0, 0x89, 0x50, 0x4e, 0x47);
+    case ".webp":
+      return ascii(0, "RIFF") && ascii(8, "WEBP");
+    default:
+      return false;
+  }
+}

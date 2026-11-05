@@ -6,15 +6,22 @@ import {
   JOB_FILES,
   hasAllowedExtension,
   isJobApplicationSubject,
+  matchesFileSignature,
   type JobFileKey,
 } from "@/lib/job-application";
+import { clientIp, hit } from "@/lib/rate-limit";
+
+/** IP başına 5 gönderim / 10 dk; CV (5 MB) + portfolyo (15 MB) + form alanları */
+const CONTACT_LIMIT = 5;
+const CONTACT_WINDOW_MS = 10 * 60 * 1000;
+const MAX_BODY_BYTES = 21 * 1024 * 1024;
 
 const schema = z.object({
   name: z.string().min(2).max(120),
   phone: z.string().min(7).max(40),
   email: z.string().email().optional().or(z.literal("")),
-  district: z.string().optional(),
-  service: z.string().optional(),
+  district: z.string().max(120).optional(),
+  service: z.string().max(120).optional(),
   message: z.string().min(5).max(5000),
 });
 
@@ -34,23 +41,40 @@ async function readJobFiles(
     }
     if (file.size > spec.maxBytes) return { field: key, error: "too-large" };
     if (!hasAllowedExtension(file.name, key)) return { field: key, error: "bad-type" };
+    const content = Buffer.from(await file.arrayBuffer());
+    if (!matchesFileSignature(file.name, content)) return { field: key, error: "bad-type" };
     attachments.push({
       label: spec.label,
       filename: file.name,
       contentType: file.type || "application/octet-stream",
-      content: Buffer.from(await file.arrayBuffer()),
+      content,
     });
   }
   return { attachments };
 }
 
 export async function POST(req: Request) {
+  const length = Number(req.headers.get("content-length") || 0);
+  if (length > MAX_BODY_BYTES) {
+    return NextResponse.json({ ok: false, error: "Dosyalar toplamda 20 MB'ı geçemez." }, { status: 413 });
+  }
+  if (!hit(`contact:${clientIp(req.headers)}`, CONTACT_LIMIT, CONTACT_WINDOW_MS)) {
+    return NextResponse.json(
+      { ok: false, error: "Çok fazla gönderim yapıldı. Lütfen birkaç dakika sonra tekrar deneyin veya WhatsApp yazın." },
+      { status: 429 }
+    );
+  }
+
   try {
     const isMultipart = (req.headers.get("content-type") || "").includes("multipart/form-data");
     const fd = isMultipart ? await req.formData() : null;
     const body = fd
       ? Object.fromEntries([...fd.entries()].filter(([, v]) => typeof v === "string"))
       : await req.json();
+    // Spam tuzağı doluysa başarılı görün ama kaydetme / e-posta gönderme
+    if (typeof body.website === "string" && body.website.trim()) {
+      return NextResponse.json({ ok: true });
+    }
     const data = schema.parse(body);
     const isJobApplication = isJobApplicationSubject(data.service);
 

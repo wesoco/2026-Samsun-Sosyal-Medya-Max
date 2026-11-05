@@ -30,13 +30,29 @@ function unauthorized(message = "Unauthorized") {
   return Response.json({ error: message }, { status: 401 });
 }
 
+/**
+ * Tekrar oynatma koruması: imza 5 dk geçerli (verifySignature); aynı imza bu sürede
+ * ikinci kez kabul edilmez. Tek konteyner, bellek içi; süre dolanlar temizlenir.
+ */
+const REPLAY_TTL_MS = 10 * 60 * 1000;
+const seenSignatures = new Map<string, number>();
+
+function firstUse(signature: string) {
+  const now = Date.now();
+  for (const [sig, exp] of seenSignatures) if (exp <= now) seenSignatures.delete(sig);
+  if (seenSignatures.has(signature)) return false;
+  seenSignatures.set(signature, now + REPLAY_TTL_MS);
+  return true;
+}
+
 function authorize(req: Request, body: string, secret: string, siteKey: string) {
   const key = req.headers.get("x-seo-agent-key") || "";
   const timestamp = req.headers.get("x-seo-agent-timestamp") || "";
   const signature = req.headers.get("x-seo-agent-signature") || "";
   if (!siteKey || !secret) return false;
   if (key !== siteKey) return false;
-  return verifySignature({ secret, timestamp, body, signature });
+  if (!verifySignature({ secret, timestamp, body, signature })) return false;
+  return firstUse(signature);
 }
 
 export function createSeoAgentHandlers(opts?: AgentHandlerOptions) {

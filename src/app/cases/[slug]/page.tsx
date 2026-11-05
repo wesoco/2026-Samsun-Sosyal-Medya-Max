@@ -7,6 +7,7 @@ import { breadcrumbJsonLd, buildMetadata, jsonLdScript } from "@/lib/seo";
 import { SiteChrome } from "@/components/site/SiteChrome";
 import { AnswerBox } from "@/components/seo/GeoBlocks";
 import { TopicCluster } from "@/components/seo/TopicCluster";
+import { sanitizeHtml } from "@/lib/sanitize";
 
 export const dynamic = "force-dynamic";
 
@@ -96,7 +97,7 @@ export default async function CaseStudyPage({ params }: Props) {
             <h2>Sonuç</h2>
             <p>{c.result}</p>
 
-            <div dangerouslySetInnerHTML={{ __html: c.bodyHtml }} />
+            <div dangerouslySetInnerHTML={{ __html: sanitizeHtml(c.bodyHtml) }} />
 
             {related.length > 0 ? (
               <div className="page-related-services">

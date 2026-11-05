@@ -12,6 +12,25 @@ const ALLOWED = new Map<string, string>([
   ["image/gif", "gif"],
 ]);
 
+/** Dosyanın ilk baytları beyan edilen türle uyuşmalı (istemcinin MIME beyanına güvenilmez) */
+export function matchesSignature(buf: Buffer, ext: string) {
+  const ascii = (start: number, end: number) => buf.subarray(start, end).toString("latin1");
+  switch (ext) {
+    case "jpg":
+      return buf[0] === 0xff && buf[1] === 0xd8 && buf[2] === 0xff;
+    case "png":
+      return buf.subarray(0, 8).equals(Buffer.from([0x89, 0x50, 0x4e, 0x47, 0x0d, 0x0a, 0x1a, 0x0a]));
+    case "gif":
+      return ascii(0, 6) === "GIF87a" || ascii(0, 6) === "GIF89a";
+    case "webp":
+      return ascii(0, 4) === "RIFF" && ascii(8, 12) === "WEBP";
+    case "avif":
+      return ascii(4, 8) === "ftyp" && /^avi[fs]$/.test(ascii(8, 12));
+    default:
+      return false;
+  }
+}
+
 const FOLDERS = new Set(["refs", "logos", "blog", "home", "misc"]);
 
 export const MAX_UPLOAD_BYTES = 8 * 1024 * 1024;
@@ -60,6 +79,7 @@ export async function saveUpload(file: File, folderRaw?: string | null) {
   await mkdir(absDir, { recursive: true });
 
   const buf = Buffer.from(await file.arrayBuffer());
+  if (!matchesSignature(buf, ext)) throw new Error("Dosya içeriği seçilen görsel türüyle uyuşmuyor");
   const absFile = path.join(absDir, filename);
   await writeFile(absFile, buf);
 

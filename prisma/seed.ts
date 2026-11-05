@@ -27,17 +27,23 @@ const districts = [
 ] as const;
 
 async function main() {
-  const passwordHash = await bcrypt.hash(process.env.ADMIN_PASSWORD || "Admin123!", 12);
-  await prisma.user.upsert({
-    where: { email: process.env.ADMIN_EMAIL || "admin@samsunsosyalmedya.com" },
-    update: { passwordHash },
-    create: {
-      email: process.env.ADMIN_EMAIL || "admin@samsunsosyalmedya.com",
-      name: "Admin",
-      passwordHash,
-      role: "ADMIN",
-    },
-  });
+  // Varsayılan şifre yok: ADMIN_PASSWORD (en az 12 karakter) verilmezse admin adımı atlanır
+  const adminPassword = process.env.ADMIN_PASSWORD || "";
+  if (adminPassword.length >= 12) {
+    const passwordHash = await bcrypt.hash(adminPassword, 12);
+    await prisma.user.upsert({
+      where: { email: process.env.ADMIN_EMAIL || "admin@samsunsosyalmedya.com" },
+      update: { passwordHash },
+      create: {
+        email: process.env.ADMIN_EMAIL || "admin@samsunsosyalmedya.com",
+        name: "Admin",
+        passwordHash,
+        role: "ADMIN",
+      },
+    });
+  } else {
+    console.warn("seed: admin atlandı (ADMIN_PASSWORD en az 12 karakter olmalı)");
+  }
 
   await prisma.siteSetting.upsert({
     where: { id: "default" },

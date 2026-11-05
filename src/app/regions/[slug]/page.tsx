@@ -15,6 +15,7 @@ import {
 import { SiteChrome } from "@/components/site/SiteChrome";
 import { AnswerBox } from "@/components/seo/GeoBlocks";
 import { TopicCluster } from "@/components/seo/TopicCluster";
+import { sanitizeHtml } from "@/lib/sanitize";
 
 export const dynamic = "force-dynamic";
 
@@ -111,7 +112,7 @@ export default async function RegionPage({ params }: Props) {
             <AnswerBox title="Kısa cevap">
               <p>{d.lead || d.seoDesc}</p>
             </AnswerBox>
-            <div dangerouslySetInnerHTML={{ __html: d.bodyHtml }} />
+            <div dangerouslySetInnerHTML={{ __html: sanitizeHtml(d.bodyHtml) }} />
             <TopicCluster
               title="Bunlara da bakın"
               services={services.slice(0, 3).map((x) => ({

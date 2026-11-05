@@ -59,6 +59,7 @@ function fileError(key: JobFileKey, file: File | null): string | null {
 export function ContactForm({ districts, services, labels }: Props) {
   const L = { ...DEFAULT_LABELS, ...labels };
   const [status, setStatus] = useState<"idle" | "loading" | "ok" | "err">("idle");
+  const [serverError, setServerError] = useState<string | null>(null);
   const [subject, setSubject] = useState("");
   const [fileErrors, setFileErrors] = useState<Partial<Record<JobFileKey, string>>>({});
   const subjects = withJobApplicationSubject(services);
@@ -92,8 +93,10 @@ export function ContactForm({ districts, services, labels }: Props) {
     setStatus("loading");
     try {
       const res = await fetch("/api/contact", { method: "POST", body: fd });
-      const data = (await res.json().catch(() => null)) as { ok?: boolean } | null;
+      const data = (await res.json().catch(() => null)) as { ok?: boolean; error?: string } | null;
       if (!res.ok || data?.ok === false) {
+        // 429 / 413: sunucunun açıklaması; diğer hatalarda varsayılan metin
+        setServerError(res.status === 429 || res.status === 413 ? data?.error ?? null : null);
         setStatus("err");
         return;
       }
@@ -114,6 +117,13 @@ export function ContactForm({ districts, services, labels }: Props) {
       toolname="submit_contact_form"
       tooldescription="Samsun Sosyal Medya iletişim formunu doldurup gönderir. Teklif, WhatsApp, proje talebi veya iş başvurusu için kullanın."
     >
+      {/* Spam tuzağı: insanlar görmez, botlar doldurur; doluysa sunucu sessizce yok sayar */}
+      <div className="sr-only" aria-hidden="true">
+        <label>
+          Web sitesi
+          <input name="website" type="text" tabIndex={-1} autoComplete="off" defaultValue="" />
+        </label>
+      </div>
       <div className="form-row">
         <label>
           {L.name}
@@ -198,7 +208,7 @@ export function ContactForm({ districts, services, labels }: Props) {
         {status === "loading" ? "Gönderiliyor..." : L.submit}
       </button>
       {status === "ok" && <p className="form-success">{L.success}</p>}
-      {status === "err" && <p className="form-error">{L.error}</p>}
+      {status === "err" && <p className="form-error">{serverError || L.error}</p>}
     </form>
   );
 }

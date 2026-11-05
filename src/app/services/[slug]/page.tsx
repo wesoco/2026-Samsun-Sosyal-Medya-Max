@@ -16,6 +16,7 @@ import {
 import { SiteChrome } from "@/components/site/SiteChrome";
 import { AnswerBox, ComparisonTable } from "@/components/seo/GeoBlocks";
 import { TopicCluster } from "@/components/seo/TopicCluster";
+import { sanitizeHtml } from "@/lib/sanitize";
 
 export const dynamic = "force-dynamic";
 
@@ -122,7 +123,7 @@ export default async function ServicePage({ params }: Props) {
             <AnswerBox title="Kısa cevap">
               <p>{s.seoDesc || s.lead}</p>
             </AnswerBox>
-            <div dangerouslySetInnerHTML={{ __html: s.bodyHtml }} />
+            <div dangerouslySetInnerHTML={{ __html: sanitizeHtml(s.bodyHtml) }} />
             <ComparisonTable
               caption={
                 slug === "sosyal-medya-yonetimi"
