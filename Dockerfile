@@ -58,6 +58,8 @@ COPY --from=builder /app/node_modules/@prisma ./node_modules/@prisma
 
 COPY --from=builder /app/node_modules/bcryptjs ./node_modules/bcryptjs
 COPY --from=builder /app/scripts/ensure-admin.cjs ./scripts/ensure-admin.cjs
+COPY --from=builder /app/scripts/retire-blog-posts.cjs ./scripts/retire-blog-posts.cjs
+COPY --from=builder /app/scripts/retired-blog-posts.json ./scripts/retired-blog-posts.json
 COPY --chown=nextjs:nodejs docker-entrypoint.sh ./docker-entrypoint.sh
 RUN chmod +x ./docker-entrypoint.sh
 

@@ -5,6 +5,10 @@
  */
 import { PrismaClient } from "@prisma/client";
 import { BLOG_CONTENT_PLAN } from "./content-plan-blogs";
+import retiredBlogPosts from "../scripts/retired-blog-posts.json";
+
+/** Kardeş sitelerle aynı olduğu için kaldırılan kalıp yazılar yeniden üretilmez */
+const ACTIVE_PLAN = BLOG_CONTENT_PLAN.filter((item) => !(item.slug in retiredBlogPosts));
 
 const prisma = new PrismaClient();
 
@@ -21,7 +25,7 @@ async function main() {
   let skipped = 0;
   let updated = 0;
 
-  for (const item of BLOG_CONTENT_PLAN) {
+  for (const item of ACTIVE_PLAN) {
     const existing = await prisma.blogPost.findUnique({ where: { slug: item.slug } });
     if (existing) {
       if (existing.published) {
@@ -70,7 +74,7 @@ async function main() {
   console.log(
     JSON.stringify(
       {
-        plan: BLOG_CONTENT_PLAN.length,
+        plan: ACTIVE_PLAN.length,
         created,
         updated,
         skippedPublishedOrCustom: skipped,

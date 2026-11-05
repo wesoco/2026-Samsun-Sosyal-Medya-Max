@@ -5,6 +5,10 @@
  */
 import { PrismaClient } from "@prisma/client";
 import { BLOG_CONTENT_PLAN, type BlogPlanItem } from "./content-plan-blogs";
+import retiredBlogPosts from "../scripts/retired-blog-posts.json";
+
+/** Kardeş sitelerle aynı olduğu için kaldırılan kalıp yazılar yeniden üretilmez */
+const ACTIVE_PLAN = BLOG_CONTENT_PLAN.filter((item) => !(item.slug in retiredBlogPosts));
 
 const prisma = new PrismaClient();
 
@@ -653,12 +657,12 @@ async function main() {
   let updated = 0;
   let skipped = 0;
 
-  for (let i = 0; i < BLOG_CONTENT_PLAN.length; i++) {
-    const r = await fillOne(BLOG_CONTENT_PLAN[i], i);
+  for (let i = 0; i < ACTIVE_PLAN.length; i++) {
+    const r = await fillOne(ACTIVE_PLAN[i], i);
     if (r === "created") created++;
     else if (r === "updated") updated++;
     else skipped++;
-    if ((i + 1) % 50 === 0) console.log(`processed ${i + 1}/${BLOG_CONTENT_PLAN.length}`);
+    if ((i + 1) % 50 === 0) console.log(`processed ${i + 1}/${ACTIVE_PLAN.length}`);
   }
 
   const published = await prisma.blogPost.count({ where: { published: true } });

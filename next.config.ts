@@ -1,4 +1,6 @@
 import type { NextConfig } from "next";
+import { readFileSync } from "node:fs";
+import path from "node:path";
 
 /**
  * GTM üzerinden gelen etiketler (GA4, Ads) ve YouTube/Maps gömüleri https
@@ -20,6 +22,14 @@ const CONTENT_SECURITY_POLICY = [
   "object-src 'none'",
   "upgrade-insecure-requests",
 ].join("; ");
+
+/**
+ * Kardeş sitelerle birebir aynı kalıp blog yazıları yayından kaldırıldı (Google'da toplu / kapı
+ * sayfası riski, son 28 günde tıklama yoktu). Eski adresler en yakın hizmet / ilçe sayfasına 301.
+ */
+const RETIRED_BLOG_POSTS: Record<string, string> = JSON.parse(
+  readFileSync(path.join(process.cwd(), "scripts/retired-blog-posts.json"), "utf8"),
+);
 
 const nextConfig: NextConfig = {
   output: "standalone",
@@ -43,6 +53,13 @@ const nextConfig: NextConfig = {
   },
   poweredByHeader: false,
   compress: true,
+  async redirects() {
+    return Object.entries(RETIRED_BLOG_POSTS).map(([slug, destination]) => ({
+      source: `/blog/${slug}`,
+      destination,
+      permanent: true,
+    }));
+  },
   /**
    * TR public URL → EN app directory (middleware rewrite Next 16’da
    * absolute localhost URL + 301 döngüsüne yol açıyordu).
