@@ -1,4 +1,4 @@
-import { NextResponse } from "next/server";
+import { NextResponse, type NextFetchEvent, type NextRequest } from "next/server";
 import { auth } from "@/lib/auth";
 import { CANONICAL_SITE_URL } from "@/lib/paths";
 
@@ -41,7 +41,31 @@ const LEGACY_REDIRECTS: Array<{ match: RegExp; to: (m: RegExpMatchArray) => stri
 /** Eski CMS/statik uzantılar (bilinen eşleşme yoksa) → ana sayfa 301 */
 const LEGACY_FILE_EXT = /\.(html?|php|aspx?|jsp|cgi|cfm)$/i;
 
-export default auth((req) => {
+/** Panel: oturum ve rol kontrolü (genel sayfalarda auth çalışmaz) */
+const adminGuard = auth((req) => {
+  const { pathname } = req.nextUrl;
+  const role = req.auth?.user && (req.auth.user as { role?: string }).role;
+  const isStaff = role === "ADMIN" || role === "EDITOR";
+  if (!req.auth || !isStaff) {
+    const url = req.nextUrl.clone();
+    url.pathname = "/admin/login";
+    return NextResponse.redirect(url);
+  }
+  const adminOnly =
+    pathname === "/admin/settings" ||
+    pathname.startsWith("/admin/settings/") ||
+    pathname === "/admin/users" ||
+    pathname.startsWith("/admin/users/");
+  if (adminOnly && role !== "ADMIN") {
+    const url = req.nextUrl.clone();
+    url.pathname = "/admin";
+    return NextResponse.redirect(url);
+  }
+
+  return NextResponse.next();
+}) as unknown as (req: NextRequest, ev: NextFetchEvent) => Promise<Response | undefined>;
+
+export default function proxy(req: NextRequest, ev: NextFetchEvent) {
   const { pathname, search } = req.nextUrl;
 
   // Tek kanonik host: www → kök alan adı. next.config redirects() başlık taşımadığı için burada; HSTS ile.
@@ -79,28 +103,13 @@ export default auth((req) => {
     return NextResponse.redirect(url, 301);
   }
 
+  // Oturum yalnız panelde çözülür: genel sayfalarda JWT/çerez işi yok (daha hızlı yanıt, Set-Cookie yok)
   if (pathname.startsWith("/admin") && pathname !== "/admin/login") {
-    const role = req.auth?.user && (req.auth.user as { role?: string }).role;
-    const isStaff = role === "ADMIN" || role === "EDITOR";
-    if (!req.auth || !isStaff) {
-      const url = req.nextUrl.clone();
-      url.pathname = "/admin/login";
-      return NextResponse.redirect(url);
-    }
-    const adminOnly =
-      pathname === "/admin/settings" ||
-      pathname.startsWith("/admin/settings/") ||
-      pathname === "/admin/users" ||
-      pathname.startsWith("/admin/users/");
-    if (adminOnly && role !== "ADMIN") {
-      const url = req.nextUrl.clone();
-      url.pathname = "/admin";
-      return NextResponse.redirect(url);
-    }
+    return adminGuard(req, ev);
   }
 
   return NextResponse.next();
-});
+}
 
 export const config = {
   matcher: [
