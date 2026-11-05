@@ -17,6 +17,8 @@ import { SiteChrome } from "@/components/site/SiteChrome";
 import { SafeImage } from "@/components/site/SafeImage";
 import { AnswerBox } from "@/components/seo/GeoBlocks";
 import { blogCover } from "@/lib/blog-cover";
+import { fixBlogHtml } from "@/lib/blog-media";
+import { BlogImageGuard } from "@/components/site/BlogImageGuard";
 import { TopicCluster } from "@/components/seo/TopicCluster";
 import { sanitizeHtml } from "@/lib/sanitize";
 
@@ -61,7 +63,7 @@ async function loadPost(rawSlug: string): Promise<UnifiedPost | null> {
         slug: db.slug,
         title: db.title,
         lead: db.lead,
-        bodyHtml: db.bodyHtml,
+        bodyHtml: fixBlogHtml(db.bodyHtml),
         coverUrl: blogCover(db.slug, db.coverUrl),
         category: db.category,
         seoTitle: db.seoTitle,
@@ -90,7 +92,7 @@ async function loadPost(rawSlug: string): Promise<UnifiedPost | null> {
     slug: agent.slug,
     title: agent.title,
     lead: agent.metaDescription || "",
-    bodyHtml: agent.bodyHtml,
+    bodyHtml: fixBlogHtml(agent.bodyHtml),
     coverUrl: blogCover(agent.slug, agent.coverImageUrl),
     category: agent.category?.trim() || "Blog",
     seoTitle: agent.title,
@@ -217,6 +219,7 @@ export default async function BlogPostPage({ params }: Props) {
                 <p>{post.seoDesc || post.lead}</p>
               </AnswerBox>
               <div className="blog-content" dangerouslySetInnerHTML={{ __html: sanitizeHtml(post.bodyHtml) }} />
+              <BlogImageGuard />
               {faqs.length > 0 ? (
                 <div className="blog-faq">
                   <h2>Sıkça sorulanlar</h2>

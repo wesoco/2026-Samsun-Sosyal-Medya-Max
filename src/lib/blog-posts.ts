@@ -1,6 +1,7 @@
 import { prisma } from "@/lib/prisma";
 import { listSeoPosts, type AgentPost } from "@/lib/seo-posts";
 import { blogCover } from "@/lib/blog-cover";
+import { fixBlogHtml } from "@/lib/blog-media";
 
 export type PublicBlogCard = {
   id: string;
@@ -44,7 +45,7 @@ export async function listPublicBlogPosts(opts?: {
       continue;
     }
 
-    const bodyImg = (p.bodyHtml || "").match(/<img[^>]+src=["']([^"']+)["']/i)?.[1];
+    const bodyImg = fixBlogHtml(p.bodyHtml).match(/<img[^>]+src=["']([^"']+)["']/i)?.[1];
     bySlug.set(p.slug, {
       id: p.id,
       slug: p.slug,

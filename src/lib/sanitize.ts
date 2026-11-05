@@ -1,4 +1,5 @@
 import DOMPurify from "isomorphic-dompurify";
+import { fixBlogHtml } from "@/lib/blog-media";
 
 /** Gömülü videoya izin verilen kaynaklar */
 const IFRAME_SRC = /^https:\/\/(www\.)?(youtube\.com|youtube-nocookie\.com|player\.vimeo\.com)\//i;
@@ -21,7 +22,7 @@ DOMPurify.addHook("afterSanitizeAttributes", (node) => {
  */
 export function sanitizeHtml(html: string | null | undefined) {
   if (!html) return "";
-  return DOMPurify.sanitize(html, {
+  return DOMPurify.sanitize(fixBlogHtml(html), {
     ADD_TAGS: ["iframe"],
     ADD_ATTR: ["target", "loading", "allow", "allowfullscreen", "frameborder"],
   });
