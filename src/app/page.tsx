@@ -9,7 +9,7 @@ import { listPublicBlogPosts } from "@/lib/blog-posts";
 import { jsonLdScript, entityGraphJsonLd, faqPageJsonLd, type SiteNap } from "@/lib/seo";
 import { SiteChrome } from "@/components/site/SiteChrome";
 import { SafeImage } from "@/components/site/SafeImage";
-import { DEFAULT_HERO_SLIDES, type HeroSlide } from "@/lib/hero-slides";
+import { DEFAULT_HERO_SLIDES, HERO_MOBILE_MEDIA, heroMobileImage, type HeroSlide } from "@/lib/hero-slides";
 import { HomeRefs } from "@/components/site/HomeRefs";
 import { REF_PAGE, type HomeRef } from "@/lib/home-refs";
 
@@ -120,6 +120,15 @@ export default async function HomePage() {
       {schemas.map((schema, i) => (
         <script key={i} type="application/ld+json" dangerouslySetInnerHTML={jsonLdScript(schema)} />
       ))}
+      {/* LCP: ilk slayt görseli; telefonda kırpılmış küçük sürüm (React <head>'e taşır) */}
+      {heroMobileImage(slides[0]?.image ?? "") ? (
+        <>
+          <link rel="preload" as="image" href={heroMobileImage(slides[0].image)!} media={HERO_MOBILE_MEDIA} fetchPriority="high" />
+          <link rel="preload" as="image" href={slides[0].image} media="(min-width: 640px)" fetchPriority="high" />
+        </>
+      ) : slides[0] ? (
+        <link rel="preload" as="image" href={slides[0].image} fetchPriority="high" />
+      ) : null}
       <main id="main">
         <section className="hero" id="anasayfa" aria-label="Samsun sosyal medya ajansı">
           <div className="hero-stage" id="heroStage">
@@ -134,17 +143,36 @@ export default async function HomePage() {
                   aria-label={`${i + 1} / ${slides.length}: ${slide.title}`}
                 >
                   <div className="hero-media">
-                    {/* Tüm slaytlarda gerçek src  -  data-src boş 1px gif kalmasın */}
-                    <img
-                      src={slide.image}
-                      alt={slide.alt}
-                      width={1280}
-                      height={800}
-                      decoding={i === 0 ? "async" : "async"}
-                      loading={i === 0 ? "eager" : "lazy"}
-                      fetchPriority={i === 0 ? "high" : "low"}
-                      className="hero-img"
-                    />
+                    {/* İlk slayt (LCP) hemen, telefonda ortadan kırpılmış küçük sürümüyle yüklenir.
+                        Diğer slaytlar aynı yerde üst üste durduğu için loading="lazy" onları da hemen
+                        indiriyordu (~290 KB, LCP'yi geciktirir); data-src ile LCP sonrası yüklenir. */}
+                    {i === 0 ? (
+                      <picture>
+                        {heroMobileImage(slide.image) ? (
+                          <source media={HERO_MOBILE_MEDIA} srcSet={heroMobileImage(slide.image)!} type="image/webp" />
+                        ) : null}
+                        <img
+                          src={slide.image}
+                          alt={slide.alt}
+                          width={1280}
+                          height={800}
+                          decoding="async"
+                          loading="eager"
+                          fetchPriority="high"
+                          className="hero-img"
+                        />
+                      </picture>
+                    ) : (
+                      <img
+                        data-src={slide.image}
+                        data-src-mobile={heroMobileImage(slide.image) ?? undefined}
+                        alt={slide.alt}
+                        width={1280}
+                        height={800}
+                        decoding="async"
+                        className="hero-img"
+                      />
+                    )}
                     <div className="hero-gradient" aria-hidden="true" />
                   </div>
                   <div className="hero-content">

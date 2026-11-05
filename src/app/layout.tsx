@@ -49,13 +49,6 @@ export default async function RootLayout({ children }: { children: React.ReactNo
     <html lang="tr">
       <head>
         <ConsentDefaults />
-        <link
-          rel="preload"
-          as="image"
-          href="/assets/hero/03.webp"
-          type="image/webp"
-          fetchPriority="high"
-        />
       </head>
       <body className={`${montserrat.variable} ${montserrat.className}`}>
         <GoogleTagManagerNoscript gtmId={settings?.gtmId} />

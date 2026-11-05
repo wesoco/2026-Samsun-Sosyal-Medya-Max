@@ -494,6 +494,11 @@ body.nav-open .menu-toggle:focus-visible {
   inset: 0;
 }
 
+/* İlk slaytın <picture> sarmalı yerleşimi etkilemesin */
+.hero-media picture {
+  display: contents;
+}
+
 .hero-media img,
 .hero-media .hero-img {
   width: 100%;

@@ -46,6 +46,16 @@ export function SiteInteractions({ variant = "home" }: { variant?: "home" | "inn
     );
     let idx = 0;
     let timer: ReturnType<typeof setInterval> | undefined;
+    let preloadTimer: number | undefined;
+
+    const mobileHero = window.matchMedia("(max-width: 639px)").matches;
+    const loadHeroImage = (img: HTMLImageElement) => {
+      const src = (mobileHero && img.dataset.srcMobile) || img.dataset.src;
+      if (!src) return;
+      img.src = src;
+      img.removeAttribute("data-src");
+      img.removeAttribute("data-src-mobile");
+    };
 
     const show = (n: number) => {
       if (!slides.length) return;
@@ -59,11 +69,7 @@ export function SiteInteractions({ variant = "home" }: { variant?: "home" | "inn
         // Gecikmeli hero görseli (LCP dışı slaytlar)
         if (active) {
           const img = s.querySelector<HTMLImageElement>("img.hero-img[data-src]");
-          if (img?.dataset.src) {
-            img.src = img.dataset.src;
-            img.removeAttribute("srcset");
-            img.removeAttribute("data-src");
-          }
+          if (img) loadHeroImage(img);
           // LCP sonrası hafif drift
           window.setTimeout(() => s.classList.add("is-ready"), 1800);
         }
@@ -84,6 +90,10 @@ export function SiteInteractions({ variant = "home" }: { variant?: "home" | "inn
         timer = setInterval(() => show(idx + 1), 7000);
       };
       window.setTimeout(startAutoplay, 12000);
+      // Diğer slayt görsellerini LCP'den sonra, ilk geçişten önce arka planda hazırla
+      preloadTimer = window.setTimeout(() => {
+        document.querySelectorAll<HTMLImageElement>("img.hero-img[data-src]").forEach(loadHeroImage);
+      }, 5000);
       pagerBtns.forEach((b, i) =>
         b.addEventListener("click", () => {
           show(i);
@@ -95,6 +105,7 @@ export function SiteInteractions({ variant = "home" }: { variant?: "home" | "inn
     }
 
     return () => {
+      window.clearTimeout(preloadTimer);
       window.removeEventListener("scroll", onScroll);
       toggle?.removeEventListener("click", onToggle);
       io.disconnect();

@@ -108,3 +108,12 @@ export const DEFAULT_HERO_SLIDES: HeroSlide[] = [
     ],
   },
 ];
+
+/** Telefon için ortadan kırpılmış dikey sürüm (public/assets/hero/NN-m.webp); yoksa null */
+export function heroMobileImage(src: string): string | null {
+  const m = /^\/assets\/hero\/(0[1-6])\.webp$/.exec(src);
+  return m ? `/assets/hero/${m[1]}-m.webp` : null;
+}
+
+/** Hero'nun telefon kırılımı (globals.css ile aynı) */
+export const HERO_MOBILE_MEDIA = "(max-width: 639px)";
