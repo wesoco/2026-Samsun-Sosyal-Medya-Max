@@ -6,7 +6,8 @@ import { listSeoPosts } from "@/lib/seo-posts";
  * llms.txt'in tamamlayıcısı: yapay zekâ motorları için tüm blog yazılarının başlık, özet ve
  * adresi. llms.txt elle yazılmış bir site özeti; yeni yazılar buraya kendiliğinden düşer.
  */
-export const revalidate = 3600;
+/** Derleme sırasında DB yok: önceden üretilirse boş liste önbelleğe girer */
+export const dynamic = "force-dynamic";
 
 export async function GET() {
   const [dbPosts, agentPosts] = await Promise.all([
